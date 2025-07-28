@@ -8,6 +8,7 @@ use App\Models\FreeSiteRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Http\Requests\UpdateFreeSiteRequest;
+use Illuminate\Support\Facades\Log;
 
 class FreeSiteRequestController extends Controller
 {
@@ -84,6 +85,8 @@ class FreeSiteRequestController extends Controller
     public function index()
     {
         return FreeSiteRequest::latest()->get();
+         Log::info('Pozvana index metoda za FreeSiteRequestController');
+    return FreeSiteRequest::latest()->get();
     }
 
     // 6. CHANGE STATUS – Promena statusa prezentacije

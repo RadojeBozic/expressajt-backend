@@ -10,6 +10,9 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    /**
+     * Registracija novog korisnika
+     */
     public function register(Request $request)
     {
         $fields = $request->validate([
@@ -18,8 +21,7 @@ class AuthController extends Controller
             'password' => 'required|string|min:6',
             'message' => 'nullable|string',
             'referrer' => 'nullable|string',
-            'role' => 'nullable|in:superadmin,user', // opcionalno, ako želite da se dodeli uloga
-            
+            'role' => 'nullable|in:superadmin,user',
         ]);
 
         $user = User::create([
@@ -28,10 +30,9 @@ class AuthController extends Controller
             'password' => Hash::make($fields['password']),
             'message' => $fields['message'] ?? null,
             'referrer' => $fields['referrer'] ?? null,
-           'role' => $fields['role'] ?? ($fields['email'] === 'admin@example.com' ? 'superadmin' : 'user'),
+            'role' => $fields['role'] ?? ($fields['email'] === 'admin@example.com' ? 'superadmin' : 'user'),
         ]);
 
-        // Logovanje odmah nakon registracije
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
@@ -40,6 +41,9 @@ class AuthController extends Controller
         ], 201);
     }
 
+    /**
+     * Prijava korisnika
+     */
     public function login(Request $request)
     {
         $fields = $request->validate([
@@ -63,14 +67,39 @@ class AuthController extends Controller
         ], 200);
     }
 
+    /**
+     * Dohvatanje trenutno prijavljenog korisnika
+     */
     public function user(Request $request)
     {
         return response()->json($request->user());
     }
 
+    /**
+     * Odjava korisnika (brisanje svih tokena)
+     */
     public function logout(Request $request)
     {
         $request->user()->tokens()->delete();
         return response()->json(['message' => 'Uspešno ste se odjavili.']);
+    }
+
+    /**
+     * Brisanje korisničkog naloga (samobrisanje)
+     */
+    public function destroy(Request $request)
+    {
+        $user = $request->user();
+
+        if (in_array($user->role, ['admin', 'superadmin'])) {
+            return response()->json([
+                'message' => 'Admin i SuperAdmin nalozi ne mogu biti obrisani ovom metodom.'
+            ], 403);
+        }
+
+        $user->tokens()->delete();
+        $user->delete();
+
+        return response()->json(['message' => 'Vaš nalog je uspešno obrisan.'], 200);
     }
 }
