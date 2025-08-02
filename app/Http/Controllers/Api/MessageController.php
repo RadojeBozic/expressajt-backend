@@ -29,5 +29,14 @@ class MessageController extends Controller
     {
         return Message::orderBy('created_at', 'desc')->get();
     }
+
+    public function destroy($id)
+{
+    $message = Message::findOrFail($id);
+
+    $message->delete();
+
+    return response()->json(['message' => 'Poruka obrisana.']);
+}
 }
 

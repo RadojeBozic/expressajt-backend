@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\MessageController;
 use App\Http\Controllers\Api\FreeSiteRequestController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VulnerabilityReportController;
+use App\Http\Controllers\Api\AIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/test', fn() => response()->json(['status' => 'Laravel radi!']));
 // Kontakt forma
 Route::post('/contact', [ContactController::class, 'store']);
 Route::post('/contact', [MessageController::class, 'store']);
+
 
 // 🌐 Free/Pro prezentacije – kreiranje i pregled (javno dostupno)
 Route::prefix('free-site-request')->group(function () {
@@ -78,8 +80,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
     // 📥 Poruke korisnika (admin)
+    Route::middleware('auth:sanctum')->group(function () {
     Route::get('/messages', [MessageController::class, 'index']);
-    Route::delete('/messages/{id}', [MessageController::class, 'destroy']);
+    Route::post('/messages', [MessageController::class, 'store']);
+    Route::delete('/messages/{id}', [MessageController::class, 'destroy']); // ⬅️ ovo mora da postoji
+});
 
     // 🌐 FreeSiteRequest – izmena i brisanje
     Route::prefix('free-site-request')->group(function () {
@@ -92,6 +97,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/vulnerabilities', [VulnerabilityReportController::class, 'index']);
     Route::delete('/vulnerabilities/{id}', [VulnerabilityReportController::class, 'destroy']);
 });
+
+Route::post('/ai/suggest', [AIController::class, 'suggest']);
+Route::post('/ai/chat', [AIController::class, 'chat']);
 
 //
 // 🧪 TEST / DEBUG (opciono obriši kasnije)

@@ -22,6 +22,7 @@ class FreeSiteRequest extends Model
         'template',
         'slug',
         'type',
+        'plan',
 
         // Hero sekcija
         'hero_title',

@@ -14,25 +14,35 @@ class FreeSiteRequestController extends Controller
 {
     // 1. STORE – Kreiranje prezentacije
     public function store(Request $request)
-    {
-        $type = $request->input('type', 'basic');
-        $upload = fn($file, $folder) => $file ? $file->store("prezentacije/{$folder}", 'public') : null;
+{
+    $type = $request->input('type', 'basic');
 
-        $validated = $request->validate($this->rules($type));
-        $data = $this->extractData($validated, $request, $upload);
+    // Validacija
+    $validated = $request->validate($this->rules($type));
 
-        $data['slug'] = Str::slug($validated['name']) . '-' . uniqid();
-        $data['user_id'] = auth()->id();
-        $data['status'] = 'pending';
+    // Upload fajlova
+    $upload = fn($file, $folder) => $file ? $file->store("prezentacije/{$folder}", 'public') : null;
 
-        $record = FreeSiteRequest::create($data);
+    // Ekstrakcija podataka
+    $data = $this->extractData($validated, $request, $upload);
 
-        return response()->json([
-            'user_id' => auth()->id() ?? null,
-            'message' => '✅ Prezentacija sačuvana!',
-            'slug' => $record->slug,
-        ], 201);
-    }
+    // Obavezna polja za kreiranje
+    $data['slug'] = Str::slug($validated['name']) . '-' . uniqid();
+    $data['user_id'] = auth()->id();
+    $data['status'] = 'pending';
+    $data['plan'] = $request->input('plan', 'starter'); // ← dodato
+    
+
+    // Snimi zahtev
+    $record = FreeSiteRequest::create($data);
+
+    return response()->json([
+        'user_id' => auth()->id() ?? null,
+        'message' => '✅ Prezentacija sačuvana!',
+        'slug' => $record->slug,
+    ], 201);
+}
+
 
     // 2. SHOW – Prikaz jedne prezentacije
     public function show($slug)
