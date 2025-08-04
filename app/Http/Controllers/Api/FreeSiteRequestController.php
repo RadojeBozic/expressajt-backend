@@ -45,12 +45,25 @@ class FreeSiteRequestController extends Controller
 
 
     // 2. SHOW – Prikaz jedne prezentacije
-    public function show($slug)
-    {
-        $site = FreeSiteRequest::where('slug', $slug)->firstOrFail();
-        return response()->json($site);
+  public function show($slug)
+{
+    $site = FreeSiteRequest::where('slug', $slug)->first();
+
+    if (!$site) {
+        return response()->json(['error' => 'Prezentacija nije pronađena.'], 404);
     }
 
+    // Ako nije aktivna, proveri korisnika
+    if ($site->status !== 'active') {
+        $user = auth('sanctum')->user();
+
+        if (!$user || !in_array($user->role, ['admin', 'superadmin'])) {
+            return response()->json(['error' => 'Nemate pristup ovoj prezentaciji.'], 401);
+        }
+    }
+
+    return response()->json($site);
+}
     // 3. UPDATE – Ažuriranje prezentacije
     public function update(UpdateFreeSiteRequest $request, $slug)
     {
@@ -219,5 +232,14 @@ class FreeSiteRequestController extends Controller
         }
 
         return $data;
+    }
+
+    // DEMO SITES – Lista demo prezentacija
+    public function demoSites()
+    {
+        return FreeSiteRequest::where('is_demo', true)
+            ->where('status', 'active')
+            ->orderBy('created_at', 'desc')
+            ->get(['name', 'description', 'slug']);
     }
 }

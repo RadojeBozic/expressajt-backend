@@ -98,11 +98,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/vulnerabilities/{id}', [VulnerabilityReportController::class, 'destroy']);
 });
 
-Route::post('/ai/suggest', [AIController::class, 'suggest']);
-Route::post('/ai/chat', [AIController::class, 'chat']);
+    Route::post('/ai/suggest', [AIController::class, 'suggest']);
+    Route::post('/ai/chat', [AIController::class, 'chat']);
 
-//
-// 🧪 TEST / DEBUG (opciono obriši kasnije)
-//
-Route::get('/test-all-sites', [FreeSiteRequestController::class, 'index']);
-Route::get('/test-site-request/{slug}', [FreeSiteRequestController::class, 'show']);
+    Route::get('/demo-sites', [FreeSiteRequestController::class, 'demoSites']);
+    Route::post('/send-presentation/{slug}', [FreeSiteRequestController::class, 'sendToClient']);
+
+
+    //
+    // 🧪 TEST / DEBUG (opciono obriši kasnije)
+    //
+    Route::get('/test-all-sites', [FreeSiteRequestController::class, 'index']);
+    Route::get('/test-site-request/{slug}', [FreeSiteRequestController::class, 'show']);
