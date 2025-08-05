@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\FreeSiteRequestController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VulnerabilityReportController;
 use App\Http\Controllers\Api\AIController;
+use App\Http\Controllers\Api\StripeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,6 +104,11 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/demo-sites', [FreeSiteRequestController::class, 'demoSites']);
     Route::post('/send-presentation/{slug}', [FreeSiteRequestController::class, 'sendToClient']);
+
+    // 🛒 Stripe naplata
+    Route::middleware('auth:sanctum')->post('/stripe/checkout', [StripeController::class, 'checkout']);
+    
+
 
 
     //

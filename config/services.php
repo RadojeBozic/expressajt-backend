@@ -32,7 +32,13 @@ return [
     ],
 
     'openai' => [
-    'key' => env('OPENAI_API_KEY'),
-],
+        'key' => env('OPENAI_API_KEY'),
+    ],
+
+    'stripe' => [
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+    ],
+
 
 ];
