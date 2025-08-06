@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VulnerabilityReportController;
 use App\Http\Controllers\Api\AIController;
 use App\Http\Controllers\Api\StripeController;
+use App\Http\Controllers\Api\InvoiceRequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,7 +110,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::middleware('auth:sanctum')->post('/stripe/checkout', [StripeController::class, 'checkout']);
     
 
-
+    // 🧾 Zahtevi za fakture
+    Route::post('/invoice-request', [InvoiceRequestController::class, 'store']);
+    Route::get('/invoice-request/{id}/pdf', [InvoiceRequestController::class, 'download']);
+    Route::middleware('auth:sanctum')->get('/my-invoices', [InvoiceRequestController::class, 'userInvoices']);
+    Route::middleware('auth:sanctum')->get('/admin/invoices', [InvoiceRequestController::class, 'allInvoices']);
 
     //
     // 🧪 TEST / DEBUG (opciono obriši kasnije)
