@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage; 
 use App\Models\InvoiceRequest;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceRequestController extends Controller
 {
-    public function store(Request $request)
+        public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -25,8 +27,7 @@ class InvoiceRequestController extends Controller
             'status' => 'pending'
         ]);
 
-        // Generiši PDF odmah nakon kreiranja zahteva
-        $invoice = InvoiceRequest::create([...]);
+        // ✅ Samo jedan create i odmah pozivamo generatePDF()
         $invoice->generatePDF();
 
         return response()->json([
@@ -34,30 +35,42 @@ class InvoiceRequestController extends Controller
             'invoice' => $invoice
         ]);
     }
+
     public function download($id)
     {
         $invoice = InvoiceRequest::findOrFail($id);
+        $file = "invoices/invoice-$id.pdf";
 
-        $pdfPath = storage_path("app/invoices/invoice_{$invoice->id}.pdf");
-
-        if (!file_exists($pdfPath)) {
+        if (!Storage::exists($file)) {
             return response()->json(['error' => 'PDF nije pronađen.'], 404);
         }
 
-        return response()->download($pdfPath);
+        return Storage::download($file);
     }
 
-    public function userInvoices(Request $request)
+        public function userInvoices(Request $request)
+        {
+            return InvoiceRequest::where('email', $request->user()->email)->latest()->get();
+        }
+        public function allInvoices()
     {
-        return InvoiceRequest::where('email', $request->user()->email)->latest()->get();
-    }
-    public function allInvoices()
-{
-    if (auth()->user()?->role !== 'admin' && auth()->user()?->role !== 'superadmin') {
-        return response()->json(['error' => 'Unauthorized'], 403);
+        if (auth()->user()?->role !== 'admin' && auth()->user()?->role !== 'superadmin') {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        return InvoiceRequest::latest()->get();
     }
 
-    return InvoiceRequest::latest()->get();
-}
+    public function generatePDF()
+    {
+        $file = "invoices/invoice-{$this->id}.pdf";
+
+        if (Storage::exists($file)) {
+            return;
+        }
+
+        $pdf = Pdf::loadView('pdf.invoice', ['invoice' => $this]);
+        Storage::put($file, $pdf->output());
+    }
 
 }
