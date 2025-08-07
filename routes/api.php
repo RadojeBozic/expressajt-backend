@@ -111,6 +111,11 @@ Route::middleware('auth:sanctum')->group(function () {
     
 
     // 🧾 Zahtevi za fakture
+    Route::middleware('auth:sanctum')->put('/invoice-request/{id}/status', [InvoiceRequestController::class, 'updateStatus']);
+    Route::middleware('auth:sanctum')->delete('/invoice-request/{id}', [InvoiceRequestController::class, 'destroy']);
+
+
+
     Route::post('/invoice-request', [InvoiceRequestController::class, 'store']);
     Route::get('/invoice-request/{id}/pdf', [InvoiceRequestController::class, 'download']);
     Route::middleware('auth:sanctum')->get('/my-invoices', [InvoiceRequestController::class, 'userInvoices']);

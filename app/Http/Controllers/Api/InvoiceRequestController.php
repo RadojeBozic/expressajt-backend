@@ -10,7 +10,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceRequestController extends Controller
 {
-        public function store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -37,18 +37,24 @@ class InvoiceRequestController extends Controller
     }
 
     public function download($id)
-    {
-        $invoice = InvoiceRequest::findOrFail($id);
-        $file = "invoices/invoice-$id.pdf";
+        {
+            $invoice = InvoiceRequest::findOrFail($id);
 
-        if (!Storage::exists($file)) {
-            return response()->json(['error' => 'PDF nije pronađen.'], 404);
+        // 👇 Generiši PDF svaki put pre preuzimanja
+        $invoice->generatePDF();
+            
+            
+            $file = "invoices/invoice-$id.pdf";
+
+            if (!Storage::exists($file)) {
+                return response()->json(['error' => 'PDF nije pronađen.'], 404);
+            }
+
+            return Storage::download($file);
         }
 
-        return Storage::download($file);
-    }
 
-        public function userInvoices(Request $request)
+    public function userInvoices(Request $request)
         {
             return InvoiceRequest::where('email', $request->user()->email)->latest()->get();
         }
@@ -60,7 +66,7 @@ class InvoiceRequestController extends Controller
 
         return InvoiceRequest::latest()->get();
     }
-
+/* 
     public function generatePDF()
     {
         $file = "invoices/invoice-{$this->id}.pdf";
@@ -71,6 +77,34 @@ class InvoiceRequestController extends Controller
 
         $pdf = Pdf::loadView('pdf.invoice', ['invoice' => $this]);
         Storage::put($file, $pdf->output());
+    } */
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,approved,paid,cancelled'
+        ]);
+
+        $invoice = InvoiceRequest::findOrFail($id);
+        $invoice->status = $request->status;
+        $invoice->save();
+
+        return response()->json(['message' => 'Status uspešno ažuriran.']);
     }
+
+    public function destroy($id)
+    {
+        $invoice = InvoiceRequest::findOrFail($id);
+        $invoice->delete();
+
+        // Obriši PDF fajl ako postoji
+        $file = "invoices/invoice-$id.pdf";
+        if (\Storage::exists($file)) {
+            \Storage::delete($file);
+        }
+
+        return response()->json(['message' => 'Zahtev za fakturu je uspešno obrisan.']);
+    }
+   
+
 
 }

@@ -13,26 +13,29 @@
 <body>
   <div class="title">𐇾 Profaktura #{{ $invoice->id }}</div>
 
-  @php
-    $exchangeRate = 117.5;
+ @php
+  use Carbon\Carbon;
 
-    // Ako je valuta EUR, konvertuj u RSD za prikaz
-    if ($invoice->currency === 'eur') {
-        $convertedAmount = $invoice->amount * $exchangeRate;
-        $formattedOriginal = number_format($invoice->amount / 100, 2, ',', '.');
-        $formattedConverted = number_format($convertedAmount / 100, 2, ',', '.');
-    } else {
-        // Ako je korisnik odabrao RSD – pretpostavljamo da je amount u evrima (centima)
-        // i radimo konverziju
-        $convertedAmount = $invoice->amount * $exchangeRate;
-        $formattedOriginal = number_format($convertedAmount / 100, 2, ',', '.');
-        $formattedConverted = null;
-    }
-  @endphp
+  $today = Carbon::now();
+  $dueDate = $today->copy()->addDays(3);
 
-  <div class="section">
-    <span class="label">Datum:</span> {{ \Carbon\Carbon::parse($invoice->created_at)->format('d.m.Y.') }}
-  </div>
+  $exchangeRate = 117.5;
+
+  if ($invoice->currency === 'eur') {
+      $convertedAmount = $invoice->amount * $exchangeRate;
+      $formattedOriginal = number_format($invoice->amount / 100, 2, ',', '.');
+      $formattedConverted = number_format($convertedAmount / 100, 2, ',', '.');
+  } else {
+      $convertedAmount = $invoice->amount * $exchangeRate;
+      $formattedOriginal = number_format($convertedAmount / 100, 2, ',', '.');
+      $formattedConverted = null;
+  }
+@endphp
+
+    <div class="section">
+        <span class="label">Datum izdavanja:</span> {{ $today->format('d.m.Y.') }}<br>
+        <span class="label">Rok za plaćanje:</span> {{ $dueDate->format('d.m.Y.') }}
+    </div>
 
   <div class="section">
     <span class="label">Račun izdaje:</span>
@@ -63,14 +66,15 @@
   </div>
 
   <div class="section">
-    <span class="label">Rok za plaćanje:</span> 7 dana od dana izdavanja.<br>
+    <span class="label">Rok za plaćanje:</span> 3 dana od dana izdavanja.<br>
     <span class="label">Napomena:</span> Kurs konverzije 1 EUR = 117,5 RSD (NBS srednji kurs).
   </div>
 
   <div class="section">
     <p>Uplatu izvršiti na račun: 265-xxxxxxxxxxxx-xxi u pozivu na broj upisati broj Profakture.</p>
-    <p>Hvala na poverenju.<br>Faktura je validna bez pečata i potpisa.<br>
-    Preduzetnik nije u sistemu PDV-a.</p>
+    <p>Hvala na poverenju.<br>
+    Preduzetnik nije u sistemu PDV-a.
+    <br>Faktura je validna bez pečata i potpisa.</p>
   </div>
 </body>
 </html>
