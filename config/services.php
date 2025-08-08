@@ -40,5 +40,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'plausible' => [
+    'key' => env('PLAUSIBLE_API_KEY'),
+    'site_id' => env('PLAUSIBLE_SITE_ID'), // ako želiš
+],
 
 ];

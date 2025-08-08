@@ -11,6 +11,8 @@ use App\Http\Controllers\VulnerabilityReportController;
 use App\Http\Controllers\Api\AIController;
 use App\Http\Controllers\Api\StripeController;
 use App\Http\Controllers\Api\InvoiceRequestController;
+use App\Http\Controllers\PlausibleController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -120,6 +122,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/invoice-request/{id}/pdf', [InvoiceRequestController::class, 'download']);
     Route::middleware('auth:sanctum')->get('/my-invoices', [InvoiceRequestController::class, 'userInvoices']);
     Route::middleware('auth:sanctum')->get('/admin/invoices', [InvoiceRequestController::class, 'allInvoices']);
+
+    // Plausible Analytics
+    Route::post('/plausible/query', [PlausibleController::class, 'query']);
 
     //
     // 🧪 TEST / DEBUG (opciono obriši kasnije)
