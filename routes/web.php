@@ -14,8 +14,8 @@ use App\Http\Controllers\PreviewController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/prezentacije/{slug}', [PreviewController::class, 'show']);
