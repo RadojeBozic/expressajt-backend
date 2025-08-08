@@ -1673,23 +1673,23 @@
     "note": "Cenovnik odražava našu trenutnu ponudu i važi za sve nove korisnike. Dodatni popusti su mogući u zavisnosti od vrste i količine naručenih usluga.",
     "services": {
       "1": {
-        "title": "Besplatna prezentacija (Starter)",
-        "price": "0 €",
+        "title": "Poslovna prezentacija  (Starter)",
+        "price": "10 €",
         "description": "Idealno za CV, portfolio, jednu stranicu. Prikaz po šablonu, generiše se automatski. Uređivanje putem forme."
       },
       "2": {
         "title": "Poslovna prezentacija (Basic)",
-        "price": "od 10 € godišnje",
+        "price": "od 20 € godišnje",
         "description": "Sadrži: kontakt formu, Google mapu, PDF, linkove, dodatne sekcije. Poddomen, domen i hosting cca. 60 € godišnje."
       },
       "3": {
         "title": "Poslovna prezentacija (Pro)",
-        "price": "od 20 € godišnje",
+        "price": "od 30 € godišnje",
         "description": "Sadrži: kontakt formu, Google mapu, PDF, linkove, dodatne sekcije. Poddomen, domen i hosting cca. 60 € godišnje."
       },
       "4": {
         "title": "Poslovna prezentacija (Premium)",
-        "price": "od 30 € godišnje",
+        "price": "od 40 € godišnje",
         "description": "Sadrži: kontakt formu, Google mapu, PDF, linkove, dodatne sekcije. Poddomen, domen i hosting cca. 60 € godišnje."
       },
       "5": {

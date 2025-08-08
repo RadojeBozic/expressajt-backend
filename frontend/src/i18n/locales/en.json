@@ -1661,23 +1661,23 @@
   "pricing_global": {
     "services": {
       "1": {
-        "title": "Free Presentation (Starter)",
-        "price": "0 \u20ac",
+        "title": "Business Presentation (Starter)",
+        "price": "from 10\u20ac",
         "description": "Ideal for a CV, portfolio, or a one-page site. Template-based, auto-generated. Editable via form."
       },
       "2": {
         "title": "Business Presentation (Basic)",
-        "price": "from 10 \u20ac per year",
+        "price": "from 20 \u20ac per year",
         "description": "Includes: contact form, Google map, PDF, links, extra sections. Subdomain, domain & hosting approx. 60 \u20ac per year."
       },
       "3": {
         "title": "Business Presentation (Pro)",
-        "price": "from 20 \u20ac per year",
+        "price": "from 30 \u20ac per year",
         "description": "Includes all from Basic plus more features. Domain & hosting approx. 60 \u20ac per year."
       },
       "4": {
         "title": "Business Presentation (Premium)",
-        "price": "from 30 \u20ac per year",
+        "price": "from 40 \u20ac per year",
         "description": "Includes all from Pro with SEO support and advanced visual blocks. Hosting billed separately."
       },
       "5": {
