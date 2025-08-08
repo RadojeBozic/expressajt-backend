@@ -1,4 +1,4 @@
-# Agencija Express Sajt – Backend (Laravel 10)
+# Agencija Express web – Backend (Laravel 10)
 
 Ovo je backend aplikacija za projekat **Agencija Express Sajt**, izrađena u Laravel PHP frameworku.
 
@@ -23,12 +23,12 @@ Služi kao API server za frontend deo (`expressajt`) i obezbeđuje:
 
 ## 🛠️ Instalacija
 
-```bash
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-php artisan storage:link
+
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+- php artisan migrate
+- php artisan storage:link
 Prethodno kreiraj MySQL bazu npr: expressajt
 Zatim u .env podesi konekciju sa bazom:
 
@@ -84,11 +84,11 @@ Fajlovi se čuvaju u storage/app/public i dostupni su preko public/storage.
 Za testiranje možeš napraviti factory-je i seedere za korisnike i prezentacije.
 
 php artisan db:seed
-🧾 Licence
-Ovaj repozitorijum je deo vlasničkog projekta Agencija Express Sajt.
+🧾 Licence 
+Ovaj repozitorijum je deo vlasničkog projekta Agencija Express web.
 Slobodno koristiš kao inspiraciju za edukaciju, ali za produkcijsku upotrebu obavezna je dozvola vlasnika.
 
 📌 Kontakt
-Agencija Express Sajt
-📧 info@expresssajt.rs
-🌐 https://expresssajt.rs (u pripremi)
+Agencija Express web
+📧 info@express-web.express
+🌐 https://express-web.express (u pripremi)
