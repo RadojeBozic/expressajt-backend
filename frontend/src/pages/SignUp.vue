@@ -131,7 +131,7 @@
 
 <script>
 import Header from '../partials/Header.vue'
-import api from '@/utils/api' // ← novo
+import api from '@/utils/api'
 
 export default {
   name: 'SignUp',
@@ -141,29 +141,33 @@ export default {
       form: { name: '', email: '', password: '', referrer: 'google' },
       success: '',
       error: '',
+      loading: false,
     }
   },
   methods: {
     async submitForm() {
+      this.loading = true
+      this.success = ''
+      this.error = ''
       try {
-        const { data } = await api.post('/register', this.form);
-        const { token, user } = data;
+        const { data } = await api.post('/register', this.form)
+        const { token, user } = data
 
-        localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('token', token)
+        localStorage.setItem('user', JSON.stringify(user))
 
-        this.success = this.$t('register.success') || 'Registracija uspešna!';
-        this.error = '';
-        this.$router.push('/dashboard');
-      } catch (error) {
-        this.success = '';
-        if (error.response?.status === 422) {
-          this.error = this.$t('register.validation_error') || 'Greška u validaciji.';
-          console.error('Validacija:', error.response.data.errors);
+        this.success = this.$t?.('register.success') || 'Registracija uspešna!'
+        this.$router.push('/dashboard')
+      } catch (err) {
+        if (err.response?.status === 422) {
+          this.error = this.$t?.('register.validation_error') || 'Greška u validaciji.'
+          console.error('Validacija:', err.response.data.errors)
         } else {
-          this.error = this.$t('register.error') || 'Greška prilikom registracije.';
-          console.error('Backend greška:', error);
+          this.error = this.$t?.('register.error') || 'Greška prilikom registracije.'
+          console.error('Backend greška:', err)
         }
+      } finally {
+        this.loading = false
       }
     }
   }

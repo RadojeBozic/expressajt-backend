@@ -1,16 +1,16 @@
 import axios from 'axios'
 
-// Ako postoji VITE_API_URL koristi njega, u suprotnom koristi origin + /api
+// Preferiraj VITE_API_URL; ako ga nema, koristi origin + /api
 const baseURL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, '') ||
+  (import.meta.env.VITE_API_URL && import.meta.env.VITE_API_URL.replace(/\/$/, '')) ||
   `${window.location.origin.replace(/\/$/, '')}/api`;
 
 const api = axios.create({
-  baseURL, // npr: https://express-web.express/api
+  baseURL, // npr. https://express-web.express/api
   withCredentials: false,
 });
 
-// automatski dodaj token ako postoji
+// Ako postoji token, šalji ga automatski
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
