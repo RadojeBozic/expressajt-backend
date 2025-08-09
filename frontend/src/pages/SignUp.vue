@@ -130,51 +130,42 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Header from '../partials/Header.vue'
+import api from '@/utils/api' // ← novo
 
 export default {
   name: 'SignUp',
+  components: { Header },
   data() {
     return {
-      form: {
-        name: '',
-        email: '',
-        password: '',
-        // message: '',
-        referrer: 'google',
-      },
+      form: { name: '', email: '', password: '', referrer: 'google' },
       success: '',
       error: '',
     }
   },
-  components: {
-    Header,
-  },
   methods: {
     async submitForm() {
-  try {
-const response = await axios.post('http://localhost:8080/api/register', this.form);
+      try {
+        const { data } = await api.post('/register', this.form);
+        const { token, user } = data;
 
-    const { token, user } = response.data;
-    localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('token', token);
+        localStorage.setItem('user', JSON.stringify(user));
 
-    this.success = this.$t('register.success') || 'Registracija uspešna!';
-    this.error = '';
-
-    this.$router.push('/dashboard');
-  } catch (error) {
-    this.success = '';
-    if (error.response?.status === 422) {
-      this.error = this.$t('register.validation_error') || 'Greška u validaciji.';
-      console.error('Validacija:', error.response.data.errors);
-    } else {
-      this.error = this.$t('register.error') || 'Greška prilikom registracije.';
-      console.error('Backend greška:', error);
+        this.success = this.$t('register.success') || 'Registracija uspešna!';
+        this.error = '';
+        this.$router.push('/dashboard');
+      } catch (error) {
+        this.success = '';
+        if (error.response?.status === 422) {
+          this.error = this.$t('register.validation_error') || 'Greška u validaciji.';
+          console.error('Validacija:', error.response.data.errors);
+        } else {
+          this.error = this.$t('register.error') || 'Greška prilikom registracije.';
+          console.error('Backend greška:', error);
+        }
+      }
     }
-  }
-}
   }
 }
 </script>

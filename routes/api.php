@@ -13,7 +13,6 @@ use App\Http\Controllers\Api\StripeController;
 use App\Http\Controllers\Api\InvoiceRequestController;
 use App\Http\Controllers\PlausibleController;
 
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,42 +21,39 @@ use App\Http\Controllers\PlausibleController;
 | Grupisane su po funkcionalnostima i obezbeđene gde je potrebno.
 */
 
-//
-// 🔓 JAVNE RUTE
-//
+/* -------------------- JAVNE RUTE -------------------- */
+
+// Autentifikacija
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+
+// Test ruta
 Route::get('/test', fn() => response()->json(['status' => 'Laravel radi!']));
 
 // Kontakt forma
 Route::post('/contact', [ContactController::class, 'store']);
-Route::post('/contact', [MessageController::class, 'store']);
 
-
-// 🌐 Free/Pro prezentacije – kreiranje i pregled (javno dostupno)
+// Free/Pro prezentacije – javne rute
 Route::prefix('free-site-request')->group(function () {
-    Route::get('/all-site-requests', [FreeSiteRequestController::class, 'index']); // ❗ VAŽNO: mora pre /{slug}
+    Route::get('/all-site-requests', [FreeSiteRequestController::class, 'index']); // mora pre /{slug}
     Route::post('/', [FreeSiteRequestController::class, 'store']);
     Route::get('/{slug}', [FreeSiteRequestController::class, 'show']);
 });
 
-// 🐞 Ranjivosti (javno prijavljivanje)
+// Prijava ranjivosti
 Route::post('/report-vulnerability', [VulnerabilityReportController::class, 'store']);
-Route::post('/vulnerabilities', [VulnerabilityReportController::class, 'store']);
 
-// ✅ Pregled prezentacije preko alternativne rute (slug)
+// Alternativna ruta za prikaz prezentacije
 Route::get('/site-request/{slug}', [FreeSiteRequestController::class, 'show']);
 
-//
-// 🔐 ZAŠTIĆENE RUTE (auth:sanctum)
-//
+/* -------------------- ZAŠTIĆENE RUTE -------------------- */
 Route::middleware('auth:sanctum')->group(function () {
 
-    // 👤 Autentifikovani korisnik
+    // Autentifikovani korisnik
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    // ❌ Samostalno brisanje naloga (osim admina)
+    // Samostalno brisanje naloga (osim admina i superadmina)
     Route::delete('/user', function (Request $request) {
         $user = $request->user();
 
@@ -71,63 +67,64 @@ Route::middleware('auth:sanctum')->group(function () {
         return response()->json(['message' => 'Vaš nalog je uspešno obrisan.']);
     });
 
-    // 📩 Moje poruke
+    // Poruke
     Route::get('/my-messages', fn(Request $request) => $request->user()->messages()->latest()->get());
+    Route::get('/messages', [MessageController::class, 'index']);
+    Route::post('/messages', [MessageController::class, 'store']);
+    Route::delete('/messages/{id}', [MessageController::class, 'destroy']);
 
-    //
-    // 🛠 ADMIN RUTE
-    //
-
-    // 👥 Korisnici
+    // Korisnici (admin)
     Route::get('/users', [UserController::class, 'index']);
     Route::patch('/users/{id}/role', [UserController::class, 'changeRole']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
-    // 📥 Poruke korisnika (admin)
-    Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/messages', [MessageController::class, 'index']);
-    Route::post('/messages', [MessageController::class, 'store']);
-    Route::delete('/messages/{id}', [MessageController::class, 'destroy']); // ⬅️ ovo mora da postoji
-});
-
-    // 🌐 FreeSiteRequest – izmena i brisanje
+    // FreeSiteRequest – admin izmene
     Route::prefix('free-site-request')->group(function () {
         Route::put('/{slug}', [FreeSiteRequestController::class, 'update']);
         Route::delete('/{slug}', [FreeSiteRequestController::class, 'destroy']);
         Route::patch('/{slug}/status', [FreeSiteRequestController::class, 'changeStatus']);
     });
 
-    // 🛡️ Ranjivosti
+    // Prijave ranjivosti – admin
     Route::get('/vulnerabilities', [VulnerabilityReportController::class, 'index']);
     Route::delete('/vulnerabilities/{id}', [VulnerabilityReportController::class, 'destroy']);
+
+    // Stripe naplata
+    Route::post('/stripe/checkout', [StripeController::class, 'checkout']);
+
+    // Fakture
+    Route::put('/invoice-request/{id}/status', [InvoiceRequestController::class, 'updateStatus']);
+    Route::delete('/invoice-request/{id}', [InvoiceRequestController::class, 'destroy']);
+    Route::get('/my-invoices', [InvoiceRequestController::class, 'userInvoices']);
+    Route::get('/admin/invoices', [InvoiceRequestController::class, 'allInvoices']);
 });
 
-    Route::post('/ai/suggest', [AIController::class, 'suggest']);
-    Route::post('/ai/chat', [AIController::class, 'chat']);
+/* -------------------- OSTALE RUTE -------------------- */
 
-    Route::get('/demo-sites', [FreeSiteRequestController::class, 'demoSites']);
-    Route::post('/send-presentation/{slug}', [FreeSiteRequestController::class, 'sendToClient']);
+// AI rute
+Route::post('/ai/suggest', [AIController::class, 'suggest']);
+Route::post('/ai/chat', [AIController::class, 'chat']);
 
-    // 🛒 Stripe naplata
-    Route::middleware('auth:sanctum')->post('/stripe/checkout', [StripeController::class, 'checkout']);
-    
+// Demo sajtovi
+Route::get('/demo-sites', [FreeSiteRequestController::class, 'demoSites']);
+Route::post('/send-presentation/{slug}', [FreeSiteRequestController::class, 'sendToClient']);
 
-    // 🧾 Zahtevi za fakture
-    Route::middleware('auth:sanctum')->put('/invoice-request/{id}/status', [InvoiceRequestController::class, 'updateStatus']);
-    Route::middleware('auth:sanctum')->delete('/invoice-request/{id}', [InvoiceRequestController::class, 'destroy']);
+// Kreiranje fakture (javno)
+Route::post('/invoice-request', [InvoiceRequestController::class, 'store']);
+Route::get('/invoice-request/{id}/pdf', [InvoiceRequestController::class, 'download']);
 
+// Plausible Analytics
+Route::post('/plausible/query', [PlausibleController::class, 'query']);
 
+// Test/Debug rute
+Route::get('/test-all-sites', [FreeSiteRequestController::class, 'index']);
+Route::get('/test-site-request/{slug}', [FreeSiteRequestController::class, 'show']);
 
-    Route::post('/invoice-request', [InvoiceRequestController::class, 'store']);
-    Route::get('/invoice-request/{id}/pdf', [InvoiceRequestController::class, 'download']);
-    Route::middleware('auth:sanctum')->get('/my-invoices', [InvoiceRequestController::class, 'userInvoices']);
-    Route::middleware('auth:sanctum')->get('/admin/invoices', [InvoiceRequestController::class, 'allInvoices']);
-
-    // Plausible Analytics
-    Route::post('/plausible/query', [PlausibleController::class, 'query']);
-
-    //
-    // 🧪 TEST / DEBUG (opciono obriši kasnije)
-    //
-    Route::get('/test-all-sites', [FreeSiteRequestController::class, 'index']);
-    Route::get('/test-site-request/{slug}', [FreeSiteRequestController::class, 'show']);
+// Health check
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'time'   => now()->toIso8601String(),
+        'app'    => config('app.name'),
+    ]);
+});

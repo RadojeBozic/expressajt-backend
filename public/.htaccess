@@ -1,18 +1,15 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /gbs-backend/public/
+  RewriteEngine On
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  # fajl/folder -> posluži direktno
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+  # API na Laravel
+  RewriteCond %{REQUEST_URI} ^/api [NC]
+  RewriteRule ^ index.php [L]
 
-    # Send Requests To Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+  # ostalo -> SPA
+  RewriteRule . /index.html [L]
 </IfModule>
