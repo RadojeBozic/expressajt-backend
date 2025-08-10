@@ -105,59 +105,60 @@
 </template>
 
 <script>
-
-import axios from 'axios';
+import api from '../api/http';
 import Header from '../partials/Header.vue';
+import { saveLoginPayload } from '../utils/auth';
 
 export default {
   name: 'SignIn',
+  components: { Header },
   data() {
-  return {
-    email: '',
-    password: '',
-    success: '',
-    error: '',
-  };
-},
-  components: {
-    Header,
+    return {
+      email: '',
+      password: '',
+      success: '',
+      error: '',
+      loading: false,
+    };
   },
-   methods: {
-  async submitForm() {
-    try {
-      const response = await axios.post('http://localhost:8080/api/login', {
-        email: this.email,
-        password: this.password,
-      });
-
-      const { token, user } = response.data;
-
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
-
-      this.success = this.$t('auth.success') || 'Uspešno ste prijavljeni!';
-      this.error = '';
-      this.$router.push('/dashboard');
-
-    } catch (error) {
+  methods: {
+    async submitForm() {
       this.success = '';
-      if (error.response) {
-        if (error.response.status === 422) {
-          this.error = this.$t('auth.validation_error') || 'Nedostaju obavezna polja.';
-        } else if (error.response.status === 401) {
-          this.error = this.$t('auth.invalid_credentials') || 'Neispravan email ili lozinka.';
+      this.error = '';
+      this.loading = true;
+
+      try {
+        // Ako koristiš Sanctum/session, prvo uradi:
+        // await api.get('/sanctum/csrf-cookie');
+
+        const { data } = await api.post('/login', {
+          email: this.email,
+          password: this.password,
+        });
+
+        // Sačuvaj token/user bez rizika od "undefined"
+        saveLoginPayload(data, this.email);
+
+        this.success = this.$t?.('auth.success') || 'Uspešno ste prijavljeni!';
+        this.$router.push('/dashboard');
+      } catch (error) {
+        if (error.response) {
+          if (error.response.status === 422) {
+            this.error = this.$t?.('auth.validation_error') || 'Nedostaju obavezna polja.';
+          } else if (error.response.status === 401) {
+            this.error = this.$t?.('auth.invalid_credentials') || 'Neispravan email ili lozinka.';
+          } else {
+            this.error = this.$t?.('auth.error') || 'Greška na serveru.';
+          }
+          console.error('❌ Auth greška:', error.response.data);
         } else {
-          this.error = this.$t('auth.error') || 'Greška na serveru.';
+          this.error = 'Došlo je do greške u mreži.';
+          console.error('❌ Mrežna greška:', error);
         }
-      } else {
-        this.error = 'Došlo je do greške u mreži.';
+      } finally {
+        this.loading = false;
       }
-
-      console.error('❌ Auth greška:', error.response?.data || error);
-    }
-  }
-}
-
-
-}
+    },
+  },
+};
 </script>

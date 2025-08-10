@@ -91,108 +91,97 @@
 
 
 <script>
-import axios from 'axios'
-import { getCurrentUser } from '../utils/auth'
-import Header from '../partials/Header.vue'
-import Footer from '../partials/Footer.vue'
+import api from '../api/http';
+import { getCurrentUser, clearAuth } from '../utils/auth';
+import Header from '../partials/Header.vue';
+import Footer from '../partials/Footer.vue';
 
 export default {
   name: 'Dashboard',
   components: { Header, Footer },
   data() {
+    const user = getCurrentUser();
     return {
-      user: getCurrentUser(),
+      user,
       messages: [],
       invoices: [],
       services: [
-  { key: 'free', route: '/services/freesite' },
-  { key: 'pro', route: '/services/prosite' },
-  { key: 'w3', route: '/services/w3site' },
-  { key: 'cruip', route: '/services/cruipsite' },
-  { key: 'original', route: '/services/originalsite' },
-  { key: 'basicshop', route: '/services/basicshop' },
-  { key: 'unishop', route: '/services/unishop' },
-  { key: 'domain', route: '/services/domain-hosting' },
-  { key: 'maintenance', route: '/services/maintenance' },
-  { key: 'design', route: '/services/design' },
-  { key: 'seo', route: '/services/seo' },
-  { key: 'marketing', route: '/services/marketing' },
-  { key: 'translation', route: '/services/translation' }
-]
-    }
+        { key: 'free', route: '/services/freesite' },
+        { key: 'pro', route: '/services/prosite' },
+        { key: 'w3', route: '/services/w3site' },
+        { key: 'cruip', route: '/services/cruipsite' },
+        { key: 'original', route: '/services/originalsite' },
+        { key: 'basicshop', route: '/services/basicshop' },
+        { key: 'unishop', route: '/services/unishop' },
+        { key: 'domain', route: '/services/domain-hosting' },
+        { key: 'maintenance', route: '/services/maintenance' },
+        { key: 'design', route: '/services/design' },
+        { key: 'seo', route: '/services/seo' },
+        { key: 'marketing', route: '/services/marketing' },
+        { key: 'translation', route: '/services/translation' },
+      ],
+    };
   },
   mounted() {
     if (!this.user) {
-      this.$router.push('/signin')
-    } else {
-      this.fetchMessages()
-      this.fetchInvoices()
+      this.$router.replace('/signin');
+      return;
     }
+    this.fetchMessages();
+    this.fetchInvoices();
   },
   methods: {
     async fetchMessages() {
       try {
-        const token = localStorage.getItem('token')
-        const res = await axios.get('http://localhost:8080/api/my-messages', {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        this.messages = res.data
+        const { data } = await api.get('/my-messages');
+        this.messages = Array.isArray(data) ? data : (data?.data ?? []);
       } catch (error) {
-        console.error('❌ Greška pri preuzimanju poruka:', error)
+        console.error('❌ Greška pri preuzimanju poruka:', error);
+        // ako dobiješ 401, interceptor će te već izlogovati (ako je uključen)
       }
     },
+
+    async fetchInvoices() {
+      try {
+        const { data } = await api.get('/my-invoices');
+        this.invoices = Array.isArray(data) ? data : (data?.data ?? []);
+      } catch (err) {
+        console.error('❌ Greška pri učitavanju profaktura:', err);
+      }
+    },
+
+    formatPrice(value, currency) {
+      const val = currency === 'rsd' ? value * 117.5 : value;
+      return new Intl.NumberFormat('sr-RS', {
+        style: 'currency',
+        currency: currency === 'rsd' ? 'RSD' : 'EUR',
+      }).format(val / 100);
+    },
+
+    async deleteInvoice(id) {
+      if (!confirm('Da li ste sigurni da želite da obrišete profakturu?')) return;
+      try {
+        await api.delete(`/invoice-request/${id}`);
+        this.invoices = this.invoices.filter((i) => i.id !== id);
+        alert('✅ Profaktura obrisana.');
+      } catch (err) {
+        console.error('❌ Greška pri brisanju:', err);
+      }
+    },
+
     async confirmDeleteAccount() {
-      if (!confirm('Da li ste sigurni da želite da obrišete svoj nalog? Ova akcija je nepovratna.')) return
+      if (!confirm('Da li ste sigurni da želite da obrišete svoj nalog? Ova akcija je nepovratna.')) return;
 
       try {
-        const token = localStorage.getItem('token')
-        await axios.delete('http://localhost:8080/api/user', {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-
-        // Očisti lokalni storage i preusmeri na početnu stranicu
-        localStorage.removeItem('token')
-        localStorage.removeItem('user')
-        alert('Vaš nalog je uspešno obrisan.')
-        this.$router.push('/')
+        await api.delete('/user');
+        clearAuth();
+        alert('Vaš nalog je uspešno obrisan.');
+        this.$router.push('/');
       } catch (error) {
-        console.error('❌ Greška pri brisanju naloga:', error)
-        alert('Greška pri brisanju naloga. Pokušajte ponovo.')
+        console.error('❌ Greška pri brisanju naloga:', error);
+        alert('Greška pri brisanju naloga. Pokušajte ponovo.');
       }
     },
-    async fetchInvoices() {
-  try {
-    const token = localStorage.getItem('token')
-    const res = await axios.get('http://localhost:8080/api/my-invoices', {
-      headers: { Authorization: `Bearer ${token}` }
-    })
-    this.invoices = res.data
-  } catch (err) {
-    console.error('❌ Greška pri učitavanju profaktura:', err)
-  }
-},
-  formatPrice(value, currency) {
-    const val = currency === 'rsd' ? value * 117.5 : value
-    return new Intl.NumberFormat('sr-RS', {
-      style: 'currency',
-      currency: currency === 'rsd' ? 'RSD' : 'EUR'
-    }).format(val / 100)
   },
-  async deleteInvoice(id) {
-  if (!confirm('Da li ste sigurni da želite da obrišete profakturu?')) return
-
-  try {
-    const token = localStorage.getItem('token')
-    await axios.delete(`http://localhost:8080/api/invoice-request/${id}`, {
-      headers: { Authorization: `Bearer ${token}` }
-    })
-    this.invoices = this.invoices.filter(i => i.id !== id)
-    alert('✅ Profaktura obrisana.')
-  } catch (err) {
-    console.error('❌ Greška pri brisanju:', err)
-  }
-}
-
-  }
-}
+};
 </script>
