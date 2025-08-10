@@ -69,3 +69,7 @@ export function isAdminUser(u = getCurrentUser()) {
   const role = u?.role;
   return role === 'admin' || role === 'superadmin';
 }
+
+export function isAuthenticated() {
+  return isLoggedIn();
+}

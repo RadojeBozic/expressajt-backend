@@ -112,7 +112,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getCurrentUser, logout as doLogout } from '../utils/auth'
+import { getCurrentUser, clearAuth as doLogout } from '../utils/auth'
 import { useCart } from '../utils/CartService'
 
 const mobileNavOpen = ref(false)

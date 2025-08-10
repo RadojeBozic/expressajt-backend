@@ -67,7 +67,7 @@
 
 <script>
 import DemoBox from '../components/DemoBox.vue'
-import { isAuthenticated } from '../utils/auth'
+import { isLoggedIn } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
 import api from '../api/http' // ✅ centralna axios instanca (baseURL = /api)
@@ -84,7 +84,7 @@ export default {
   },
   computed: {
     isAuthenticated() {
-      return isAuthenticated()
+      return isLoggedIn()
     },
   },
   async mounted() {
