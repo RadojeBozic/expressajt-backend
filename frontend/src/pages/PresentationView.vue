@@ -105,11 +105,11 @@
 </template>
 
 <script>
-import axios from 'axios'
 import html2pdf from 'html2pdf.js'
 import { getCurrentUser } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
+import api from '../api/http' // ✅ centralna axios instanca
 
 // Šabloni
 import ClassicPreview from '../templates/ClassicPreview.vue'
@@ -144,7 +144,8 @@ export default {
     return {
       siteData: null,
       user: getCurrentUser(),
-      copySuccess: false
+      copySuccess: false,
+      loading: false
     }
   },
   computed: {
@@ -175,36 +176,34 @@ export default {
   },
   methods: {
     async fetchSite() {
+      this.loading = true
       try {
-        const token = localStorage.getItem('token')
-        const res = await axios.get(`http://localhost:8080/api/site-request/${this.slug}`, {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        this.siteData = res.data
+        const { data } = await api.get(`/site-request/${this.slug}`) // → /api/site-request/:slug
+        this.siteData = data
       } catch (err) {
-        console.error('❌', err)
-        alert(this.$t('siteview.errors.fetch'))
+        console.error('❌ Fetch error:', err)
+        alert(this.$t?.('siteview.errors.fetch') || 'Greška pri učitavanju prezentacije.')
+      } finally {
+        this.loading = false
       }
     },
     async confirmDelete() {
-      const confirmMsg = this.$t('siteview.confirmDelete')
+      const confirmMsg = this.$t?.('siteview.confirmDelete') || 'Da li sigurno želite da obrišete prezentaciju?'
       if (!confirm(confirmMsg)) return
 
       try {
-        const token = localStorage.getItem('token')
-        await axios.delete(`http://localhost:8080/api/site-request/${this.slug}`, {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        alert(this.$t('siteview.deleted'))
+        await api.delete(`/site-request/${this.slug}`) // → /api/site-request/:slug
+        alert(this.$t?.('siteview.deleted') || 'Prezentacija je obrisana.')
 
-        const destination = this.user?.role === 'admin' || this.user?.role === 'superadmin'
-          ? '/admin/dashboard'
-          : '/dashboard'
+        const destination =
+          this.user?.role === 'admin' || this.user?.role === 'superadmin'
+            ? '/admin/dashboard'
+            : '/dashboard'
 
         this.$router.push(destination)
       } catch (err) {
-        console.error('❌', err)
-        alert(this.$t('siteview.errors.delete'))
+        console.error('❌ Delete error:', err)
+        alert(this.$t?.('siteview.errors.delete') || 'Greška pri brisanju prezentacije.')
       }
     },
     copyLink() {

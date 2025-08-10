@@ -66,37 +66,44 @@
 </template>
 
 <script>
-import axios from 'axios'
 import DemoBox from '../components/DemoBox.vue'
 import { isAuthenticated } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
+import api from '../api/http' // ✅ centralna axios instanca (baseURL = /api)
 
 export default {
   name: 'DemoPreviews',
-  components: {
-    DemoBox,
-    Header,
-    Footer
-  },
+  components: { DemoBox, Header, Footer },
   data() {
     return {
-      demoSites: []
+      demoSites: [],
+      loading: false,
+      error: null,
     }
   },
   computed: {
     isAuthenticated() {
       return isAuthenticated()
-    }
+    },
   },
-  mounted() {
-    axios.get('http://localhost:8080/api/demo-sites')
-      .then(res => {
-        this.demoSites = res.data
-      })
-      .catch(err => {
+  async mounted() {
+    await this.loadDemoSites()
+  },
+  methods: {
+    async loadDemoSites() {
+      this.loading = true
+      this.error = null
+      try {
+        const { data } = await api.get('/demo-sites') // → /api/demo-sites
+        this.demoSites = Array.isArray(data) ? data : (data?.data ?? [])
+      } catch (err) {
         console.error('❌ Greška pri učitavanju demo sajtova:', err)
-      })
-  }
+        this.error = 'Greška pri učitavanju demo sajtova.'
+      } finally {
+        this.loading = false
+      }
+    },
+  },
 }
 </script>

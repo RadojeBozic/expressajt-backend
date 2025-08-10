@@ -123,38 +123,54 @@ export default {
   },
   methods: {
     async submitForm() {
+      if (this.loading) return; // 🛑 spreči dupli submit
       this.success = '';
       this.error = '';
-      this.loading = true;
 
+      // 🧪 brza validacija
+      if (!this.email?.trim() || !this.password) {
+        this.error = this.$t?.('auth.validation_error') || 'Email i lozinka su obavezni.';
+        return;
+      }
+
+      this.loading = true;
       try {
-        // Ako koristiš Sanctum/session, prvo uradi:
+        // Sanctum? -> odkomentariši:
         // await api.get('/sanctum/csrf-cookie');
 
         const { data } = await api.post('/login', {
-          email: this.email,
+          email: this.email.trim(),
           password: this.password,
         });
 
-        // Sačuvaj token/user bez rizika od "undefined"
         saveLoginPayload(data, this.email);
 
         this.success = this.$t?.('auth.success') || 'Uspešno ste prijavljeni!';
-        this.$router.push('/dashboard');
+
+        // 🔁 vrati gde je hteo da ide (npr. /dashboard, /checkout...)
+        const fallback = '/dashboard';
+        const redirect = this.$route?.query?.redirect;
+        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/')
+          ? redirect
+          : fallback);
       } catch (error) {
-        if (error.response) {
-          if (error.response.status === 422) {
-            this.error = this.$t?.('auth.validation_error') || 'Nedostaju obavezna polja.';
-          } else if (error.response.status === 401) {
-            this.error = this.$t?.('auth.invalid_credentials') || 'Neispravan email ili lozinka.';
-          } else {
-            this.error = this.$t?.('auth.error') || 'Greška na serveru.';
-          }
-          console.error('❌ Auth greška:', error.response.data);
+        // Lepše izvlačenje poruke sa backenda
+        const msg =
+          error?.response?.data?.message ||
+          error?.response?.data?.error ||
+          null;
+
+        if (error.response?.status === 422) {
+          this.error = this.$t?.('auth.validation_error') || (msg ?? 'Nedostaju obavezna polja.');
+        } else if (error.response?.status === 401) {
+          this.error = this.$t?.('auth.invalid_credentials') || (msg ?? 'Neispravan email ili lozinka.');
+        } else if (msg) {
+          this.error = msg;
         } else {
-          this.error = 'Došlo je do greške u mreži.';
-          console.error('❌ Mrežna greška:', error);
+          this.error = this.$t?.('auth.error') || 'Greška na serveru.';
         }
+
+        console.error('❌ Auth greška:', error?.response ?? error);
       } finally {
         this.loading = false;
       }

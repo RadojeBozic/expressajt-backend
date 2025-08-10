@@ -131,7 +131,8 @@
 
 <script>
 import Header from '../partials/Header.vue'
-import api from '@/utils/api'
+import api from '../api/http'                 // ✅ centralna axios instanca (baseURL=/api)
+import { saveLoginPayload } from '../utils/auth' // ✅ sigurno čuvanje token/user
 
 export default {
   name: 'SignUp',
@@ -146,24 +147,45 @@ export default {
   },
   methods: {
     async submitForm() {
+      if (this.loading) return;
       this.loading = true
       this.success = ''
       this.error = ''
-      try {
-        const { data } = await api.post('/register', this.form)
-        const { token, user } = data
 
-        localStorage.setItem('token', token)
-        localStorage.setItem('user', JSON.stringify(user))
+      // brza validacija
+      if (!this.form.name?.trim() || !this.form.email?.trim() || !this.form.password) {
+        this.error = this.$t?.('register.validation_error') || 'Sva polja su obavezna.'
+        this.loading = false
+        return
+      }
+
+      try {
+        // Ako koristiš Sanctum/session, odkomentariši:
+        // await api.get('/sanctum/csrf-cookie')
+
+        const payload = {
+          ...this.form,
+          name: this.form.name.trim(),
+          email: this.form.email.trim(),
+        }
+
+        const { data } = await api.post('/register', payload)
+
+        // sigurno upiši token/user (izbegava "undefined" i loš JSON)
+        saveLoginPayload(data, this.form.email)
 
         this.success = this.$t?.('register.success') || 'Registracija uspešna!'
-        this.$router.push('/dashboard')
+
+        // podrži redirect query ako postoji (?redirect=/nesto)
+        const redirect = this.$route?.query?.redirect
+        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard')
       } catch (err) {
+        const msg = err?.response?.data?.message || err?.response?.data?.error || null
         if (err.response?.status === 422) {
-          this.error = this.$t?.('register.validation_error') || 'Greška u validaciji.'
+          this.error = this.$t?.('register.validation_error') || (msg ?? 'Greška u validaciji.')
           console.error('Validacija:', err.response.data.errors)
         } else {
-          this.error = this.$t?.('register.error') || 'Greška prilikom registracije.'
+          this.error = this.$t?.('register.error') || (msg ?? 'Greška prilikom registracije.')
           console.error('Backend greška:', err)
         }
       } finally {

@@ -1,3 +1,4 @@
+// src/utils/storage.js
 export function readJSON(key, fallback = null) {
   try {
     const raw = localStorage.getItem(key);

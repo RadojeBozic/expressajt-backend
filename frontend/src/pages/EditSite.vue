@@ -78,7 +78,7 @@
 
 
 <script>
-import axios from 'axios'
+import api from '../api/http'
 import { getCurrentUser } from '../utils/auth'
 
 export default {
@@ -107,15 +107,15 @@ export default {
         aboutImage: null,
         offerTitle: '',
         offerItems: [{ title: '', image: null }],
-        template: 'klasicni'
-      }
+        template: 'klasicni',
+      },
     }
   },
   async created() {
     try {
-      const res = await axios.get(`http://localhost:8080/api/free-site-request/${this.slug}`)
-      const site = res.data
+      const { data: site } = await api.get(`/free-site-request/${this.slug}`)
 
+      // zaštita: vlasnik ili admin/superadmin
       if (!this.user || (this.user.id !== site.user_id && !['admin', 'superadmin'].includes(this.user.role))) {
         return this.$router.push('/dashboard')
       }
@@ -123,37 +123,36 @@ export default {
       this.form = {
         ...this.form,
         siteType: site.type,
-        name: site.name,
-        description: site.description,
-        email: site.email,
-        phone: site.phone,
-        facebook: site.facebook,
-        instagram: site.instagram,
-        heroTitle: site.hero_title,
-        heroSubtitle: site.hero_subtitle,
-        aboutTitle: site.about_title,
-        aboutText: site.about_text,
-        offerTitle: site.offer_title || '',
-        template: site.template || 'klasicni',
-        offerItems: site.offer_items?.map(item => ({
-          title: item.title,
-          image: null
-        })) || [{ title: '', image: null }]
+        name: site.name ?? '',
+        description: site.description ?? '',
+        email: site.email ?? '',
+        phone: site.phone ?? '',
+        facebook: site.facebook ?? '',
+        instagram: site.instagram ?? '',
+        heroTitle: site.hero_title ?? '',
+        heroSubtitle: site.hero_subtitle ?? '',
+        aboutTitle: site.about_title ?? '',
+        aboutText: site.about_text ?? '',
+        offerTitle: site.offer_title ?? '',
+        template: site.template ?? 'klasicni',
+        offerItems: Array.isArray(site.offer_items)
+          ? site.offer_items.map(item => ({ title: item?.title ?? '', image: null }))
+          : [{ title: '', image: null }],
       }
     } catch (err) {
-      console.error(err)
-      this.error = this.$t('edit.errors.load')
+      console.error('❌ Load error:', err)
+      this.error = this.$t?.('edit.errors.load') || 'Greška pri učitavanju podataka.'
     }
   },
   methods: {
     handleFile(e, field) {
-      const file = e.target.files[0]
+      const file = e.target.files?.[0]
       if (file) this.form[field] = file
     },
     handleOfferImageUpload(e, index) {
-      const file = e.target.files[0]
-      if (file && (!file.type.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
-        this.error = this.$t('edit.errors.image', { index: index + 1 })
+      const file = e.target.files?.[0]
+      if (file && (!file.type?.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
+        this.error = this.$t?.('edit.errors.image', { index: index + 1 }) || 'Pogrešan format ili prevelika slika.'
         this.form.offerItems[index].image = null
         return
       }
@@ -174,51 +173,47 @@ export default {
 
       try {
         const fd = new FormData()
-        const token = localStorage.getItem('token')
 
+        // obična polja (osim offerItems)
         Object.entries(this.form).forEach(([key, value]) => {
           if (key !== 'offerItems' && value !== null && typeof value !== 'undefined') {
             fd.append(key, value)
           }
         })
 
-        fd.append('offerTitle', this.form.offerTitle)
+        // naslov ponude
+        fd.append('offerTitle', this.form.offerTitle ?? '')
 
+        // items
         this.form.offerItems.forEach((item, i) => {
-          fd.append(`offerItems[${i}][title]`, item.title)
+          fd.append(`offerItems[${i}][title]`, item.title ?? '')
           if (item.image) {
             fd.append(`offerItems[${i}][image]`, item.image)
           }
         })
 
-        const response = await axios.post(
-          `http://localhost:8080/api/free-site-request/${this.slug}?_method=PUT`,
-          fd,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-Type': 'multipart/form-data'
-            }
-          }
+        // Laravel: POST + _method=PUT radi pouzdano sa multipart/form-data
+        const { data } = await api.post(
+          `/free-site-request/${this.slug}?_method=PUT`,
+          fd
         )
 
-        this.success = this.$t('edit.success')
-
+        this.success = this.$t?.('edit.success') || 'Uspešno sačuvano.'
         setTimeout(() => {
-          this.$router.push(`/prezentacije/${response.data.slug}`)
-        }, 1500)
+          this.$router.push(`/prezentacije/${data?.slug || this.slug}`)
+        }, 1200)
       } catch (err) {
-        console.error(err)
+        console.error('❌ Save error:', err)
         if (err.response?.status === 422 && err.response.data?.errors) {
           const errors = Object.values(err.response.data.errors).flat()
           this.error = errors.join(', ')
         } else {
-          this.error = this.$t('edit.errors.save')
+          this.error = this.$t?.('edit.errors.save') || 'Greška pri čuvanju podataka.'
         }
       } finally {
         this.loading = false
       }
-    }
-  }
+    },
+  },
 }
 </script>

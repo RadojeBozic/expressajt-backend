@@ -10,7 +10,7 @@
 
 
 <script>
-import axios from 'axios'
+import api from '../api/http'
 
 // Šabloni
 import ClassicPreview from '../templates/ClassicPreview.vue'
@@ -41,7 +41,9 @@ export default {
   },
   data() {
     return {
-      siteData: null
+      siteData: null,
+      loading: false,
+      error: null,
     }
   },
   computed: {
@@ -61,17 +63,19 @@ export default {
       return map[this.siteData?.template] || 'ClassicPreview'
     }
   },
-   methods: {
+  methods: {
     async fetchSite() {
+      this.loading = true
+      this.error = null
       try {
-        const token = localStorage.getItem('token')
-        const res = await axios.get(`http://localhost:8080/api/site-request/${this.slug}`, {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        this.siteData = res.data
+        const { data } = await api.get(`/site-request/${this.slug}`) // → /api/site-request/:slug
+        this.siteData = data
       } catch (err) {
         console.error('❌ Greška pri učitavanju sajta:', err)
+        this.error = 'Greška pri učitavanju sajta.'
         this.siteData = null
+      } finally {
+        this.loading = false
       }
     }
   },
@@ -82,8 +86,6 @@ export default {
 </script>
 
 <style>
-/* Dodaj ako želiš da ukloniš marginu za PDF */
-body {
-  margin: 0;
-}
+/* (Opc.) ukloni marginu tela za “čist” print/PDF render */
+body { margin: 0; }
 </style>

@@ -101,10 +101,9 @@
 
 
 <script>
-import axios from 'axios'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
-import { useRoute } from 'vue-router'
+import api from '../api/http' // ✅ centralna axios instanca (baseURL=/api + interceptor)
 
 export default {
   name: 'FreeSiteForm',
@@ -112,7 +111,6 @@ export default {
   data() {
     return {
       loading: false,
-      route: useRoute(),
       form: {
         name: '',
         description: '',
@@ -129,15 +127,16 @@ export default {
         aboutText: '',
         offerTitle: '',
         offerItems: [{ title: '', image: null }],
-        template: localStorage.getItem('selectedTemplate') || 'klasicni'
+        template: localStorage.getItem('selectedTemplate') || 'klasicni',
       },
       successMessage: '',
-      errorMessage: ''
+      errorMessage: '',
     }
   },
-  mounted() {
-    const slug = this.route.query.fromSlug
-    if (slug) this.fetchFromSlug(slug)
+  async mounted() {
+    // ✅ U Options API koristi this.$route (ne useRoute())
+    const slug = this.$route?.query?.fromSlug
+    if (slug) await this.fetchFromSlug(slug)
   },
   methods: {
     addItem() {
@@ -149,9 +148,9 @@ export default {
       this.form.offerItems.splice(index, 1)
     },
     handleImageFile(e, field) {
-      const file = e.target.files[0]
-      if (file && (!file.type.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
-        this.errorMessage = this.$t('freesite.errors.image')
+      const file = e.target.files?.[0]
+      if (file && (!file.type?.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
+        this.errorMessage = this.$t?.('freesite.errors.image') || 'Slika je pogrešnog formata ili prevelika.'
         this.form[field] = null
         return
       }
@@ -159,9 +158,9 @@ export default {
       this.errorMessage = ''
     },
     handleOfferImageUpload(e, index) {
-      const file = e.target.files[0]
-      if (file && (!file.type.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
-        this.errorMessage = this.$t('freesite.errors.offerImage', { index: index + 1 })
+      const file = e.target.files?.[0]
+      if (file && (!file.type?.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
+        this.errorMessage = this.$t?.('freesite.errors.offerImage', { index: index + 1 }) || 'Pogrešna slika u ponudi.'
         this.form.offerItems[index].image = null
         return
       }
@@ -176,35 +175,34 @@ export default {
       try {
         const formData = new FormData()
 
-        // Dinamički dodaj polja
+        // Dinamički polja
         for (const key in this.form) {
           if (key === 'offerItems') {
             this.form.offerItems.forEach((item, i) => {
-              formData.append(`offerItems[${i}][title]`, item.title)
+              formData.append(`offerItems[${i}][title]`, item.title ?? '')
               if (item.image instanceof File) {
                 formData.append(`offerItems[${i}][image]`, item.image)
               }
             })
           } else if (this.form[key] instanceof File) {
             formData.append(key, this.form[key])
-          } else if (this.form[key]) {
+          } else if (this.form[key] !== null && typeof this.form[key] !== 'undefined') {
             formData.append(key, this.form[key])
           }
         }
 
-        const res = await axios.post('http://localhost:8080/api/free-site-request', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        })
+        // ✅ preko api -> POST /api/free-site-request
+        const { data } = await api.post('/free-site-request', formData /*, { headers: { 'Content-Type': 'multipart/form-data' } }*/)
 
-        this.successMessage = this.$t('freesite.success')
-        this.$router.push(`/prezentacije/${res.data.slug}`)
+        this.successMessage = this.$t?.('freesite.success') || 'Zahtev uspešno poslat.'
+        this.$router.push(`/prezentacije/${data?.slug}`)
       } catch (err) {
-        console.error('❌', err.response || err)
+        console.error('❌', err?.response || err)
         if (err.response?.data?.errors) {
           const errors = Object.values(err.response.data.errors).flat()
-          this.errorMessage = errors[0] || this.$t('freesite.errors.general')
+          this.errorMessage = errors?.[0] || this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
         } else {
-          this.errorMessage = this.$t('freesite.errors.general')
+          this.errorMessage = this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
         }
       } finally {
         this.loading = false
@@ -212,31 +210,29 @@ export default {
     },
     async fetchFromSlug(slug) {
       try {
-        const res = await axios.get(`http://localhost:8080/api/free-site-request/${slug}`)
-        const source = res.data
+        // ✅ preko api -> GET /api/free-site-request/:slug
+        const { data: source } = await api.get(`/free-site-request/${slug}`)
 
-        this.form.name = source.name + ' (kopija)'
-        this.form.description = source.description
-        this.form.email = source.email
-        this.form.phone = source.phone
-        this.form.facebook = source.facebook
-        this.form.instagram = source.instagram
-        this.form.heroTitle = source.hero_title
-        this.form.heroSubtitle = source.hero_subtitle
-        this.form.aboutTitle = source.about_title
-        this.form.aboutText = source.about_text
-        this.form.offerTitle = source.offer_title
-        this.form.offerItems = source.offer_items.map(item => ({
-          title: item.title,
-          image: null
-        }))
-        this.form.template = source.template
-
+        this.form.name = (source?.name || '') + ' (kopija)'
+        this.form.description = source?.description ?? ''
+        this.form.email = source?.email ?? ''
+        this.form.phone = source?.phone ?? ''
+        this.form.facebook = source?.facebook ?? ''
+        this.form.instagram = source?.instagram ?? ''
+        this.form.heroTitle = source?.hero_title ?? ''
+        this.form.heroSubtitle = source?.hero_subtitle ?? ''
+        this.form.aboutTitle = source?.about_title ?? ''
+        this.form.aboutText = source?.about_text ?? ''
+        this.form.offerTitle = source?.offer_title ?? ''
+        this.form.offerItems = Array.isArray(source?.offer_items)
+          ? source.offer_items.map(item => ({ title: item?.title ?? '', image: null }))
+          : [{ title: '', image: null }]
+        this.form.template = source?.template ?? this.form.template
       } catch (err) {
         console.error('❌', err)
-        this.errorMessage = this.$t('freesite.errors.general')
+        this.errorMessage = this.$t?.('freesite.errors.general') || 'Greška pri učitavanju.'
       }
-    }
-  }
+    },
+  },
 }
 </script>

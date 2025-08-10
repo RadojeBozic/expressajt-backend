@@ -74,13 +74,17 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import axios from 'axios'
+import { useI18n } from 'vue-i18n'
+
 import Header from '@/partials/Header.vue'
 import Footer from '@/partials/Footer.vue'
 import InvoiceModal from '@/partials/InvoiceModal.vue'
+
 import { useCart } from '@/utils/CartService'
-import { useI18n } from 'vue-i18n'
-import { track, trackOnce } from '@/utils/analytics' // Plausible helper
+import { track, trackOnce } from '@/utils/analytics'
+
+// ✅ koristimo centralnu axios instancu
+import api from '@/api/http'
 
 const { t } = useI18n()
 
@@ -137,14 +141,12 @@ async function handleStripeCheckout() {
   try {
     const token = 'tok_visa' // Stripe test token
 
-    // koristi axios.defaults.baseURL iz main.js
-    const res = await axios.post('/stripe/checkout', {
+    // ✅ api.post('/stripe/checkout') -> efektivno pogađa /api/stripe/checkout na serveru
+    const res = await api.post('/stripe/checkout', {
       amount: totalAmount.value,   // u centima
       currency: 'eur',
       description: 'ExpressWeb Checkout',
-      token,
-    }, {
-      headers: { Authorization: `Bearer ${localStorage.getItem('token') || ''}` }
+      token
     })
 
     alert('✅ ' + (t('checkout.paymentSuccess') || `Plaćanje uspešno: ${res?.data?.charge?.id || ''}`))
