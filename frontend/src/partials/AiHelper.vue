@@ -31,17 +31,14 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import axios from 'axios'
 import { useI18n } from 'vue-i18n'
+import api from '@/api/http' // ✅ centralna axios instanca (baseURL=/api)
 
 const { t } = useI18n()
 
 const props = defineProps({
   prompt: { type: String, required: true }
 })
-
-const baseURL = import.meta.env.VITE_API_URL?.replace(/\/+$/, '') || ''
-const api = axios.create({ baseURL })
 
 const suggestion = ref('')
 const loading = ref(false)

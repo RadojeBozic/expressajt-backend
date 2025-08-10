@@ -63,44 +63,57 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Particles from './Particles.vue'
+import api from '@/api/http'
 
 export default {
   name: 'ContactForm',
-  components: {
-    Particles
-  },
+  components: { Particles },
   data() {
     return {
-      form: {
-        name: '',
-        email: '',
-        message: '',
-        newsletter: false,
-      },
+      form: { name: '', email: '', message: '', newsletter: false },
       success: '',
-      error: ''
+      error: '',
+      loading: false,
     }
   },
   methods: {
     async submitForm() {
-      try {
-        const response = await axios.post('http://localhost:8080/api/contact', this.form);
-        this.success = this.$t('contact.success') || 'Poruka uspešno poslata!';
-        this.error = '';
-        this.form = { name: '', email: '', message: '', newsletter: false };
-      } catch (err) {
-        this.success = '';
-        this.error = this.$t('contact.error') || 'Došlo je do greške pri slanju.';
-        console.error('❌ Greška pri slanju:', err.response?.data || err);
+      if (this.loading) return
+      this.success = ''
+      this.error = ''
+
+      // brza validacija
+      if (!this.form.name?.trim() || !this.form.email?.trim() || !this.form.message?.trim()) {
+        this.error = this.$t?.('contact.required') || 'Sva polja su obavezna.'
+        return
       }
-    }
+
+      this.loading = true
+      try {
+        await api.post('/contact', {
+          name: this.form.name.trim(),
+          email: this.form.email.trim(),
+          message: this.form.message.trim(),
+          newsletter: !!this.form.newsletter,
+        })
+        this.success = this.$t?.('contact.success') || 'Poruka uspešno poslata!'
+        this.form = { name: '', email: '', message: '', newsletter: false }
+      } catch (err) {
+        console.error('❌ Greška pri slanju:', err?.response?.data || err)
+        this.error =
+          this.$t?.('contact.error') ||
+          err?.response?.data?.message ||
+          'Došlo je do greške pri slanju.'
+      } finally {
+        this.loading = false
+      }
+    },
   },
   mounted() {
-    this.success = '';
-    this.error = '';
-    this.form = { name: '', email: '', message: '', newsletter: false };
-  }
+    this.success = ''
+    this.error = ''
+    this.form = { name: '', email: '', message: '', newsletter: false }
+  },
 }
 </script>

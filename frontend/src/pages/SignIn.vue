@@ -105,9 +105,11 @@
 </template>
 
 <script>
-import api from '../api/http';
-import Header from '../partials/Header.vue';
-import { saveLoginPayload } from '../utils/auth';
+import api from '../api/http'
+import Header from '../partials/Header.vue'
+import { saveLoginPayload } from '../utils/auth'
+
+let inflight; // AbortController između poziva
 
 export default {
   name: 'SignIn',
@@ -119,62 +121,69 @@ export default {
       success: '',
       error: '',
       loading: false,
-    };
+    }
   },
   methods: {
     async submitForm() {
-      if (this.loading) return; // 🛑 spreči dupli submit
-      this.success = '';
-      this.error = '';
+      if (this.loading) return
+      this.success = ''
+      this.error = ''
 
-      // 🧪 brza validacija
-      if (!this.email?.trim() || !this.password) {
-        this.error = this.$t?.('auth.validation_error') || 'Email i lozinka su obavezni.';
-        return;
+      const email = (this.email || '').trim().toLowerCase()
+      const password = this.password || ''
+
+      if (!email || !password) {
+        this.error = this.$t?.('auth.validation_error') || 'Email i lozinka su obavezni.'
+        // ako u template-u dodaš ref="emailInput", možeš fokusirati:
+        // this.$refs.emailInput?.focus?.()
+        return
       }
 
-      this.loading = true;
+      // otkaži prethodni zahtev ako postoji
+      try { inflight?.abort() } catch {}
+      inflight = new AbortController()
+
+      this.loading = true
       try {
-        // Sanctum? -> odkomentariši:
-        // await api.get('/sanctum/csrf-cookie');
+        // Sanctum? -> odkomentariši pre logina:
+        // await api.get('/sanctum/csrf-cookie', { signal: inflight.signal })
 
-        const { data } = await api.post('/login', {
-          email: this.email.trim(),
-          password: this.password,
-        });
+        const { data } = await api.post(
+          '/login',
+          { email, password },
+          { signal: inflight.signal }
+        )
 
-        saveLoginPayload(data, this.email);
+        saveLoginPayload(data, email)
+        this.success = this.$t?.('auth.success') || 'Uspešno ste prijavljeni!'
 
-        this.success = this.$t?.('auth.success') || 'Uspešno ste prijavljeni!';
-
-        // 🔁 vrati gde je hteo da ide (npr. /dashboard, /checkout...)
-        const fallback = '/dashboard';
-        const redirect = this.$route?.query?.redirect;
-        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/')
-          ? redirect
-          : fallback);
+        const fallback = '/dashboard'
+        const redirect = this.$route?.query?.redirect
+        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : fallback)
       } catch (error) {
-        // Lepše izvlačenje poruke sa backenda
-        const msg =
-          error?.response?.data?.message ||
-          error?.response?.data?.error ||
-          null;
-
-        if (error.response?.status === 422) {
-          this.error = this.$t?.('auth.validation_error') || (msg ?? 'Nedostaju obavezna polja.');
-        } else if (error.response?.status === 401) {
-          this.error = this.$t?.('auth.invalid_credentials') || (msg ?? 'Neispravan email ili lozinka.');
-        } else if (msg) {
-          this.error = msg;
-        } else {
-          this.error = this.$t?.('auth.error') || 'Greška na serveru.';
+        if (error?.name === 'CanceledError' || error?.message === 'canceled') {
+          // ignorisi otkazani zahtev (dupli klik)
+          return
         }
 
-        console.error('❌ Auth greška:', error?.response ?? error);
+        const status = error?.response?.status
+        const msg = error?.response?.data?.message || error?.response?.data?.error || null
+
+        if (status === 422) {
+          this.error = this.$t?.('auth.validation_error') || (msg ?? 'Nedostaju obavezna polja.')
+        } else if (status === 401) {
+          this.error = this.$t?.('auth.invalid_credentials') || (msg ?? 'Neispravan email ili lozinka.')
+        } else if (msg) {
+          this.error = msg
+        } else {
+          this.error = this.$t?.('auth.error') || 'Greška na serveru.'
+        }
+
+        console.error('❌ Auth greška (status):', status || 'n/a')
       } finally {
-        this.loading = false;
+        this.loading = false
       }
     },
   },
-};
+}
 </script>

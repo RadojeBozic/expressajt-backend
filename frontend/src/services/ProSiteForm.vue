@@ -180,20 +180,18 @@
 
 
 <script>
-import axios from 'axios'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
 import AiHelper from '../partials/AiHelper.vue'
-import { useRoute } from 'vue-router'
+import api from '@/api/http'
 
 export default {
   name: 'ProSiteForm',
-  components: { Header, Footer, AiHelper},
+  components: { Header, Footer, AiHelper },
   data() {
     return {
       loading: false,
       resData: null,
-      route: useRoute(),
       showHelp: false,
       form: {
         name: '', description: '', email: '', phone: '',
@@ -205,17 +203,17 @@ export default {
         address_city: '', address_street: '', google_map_link: '',
         phone2: '', phone3: '', email2: '', email3: '',
         template: localStorage.getItem('selectedTemplate') || 'klasicni-pro',
-        plan: 'starter', // default
+        plan: 'starter',
       },
-      successMessage: '', errorMessage: ''
+      successMessage: '',
+      errorMessage: '',
     }
   },
   mounted() {
-    const slug = this.route.query.fromSlug
+    const slug = this.$route?.query?.fromSlug
     if (slug) this.fetchFromSlug(slug)
   },
   methods: {
-    
     addItem() {
       if (this.form.offerItems.length < 12)
         this.form.offerItems.push({ title: '', image: null })
@@ -224,17 +222,17 @@ export default {
       this.form.offerItems.splice(i, 1)
     },
     handleFile(e, field) {
-      const file = e.target.files[0]
+      const file = e.target.files?.[0]
       if (!file) return
 
-      if (field !== 'pdfDocument' && (!file.type.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
-        this.errorMessage = this.$t('proform.errors.image')
+      if (field !== 'pdfDocument' && (!file.type?.startsWith('image/') || file.size > 4 * 1024 * 1024)) {
+        this.errorMessage = this.$t?.('proform.errors.image') || 'Pogrešna slika ili prevelika.'
         this.form[field] = null
         return
       }
 
       if (field === 'pdfDocument' && file.type !== 'application/pdf') {
-        this.errorMessage = this.$t('proform.errors.pdf')
+        this.errorMessage = this.$t?.('proform.errors.pdf') || 'PDF nije ispravan.'
         this.form[field] = null
         return
       }
@@ -243,9 +241,9 @@ export default {
       this.errorMessage = ''
     },
     handleOfferImageUpload(e, i) {
-      const file = e.target.files[0]
-      if (!file || !file.type.startsWith('image/') || file.size > 4 * 1024 * 1024) {
-        this.errorMessage = this.$t('proform.errors.offerImage', { index: i + 1 })
+      const file = e.target.files?.[0]
+      if (!file || !file.type?.startsWith('image/') || file.size > 4 * 1024 * 1024) {
+        this.errorMessage = this.$t?.('proform.errors.offerImage', { index: i + 1 }) || 'Neispravna slika u ponudi.'
         this.form.offerItems[i].image = null
         return
       }
@@ -280,73 +278,67 @@ export default {
         if (this.form.pdfDocument) fd.append('pdf_file', this.form.pdfDocument)
 
         this.form.offerItems.forEach((item, i) => {
-          fd.append(`offerItems[${i}][title]`, item.title)
-          fd.append(`offerItems[${i}][image]`, item.image)
+          fd.append(`offerItems[${i}][title]`, item?.title || '')
+          if (item?.image instanceof File) {
+            fd.append(`offerItems[${i}][image]`, item.image)
+          }
         })
 
-        const res = await axios.post('http://localhost:8080/api/free-site-request', fd, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        })
-
-        
-        this.errorMessage = this.$t('proform.errors.general')
-
-        this.successMessage = this.$t('proform.success')
-        this.resData = res.data
-
+        const { data } = await api.post('/free-site-request', fd)
+        this.successMessage = this.$t?.('proform.success') || 'Zahtev uspešno poslat.'
+        this.resData = data
       } catch (err) {
-        console.error('❌', err.response || err)
-        this.errorMessage = err.response?.data?.message || this.$t('proform.errors.general')
+        console.error('❌', err?.response || err)
+        this.errorMessage = err?.response?.data?.message || this.$t?.('proform.errors.general') || 'Došlo je do greške.'
       } finally {
         this.loading = false
       }
     },
     async fetchFromSlug(slug) {
       try {
-        const res = await axios.get(`http://localhost:8080/api/free-site-request/${slug}`)
-        const source = res.data
+        const { data: source } = await api.get(`/free-site-request/${slug}`)
 
-        this.form.name = source.name + ' (kopija)'
-        this.form.description = source.description
-        this.form.email = source.email
-        this.form.phone = source.phone
-        this.form.facebook = source.facebook
-        this.form.instagram = source.instagram
-        this.form.heroTitle = source.hero_title
-        this.form.heroSubtitle = source.hero_subtitle
-        this.form.aboutTitle = source.about_title
-        this.form.aboutText = source.about_text
-        this.form.offerTitle = source.offer_title
-        this.form.offerItems = source.offer_items.map(item => ({
-          title: item.title,
-          image: null
-        }))
-        this.form.youtubeLink = source.video_url || ''
-        this.form.address_city = (source.address || '').split(',')[1]?.trim() || ''
-        this.form.address_street = (source.address || '').split(',')[0]?.trim() || ''
-        this.form.google_map_link = source.google_map_link || ''
-        this.form.phone2 = source.phone2 || ''
-        this.form.phone3 = source.phone3 || ''
-        this.form.email2 = source.email2 || ''
-        this.form.email3 = source.email3 || ''
-        this.form.template = source.template
-
+        this.form.name = (source?.name || '') + ' (kopija)'
+        this.form.description = source?.description ?? ''
+        this.form.email = source?.email ?? ''
+        this.form.phone = source?.phone ?? ''
+        this.form.facebook = source?.facebook ?? ''
+        this.form.instagram = source?.instagram ?? ''
+        this.form.heroTitle = source?.hero_title ?? ''
+        this.form.heroSubtitle = source?.hero_subtitle ?? ''
+        this.form.aboutTitle = source?.about_title ?? ''
+        this.form.aboutText = source?.about_text ?? ''
+        this.form.offerTitle = source?.offer_title ?? ''
+        this.form.offerItems = Array.isArray(source?.offer_items)
+          ? source.offer_items.map(item => ({ title: item?.title ?? '', image: null }))
+          : [{ title: '', image: null }]
+        this.form.youtubeLink = source?.video_url ?? ''
+        // ako backend ima posebna polja za adresu, iskoristi njih; u suprotnom ostaje split fallback:
+        const address = source?.address || ''
+        this.form.address_city = address.split(',')[1]?.trim() || ''
+        this.form.address_street = address.split(',')[0]?.trim() || ''
+        this.form.google_map_link = source?.google_map_link ?? ''
+        this.form.phone2 = source?.phone2 ?? ''
+        this.form.phone3 = source?.phone3 ?? ''
+        this.form.email2 = source?.email2 ?? ''
+        this.form.email3 = source?.email3 ?? ''
+        this.form.template = source?.template ?? this.form.template
       } catch (err) {
         console.error('❌', err)
-        this.errorMessage = this.$t('proform.errors.fetch')
+        this.errorMessage = this.$t?.('proform.errors.fetch') || 'Greška pri učitavanju.'
       }
-    }
+    },
   },
   computed: {
-  allowAiHero() {
-    return ['pro', 'premium', 'business'].includes(this.form.plan)
+    allowAiHero() {
+      return ['pro', 'premium', 'business'].includes(this.form.plan)
+    },
+    allowAiAbout() {
+      return ['premium', 'business'].includes(this.form.plan)
+    },
+    allowAiPdf() {
+      return this.form.plan === 'business'
+    },
   },
-  allowAiAbout() {
-    return ['premium', 'business'].includes(this.form.plan)
-  },
-  allowAiPdf() {
-    return this.form.plan === 'business'
-  }
-}
 }
 </script>
