@@ -9,19 +9,9 @@ on:
       - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
-# Ne pokreći dva deploya paralelno
-concurrency:
-  group: deploy-frontend
-  cancel-in-progress: true
-
-permissions:
-  contents: read
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
     env:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USER: ${{ secrets.SSH_USER }}
@@ -43,47 +33,76 @@ jobs:
         working-directory: frontend
         shell: bash
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           npm ci
           npm run build
-          test -f dist/index.html || { echo "❌ dist/index.html ne postoji"; exit 1; }
+          echo "=== DIST TREE ==="
+          ls -lah dist
+          echo "=== ASSETS TREE (HEAD) ==="
+          ls -lah dist/assets | head -n 50 || true
 
       - name: Prepare SSH
         shell: bash
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           mkdir -p ~/.ssh
-          # Ukloni CRLF (Windows) iz privatnog ključa
+          # Ukloni CR ako je neko slučajno nalepio Windows CRLF u secret
           printf '%s' "$SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          # Validacija: padni odmah ako secret nije PRIVATNI ključ
-          ssh-keygen -y -f ~/.ssh/id_rsa >/dev/null 2>&1 || { echo "❌ SSH_KEY nije PRIVATNI ključ (ili je oštećen)"; exit 1; }
+          ssh-keygen -l -f ~/.ssh/id_rsa || true
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+          # Proba veze (ako ovde padne – problem je ključ/secrets)
+          ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" 'echo SSH_OK && whoami && uname -a'
 
       - name: Deploy dist to Cloudways public/
         shell: bash
         run: |
-          set -euo pipefail
-          SSH_OPTS="-i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"
+          set -euxo pipefail
 
-          # Kreiraj assets dir, očisti stare hashirane fajlove
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" "mkdir -p '$DEST/assets' && rm -rf '$DEST/assets'/* || true"
+          # 1) Osiguraj da postoji destinacija
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
 
-          # Prebaci nove assete (ako postoje)
-          if compgen -G "frontend/dist/assets/*" > /dev/null; then
-            scp $SSH_OPTS -r frontend/dist/assets/* "$SSH_USER@$SSH_HOST:$DEST/assets/"
+          # 2) Ako nema ništa u assets – reci glasno i prekini
+          if ! compgen -G "frontend/dist/assets/*" > /dev/null; then
+            echo "ERROR: frontend/dist/assets je prazan. Build nije dao fajlove."
+            exit 1
           fi
 
-          # Prebaci index.html (SPA ulaz)
-          scp $SSH_OPTS frontend/dist/index.html "$SSH_USER@$SSH_HOST:$DEST/index.html"
+          # 3) Očisti stare hashirane assete (bez oštećivanja index.php/.htaccess)
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
 
-          # Marker fajl da možeš lako da vidiš vreme i commit
-          DATE_UTC="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" "echo 'Deployed: $DATE_UTC  Commit: $GITHUB_SHA' > '$DEST/DEPLOY.txt'"
+          # 4) Upload assets (koristimo rsync za robusnost i brzinu)
+          rsync -avz --progress \
+            -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes" \
+            frontend/dist/assets/ \
+            "$SSH_USER@$SSH_HOST:$DEST/assets/"
+
+          # 5) Upload index.html (SPA ulaz)
+          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            frontend/dist/index.html \
+            "$SSH_USER@$SSH_HOST:$DEST/index.html"
+
+          # 6) Prikaži šta je stiglo na server
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" "ls -lah \"$DEST/assets\" | head -n 50; echo '---'; head -n 30 \"$DEST/index.html\""
 
       - name: Clear Laravel caches (optional)
         shell: bash
         run: |
-          set -euo pipefail
-          SSH_OPTS="-i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" 'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
+          set -euxo pipefail
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" \
+            'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
+
+      - name: Post-deploy HTTP smoke test
+        shell: bash
+        run: |
+          set -euxo pipefail
+          # Izvuci ime JS fajla iz index.html na serveru i proveri MIME
+          JS_FILE=$(ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" \
+            "grep -Eo '/assets/index-[^\"]+\.js' \"$DEST/index.html\" | head -n1 | sed 's#^/##'")
+          echo "Detected JS_FILE: $JS_FILE"
+          curl -I "https://express-web.express/${JS_FILE}"
