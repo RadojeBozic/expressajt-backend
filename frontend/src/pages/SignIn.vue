@@ -209,7 +209,8 @@ export default {
         // --- /DEBUG ---
 
         const redirect = this.$route?.query?.redirect
-        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard')
+        const target = typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard'
+        this.$router.replace(target)
       } catch (e) {
         console.error('❌ Auth greška:', e?.response?.status, e?.response?.data || e)
         const s = e?.response?.status
