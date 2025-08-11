@@ -111,6 +111,7 @@ export default {
   // ...
   methods: {
     async submitForm() {
+      console.log('[submitForm] fired', { email: this.email })
       this.error = ''; this.success = ''
       const email = (this.email || '').trim().toLowerCase()
       const password = this.password || ''
