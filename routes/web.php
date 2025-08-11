@@ -1,21 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PreviewController;
+use App\Http\Controllers\Auth\SpaAuthController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Ovde registruješ web rute aplikacije.
+| Ove rute se učitavaju kroz RouteServiceProvider i dobijaju "web" middleware.
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+// SPA auth (session-based preko Sanctum-a)
+Route::post('/login',    [SpaAuthController::class, 'login'])->name('login');
+Route::post('/register', [SpaAuthController::class, 'register']);
+Route::post('/logout',   [SpaAuthController::class, 'logout']);
 
-Route::get('/prezentacije/{slug}', [PreviewController::class, 'show']);
+// (opciono) health / ping
+Route::get('/ping', fn () => response()->json(['pong' => true]));

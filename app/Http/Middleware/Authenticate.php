@@ -12,6 +12,12 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        //return $request->expectsJson() ? null : route('login');
+        // Za SPA/API: ne radi redirect, nego pusti 401 JSON
+        if ($request->expectsJson() || $request->is('api/*')) {
+            return null;
+        }
+
+        // Za klasične web rute — ako ti treba:
+        return route('login');
     }
 }

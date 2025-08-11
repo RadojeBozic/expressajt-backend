@@ -105,85 +105,35 @@
 </template>
 
 <script>
-import api from '../api/http'
-import Header from '../partials/Header.vue'
+import { web, api, getCsrfCookie } from '../api/http'
 import { saveLoginPayload } from '../utils/auth'
-
-let inflight; // AbortController između poziva
-
 export default {
-  name: 'SignIn',
-  components: { Header },
-  data() {
-    return {
-      email: '',
-      password: '',
-      success: '',
-      error: '',
-      loading: false,
-    }
-  },
+  // ...
   methods: {
     async submitForm() {
-      if (this.loading) return
-      this.success = ''
-      this.error = ''
-
+      this.error = ''; this.success = ''
       const email = (this.email || '').trim().toLowerCase()
       const password = this.password || ''
-
-      if (!email || !password) {
-        this.error = this.$t?.('auth.validation_error') || 'Email i lozinka su obavezni.'
-        // ako u template-u dodaš ref="emailInput", možeš fokusirati:
-        // this.$refs.emailInput?.focus?.()
-        return
-      }
-
-      // otkaži prethodni zahtev ako postoji
-      try { inflight?.abort() } catch {}
-      inflight = new AbortController()
+      if (!email || !password) { this.error = 'Email i lozinka su obavezni.'; return }
 
       this.loading = true
       try {
-        // Sanctum? -> odkomentariši pre logina:
-        // await api.get('/sanctum/csrf-cookie', { signal: inflight.signal })
-
-        const { data } = await api.post(
-          '/login',
-          { email, password },
-          { signal: inflight.signal }
-        )
-
-        saveLoginPayload(data, email)
-        this.success = this.$t?.('auth.success') || 'Uspešno ste prijavljeni!'
-
-        const fallback = '/dashboard'
+        await getCsrfCookie()                               // 1) setuje CSRF + session
+        await web.post('/login', { email, password })       // 2) 204 ako je ok
+        const { data: user } = await api.get('/user')       // 3) 200 + JSON
+        saveLoginPayload({ user }, email)
         const redirect = this.$route?.query?.redirect
-        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : fallback)
-      } catch (error) {
-        if (error?.name === 'CanceledError' || error?.message === 'canceled') {
-          // ignorisi otkazani zahtev (dupli klik)
-          return
-        }
-
-        const status = error?.response?.status
-        const msg = error?.response?.data?.message || error?.response?.data?.error || null
-
-        if (status === 422) {
-          this.error = this.$t?.('auth.validation_error') || (msg ?? 'Nedostaju obavezna polja.')
-        } else if (status === 401) {
-          this.error = this.$t?.('auth.invalid_credentials') || (msg ?? 'Neispravan email ili lozinka.')
-        } else if (msg) {
-          this.error = msg
-        } else {
-          this.error = this.$t?.('auth.error') || 'Greška na serveru.'
-        }
-
-        console.error('❌ Auth greška (status):', status || 'n/a')
+        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard')
+      } catch (e) {
+        const s = e?.response?.status
+        if (s === 419) this.error = 'CSRF greška. Očisti kolačiće i probaj ponovo.'
+        else if (s === 401) this.error = 'Email ili lozinka nisu ispravni.'
+        else this.error = e?.response?.data?.message || 'Greška na serveru.'
+        console.error('❌ Auth greška:', e)
       } finally {
         this.loading = false
       }
-    },
-  },
+    }
+  }
 }
 </script>

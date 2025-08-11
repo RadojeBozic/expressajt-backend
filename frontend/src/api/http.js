@@ -1,21 +1,39 @@
-// src/api/http.js
-import axios from 'axios';
+import axios from 'axios'
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  // withCredentials: true, // uključi ako koristiš Sanctum/session
-});
+/** WEB klijent (za /login, /logout, /register, /sanctum/csrf-cookie) */
+export const web = axios.create({
+  baseURL: '/',                 // bez /api
+  withCredentials: true,        // šalje cookie
+})
 
-// Bearer token iz localStorage (JWT varijanta)
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
-  if (token) config.headers.Authorization = `Bearer ${token}`;
-  return config;
-});
+/** API klijent (za /api/* pozive) */
+export const api = axios.create({
+  baseURL: '/api',
+  withCredentials: true,
+})
 
-// Sigurnosna mreža: ako je neko greškom stavio http:// u baseURL, forsiraj relativni
-if (api.defaults.baseURL?.startsWith?.('http://')) {
-  api.defaults.baseURL = '/api';
+/** Zajednički default-i */
+for (const client of [web, api]) {
+  client.defaults.xsrfCookieName = 'XSRF-TOKEN'
+  client.defaults.xsrfHeaderName = 'X-XSRF-TOKEN'
+  client.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest' // sprečava HTML redirect
+  client.defaults.headers.common['Accept'] = 'application/json'         // traži JSON
 }
 
-export default api;
+/** 💪 Ručno ubaci decode-ovan XSRF iz cookie-ja – rešava 419 */
+function attachXsrf(config) {
+  try {
+    const m = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/)
+    if (m) config.headers['X-XSRF-TOKEN'] = decodeURIComponent(m[1])
+  } catch {}
+  return config
+}
+web.interceptors.request.use(attachXsrf)
+api.interceptors.request.use(attachXsrf)
+
+/** Uvek prvo CSRF (isti origin, web klijent) */
+export function getCsrfCookie() {
+  return web.get('/sanctum/csrf-cookie')
+}
+
+export default api

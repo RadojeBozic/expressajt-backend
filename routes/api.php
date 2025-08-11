@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\StripeController;
 use App\Http\Controllers\Api\InvoiceRequestController;
 use App\Http\Controllers\PlausibleController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
