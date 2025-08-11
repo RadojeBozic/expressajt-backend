@@ -9,9 +9,18 @@ on:
       - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
+# Ne pokreći dva deploya paralelno
+concurrency:
+  group: deploy-frontend
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     env:
       SSH_HOST: ${{ secrets.SSH_HOST }}
@@ -37,46 +46,44 @@ jobs:
           set -euo pipefail
           npm ci
           npm run build
+          test -f dist/index.html || { echo "❌ dist/index.html ne postoji"; exit 1; }
 
       - name: Prepare SSH
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          # ✅ printf (ne echo) – ne dodaje sporedne nove linije
-          printf '%s' "$SSH_KEY" > ~/.ssh/id_rsa
+          # Ukloni CRLF (Windows) iz privatnog ključa
+          printf '%s' "$SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          # Validacija: padni odmah ako secret nije PRIVATNI ključ
+          ssh-keygen -y -f ~/.ssh/id_rsa >/dev/null 2>&1 || { echo "❌ SSH_KEY nije PRIVATNI ključ (ili je oštećen)"; exit 1; }
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Deploy dist to Cloudways public/
         shell: bash
         run: |
           set -euo pipefail
+          SSH_OPTS="-i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"
 
-          # kreiraj assets dir ako ne postoji
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
+          # Kreiraj assets dir, očisti stare hashirane fajlove
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" "mkdir -p '$DEST/assets' && rm -rf '$DEST/assets'/* || true"
 
-          # očisti stare hashirane assete (dozvoli glob ekspanziju na remote-u)
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
-
-          # prebaci nove assete (ako postoje)
+          # Prebaci nove assete (ako postoje)
           if compgen -G "frontend/dist/assets/*" > /dev/null; then
-            scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes -r \
-              frontend/dist/assets/* \
-              "$SSH_USER@$SSH_HOST:$DEST/assets/"
+            scp $SSH_OPTS -r frontend/dist/assets/* "$SSH_USER@$SSH_HOST:$DEST/assets/"
           fi
 
-          # prebaci index.html (SPA ulaz)
-          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
-            frontend/dist/index.html \
-            "$SSH_USER@$SSH_HOST:$DEST/index.html"
+          # Prebaci index.html (SPA ulaz)
+          scp $SSH_OPTS frontend/dist/index.html "$SSH_USER@$SSH_HOST:$DEST/index.html"
+
+          # Marker fajl da možeš lako da vidiš vreme i commit
+          DATE_UTC="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" "echo 'Deployed: $DATE_UTC  Commit: $GITHUB_SHA' > '$DEST/DEPLOY.txt'"
 
       - name: Clear Laravel caches (optional)
         shell: bash
         run: |
           set -euo pipefail
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" \
-            'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
+          SSH_OPTS="-i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" 'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
