@@ -236,7 +236,15 @@
 </template>
 
 <script>
+import { resetAuthCache } from '@/router'
+
 export default {
   name: 'Footer',
+  mounted() {
+    // Reset auth cache on footer mount
+    if (typeof resetAuthCache === 'function') {
+      resetAuthCache()
+    }
+  },
 }
 </script>

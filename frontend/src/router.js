@@ -205,4 +205,11 @@ router.beforeEach(async (to) => {
     } catch {}
   }
 
+    export function resetAuthCache() {
+    _user = null
+    _inFlight = null
+  }
+
+  
+
 export default router

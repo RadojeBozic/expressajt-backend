@@ -116,6 +116,7 @@
 import { api, web } from '@/api/http'
 import { useCart } from '../utils/CartService'
 import { clearAuth as clearAuthLocal } from '../utils/auth'
+import { resetAuthCache } from '@/router'
 
 // (opciono) reset keša iz router-a ako si ubacio server guard sa keširanjem
 let resetAuthCache = null
@@ -231,6 +232,7 @@ export default {
 
     // LOGOUT – backend + local clear + cart clear + reset router cache + na /signin
     async logout() {
+      if (typeof resetAuthCache === 'function') resetAuthCache()
       try { await web.post('/logout') } catch {}
       try { clearAuthLocal() } catch {}
       try { this.clearCart() } catch {}
