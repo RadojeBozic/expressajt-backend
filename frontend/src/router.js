@@ -194,22 +194,12 @@ router.beforeEach(async (to) => {
   }
 
   return true
-
- 
 })
 
-  export function resetAuthCache() {
-    try {
-      _user = null
-      _inFlight = null
-    } catch {}
-  }
-
-    export function resetAuthCache() {
-    _user = null
-    _inFlight = null
-  }
-
-  
+// 👇 jedina (i javna) reset funkcija keša
+export function resetAuthCache() {
+  _user = null
+  _inFlight = null
+}
 
 export default router
