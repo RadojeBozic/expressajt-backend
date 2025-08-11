@@ -53,10 +53,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          APP_ROOT="/home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html"
+          # ⛳ koristimo HOME-relativnu putanju (chroot-friendly za SFTP/SCP)
+          APP_ROOT="~/applications/ascqrnhbfh/public_html"
           DEST="$APP_ROOT/public"
 
-          echo "== Ensure remote dirs exist =="
+          echo "== Ensure remote dirs exist (HOME-relative) =="
           ssh "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\" && ls -ld \"$DEST\" \"$DEST/assets\""
 
           echo "== Clean old hashed assets =="
@@ -64,13 +65,21 @@ jobs:
 
           echo "== Upload assets =="
           if compgen -G "frontend/dist/assets/*" > /dev/null; then
-            scp -r frontend/dist/assets/* "$SSH_USER@$SSH_HOST:$DEST/assets/"
+            # šaljemo *sadržaj* direktorijuma (suffix ".")
+            scp -r frontend/dist/assets/. "$SSH_USER@$SSH_HOST:$DEST/assets/"
           else
             echo "No local assets to upload (frontend/dist/assets is empty?)"
           fi
 
           echo "== Upload index.html =="
           scp frontend/dist/index.html "$SSH_USER@$SSH_HOST:$DEST/index.html"
+
+      - name: Clear Laravel caches (optional)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh "$SSH_USER@$SSH_HOST" \
+            'cd ~/applications/ascqrnhbfh/public_html && php artisan optimize:clear || true'
 
       - name: Clear Laravel caches (optional)
         shell: bash
@@ -85,7 +94,6 @@ jobs:
         run: |
           set -euo pipefail
           echo "== Who am I on remote =="
-          ssh "$SSH_USER@$SSH_HOST" 'whoami && pwd || true'
-          echo "== Test listing =="
-          ssh "$SSH_USER@$SSH_HOST" 'ls -ld /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html || true'
-          ssh "$SSH_USER@$SSH_HOST" 'ls -ld /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public || true'
+          ssh "$SSH_USER@$SSH_HOST" 'whoami; echo "HOME=$HOME"; pwd || true'
+          echo "== Check app dirs under HOME =="
+          ssh "$SSH_USER@$SSH_HOST" 'ls -ld ~/applications ~/applications/ascqrnhbfh ~/applications/ascqrnhbfh/public_html ~/applications/ascqrnhbfh/public_html/public || true'
