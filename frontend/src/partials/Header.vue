@@ -114,33 +114,22 @@
 
 <script>
 import { api, web } from '@/api/http'
-import { useCart } from '../utils/CartService'
-import { clearAuth as clearAuthLocal } from '../utils/auth'
-import { resetAuthCache } from '@/router'
-
-// (opciono) reset keša iz router-a ako si ubacio server guard sa keširanjem
-let resetAuthCache = null
-try {
-  // ovo uspe ako u router.js dodaš export resetAuthCache (vidi dole)
-  ({ resetAuthCache } = await import('@/router'))
-} catch {}
+import { useCart } from '@/utils/CartService'
+import { clearAuth as clearAuthLocal } from '@/utils/auth'
+import { resetAuthCache } from '@/router' // statički import, bez TLA
 
 export default {
   name: 'SiteHeader',
 
   data() {
     return {
-      // UI
       mobileNavOpen: false,
       showLang: false,
-
-      // auth
       user: null,
 
-      // cart store (direktno iz composable-a)
+      // store (composable instanca)
       cartStore: useCart(),
 
-      // meni
       navLinks: [
         { to: '/', label: 'header.menu.home' },
         { to: '/about', label: 'header.menu.about' },
@@ -152,7 +141,7 @@ export default {
   },
 
   computed: {
-    // I18n (Options API). Ako koristiš Composition i18n, i dalje radi preko this.$i18n
+    // Zastavice (koristi bundler-friendly URL, a u templatu: <img :src="currentFlag" .../>)
     currentFlag() {
       const isSr = this.$i18n?.locale === 'sr'
       return new URL(isSr ? '../images/flag-rs.png' : '../images/flag-uk.png', import.meta.url).href
@@ -161,16 +150,13 @@ export default {
       return this.$i18n?.locale === 'sr' ? 'SR' : 'EN'
     },
 
-    // CART: expose u templatu
-    cart() { return this.cartStore.cart },                 // lista stavki
-    cartCount() { return this.cartStore.totalItems || 0 }, // broj artikala
-    cartTotal() {
-      // prilagodi ako CartService ima drugačiji naziv
-      return this.cartStore.totalPrice ?? this.cartStore.total ?? 0
-    },
-    hasItems() { return (this.cartCount ?? 0) > 0 },
+    // Korpa (wrappuje ref-ove iz store-a)
+    cart()       { return this.cartStore.cart?.value || [] },
+    cartCount()  { return this.cartStore.totalItems?.value || 0 },
+    cartTotal()  { return this.cartStore.totalPrice?.value || 0 },
+    hasItems()   { return this.cartCount > 0 },
 
-    // auth helpers
+    // Auth helpers
     isLoggedIn() { return !!this.user },
     isAdmin() {
       if (!this.user) return false
@@ -180,7 +166,7 @@ export default {
   },
 
   methods: {
-    // jezici
+    // Jezici
     toggleLangDropdown() { this.showLang = !this.showLang },
     setLanguage(lang) {
       if (this.$i18n) this.$i18n.locale = lang
@@ -188,7 +174,7 @@ export default {
       this.showLang = false
     },
 
-    // mobile nav
+    // Mobile nav
     toggleMobile() { this.mobileNavOpen = !this.mobileNavOpen },
     clickHandler(e) {
       if (!this.mobileNavOpen) return
@@ -197,12 +183,13 @@ export default {
     },
     keyHandler(e) { if (e.key === 'Escape') this.mobileNavOpen = false },
 
-    // CART akcije (prilagodi imenima iz CartService-a ako se razlikuju)
-    addToCart(item) { this.cartStore.addItem?.(item) },
-    removeFromCart(id) { this.cartStore.removeItem?.(id) },
-    clearCart() { this.cartStore.clearCart?.() },
+    // Korpa (mapiranje na CartService API)
+    addToCart(item)            { this.cartStore.addToCart?.(item) },
+    updateQuantity(id, v, qty) { this.cartStore.updateQuantity?.(id, v, qty) },
+    removeFromCart(id, v='')   { this.cartStore.removeFromCart?.(id, v) },
+    clearCart()                { this.cartStore.clearCart?.() },
 
-    // auth (server autoritet)
+    // Auth (server autoritet)
     async refreshUser() {
       try {
         const { data } = await api.get('/user')
@@ -211,7 +198,6 @@ export default {
         this.user = null
       }
     },
-
     async goToAccount() {
       try {
         await api.get('/user')
@@ -230,22 +216,16 @@ export default {
       }
     },
 
-    // LOGOUT – backend + local clear + cart clear + reset router cache + na /signin
+    // LOGOUT – backend + local clear + cart clear + resetAuthCache + na /signin
     async logout() {
-      if (typeof resetAuthCache === 'function') resetAuthCache()
       try { await web.post('/logout') } catch {}
       try { clearAuthLocal() } catch {}
       try { this.clearCart() } catch {}
-
       this.user = null
-      if (typeof resetAuthCache === 'function') {
-        try { resetAuthCache() } catch {}
-      }
-
-      // hard navigacija sigurno prekida bilo kakav stari state
+      try { resetAuthCache() } catch {}
+      // hard reload da ne ostane stari state
       window.location.assign('/signin')
-      // (ako želiš SPA bez reload-a, koristi umesto assign):
-      // this.$router.replace('/signin')
+      // ili SPA varijanta: this.$router.replace('/signin')
     },
   },
 
