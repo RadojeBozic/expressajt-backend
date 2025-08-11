@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Frontend – Build & Deploy to Cloudways
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/deploy-frontend.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_KEY:  ${{ secrets.SSH_KEY }}
+      DEST: /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install & Build (frontend)
+        working-directory: frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+
+      - name: Prepare SSH
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          # ✅ printf (ne echo) – ne dodaje sporedne nove linije
+          printf '%s' "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy dist to Cloudways public/
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # kreiraj assets dir ako ne postoji
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
+
+          # očisti stare hashirane assete (dozvoli glob ekspanziju na remote-u)
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
+
+          # prebaci nove assete (ako postoje)
+          if compgen -G "frontend/dist/assets/*" > /dev/null; then
+            scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes -r \
+              frontend/dist/assets/* \
+              "$SSH_USER@$SSH_HOST:$DEST/assets/"
+          fi
+
+          # prebaci index.html (SPA ulaz)
+          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            frontend/dist/index.html \
+            "$SSH_USER@$SSH_HOST:$DEST/index.html"
+
+      - name: Clear Laravel caches (optional)
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" \
+            'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
