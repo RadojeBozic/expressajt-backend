@@ -27,5 +27,26 @@ api.interceptors.request.use(attachXsrf)
 export function getCsrfCookie() {
   return web.get('/sanctum/csrf-cookie')
 }
+for (const client of [web, api]) {
+  client.interceptors.response.use(
+    (response) => {
+      try {
+        const m = response.config.method?.toUpperCase()
+        const u = response.config.url
+        console.log(`✅ ${m} ${u} → ${response.status}`)
+      } catch {}
+      return response
+    },
+    (error) => {
+      try {
+        const m = error.config?.method?.toUpperCase()
+        const u = error.config?.url
+        const st = error.response?.status
+        console.error(`❌ ${m} ${u} → ${st}`)
+      } catch {}
+      return Promise.reject(error)
+    }
+  )
+}
 
 export default api
