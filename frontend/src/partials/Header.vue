@@ -109,71 +109,127 @@
   </header>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { getCurrentUser, clearAuth as doLogout } from '../utils/auth'
+<script>
+import { api, web } from '@/api/http'          // server-autoritet za /user i /logout
 import { useCart } from '../utils/CartService'
+import { clearAuth as doLogout } from '../utils/auth'
 
-const mobileNavOpen = ref(false)
-const showLang = ref(false)
+// global/store instanca (ostaje reaktivna)
+const cartStore = useCart()
 
-const { locale } = useI18n()
-const { cart, totalItems, clearCart } = useCart()   // ⬅ Dodali clearCart()
+export default {
+  name: 'SiteHeader',
 
-const toggleLangDropdown = () => showLang.value = !showLang.value
-const setLanguage = (lang) => {
-  locale.value = lang
-  localStorage.setItem('locale', lang)
-  showLang.value = false
+  data() {
+    return {
+      mobileNavOpen: false,
+      showLang: false,
+      user: null, // puni se sa /api/user u mounted()
+      navLinks: [
+        { to: '/', label: 'header.menu.home' },
+        { to: '/about', label: 'header.menu.about' },
+        { to: '/projects', label: 'header.menu.projects' },
+        { to: '/pricing', label: 'header.menu.pricing' },
+        { to: '/contact', label: 'header.menu.contact' },
+      ],
+    }
+  },
+
+  computed: {
+    // I18n preko this.$i18n (Options API friendly)
+    currentFlag() {
+      const isSr = this.$i18n?.locale === 'sr'
+      return new URL(isSr ? '../images/flag-rs.png' : '../images/flag-uk.png', import.meta.url).href
+    },
+    currentLabel() {
+      return this.$i18n?.locale === 'sr' ? 'SR' : 'EN'
+    },
+
+    // Cart (iz store-a)
+    cart() { return cartStore.cart },
+    totalItems() { return cartStore.totalItems },
+
+    // Auth helpers
+    isLoggedIn() { return !!this.user },
+    isAdmin() {
+      if (!this.user) return false
+      // primarno po roli, fallback po e-mailu
+      return (['admin', 'superadmin'].includes(this.user.role)) ||
+             (['admin@example.com', 'radoje@example.com'].includes(this.user.email))
+    },
+  },
+
+  methods: {
+    // jezici
+    toggleLangDropdown() { this.showLang = !this.showLang },
+    setLanguage(lang) {
+      if (this.$i18n) this.$i18n.locale = lang
+      try { localStorage.setItem('locale', lang) } catch {}
+      this.showLang = false
+    },
+
+    // mobile nav
+    toggleMobile() { this.mobileNavOpen = !this.mobileNavOpen },
+    clickHandler(e) {
+      if (!this.mobileNavOpen) return
+      const t = e.target
+      if (!t.closest('nav') && !t.closest('button')) this.mobileNavOpen = false
+    },
+    keyHandler(e) {
+      if (e.key === 'Escape') this.mobileNavOpen = false
+    },
+
+    // server-autoritet: ko sam ja?
+    async refreshUser() {
+      try {
+        const { data } = await api.get('/user')
+        this.user = data
+      } catch {
+        this.user = null
+      }
+    },
+
+    // account / admin navigacija (uvek pitamo server)
+    async goToAccount() {
+      try {
+        await api.get('/user')
+        this.$router.push('/dashboard')
+      } catch {
+        this.$router.push({ path: '/signin', query: { redirect: '/dashboard' } })
+      }
+    },
+    async goToAdmin() {
+      try {
+        const { data } = await api.get('/user')
+        if (['admin', 'superadmin'].includes(data.role)) {
+          this.$router.push('/admin/dashboard')
+        } else {
+          this.$router.push('/dashboard')
+        }
+      } catch {
+        this.$router.push({ path: '/signin', query: { redirect: '/admin/dashboard' } })
+      }
+    },
+
+    // logout: backend + lokalni clear + korpa
+    async logout() {
+      try { await web.post('/logout') } catch {}
+      try { doLogout() } catch {}
+      try { cartStore.clearCart() } catch {}
+      this.user = null
+      this.$router.replace('/signin')
+    },
+  },
+
+  mounted() {
+    document.addEventListener('click', this.clickHandler)
+    document.addEventListener('keydown', this.keyHandler)
+    this.refreshUser()
+  },
+
+  beforeUnmount() {
+    document.removeEventListener('click', this.clickHandler)
+    document.removeEventListener('keydown', this.keyHandler)
+  },
 }
-
-const currentFlag = computed(() =>
-  locale.value === 'sr'
-    ? new URL('../images/flag-rs.png', import.meta.url).href
-    : new URL('../images/flag-uk.png', import.meta.url).href
-)
-const currentLabel = computed(() => locale.value === 'sr' ? 'SR' : 'EN')
-
-const user = getCurrentUser()
-const isAdmin = user && ['admin@example.com', 'radoje@example.com'].includes(user.email)
-
-const navLinks = [
-  { to: '/', label: 'header.menu.home' },
-  { to: '/about', label: 'header.menu.about' },
-  { to: '/projects', label: 'header.menu.projects' },
-  { to: '/pricing', label: 'header.menu.pricing' },
-  { to: '/contact', label: 'header.menu.contact' }
-]
-
-const logout = () => {
-  // 1. Odjavi korisnika
-  doLogout()
-
-  // 2. Isprazni korpu
-  clearCart()
-
-  // 3. Prebaci na login
-  window.location.href = '/signin'
-}
-
-const clickHandler = ({ target }) => {
-  if (!mobileNavOpen.value) return
-  if (!target.closest('nav') && !target.closest('button')) {
-    mobileNavOpen.value = false
-  }
-}
-const keyHandler = ({ key }) => {
-  if (key === 'Escape') mobileNavOpen.value = false
-}
-
-onMounted(() => {
-  document.addEventListener('click', clickHandler)
-  document.addEventListener('keydown', keyHandler)
-})
-
-onUnmounted(() => {
-  document.removeEventListener('click', clickHandler)
-  document.removeEventListener('keydown', keyHandler)
-})
 </script>
