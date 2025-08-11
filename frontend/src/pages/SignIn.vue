@@ -127,33 +127,30 @@ export default {
 
       this.loading = true
       try {
-          console.log('1) calling getCsrfCookie')
-        await getCsrfCookie()
-        console.log('1) OK')
+  console.log('1) calling getCsrfCookie')
+  await getCsrfCookie()
+  console.log('1) OK')
 
-        console.log('2) POST /login')
-        await web.post('/login', { email, password })
-        console.log('2) OK')
+  console.log('2) POST /login')
+  await web.post('/login', { email, password })
+  console.log('2) OK')
 
-        console.log('3) GET /api/user')
-        const { data: user } = await api.get('/user')
-        console.log('3) OK', user)
-        await getCsrfCookie()                               // 1) setuje CSRF + session
-        await web.post('/login', { email, password })       // 2) 204 ako je ok
-        const { data: user } = await api.get('/user')       // 3) 200 + JSON
-        saveLoginPayload({ user }, email)
-        const redirect = this.$route?.query?.redirect
-        this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard')
-      } catch (e) {
-        console.error('❌ Auth greška:', e?.response?.status, e?.response?.data || e)
-        const s = e?.response?.status
-        if (s === 419) this.error = 'CSRF greška. Očisti kolačiće i probaj ponovo.'
-        else if (s === 401) this.error = 'Email ili lozinka nisu ispravni.'
-        else this.error = e?.response?.data?.message || 'Greška na serveru.'
-        console.error('❌ Auth greška:', e)
-      } finally {
-        this.loading = false
-      }
+  console.log('3) GET /api/user')
+  const { data: user } = await api.get('/user')
+  console.log('3) OK', user)
+
+  saveLoginPayload({ user }, email)
+  const redirect = this.$route?.query?.redirect
+  this.$router.push(typeof redirect === 'string' && redirect.startsWith('/') ? redirect : '/dashboard')
+} catch (e) {
+  console.error('❌ Auth greška:', e?.response?.status, e?.response?.data || e)
+  const s = e?.response?.status
+  if (s === 419) this.error = 'CSRF greška. Očisti kolačiće i probaj ponovo.'
+  else if (s === 401) this.error = 'Email ili lozinka nisu ispravni.'
+  else this.error = e?.response?.data?.message || 'Greška na serveru.'
+} finally {
+  this.loading = false
+}
     }
   }
 }
