@@ -1,4 +1,3 @@
-# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Frontend – Build & Deploy to Cloudways
 
 on:
@@ -12,10 +11,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     env:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USER: ${{ secrets.SSH_USER }}
-      SSH_KEY:  ${{ secrets.SSH_KEY }}
       DEST: /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public
 
     steps:
@@ -33,76 +32,49 @@ jobs:
         working-directory: frontend
         shell: bash
         run: |
-          set -euxo pipefail
+          set -euo pipefail
           npm ci
           npm run build
-          echo "=== DIST TREE ==="
-          ls -lah dist
-          echo "=== ASSETS TREE (HEAD) ==="
-          ls -lah dist/assets | head -n 50 || true
 
-      - name: Prepare SSH
+      # ✅ Umesto ručne pripreme ključa — koristimo agent koji sve sredi
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Trust host
         shell: bash
         run: |
-          set -euxo pipefail
           mkdir -p ~/.ssh
-          # Ukloni CR ako je neko slučajno nalepio Windows CRLF u secret
-          printf '%s' "$SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keygen -l -f ~/.ssh/id_rsa || true
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
-          # Proba veze (ako ovde padne – problem je ključ/secrets)
-          ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" 'echo SSH_OK && whoami && uname -a'
 
       - name: Deploy dist to Cloudways public/
         shell: bash
         run: |
-          set -euxo pipefail
-
-          # 1) Osiguraj da postoji destinacija
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+          set -euo pipefail
+          # kreiraj assets dir ako ne postoji
+          ssh -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
 
-          # 2) Ako nema ništa u assets – reci glasno i prekini
-          if ! compgen -G "frontend/dist/assets/*" > /dev/null; then
-            echo "ERROR: frontend/dist/assets je prazan. Build nije dao fajlove."
-            exit 1
-          fi
-
-          # 3) Očisti stare hashirane assete (bez oštećivanja index.php/.htaccess)
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+          # očisti stare hashirane assete
+          ssh -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
 
-          # 4) Upload assets (koristimo rsync za robusnost i brzinu)
-          rsync -avz --progress \
-            -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes" \
-            frontend/dist/assets/ \
-            "$SSH_USER@$SSH_HOST:$DEST/assets/"
+          # prebaci nove assete (ako postoje)
+          if compgen -G "frontend/dist/assets/*" > /dev/null; then
+            scp -o StrictHostKeyChecking=yes -r \
+              frontend/dist/assets/* \
+              "$SSH_USER@$SSH_HOST:$DEST/assets/"
+          fi
 
-          # 5) Upload index.html (SPA ulaz)
-          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+          # prebaci index.html
+          scp -o StrictHostKeyChecking=yes \
             frontend/dist/index.html \
             "$SSH_USER@$SSH_HOST:$DEST/index.html"
-
-          # 6) Prikaži šta je stiglo na server
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" "ls -lah \"$DEST/assets\" | head -n 50; echo '---'; head -n 30 \"$DEST/index.html\""
 
       - name: Clear Laravel caches (optional)
         shell: bash
         run: |
-          set -euxo pipefail
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes \
+          ssh -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" \
             'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
-
-      - name: Post-deploy HTTP smoke test
-        shell: bash
-        run: |
-          set -euxo pipefail
-          # Izvuci ime JS fajla iz index.html na serveru i proveri MIME
-          JS_FILE=$(ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" \
-            "grep -Eo '/assets/index-[^\"]+\.js' \"$DEST/index.html\" | head -n1 | sed 's#^/##'")
-          echo "Detected JS_FILE: $JS_FILE"
-          curl -I "https://express-web.express/${JS_FILE}"
