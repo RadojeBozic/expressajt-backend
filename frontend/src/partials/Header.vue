@@ -22,8 +22,11 @@
         <!-- Desni meni -->
         <div class="flex items-center gap-3">
           <!-- Korpa -->
-          <router-link to="/checkout" class="text-sm text-white hover:text-purple-300 cursor-pointer">
-            🛒 {{ $t('header.menu.cart') }} ({{ totalItems() }})
+           <router-link to="/checkout" class="relative text-sm text-white hover:text-purple-300">
+            🛒 {{ $t('header.menu.cart') }}
+            <span v-if="cartCount" class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+              {{ cartCount }}
+            </span>
           </router-link>
 
           <!-- Login/Logout -->
@@ -110,21 +113,33 @@
 </template>
 
 <script>
-import { api, web } from '@/api/http'          // server-autoritet za /user i /logout
+import { api, web } from '@/api/http'
 import { useCart } from '../utils/CartService'
-import { clearAuth as doLogout } from '../utils/auth'
+import { clearAuth as clearAuthLocal } from '../utils/auth'
 
-// global/store instanca (ostaje reaktivna)
-const cartStore = useCart()
+// (opciono) reset keša iz router-a ako si ubacio server guard sa keširanjem
+let resetAuthCache = null
+try {
+  // ovo uspe ako u router.js dodaš export resetAuthCache (vidi dole)
+  ({ resetAuthCache } = await import('@/router'))
+} catch {}
 
 export default {
   name: 'SiteHeader',
 
   data() {
     return {
+      // UI
       mobileNavOpen: false,
       showLang: false,
-      user: null, // puni se sa /api/user u mounted()
+
+      // auth
+      user: null,
+
+      // cart store (direktno iz composable-a)
+      cartStore: useCart(),
+
+      // meni
       navLinks: [
         { to: '/', label: 'header.menu.home' },
         { to: '/about', label: 'header.menu.about' },
@@ -136,7 +151,7 @@ export default {
   },
 
   computed: {
-    // I18n preko this.$i18n (Options API friendly)
+    // I18n (Options API). Ako koristiš Composition i18n, i dalje radi preko this.$i18n
     currentFlag() {
       const isSr = this.$i18n?.locale === 'sr'
       return new URL(isSr ? '../images/flag-rs.png' : '../images/flag-uk.png', import.meta.url).href
@@ -145,17 +160,21 @@ export default {
       return this.$i18n?.locale === 'sr' ? 'SR' : 'EN'
     },
 
-    // Cart (iz store-a)
-    cart() { return cartStore.cart },
-    totalItems() { return cartStore.totalItems },
+    // CART: expose u templatu
+    cart() { return this.cartStore.cart },                 // lista stavki
+    cartCount() { return this.cartStore.totalItems || 0 }, // broj artikala
+    cartTotal() {
+      // prilagodi ako CartService ima drugačiji naziv
+      return this.cartStore.totalPrice ?? this.cartStore.total ?? 0
+    },
+    hasItems() { return (this.cartCount ?? 0) > 0 },
 
-    // Auth helpers
+    // auth helpers
     isLoggedIn() { return !!this.user },
     isAdmin() {
       if (!this.user) return false
-      // primarno po roli, fallback po e-mailu
-      return (['admin', 'superadmin'].includes(this.user.role)) ||
-             (['admin@example.com', 'radoje@example.com'].includes(this.user.email))
+      return ['admin', 'superadmin'].includes(this.user.role) ||
+             ['admin@example.com', 'radoje@example.com'].includes(this.user.email)
     },
   },
 
@@ -175,11 +194,14 @@ export default {
       const t = e.target
       if (!t.closest('nav') && !t.closest('button')) this.mobileNavOpen = false
     },
-    keyHandler(e) {
-      if (e.key === 'Escape') this.mobileNavOpen = false
-    },
+    keyHandler(e) { if (e.key === 'Escape') this.mobileNavOpen = false },
 
-    // server-autoritet: ko sam ja?
+    // CART akcije (prilagodi imenima iz CartService-a ako se razlikuju)
+    addToCart(item) { this.cartStore.addItem?.(item) },
+    removeFromCart(id) { this.cartStore.removeItem?.(id) },
+    clearCart() { this.cartStore.clearCart?.() },
+
+    // auth (server autoritet)
     async refreshUser() {
       try {
         const { data } = await api.get('/user')
@@ -189,7 +211,6 @@ export default {
       }
     },
 
-    // account / admin navigacija (uvek pitamo server)
     async goToAccount() {
       try {
         await api.get('/user')
@@ -201,30 +222,35 @@ export default {
     async goToAdmin() {
       try {
         const { data } = await api.get('/user')
-        if (['admin', 'superadmin'].includes(data.role)) {
-          this.$router.push('/admin/dashboard')
-        } else {
-          this.$router.push('/dashboard')
-        }
+        if (['admin', 'superadmin'].includes(data.role)) this.$router.push('/admin/dashboard')
+        else this.$router.push('/dashboard')
       } catch {
         this.$router.push({ path: '/signin', query: { redirect: '/admin/dashboard' } })
       }
     },
 
-    // logout: backend + lokalni clear + korpa
+    // LOGOUT – backend + local clear + cart clear + reset router cache + na /signin
     async logout() {
       try { await web.post('/logout') } catch {}
-      try { doLogout() } catch {}
-      try { cartStore.clearCart() } catch {}
+      try { clearAuthLocal() } catch {}
+      try { this.clearCart() } catch {}
+
       this.user = null
-      this.$router.replace('/signin')
+      if (typeof resetAuthCache === 'function') {
+        try { resetAuthCache() } catch {}
+      }
+
+      // hard navigacija sigurno prekida bilo kakav stari state
+      window.location.assign('/signin')
+      // (ako želiš SPA bez reload-a, koristi umesto assign):
+      // this.$router.replace('/signin')
     },
   },
 
-  mounted() {
+  async mounted() {
     document.addEventListener('click', this.clickHandler)
     document.addEventListener('keydown', this.keyHandler)
-    this.refreshUser()
+    await this.refreshUser()
   },
 
   beforeUnmount() {

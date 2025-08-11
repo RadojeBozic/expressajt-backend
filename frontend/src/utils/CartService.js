@@ -16,7 +16,6 @@ function canUseStorage() {
     return true
   } catch { return false }
 }
-
 const storageOK = canUseStorage()
 
 function loadInitial() {
@@ -27,14 +26,33 @@ function loadInitial() {
 
   // (Po potrebi migracije između verzija)
   if (payload.version !== CART_VERSION) {
-    // primer migracije:
-    // if (payload.version === 0) { ... }
     return { version: CART_VERSION, items: Array.isArray(payload.items) ? payload.items : [] }
   }
   return { version: CART_VERSION, items: Array.isArray(payload.items) ? payload.items : [] }
 }
 
 const state = ref(loadInitial())
+
+/** Globalni, reaktivan niz item-a */
+const cart = computed({
+  get: () => state.value.items,
+  set: (arr) => { state.value.items = Array.isArray(arr) ? arr : [] }
+})
+
+/** Ukupan broj proizvoda */
+const totalItems = computed(() =>
+  cart.value.reduce((sum, i) => sum + (parseInt(i.quantity, 10) || 0), 0)
+)
+
+/** Ukupna cena u centima */
+const totalPrice = computed(() =>
+  cart.value.reduce((sum, i) => sum + (Math.round(Number(i.price) || 0) * (parseInt(i.quantity, 10) || 0)), 0)
+)
+
+/** Dohvati kopiju korpe (ne reaktivnu) */
+function getCart() {
+  return cart.value.map(i => ({ ...i }))
+}
 
 /** Helper: bezbedan upis u storage */
 function persist() {
@@ -46,11 +64,13 @@ function persist() {
   }
 }
 
-/** Globalni, reaktivan niz item-a */
-const cart = computed({
-  get: () => state.value.items,
-  set: (arr) => { state.value.items = Array.isArray(arr) ? arr : [] }
-})
+/** Emit event (za legacy UI/mini widgete i jednostavnije hookove) */
+function emitCartUpdated() {
+  try {
+    const detail = { items: getCart(), totalItems: totalItems.value, totalPrice: totalPrice.value }
+    window.dispatchEvent(new CustomEvent('cart-updated', { detail }))
+  } catch { /* no-op (SSR / CSP) */ }
+}
 
 /** Identifikuj item po (id, variantKey) da bismo podržali varijante istog proizvoda */
 function keyOf(item) {
@@ -102,41 +122,31 @@ function clearCart() {
   cart.value = []
 }
 
-/** Ukupan broj proizvoda */
-const totalItems = computed(() =>
-  cart.value.reduce((sum, i) => sum + (parseInt(i.quantity, 10) || 0), 0)
-)
-
-/** Ukupna cena u centima */
-const totalPrice = computed(() =>
-  cart.value.reduce((sum, i) => sum + (Math.round(Number(i.price) || 0) * (parseInt(i.quantity, 10) || 0)), 0)
-)
-
-/** Dohvati kopiju korpe (ne reaktivnu) */
-function getCart() {
-  return cart.value.map(i => ({ ...i }))
-}
-
 /** Zameni celu korpu (npr. restore iz backenda) */
 function replaceCart(items = []) {
   cart.value = (Array.isArray(items) ? items : []).map(normalize)
 }
 
-/** Auto‑persist (debounce‑ovan minimalno preko microtask-a) */
+/** Auto-persist (+ emit) — debounce-ovan microtaskom */
 let persistQueued = false
 watch(state, () => {
   if (persistQueued) return
   persistQueued = true
-  queueMicrotask(() => { persist(); persistQueued = false })
+  queueMicrotask(() => {
+    persist()
+    emitCartUpdated()
+    persistQueued = false
+  })
 }, { deep: true })
 
-/** Cross‑tab sinhronizacija */
+/** Cross-tab sinhronizacija (+ emit) */
 if (storageOK) {
   window.addEventListener('storage', (e) => {
     if (e.key === STORAGE_KEY && e.newValue) {
       const next = safeParse(e.newValue, null)
       if (next && next.version === CART_VERSION && Array.isArray(next.items)) {
         state.value = next
+        emitCartUpdated()
       }
     }
   })
@@ -168,4 +178,14 @@ export {
   getCart,
   totalItems,
   totalPrice,
+}
+
+/** Optional: helpers za lakši subscribe/unsubscribe iz vanilla delova */
+export function onCartUpdated(handler) {
+  window.addEventListener('cart-updated', handler)
+  // po inicijali da dobiješ trenutni state
+  handler({ detail: { items: getCart(), totalItems: totalItems.value, totalPrice: totalPrice.value } })
+}
+export function offCartUpdated(handler) {
+  window.removeEventListener('cart-updated', handler)
 }
