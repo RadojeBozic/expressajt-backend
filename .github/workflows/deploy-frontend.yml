@@ -52,25 +52,25 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # kreiraj assets dir ako ne postoji
-          ssh -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
 
-          # očisti stare hashirane assete
-          ssh -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
+          APP_ROOT="/home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html"
+          DEST="$APP_ROOT/public"
 
-          # prebaci nove assete (ako postoje)
+          echo "== Ensure remote dirs exist =="
+          ssh "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\" && ls -ld \"$DEST\" \"$DEST/assets\""
+
+          echo "== Clean old hashed assets =="
+          ssh "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
+
+          echo "== Upload assets =="
           if compgen -G "frontend/dist/assets/*" > /dev/null; then
-            scp -o StrictHostKeyChecking=yes -r \
-              frontend/dist/assets/* \
-              "$SSH_USER@$SSH_HOST:$DEST/assets/"
+            scp -r frontend/dist/assets/* "$SSH_USER@$SSH_HOST:$DEST/assets/"
+          else
+            echo "No local assets to upload (frontend/dist/assets is empty?)"
           fi
 
-          # prebaci index.html
-          scp -o StrictHostKeyChecking=yes \
-            frontend/dist/index.html \
-            "$SSH_USER@$SSH_HOST:$DEST/index.html"
+          echo "== Upload index.html =="
+          scp frontend/dist/index.html "$SSH_USER@$SSH_HOST:$DEST/index.html"
 
       - name: Clear Laravel caches (optional)
         shell: bash
@@ -78,3 +78,14 @@ jobs:
           ssh -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" \
             'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
+
+
+      - name: Sanity check remote path & user
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "== Who am I on remote =="
+          ssh "$SSH_USER@$SSH_HOST" 'whoami && pwd || true'
+          echo "== Test listing =="
+          ssh "$SSH_USER@$SSH_HOST" 'ls -ld /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html || true'
+          ssh "$SSH_USER@$SSH_HOST" 'ls -ld /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public || true'
