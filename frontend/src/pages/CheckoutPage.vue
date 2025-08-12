@@ -20,6 +20,19 @@
             <p class="text-sm text-slate-400">
               {{ item.quantity }} × {{ formatPrice(item.price) }}
             </p>
+
+            <div class="flex items-center gap-2 mt-2">
+            <button
+              @click="updateQuantity(item.id, item.variantKey || '', Math.max(0, item.quantity - 1))"
+            class="px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs"
+                >−</button>
+              <button
+              @click="updateQuantity(item.id, item.variantKey || '', item.quantity + 1)"
+            class="px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs"
+              >+</button>
+            </div>
+
+
             <button
               @click="removeItem(item.id)"
               class="text-xs text-red-400 hover:text-red-200 mt-1"
@@ -88,15 +101,11 @@ import api from '@/api/http'
 
 const { t } = useI18n()
 
-const { cart, removeFromCart, clearCart } = useCart()
-const cartItems = ref([])
+const { cart, removeFromCart, clearCart, updateQuantity } = useCart()
+const cartItems = computed(() => cart.value || [])
 const showInvoiceModal = ref(false)
 
 onMounted(() => {
-  // sync iz store-a
-  cartItems.value = [...(cart.value || [])]
-
-  // Plausible: zabeleži ulazak u checkout (jednom po sesiji)
   trackOnce('checkout_started', () => track('Checkout Started'))
 })
 
@@ -121,7 +130,7 @@ function formatPrice(valueCents, currency = 'RSD') {
 function removeItem(id) {
   try {
     removeFromCart(id)
-    cartItems.value = [...(cart.value || [])]
+    
   } catch (e) {
     console.error('Remove item error:', e)
   }
