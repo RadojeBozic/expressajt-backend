@@ -20,7 +20,7 @@
           <td class="px-4 py-2">{{ invoice.name }}</td>
           <td class="px-4 py-2">{{ invoice.email }}</td>
           <td class="px-4 py-2">{{ invoice.currency }}</td>
-          <td class="px-4 py-2">{{ formatPrice(invoice.amount, invoice.currency) }}</td>
+          <td class="px-4 py-2">{{ formatPrice((invoice.total_cents ?? invoice.amount), invoice.currency) }}</td>
           <td class="px-4 py-2">
             <select v-model="invoice.status" class="bg-slate-700 text-white rounded px-2 py-1 text-sm">
               <option value="pending">⏳ Na čekanju</option>

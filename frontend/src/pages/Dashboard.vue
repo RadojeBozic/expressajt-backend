@@ -40,7 +40,7 @@
   <ul>
     <li v-for="invoice in invoices" :key="invoice.id" class="border-b border-slate-700 pb-2 mb-2">
       {{ invoice.name }} – {{ invoice.currency.toUpperCase() }} – 
-      {{ formatPrice(invoice.amount, invoice.currency) }} – 
+      {{ formatPrice((invoice.total_cents ?? invoice.amount), invoice.currency) }} – 
       Status: {{ invoice.status }}
       <br />
       <a
