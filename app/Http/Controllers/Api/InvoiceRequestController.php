@@ -54,21 +54,22 @@ class InvoiceRequestController extends Controller
 
     # GET /api/invoice-request/{id}/pdf
     public function download($id)
-    {
-        $invoice = InvoiceRequest::findOrFail($id);
+{
+    $invoice = InvoiceRequest::findOrFail($id);
+    $invoice->generatePDF();
 
-        // Ako PDF ne postoji (ili želite uvek sveže) – generiši/regen
-        $invoice->generatePDF();
-
-        $file = "invoices/invoice-{$invoice->id}.pdf";
-        if (!Storage::exists($file)) {
-            return response()->json(['error' => 'PDF nije pronađen.'], 404);
-        }
-
-        // opciono: friendly filename
-        $filename = "profaktura-{$invoice->id}.pdf";
-        return Storage::download($file, $filename);
+    $path = "invoices/invoice-{$invoice->id}.pdf";
+    if (!\Storage::exists($path)) {
+        return response()->json(['error' => 'PDF nije pronađen.'], 404);
     }
+
+    $filename = "profaktura-{$invoice->id}.pdf";
+    $content  = \Storage::get($path);
+
+    return response($content, 200)
+        ->header('Content-Type', 'application/pdf')
+        ->header('Content-Disposition', 'inline; filename="'.$filename.'"');
+}
 
     # GET /api/my-invoices  (auth:sanctum)
     public function userInvoices(Request $request)
