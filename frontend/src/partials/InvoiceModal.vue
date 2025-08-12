@@ -1,7 +1,7 @@
 <template>
-  <div v-if="visible" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+  <div v-if="visible" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-16 mb-16">
     <div class="bg-slate-800 text-white rounded-lg p-6 w-full max-w-lg shadow-lg relative">
-      <h2 class="text-2xl font-bold mb-16 mt-16 text-center">{{ $t('invoice.title') }}</h2>
+      <h2 class="text-2xl font-bold mb-4 mt-16 text-center">{{ $t('invoice.title') }}</h2>
 
       <!-- Forma -->
       <form @submit.prevent="submitForm" class="space-y-4">
