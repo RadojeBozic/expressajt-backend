@@ -244,7 +244,7 @@ export default {
         fd.append(`offer_items[${i}][image]`, item.image)
       }
     })
-
+    //// samo za debug
     // (debug) — vidi šta konkretno šalješ
     // for (const [k, v] of fd.entries()) console.log('FD', k, v)
 
