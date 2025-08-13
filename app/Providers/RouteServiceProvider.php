@@ -10,22 +10,21 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    /**
-     * The path to your application's "home" route.
-     *
-     * Typically, users are redirected here after authentication.
-     *
-     * @var string
-     */
+    /** The path to your application's "home" route. */
     public const HOME = '/home';
 
-    /**
-     * Define your route model bindings, pattern filters, and other route configuration.
-     */
+    /** Define your route model bindings, pattern filters, and other route configuration. */
     public function boot(): void
     {
+        // Default API limiter (60/min po user-u ili IP-u)
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+        });
+
+        // Naš AI limiter (10/min po user-u ili IP-u) — BEZ decayMinutes!
+        RateLimiter::for('ai-lite', function (Request $request) {
+            $key = $request->user()?->id ? ('u:' . $request->user()->id) : ('ip:' . $request->ip());
+            return Limit::perMinute(10)->by($key);
         });
 
         $this->routes(function () {

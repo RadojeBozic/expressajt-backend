@@ -102,7 +102,7 @@
       © {{ new Date().getFullYear() }} {{ data.name || 'Vaša firma' }} —
       {{ $t('businessPreview.footerText') }}
       <a
-        href="https://gbsplatform.com"
+        href="https://express-web.express"
         target="_blank"
         class="text-blue-600 hover:underline"
       >{{ $t('businessPreview.footerLink') }}</a>
