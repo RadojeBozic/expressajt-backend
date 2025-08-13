@@ -17,18 +17,18 @@
             :description="site.description"
             :link="`/preview/${site.slug}`"
           />
-         
+
+          <!-- Dev-primjeri: koristimo RELATIVNE rute umesto localhost linkova -->
           <DemoBox
-            title="🏡 Frizer Neša/pro plaćena varijanta"
-            description="Ovo je primer plaćene verzije i cena može biti od 10 do 50 €, a sve zavisi od nivoa željene podrške: obrade fotografija, uređivanja teksta, izrada logoa, kreiranja cenovnika... Detaljnu specifikaciju dobijate na upit"
-            link="http://localhost:5173/preview/frizerski-salon-nesa-6890d5fbd0285"
+            title="🏡 Frizer Neša / PRO (plaćena varijanta)"
+            description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
+            :link="`/preview/frizerski-salon-nesa-6890d5fbd0285`"
           />
-           <DemoBox
-            title="🏡 Frizer Neša - besplatna/modern"
-            description="Ovo je primer besplatne prezentacije koju korisnik može samostalno uređivati bez ikakve nadoknade. Korisnik može kopirati link i koristiti ga neograničeno."
-            link="http://localhost:5173/preview/nesa-frizer-6890cdbf41662"
+          <DemoBox
+            title="🏡 Frizer Neša — besplatna / modern"
+            description="Primer besplatne prezentacije za samostalno uređivanje. Link možete koristiti neograničeno."
+            :link="`/preview/nesa-frizer-6890cdbf41662`"
           />
-          
         </div>
 
         <!-- CTA dugmad -->
@@ -57,6 +57,8 @@
               {{ $t('demoPreviews.proSiteButton') }}
             </router-link>
           </div>
+
+          <p v-if="error" class="text-red-300 text-sm mt-4">{{ error }}</p>
         </div>
       </div>
     </section>
@@ -70,7 +72,7 @@ import DemoBox from '../components/DemoBox.vue'
 import { isLoggedIn } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
-import api from '../api/http' // ✅ centralna axios instanca (baseURL = /api)
+import api from '@/api/http' // centralna axios instanca (baseURL = /api)
 
 export default {
   name: 'DemoPreviews',

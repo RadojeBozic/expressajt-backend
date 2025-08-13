@@ -9,6 +9,7 @@
           :alt="data.name ? `Logo ${data.name}` : 'Logo'"
           class="h-12 w-12 object-contain rounded-full hover:scale-105 transition-transform duration-300"
           loading="lazy"
+          decoding="async"
         />
         <h1 v-else class="text-xl font-bold">{{ data.name || 'Vaša firma' }}</h1>
       </div>
@@ -31,6 +32,8 @@
         :alt="data.hero_title ? `Hero: ${data.hero_title}` : 'Hero slika'"
         class="w-full h-[400px] object-cover rounded-lg hover:scale-105 transition duration-300"
         loading="lazy"
+        decoding="async"
+        fetchpriority="high"
       />
     </section>
 
@@ -52,6 +55,7 @@
           :alt="data.about_title ? `O nama: ${data.about_title}` : 'O nama slika'"
           class="w-60 h-60 object-cover rounded shadow hover:scale-105 transition duration-300"
           loading="lazy"
+          decoding="async"
         />
         <div class="text-sm leading-relaxed whitespace-pre-line break-words w-full text-justify" v-if="isNonEmpty(data.about_text)">
           {{ data.about_text }}
@@ -76,6 +80,7 @@
             :alt="item.title ? `Ponuda: ${item.title}` : 'Ponuda slika'"
             class="w-full h-48 object-cover rounded shadow hover:scale-105 transition duration-300"
             loading="lazy"
+            decoding="async"
           />
           <p class="mt-2 text-sm font-medium break-words" v-if="isNonEmpty(item.title)">{{ item.title }}</p>
         </div>
@@ -94,6 +99,7 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       </div>
     </section>
@@ -109,6 +115,21 @@
         loading="lazy"
         title="PDF dokument"
       ></iframe>
+      <!-- Fallback linkovi -->
+      <div class="mt-2 text-sm">
+        <a
+          :href="getFileUrl(data.pdf_file)"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-700 hover:underline"
+        >{{ $t('businessPreviewPro.openPdfInNewTab') || 'Otvori PDF u novom tabu' }}</a>
+        <span class="mx-1 text-gray-400">|</span>
+        <a
+          :href="getFileUrl(data.pdf_file)"
+          download
+          class="text-blue-700 hover:underline"
+        >{{ $t('businessPreviewPro.downloadPdf') || 'Preuzmi PDF' }}</a>
+      </div>
     </section>
 
     <!-- Kontakt -->
@@ -145,7 +166,7 @@
         <a
           :href="isValidUrl(data.facebook) ? data.facebook : fallbackFacebook"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="hover:text-blue-600 transition"
           aria-label="Facebook"
         >
@@ -154,7 +175,7 @@
         <a
           :href="isValidUrl(data.instagram) ? data.instagram : fallbackInstagram"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="hover:text-pink-600 transition"
           aria-label="Instagram"
         >
@@ -205,7 +226,6 @@ export default {
       const src = this.data?.video_url
       if (!src) return null
       try {
-        // podrži razne YouTube formate
         const url = new URL(src)
         const host = url.hostname.replace(/^www\./, '')
         let id = null
@@ -231,10 +251,8 @@ export default {
       const link = (this.data?.google_map_link || '').trim()
       const addr = (this.data?.address || '').trim()
 
-      // Ako postoji već embed link, koristi ga
       if (link && /\/maps\/embed/i.test(link)) return link
 
-      // Ako postoji običan Google Maps link, probaj da izvučeš q= ili place
       if (link && /google\.[^/]+\/maps/i.test(link)) {
         try {
           const u = new URL(link)
@@ -243,7 +261,6 @@ export default {
         } catch {}
       }
 
-      // fallback na adresu
       if (addr) {
         return `https://www.google.com/maps?q=${encodeURIComponent(addr)}&output=embed`
       }
@@ -266,7 +283,6 @@ export default {
     },
     getFileUrl(path) {
       if (!path) return ''
-      // apsolutni URL — pusti kako jeste
       if (/^https?:\/\//i.test(path)) return path
 
       const trimmed = String(path).replace(/^\/+/, '')

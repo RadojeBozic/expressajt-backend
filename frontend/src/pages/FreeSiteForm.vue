@@ -8,17 +8,33 @@
         {{ $t('freesite.note') }}
       </p>
 
-      <form @submit.prevent="submitForm" class="bg-slate-800 p-6 rounded-lg shadow max-w-3xl w-full space-y-6">
+      <form @submit.prevent="submitForm" class="bg-slate-800 p-6 rounded-lg shadow max-w-3xl w-full space-y-6" novalidate>
         <!-- 📇 Opšti podaci -->
         <fieldset>
           <legend class="text-xl font-semibold text-purple-400 mb-4">📇 {{ $t('freesite.sections.general') }}</legend>
           <div class="space-y-4">
-            <input v-model="form.name" required maxlength="255" :placeholder="$t('freesite.fields.name')" class="input" />
-            <textarea v-model="form.description" required maxlength="1000" :placeholder="$t('freesite.fields.description')" class="input" rows="3" />
-            <input v-model="form.email" required type="email" :placeholder="$t('freesite.fields.email')" class="input" />
-            <input v-model="form.phone" required pattern=".{5,50}" :placeholder="$t('freesite.fields.phone')" class="input" />
-            <input v-model="form.facebook" required :placeholder="$t('freesite.fields.facebook')" class="input" />
-            <input v-model="form.instagram" required :placeholder="$t('freesite.fields.instagram')" class="input" />
+            <input v-model.trim="form.name" required maxlength="255" :placeholder="$t('freesite.fields.name')" class="input" />
+
+            <textarea v-model.trim="form.description" required maxlength="1000" :placeholder="$t('freesite.fields.description')" class="input" rows="3" />
+
+            <input v-model.trim="form.email" required type="email" :placeholder="$t('freesite.fields.email')" class="input" />
+
+            <input v-model.trim="form.phone" required pattern=".{5,50}" :placeholder="$t('freesite.fields.phone')" class="input" />
+
+            <!-- Facebook/Instagram: nisu obavezni; ako ih korisnik popuni, normalizujemo u validan http(s) URL -->
+            <input
+              v-model.trim="form.facebook"
+              :placeholder="$t('freesite.fields.facebook')"
+              class="input"
+              @blur="form.facebook = normalizeUrl(form.facebook)"
+            />
+            <input
+              v-model.trim="form.instagram"
+              :placeholder="$t('freesite.fields.instagram')"
+              class="input"
+              @blur="form.instagram = normalizeUrl(form.instagram)"
+            />
+
             <label class="block text-sm mb-1">{{ $t('freesite.fields.logo') }}</label>
             <input type="file" accept="image/*" @change="e => handleImageFile(e, 'logo')" class="block" />
           </div>
@@ -30,8 +46,8 @@
           <div class="space-y-4">
             <label>{{ $t('freesite.fields.heroImage') }}</label>
             <input type="file" required accept="image/*" @change="e => handleImageFile(e, 'heroImage')" />
-            <input v-model="form.heroTitle" required maxlength="255" :placeholder="$t('freesite.fields.heroTitle')" class="input" />
-            <textarea v-model="form.heroSubtitle" required maxlength="250" :placeholder="$t('freesite.fields.heroSubtitle')" class="input" rows="3" />
+            <input v-model.trim="form.heroTitle" required maxlength="255" :placeholder="$t('freesite.fields.heroTitle')" class="input" />
+            <textarea v-model.trim="form.heroSubtitle" required maxlength="250" :placeholder="$t('freesite.fields.heroSubtitle')" class="input" rows="3" />
           </div>
         </fieldset>
 
@@ -41,8 +57,8 @@
           <div class="space-y-4">
             <label>{{ $t('freesite.fields.aboutImage') }}</label>
             <input type="file" required accept="image/*" @change="e => handleImageFile(e, 'aboutImage')" />
-            <input v-model="form.aboutTitle" required maxlength="255" :placeholder="$t('freesite.fields.aboutTitle')" class="input" />
-            <textarea v-model="form.aboutText" required maxlength="1000" :placeholder="$t('freesite.fields.aboutText')" rows="5" class="input" />
+            <input v-model.trim="form.aboutTitle" required maxlength="255" :placeholder="$t('freesite.fields.aboutTitle')" class="input" />
+            <textarea v-model.trim="form.aboutText" required maxlength="1000" :placeholder="$t('freesite.fields.aboutText')" rows="5" class="input" />
           </div>
         </fieldset>
 
@@ -50,12 +66,21 @@
         <fieldset>
           <legend class="text-xl font-semibold text-purple-400 mb-4 mt-6">🛍️ {{ $t('freesite.sections.offer') }}</legend>
           <div class="space-y-4">
-            <input v-model="form.offerTitle" required maxlength="255" :placeholder="$t('freesite.fields.offerTitle')" class="input" />
+            <input v-model.trim="form.offerTitle" required maxlength="255" :placeholder="$t('freesite.fields.offerTitle')" class="input" />
             <div class="space-y-2">
-              <div v-for="(item, index) in form.offerItems" :key="index" class="space-y-2 border border-slate-600 p-3 rounded">
-                <input v-model="item.title" required maxlength="255" :placeholder="$t('freesite.fields.offerItemTitle')" class="input" />
+              <div
+                v-for="(item, index) in form.offerItems"
+                :key="index"
+                class="space-y-2 border border-slate-600 p-3 rounded"
+              >
+                <input v-model.trim="item.title" required maxlength="255" :placeholder="$t('freesite.fields.offerItemTitle')" class="input" />
                 <input type="file" required accept="image/*" @change="e => handleOfferImageUpload(e, index)" />
-                <button v-if="form.offerItems.length > 1" type="button" @click="removeItem(index)" class="text-red-400 hover:text-red-600 text-sm">
+                <button
+                  v-if="form.offerItems.length > 1"
+                  type="button"
+                  @click="removeItem(index)"
+                  class="text-red-400 hover:text-red-600 text-sm"
+                >
                   {{ $t('freesite.fields.remove') }}
                 </button>
               </div>
@@ -83,11 +108,13 @@
           type="submit"
           :disabled="loading"
           class="w-full bg-purple-600 hover:bg-purple-700 py-3 px-4 rounded text-white font-semibold"
+          :aria-busy="loading ? 'true' : 'false'"
         >
           {{ loading ? $t('freesite.loading') : $t('freesite.submit') }}
         </button>
+
         <p class="text-slate-400 text-xs mt-2 text-center">
-          ℹ️{{ $t('freesite.noticeAfterSubmit') }}
+          ℹ️ {{ $t('freesite.noticeAfterSubmit') }}
         </p>
 
         <p v-if="successMessage" class="text-green-400 text-sm mt-4">{{ $t('freesite.success') }}</p>
@@ -99,11 +126,10 @@
   </div>
 </template>
 
-
 <script>
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
-import api from '../api/http' // ✅ centralna axios instanca (baseURL=/api + interceptor)
+import api, { getCsrfCookie } from '../api/http' // centralna axios instanca + CSRF helper
 
 export default {
   name: 'FreeSiteForm',
@@ -134,11 +160,24 @@ export default {
     }
   },
   async mounted() {
-    // ✅ U Options API koristi this.$route (ne useRoute())
     const slug = this.$route?.query?.fromSlug
     if (slug) await this.fetchFromSlug(slug)
   },
   methods: {
+    // Nije obavezno, ali ako korisnik nešto upiše, napravimo validan http(s) URL
+    normalizeUrl(val) {
+      const v = (val || '').trim()
+      if (!v) return ''
+      if (/^https?:\/\//i.test(v)) return v
+      // dozvoli “facebook.com/..” → “https://facebook.com/..”
+      try {
+        // ako izgleda kao domen/putanja bez protokola
+        return `https://${v}`
+      } catch {
+        return v
+      }
+    },
+
     addItem() {
       if (this.form.offerItems.length < 10) {
         this.form.offerItems.push({ title: '', image: null })
@@ -154,7 +193,7 @@ export default {
         this.form[field] = null
         return
       }
-      this.form[field] = file
+      this.form[field] = file || null
       this.errorMessage = ''
     },
     handleOfferImageUpload(e, index) {
@@ -164,53 +203,84 @@ export default {
         this.form.offerItems[index].image = null
         return
       }
-      this.form.offerItems[index].image = file
+      this.form.offerItems[index].image = file || null
       this.errorMessage = ''
     },
+
     async submitForm() {
       this.successMessage = ''
       this.errorMessage = ''
       this.loading = true
 
       try {
-        const formData = new FormData()
+        // 1) (bezbedno) povuci CSRF cookie ako je potreban (Sanctum u nekim setapima hoće)
+        await getCsrfCookie().catch(() => {})
 
-        // Dinamički polja
-        for (const key in this.form) {
-          if (key === 'offerItems') {
-            this.form.offerItems.forEach((item, i) => {
-              formData.append(`offerItems[${i}][title]`, item.title ?? '')
-              if (item.image instanceof File) {
-                formData.append(`offerItems[${i}][image]`, item.image)
-              }
-            })
-          } else if (this.form[key] instanceof File) {
-            formData.append(key, this.form[key])
-          } else if (this.form[key] !== null && typeof this.form[key] !== 'undefined') {
-            formData.append(key, this.form[key])
+        // 2) pripremi payload
+        const fd = new FormData()
+        // server razlikuje free/pro → eksplicitno pošaljimo type=free
+        fd.append('type', 'free')
+
+        // tekstualna polja (po istim imenima kao backend)
+        const textFields = [
+          'name', 'description', 'email', 'phone',
+          'facebook', 'instagram',
+          'heroTitle', 'heroSubtitle',
+          'aboutTitle', 'aboutText',
+          'offerTitle',
+          'template',
+        ]
+
+        // map Hero/About “camelCase” → snake_case ako backend koristi takav naming
+        const mapKey = (k) => ({
+          heroTitle: 'hero_title',
+          heroSubtitle: 'hero_subtitle',
+          aboutTitle: 'about_title',
+          aboutText: 'about_text',
+        }[k] || k)
+
+        textFields.forEach((k) => {
+          const v = (this.form[k] ?? '').toString()
+          fd.append(mapKey(k), v)
+        })
+
+        // fajlovi
+        if (this.form.logo instanceof File) fd.append('logo', this.form.logo)
+        if (this.form.heroImage instanceof File) fd.append('heroImage', this.form.heroImage)
+        if (this.form.aboutImage instanceof File) fd.append('aboutImage', this.form.aboutImage)
+
+        // ponuda (niz)
+        this.form.offerItems.forEach((item, i) => {
+          fd.append(`offerItems[${i}][title]`, (item?.title ?? '').toString())
+          if (item?.image instanceof File) {
+            fd.append(`offerItems[${i}][image]`, item.image)
           }
-        }
+        })
 
-        // ✅ preko api -> POST /api/free-site-request
-        const { data } = await api.post('/free-site-request', formData /*, { headers: { 'Content-Type': 'multipart/form-data' } }*/)
+        // 3) pozovi API
+        const { data } = await api.post('/free-site-request', fd)
 
+        // 4) uspeh → redirekcija na preview
         this.successMessage = this.$t?.('freesite.success') || 'Zahtev uspešno poslat.'
-        this.$router.push(`/prezentacije/${data?.slug}`)
+        const slug = data?.slug || data?.data?.slug
+        if (slug) this.$router.push(`/prezentacije/${slug}`)
       } catch (err) {
-        console.error('❌', err?.response || err)
-        if (err.response?.data?.errors) {
-          const errors = Object.values(err.response.data.errors).flat()
-          this.errorMessage = errors?.[0] || this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
+        // 422 validacija ili drugi problemi
+        const res = err?.response
+        if (res?.status === 422 && res.data?.errors) {
+          const first = Object.values(res.data.errors).flat()?.[0]
+          this.errorMessage = first || (this.$t?.('freesite.errors.general') || 'Došlo je do greške.')
         } else {
-          this.errorMessage = this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
+          this.errorMessage = res?.data?.message || this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
         }
+        console.error('❌ /free-site-request error:', res || err)
       } finally {
         this.loading = false
       }
     },
+
     async fetchFromSlug(slug) {
       try {
-        // ✅ preko api -> GET /api/free-site-request/:slug
         const { data: source } = await api.get(`/free-site-request/${slug}`)
 
         this.form.name = (source?.name || '') + ' (kopija)'
@@ -225,11 +295,11 @@ export default {
         this.form.aboutText = source?.about_text ?? ''
         this.form.offerTitle = source?.offer_title ?? ''
         this.form.offerItems = Array.isArray(source?.offer_items)
-          ? source.offer_items.map(item => ({ title: item?.title ?? '', image: null }))
+          ? source.offer_items.map(it => ({ title: it?.title ?? '', image: null }))
           : [{ title: '', image: null }]
         this.form.template = source?.template ?? this.form.template
       } catch (err) {
-        console.error('❌', err)
+        console.error('❌ fetchFromSlug error:', err)
         this.errorMessage = this.$t?.('freesite.errors.general') || 'Greška pri učitavanju.'
       }
     },

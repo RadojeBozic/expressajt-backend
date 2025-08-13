@@ -412,51 +412,77 @@ export default {
     },
 
     // ---------- SUBMIT ----------
-    async submitForm() {
-      this.successMessage = ''
-      this.errorMessage = ''
-      this.loading = true
-      this.resData = null
+   async submitForm() {
+  this.successMessage = ''
+  this.errorMessage = ''
+  this.loading = true
+  this.resData = null
 
-      try {
-        const fd = new FormData()
-        fd.append('type', 'pro')
-        fd.append('is_sample', this.isSample ? '1' : '0') // harmless; backend može ignorisati
+  try {
+    const fd = new FormData()
+    // tip zahteva: "pro" ili "free"
+    fd.append('type', 'pro')
 
-        const textFields = [
-          'name', 'description', 'email', 'phone', 'facebook', 'instagram',
-          'heroTitle', 'heroSubtitle', 'aboutTitle', 'aboutText', 'offerTitle',
-          'youtubeLink', 'google_map_link', 'address_city', 'address_street',
-          'phone2', 'phone3', 'email2', 'email3', 'template', 'plan'
-        ]
+    // snake_case tekstualna polja
+    const snake = {
+      name: this.form.name,
+      description: this.form.description,
+      email: this.form.email,
+      phone: this.form.phone,
+      facebook: this.form.facebook,
+      instagram: this.form.instagram,
+      hero_title: this.form.heroTitle,
+      hero_subtitle: this.form.heroSubtitle,
+      about_title: this.form.aboutTitle,
+      about_text: this.form.aboutText,
+      offer_title: this.form.offerTitle,
+      video_url: this.form.youtubeLink,
+      google_map_link: this.form.google_map_link,
+      template: this.form.template || 'klasicni-pro',
+      plan: this.form.plan || 'starter',
+    }
 
-        textFields.forEach(field => {
-          const key = field === 'youtubeLink' ? 'video_url' : field
-          fd.append(key, this.form[field] || '')
-        })
+    // napravi jedno polje "address" iz ulice + grada
+    const address = [this.form.address_street, this.form.address_city].filter(Boolean).join(', ')
+    if (address) snake.address = address
 
-        if (this.form.logo) fd.append('logo', this.form.logo)
-        if (this.form.heroImage) fd.append('heroImage', this.form.heroImage)
-        if (this.form.aboutImage) fd.append('aboutImage', this.form.aboutImage)
-        if (this.form.pdfDocument) fd.append('pdf_file', this.form.pdfDocument)
+    Object.entries(snake).forEach(([k, v]) => fd.append(k, v || ''))
 
-        this.form.offerItems.forEach((item, i) => {
-          fd.append(`offerItems[${i}][title]`, item?.title || '')
-          if (item?.image instanceof File) {
-            fd.append(`offerItems[${i}][image]`, item.image)
-          }
-        })
+    // fajlovi — obavezno snake_case imena:
+    if (this.form.logo)       fd.append('logo', this.form.logo)
+    if (this.form.heroImage)  fd.append('hero_image', this.form.heroImage)
+    if (this.form.aboutImage) fd.append('about_image', this.form.aboutImage)
+    if (this.form.pdfDocument)fd.append('pdf_file', this.form.pdfDocument)
 
-        const { data } = await api.post('/free-site-request', fd)
-        this.successMessage = this.$t?.('proform.success') || 'Zahtev uspešno poslat.'
-        this.resData = data
-      } catch (err) {
-        console.error('❌', err?.response || err)
-        this.errorMessage = err?.response?.data?.message || this.$t?.('proform.errors.general') || 'Došlo je do greške.'
-      } finally {
-        this.loading = false
+    // stavke ponude (snake_case + iste ključne reči kao u previewu)
+    this.form.offerItems.forEach((item, i) => {
+      fd.append(`offer_items[${i}][title]`, item?.title || '')
+      if (item?.image instanceof File) {
+        fd.append(`offer_items[${i}][image]`, item.image)
       }
-    },
+    })
+
+    // OPCIJONO: za javne rute ne trebaju cookies → izbegne se Chrome warning
+    const { data } = await api.post('/free-site-request', fd, { withCredentials: false })
+
+    this.successMessage = this.$t?.('proform.success') || 'Zahtev uspešno poslat.'
+    this.resData = data
+  } catch (err) {
+    console.error('❌', err?.response || err)
+    const st = err?.response?.status
+    if (st === 422) {
+      // prikaži validacione poruke detaljno
+      const errs = err.response?.data?.errors || {}
+      const flat = Object.values(errs).flat().join(' ')
+      this.errorMessage = flat || err.response?.data?.message || 'Neispravni podaci.'
+    } else {
+      this.errorMessage = err?.response?.data?.message || this.$t?.('proform.errors.general') || 'Došlo je do greške.'
+    }
+  } finally {
+    this.loading = false
+  }
+},
+
 
     async fetchFromSlug(slug) {
       try {

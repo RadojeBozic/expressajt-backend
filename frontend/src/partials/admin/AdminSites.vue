@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import api from '@/api/http'
+import api, { getCsrfCookie } from '@/api/http'
 
 export default {
   name: 'AdminSites',
@@ -93,10 +93,14 @@ export default {
       this.error = null
       try {
         const { data } = await api.get('/free-site-request/all-site-requests')
+        // ako backend vraća {data: []} ili direktno []
         this.sites = Array.isArray(data) ? data : (data?.data ?? [])
+        // (opciono) sort najnovije prvo
+        this.sites.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       } catch (error) {
         console.error('❌ Greška pri učitavanju sajtova:', error?.response?.data || error)
         this.error = this.$t?.('adminSites.errorLoading') || 'Greška pri učitavanju sajtova.'
+        if (error?.response?.status === 401) this.$router.push('/login')
       } finally {
         this.loading = false
       }
@@ -104,25 +108,32 @@ export default {
 
     async approveSite(slug) {
       try {
+        // ✅ Sanctum CSRF pre PATCH
+        await getCsrfCookie().catch(() => {})
         await api.patch(`/free-site-request/${slug}/status`, { status: 'active' })
+
         const site = this.sites.find(s => s.slug === slug)
         if (site) site.status = 'active'
         alert(`✅ ${this.$t?.('adminSites.approved') || 'Odobreno.'}`)
       } catch (err) {
         console.error('❌ Greška pri odobravanju:', err?.response?.data || err)
-        alert(this.$t?.('adminSites.errorApprove') || 'Greška pri odobravanju.')
+        if (err?.response?.status === 401) this.$router.push('/login')
+        else alert(this.$t?.('adminSites.errorApprove') || 'Greška pri odobravanju.')
       }
     },
 
     async deleteSite(slug) {
       if (!confirm(this.$t?.('adminSites.confirmDelete') || 'Obrisati sajt?')) return
       try {
+        // ✅ Sanctum CSRF pre DELETE
+        await getCsrfCookie().catch(() => {})
         await api.delete(`/free-site-request/${slug}`)
         this.sites = this.sites.filter(s => s.slug !== slug)
         alert(`🗑 ${this.$t?.('adminSites.deleted') || 'Sajt obrisan.'}`)
       } catch (error) {
         console.error('❌ Greška pri brisanju:', error?.response?.data || error)
-        alert(this.$t?.('adminSites.errorDelete') || 'Greška pri brisanju.')
+        if (error?.response?.status === 401) this.$router.push('/login')
+        else alert(this.$t?.('adminSites.errorDelete') || 'Greška pri brisanju.')
       }
     },
 
