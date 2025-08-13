@@ -419,42 +419,40 @@ export default {
   this.resData = null
 
   try {
+    // await getCsrfCookie()
+
     const fd = new FormData()
-    // tip zahteva: "pro" ili "free"
     fd.append('type', 'pro')
+    fd.append('plan', this.form.plan || '')
 
-    // snake_case tekstualna polja
-    const snake = {
-      name: this.form.name,
-      description: this.form.description,
-      email: this.form.email,
-      phone: this.form.phone,
-      facebook: this.form.facebook,
-      instagram: this.form.instagram,
-      hero_title: this.form.heroTitle,
-      hero_subtitle: this.form.heroSubtitle,
-      about_title: this.form.aboutTitle,
-      about_text: this.form.aboutText,
-      offer_title: this.form.offerTitle,
-      video_url: this.form.youtubeLink,
-      google_map_link: this.form.google_map_link,
-      template: this.form.template || 'klasicni-pro',
-      plan: this.form.plan || 'starter',
-    }
+    // tekst polja (snake_case)
+    fd.append('name', this.form.name || '')
+    fd.append('description', this.form.description || '')
+    fd.append('email', this.form.email || '')
+    fd.append('phone', this.form.phone || '')
+    fd.append('facebook', this.form.facebook || '')
+    fd.append('instagram', this.form.instagram || '')
+    fd.append('hero_title', this.form.heroTitle || '')
+    fd.append('hero_subtitle', this.form.heroSubtitle || '')
+    fd.append('about_title', this.form.aboutTitle || '')
+    fd.append('about_text', this.form.aboutText || '')
+    fd.append('offer_title', this.form.offerTitle || '')
+    fd.append('template', this.form.template || '')
+    fd.append('video_url', this.form.youtubeLink || '')
+    fd.append('google_map_link', this.form.google_map_link || '')
 
-    // napravi jedno polje "address" iz ulice + grada
-    const address = [this.form.address_street, this.form.address_city].filter(Boolean).join(', ')
-    if (address) snake.address = address
+    // adresu spoji u jedno polje (ako backend tako čuva)
+    const address = [this.form.address_street, this.form.address_city]
+      .map(s => (s || '').trim()).filter(Boolean).join(', ')
+    fd.append('address', address)
 
-    Object.entries(snake).forEach(([k, v]) => fd.append(k, v || ''))
-
-    // fajlovi — obavezno snake_case imena:
+    // fajlovi
     if (this.form.logo)       fd.append('logo', this.form.logo)
     if (this.form.heroImage)  fd.append('hero_image', this.form.heroImage)
     if (this.form.aboutImage) fd.append('about_image', this.form.aboutImage)
-    if (this.form.pdfDocument)fd.append('pdf_file', this.form.pdfDocument)
+    if (this.form.pdfDocument) fd.append('pdf_file', this.form.pdfDocument)
 
-    // stavke ponude (snake_case + iste ključne reči kao u previewu)
+    // ponuda
     this.form.offerItems.forEach((item, i) => {
       fd.append(`offer_items[${i}][title]`, item?.title || '')
       if (item?.image instanceof File) {
@@ -462,19 +460,17 @@ export default {
       }
     })
 
-    // OPCIJONO: za javne rute ne trebaju cookies → izbegne se Chrome warning
-    const { data } = await api.post('/free-site-request', fd, { withCredentials: false })
+    // for (const [k, v] of fd.entries()) console.log('FD', k, v)
 
+    const { data } = await api.post('/free-site-request', fd)
     this.successMessage = this.$t?.('proform.success') || 'Zahtev uspešno poslat.'
     this.resData = data
   } catch (err) {
     console.error('❌', err?.response || err)
-    const st = err?.response?.status
-    if (st === 422) {
-      // prikaži validacione poruke detaljno
-      const errs = err.response?.data?.errors || {}
-      const flat = Object.values(errs).flat().join(' ')
-      this.errorMessage = flat || err.response?.data?.message || 'Neispravni podaci.'
+    const status = err?.response?.status
+    if (status === 422 && err?.response?.data?.errors) {
+      const first = Object.values(err.response.data.errors).flat()?.[0]
+      this.errorMessage = first || this.$t?.('proform.errors.general') || 'Došlo je do greške.'
     } else {
       this.errorMessage = err?.response?.data?.message || this.$t?.('proform.errors.general') || 'Došlo je do greške.'
     }
@@ -482,7 +478,6 @@ export default {
     this.loading = false
   }
 },
-
 
     async fetchFromSlug(slug) {
       try {

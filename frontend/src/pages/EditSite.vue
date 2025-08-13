@@ -88,7 +88,12 @@
       </fieldset>
 
       <!-- CTA -->
-      <button type="submit" :disabled="loading" class="w-full bg-purple-600 hover:bg-purple-700 py-3 px-4 rounded text-white font-semibold" :aria-busy="loading ? 'true' : 'false'">
+      <button
+        type="submit"
+        :disabled="loading"
+        class="w-full bg-purple-600 hover:bg-purple-700 py-3 px-4 rounded text-white font-semibold"
+        :aria-busy="loading ? 'true' : 'false'"
+      >
         {{ loading ? $t('edit.loading') : $t('edit.submit') }}
       </button>
 
@@ -112,8 +117,7 @@ export default {
       success: '',
       error: '',
       form: {
-        // type zadržavamo samo ako backend dozvoljava izmenu (inače ga nećemo slati)
-        siteType: 'free', // 'free' | 'pro'
+        siteType: 'free', // 'free' | 'pro' (menjaj samo ako backend dozvoljava)
         name: '',
         description: '',
         email: '',
@@ -205,13 +209,13 @@ export default {
       this.loading = true
 
       try {
-        // 1) povuci CSRF cookie ako treba (Sanctum)
+        // 1) CSRF cookie (ako koristiš Sanctum)
         await getCsrfCookie().catch(() => {})
 
-        // 2) pripremi FormData (mapiramo camelCase -> snake_case gde backend očekuje)
+        // 2) FormData — snake_case za backend
         const fd = new FormData()
 
-        // ako backend dozvoljava izmenu tipa sajta:
+        // ako backend dozvoljava izmenu tipa:
         if (this.form.siteType) fd.append('type', this.form.siteType)
 
         const textFields = [
@@ -235,16 +239,16 @@ export default {
           fd.append(mapKey(k), v)
         })
 
-        // fajlovi (samo ako je korisnik uneo nove)
-        if (this.form.logo instanceof File) fd.append('logo', this.form.logo)
-        if (this.form.heroImage instanceof File) fd.append('heroImage', this.form.heroImage)
-        if (this.form.aboutImage instanceof File) fd.append('aboutImage', this.form.aboutImage)
+        // fajlovi (samo ako su promenjeni)
+        if (this.form.logo instanceof File)       fd.append('logo', this.form.logo)
+        if (this.form.heroImage instanceof File)  fd.append('hero_image', this.form.heroImage)
+        if (this.form.aboutImage instanceof File) fd.append('about_image', this.form.aboutImage)
 
-        // ponuda
+        // offer_items[*]
         this.form.offerItems.forEach((item, i) => {
-          fd.append(`offerItems[${i}][title]`, (item?.title ?? '').toString())
+          fd.append(`offer_items[${i}][title]`, (item?.title ?? '').toString())
           if (item?.image instanceof File) {
-            fd.append(`offerItems[${i}][image]`, item.image)
+            fd.append(`offer_items[${i}][image]`, item.image)
           }
         })
 
@@ -260,7 +264,6 @@ export default {
         console.error('❌ Save error:', err?.response || err)
         const res = err?.response
         if (res?.status === 422 && res.data?.errors) {
-          // prikaži prvu validacionu poruku
           const first = Object.values(res.data.errors).flat()?.[0]
           this.error = first || (this.$t?.('edit.errors.save') || 'Greška pri čuvanju podataka.')
         } else {

@@ -208,76 +208,63 @@ export default {
     },
 
     async submitForm() {
-      this.successMessage = ''
-      this.errorMessage = ''
-      this.loading = true
+  this.successMessage = ''
+  this.errorMessage = ''
+  this.loading = true
+  try {
+    // (opciono, ako koristiš Sanctum) pobrini se za CSRF cookie:
+    // await getCsrfCookie()
 
-      try {
-        // 1) (bezbedno) povuci CSRF cookie ako je potreban (Sanctum u nekim setapima hoće)
-        await getCsrfCookie().catch(() => {})
+    const fd = new FormData()
+    fd.append('type', 'free')
 
-        // 2) pripremi payload
-        const fd = new FormData()
-        // server razlikuje free/pro → eksplicitno pošaljimo type=free
-        fd.append('type', 'free')
+    // tekstualna polja (snake_case)
+    fd.append('name', this.form.name || '')
+    fd.append('description', this.form.description || '')
+    fd.append('email', this.form.email || '')
+    fd.append('phone', this.form.phone || '')
+    fd.append('facebook', this.form.facebook || '')
+    fd.append('instagram', this.form.instagram || '')
+    fd.append('hero_title', this.form.heroTitle || '')
+    fd.append('hero_subtitle', this.form.heroSubtitle || '')
+    fd.append('about_title', this.form.aboutTitle || '')
+    fd.append('about_text', this.form.aboutText || '')
+    fd.append('offer_title', this.form.offerTitle || '')
+    fd.append('template', this.form.template || '')
 
-        // tekstualna polja (po istim imenima kao backend)
-        const textFields = [
-          'name', 'description', 'email', 'phone',
-          'facebook', 'instagram',
-          'heroTitle', 'heroSubtitle',
-          'aboutTitle', 'aboutText',
-          'offerTitle',
-          'template',
-        ]
+    // fajlovi (snake_case)
+    if (this.form.logo)       fd.append('logo', this.form.logo)
+    if (this.form.heroImage)  fd.append('hero_image', this.form.heroImage)
+    if (this.form.aboutImage) fd.append('about_image', this.form.aboutImage)
 
-        // map Hero/About “camelCase” → snake_case ako backend koristi takav naming
-        const mapKey = (k) => ({
-          heroTitle: 'hero_title',
-          heroSubtitle: 'hero_subtitle',
-          aboutTitle: 'about_title',
-          aboutText: 'about_text',
-        }[k] || k)
-
-        textFields.forEach((k) => {
-          const v = (this.form[k] ?? '').toString()
-          fd.append(mapKey(k), v)
-        })
-
-        // fajlovi
-        if (this.form.logo instanceof File) fd.append('logo', this.form.logo)
-        if (this.form.heroImage instanceof File) fd.append('heroImage', this.form.heroImage)
-        if (this.form.aboutImage instanceof File) fd.append('aboutImage', this.form.aboutImage)
-
-        // ponuda (niz)
-        this.form.offerItems.forEach((item, i) => {
-          fd.append(`offerItems[${i}][title]`, (item?.title ?? '').toString())
-          if (item?.image instanceof File) {
-            fd.append(`offerItems[${i}][image]`, item.image)
-          }
-        })
-
-        // 3) pozovi API
-        const { data } = await api.post('/free-site-request', fd)
-
-        // 4) uspeh → redirekcija na preview
-        this.successMessage = this.$t?.('freesite.success') || 'Zahtev uspešno poslat.'
-        const slug = data?.slug || data?.data?.slug
-        if (slug) this.$router.push(`/prezentacije/${slug}`)
-      } catch (err) {
-        // 422 validacija ili drugi problemi
-        const res = err?.response
-        if (res?.status === 422 && res.data?.errors) {
-          const first = Object.values(res.data.errors).flat()?.[0]
-          this.errorMessage = first || (this.$t?.('freesite.errors.general') || 'Došlo je do greške.')
-        } else {
-          this.errorMessage = res?.data?.message || this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
-        }
-        console.error('❌ /free-site-request error:', res || err)
-      } finally {
-        this.loading = false
+    // ponuda (offer_items)
+    this.form.offerItems.forEach((item, i) => {
+      fd.append(`offer_items[${i}][title]`, item?.title || '')
+      if (item?.image instanceof File) {
+        fd.append(`offer_items[${i}][image]`, item.image)
       }
-    },
+    })
+
+    // (debug) — vidi šta konkretno šalješ
+    // for (const [k, v] of fd.entries()) console.log('FD', k, v)
+
+    const { data } = await api.post('/free-site-request', fd)
+    this.successMessage = this.$t?.('freesite.success') || 'Zahtev uspešno poslat.'
+    this.$router.push(`/prezentacije/${data?.slug}`)
+  } catch (err) {
+    console.error('❌', err?.response || err)
+    const errors = err?.response?.data?.errors
+    if (errors) {
+      // izlistaj 1. poruku validacije
+      const first = Object.values(errors).flat()?.[0]
+      this.errorMessage = first || this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
+    } else {
+      this.errorMessage = this.$t?.('freesite.errors.general') || 'Došlo je do greške.'
+    }
+  } finally {
+    this.loading = false
+  }
+},
 
     async fetchFromSlug(slug) {
       try {
