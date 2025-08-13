@@ -2006,7 +2006,7 @@
   },
   "adminSites": {
     "title": "🌐 Poslate prezentacije",
-    "no-sites": "Nema prezentacija za prikaz.",
+    "noSites": "Nema prezentacija za prikaz.",
     "columns": {
       "name": "Naziv",
       "user": "Korisnik",
