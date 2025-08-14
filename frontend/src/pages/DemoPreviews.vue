@@ -15,14 +15,26 @@
           <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
             title="🏡 Frizer Neša / FREE - besplatna varijanta"
-            description="Primer besplatne verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
+            description="Primer besplatne verzije."
             link="/prezentacije/frizer-nesa-689dbf092251a"
           />
 
           <DemoBox
-            title="🏡 Neka druga prezentacija / classic"
-            description="Primer pro prezentacije, sa minimumom dodatne usluge."
+            title="🏡 Frizer Neša / PRO paket"
+            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
             link="/prezentacije/frizer-nesa-689db59a24081"
+          />
+
+           <DemoBox
+            title="🏡 HIT Auto/ FREE - besplatna varijanta"
+            description="Primer besplatne verzije; Dodata izrada logoa 990,00 din"
+            link="/prezentacije/hit-auto-sabac-689ddd8396c41"
+          />
+
+           <DemoBox
+            title="🏡 HIT Auto/ modern - pro varijanta"
+            description="Primer pro prezentacije, sa izradom logoa. Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga"
+            link="/prezentacije/hit-auto-sabac-689ddf3418f94"
           />
 
           <!-- 👇 Ovde samo kopiraj i menjaj -->
