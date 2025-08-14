@@ -15,7 +15,7 @@
             :key="site.slug"
             :title="`🌐 ${site.name}`"
             :description="site.description"
-            :link="`/preview/${site.slug}`"
+            :link="`prezentacije/${site.slug}`"
           />
 
           <!-- Dev-primjeri: koristimo RELATIVNE rute umesto localhost linkova -->
