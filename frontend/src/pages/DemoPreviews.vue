@@ -15,19 +15,19 @@
             :key="site.slug"
             :title="`🌐 ${site.name}`"
             :description="site.description"
-            :link="`prezentacije/${site.slug}`"
+            :link="`/prezentacije/${site.slug}`"
           />
 
           <!-- Dev-primjeri: koristimo RELATIVNE rute umesto localhost linkova -->
           <DemoBox
             title="🏡 Frizer Neša / PRO (plaćena varijanta)"
             description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
-            :link="`/preview/frizer-nesa-689d451ced43e`"
+            :link="`/prezentacije/frizer-nesa-689d451ced43e`"
           />
           <DemoBox
             title="🏡 Frizer Neša — besplatna / modern"
             description="Primer besplatne prezentacije za samostalno uređivanje. Link možete koristiti neograničeno."
-            :link="`/preview/nesa-frizer-6890cdbf41662`"
+            :link="`/prezentacije/nesa-frizer-6890cdbf41662`"
           />
         </div>
 
