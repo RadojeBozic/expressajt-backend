@@ -1030,6 +1030,7 @@
   },
   "siteview": {
     "previewOf": "Pregled sajta:",
+    "notFound": "Nije pronađeno",
     "pro": {
       "title": "Ovo je PRO prezentacija.",
       "editBlocked": "Uređivanje će biti omogućeno nakon aktivacije."

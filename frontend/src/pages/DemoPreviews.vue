@@ -9,47 +9,34 @@
           {{ $t('demoPreviews.subtitle') }}
         </p>
 
-        <!-- Loading / Error / Empty states -->
-        <div v-if="loading" class="text-center text-slate-400 py-10">
-          {{ $t('common.loading') || 'Učitavanje…' }}
-        </div>
-        <div v-else-if="error" class="text-center text-red-300 py-10">
-          {{ error }}
-        </div>
-        <div v-else class="grid md:grid-cols-2 gap-6">
-          <!-- Dinamički demo sajtovi iz /api/demo-sites -->
-          <DemoBox
-            v-for="site in demoSites"
-            :key="site.slug"
-            :title="`🌐 ${site.name}`"
-            :description="site.description"
-            :link="`/prezentacije/${site.slug}`"
-          />
+        <!-- Ručno dodaj koliko god DemoBox-ova želiš -->
+        <div class="grid md:grid-cols-2 gap-6">
 
-          <!-- Statički primeri (apsolutne putanje ka Blade ruti /prezentacije/:slug) -->
+          <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
             title="🏡 Frizer Neša / PRO (plaćena varijanta)"
             description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
-            :link="`/prezentacije/frizer-nesa-689d451ced43e`"
+            link="/prezentacije/frizer-nesa-689d451ced43e"
           />
+
           <DemoBox
-            title="🏡 Frizer Neša — besplatna / modern"
-            description="Primer besplatne prezentacije za samostalno uređivanje. Link možete koristiti neograničeno."
-            :link="`/prezentacije/nesa-frizer-6890cdbf41662`"
+            title="🏡 Neka druga prezentacija / classic"
+            description="Primer neke druge prezentacije. Link možete koristiti neograničeno."
+            link="/prezentacije/nesa-frizer-6890cdbf41662"
           />
+
+          <!-- 👇 Ovde samo kopiraj i menjaj -->
+          <!--
+          <DemoBox
+            title="✳️ Naziv prezentacije / modern"
+            description="Kratak opis prezentacije."
+            link="/prezentacije/tvoj-slug-abcdef123456"
+          />
+          -->
         </div>
 
         <!-- CTA dugmad -->
         <div class="text-center mt-12 space-y-4">
-          <router-link
-            :to="isAuthenticated ? '/dashboard' : '/signup'"
-            class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded text-lg font-semibold transition"
-          >
-            {{ isAuthenticated ? $t('demoPreviews.goToDashboard') : $t('demoPreviews.registerAndCreate') }}
-          </router-link>
-
-          <p class="text-bold text-slate-400 mt-4">{{ $t('demoPreviews.note') }}</p>
-
           <div class="flex flex-col sm:flex-row gap-4 justify-center mt-2">
             <router-link
               to="/free-site-form"
@@ -75,51 +62,11 @@
 
 <script>
 import DemoBox from '../components/DemoBox.vue'
-import { isLoggedIn } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
-import api from '@/api/http' // baseURL = /api
 
 export default {
   name: 'DemoPreviews',
   components: { DemoBox, Header, Footer },
-  data() {
-    return {
-      demoSites: [],
-      loading: false,
-      error: null,
-    }
-  },
-  computed: {
-    isAuthenticated() {
-      return isLoggedIn()
-    },
-  },
-  async mounted() {
-    await this.loadDemoSites()
-  },
-  methods: {
-    async loadDemoSites() {
-      this.loading = true
-      this.error = null
-      try {
-        const { data } = await api.get('/demo-sites') // → /api/demo-sites
-        const list = Array.isArray(data) ? data : (data?.data ?? [])
-        // Bezbedan fallback: očekujemo { name, description, slug }
-        this.demoSites = list
-          .filter(it => it && it.slug && it.name)
-          .map(it => ({
-            slug: String(it.slug),
-            name: String(it.name),
-            description: (it.description ?? '').toString(),
-          }))
-      } catch (err) {
-        console.error('❌ Greška pri učitavanju demo sajtova:', err)
-        this.error = this.$t?.('errors.load') || 'Greška pri učitavanju demo sajtova.'
-      } finally {
-        this.loading = false
-      }
-    },
-  },
 }
 </script>
