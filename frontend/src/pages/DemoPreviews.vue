@@ -14,9 +14,9 @@
 
           <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
-            title="🏡 Frizer Neša / PRO (plaćena varijanta)"
-            description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
-            link="/prezentacije/frizer-nesa-689d451ced43e"
+            title="🏡 Frizer Neša / FREE - besplatna varijanta"
+            description="Primer besplatne verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
+            link="/prezentacije/frizer-nesa-689dbf092251a"
           />
 
           <DemoBox
