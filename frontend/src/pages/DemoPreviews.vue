@@ -9,7 +9,15 @@
           {{ $t('demoPreviews.subtitle') }}
         </p>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <!-- Loading / Error / Empty states -->
+        <div v-if="loading" class="text-center text-slate-400 py-10">
+          {{ $t('common.loading') || 'Učitavanje…' }}
+        </div>
+        <div v-else-if="error" class="text-center text-red-300 py-10">
+          {{ error }}
+        </div>
+        <div v-else class="grid md:grid-cols-2 gap-6">
+          <!-- Dinamički demo sajtovi iz /api/demo-sites -->
           <DemoBox
             v-for="site in demoSites"
             :key="site.slug"
@@ -18,7 +26,7 @@
             :link="`/prezentacije/${site.slug}`"
           />
 
-          <!-- Dev-primjeri: koristimo RELATIVNE rute umesto localhost linkova -->
+          <!-- Statički primeri (apsolutne putanje ka Blade ruti /prezentacije/:slug) -->
           <DemoBox
             title="🏡 Frizer Neša / PRO (plaćena varijanta)"
             description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
@@ -57,8 +65,6 @@
               {{ $t('demoPreviews.proSiteButton') }}
             </router-link>
           </div>
-
-          <p v-if="error" class="text-red-300 text-sm mt-4">{{ error }}</p>
         </div>
       </div>
     </section>
@@ -72,7 +78,7 @@ import DemoBox from '../components/DemoBox.vue'
 import { isLoggedIn } from '../utils/auth'
 import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
-import api from '@/api/http' // centralna axios instanca (baseURL = /api)
+import api from '@/api/http' // baseURL = /api
 
 export default {
   name: 'DemoPreviews',
@@ -98,10 +104,18 @@ export default {
       this.error = null
       try {
         const { data } = await api.get('/demo-sites') // → /api/demo-sites
-        this.demoSites = Array.isArray(data) ? data : (data?.data ?? [])
+        const list = Array.isArray(data) ? data : (data?.data ?? [])
+        // Bezbedan fallback: očekujemo { name, description, slug }
+        this.demoSites = list
+          .filter(it => it && it.slug && it.name)
+          .map(it => ({
+            slug: String(it.slug),
+            name: String(it.name),
+            description: (it.description ?? '').toString(),
+          }))
       } catch (err) {
         console.error('❌ Greška pri učitavanju demo sajtova:', err)
-        this.error = 'Greška pri učitavanju demo sajtova.'
+        this.error = this.$t?.('errors.load') || 'Greška pri učitavanju demo sajtova.'
       } finally {
         this.loading = false
       }
