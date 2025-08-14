@@ -21,8 +21,8 @@
 
           <DemoBox
             title="🏡 Neka druga prezentacija / classic"
-            description="Primer neke druge prezentacije. Link možete koristiti neograničeno."
-            link="/prezentacije/nesa-frizer-6890cdbf41662"
+            description="Primer pro prezentacije, sa minimumom dodatne usluge."
+            link="/prezentacije/frizer-nesa-689db59a24081"
           />
 
           <!-- 👇 Ovde samo kopiraj i menjaj -->
