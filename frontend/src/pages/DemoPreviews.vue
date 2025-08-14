@@ -22,7 +22,7 @@
           <DemoBox
             title="🏡 Frizer Neša / PRO (plaćena varijanta)"
             description="Primer plaćene verzije; cena zavisi od nivoa podrške (obrada fotografija, uređivanje teksta, logo, cenovnik...). Detaljna specifikacija na upit."
-            :link="`/preview/frizerski-salon-nesa-6890d5fbd0285`"
+            :link="`/preview/frizer-nesa-689d451ced43e`"
           />
           <DemoBox
             title="🏡 Frizer Neša — besplatna / modern"
