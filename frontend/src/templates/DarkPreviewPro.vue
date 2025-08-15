@@ -129,7 +129,7 @@
         <p v-if="isNonEmpty(data.email2)"><strong>Email 2:</strong> {{ data.email2 }}</p>
         <p v-if="isNonEmpty(data.email3)"><strong>Email 3:</strong> {{ data.email3 }}</p>
       </div>
-      <div v-if="mapEmbedUrl" class="mt-4 w-full h-64 rounded overflow-hidden shadow">
+     <!--  <div v-if="mapEmbedUrl" class="mt-4 w-full h-64 rounded overflow-hidden shadow">
         <iframe
           :src="mapEmbedUrl"
           width="100%" height="100%"
@@ -139,6 +139,9 @@
           referrerpolicy="no-referrer-when-downgrade"
           title="Mapa lokacije"
         ></iframe>
+      </div> -->
+      <div v-if="data.address || data.google_map_link" class="mt-4 w-full h-64 rounded overflow-hidden shadow">
+        <iframe :src="googleMapUrl" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
       </div>
     </section>
 
@@ -203,19 +206,16 @@ export default {
         return id ? `https://www.youtube.com/embed/${id}` : null
       } catch { return null }
     },
-    mapEmbedUrl() {
-      const link = (this.data?.google_map_link || '').trim()
-      const addr = (this.data?.address || '').trim()
-      if (link && /\/maps\/embed/i.test(link)) return link
-      if (link && /google\.[^/]+\/maps/i.test(link)) {
-        try {
-          const u = new URL(link)
-          const q = u.searchParams.get('q')
-          if (q) return `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed`
-        } catch {}
+    googleMapUrl() {
+  // Ako je eksplicitno zadat link za embed – koristi njega
+      if (this.data.google_map_link && typeof this.data.google_map_link === 'string') {
+        return this.data.google_map_link
       }
-      if (addr) return `https://www.google.com/maps?q=${encodeURIComponent(addr)}&output=embed`
-      return null
+      // Inače konstruiši iz adrese
+      const addr = (this.data.address || '').trim()
+      if (!addr) return ''
+      const q = encodeURIComponent(addr)
+      return `https://maps.google.com/maps?q=${q}&output=embed`
     }
   },
   methods: {

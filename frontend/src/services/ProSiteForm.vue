@@ -419,8 +419,6 @@ export default {
   this.resData = null
 
   try {
-    // await getCsrfCookie()
-
     const fd = new FormData()
     fd.append('type', 'pro')
     fd.append('plan', this.form.plan || '')
@@ -441,15 +439,23 @@ export default {
     fd.append('video_url', this.form.youtubeLink || '')
     fd.append('google_map_link', this.form.google_map_link || '')
 
-    // adresu spoji u jedno polje (ako backend tako čuva)
+    // ✅ OVO JE NEDOSTAJALO
+    fd.append('phone2', this.form.phone2 || '')
+    fd.append('phone3', this.form.phone3 || '')
+    fd.append('email2', this.form.email2 || '')
+    fd.append('email3', this.form.email3 || '')
+
+    // adresu spoji (backend čuva u jednom polju)
     const address = [this.form.address_street, this.form.address_city]
-      .map(s => (s || '').trim()).filter(Boolean).join(', ')
+      .map(s => (s || '').trim())
+      .filter(Boolean)
+      .join(', ')
     fd.append('address', address)
 
     // fajlovi
-    if (this.form.logo)       fd.append('logo', this.form.logo)
-    if (this.form.heroImage)  fd.append('hero_image', this.form.heroImage)
-    if (this.form.aboutImage) fd.append('about_image', this.form.aboutImage)
+    if (this.form.logo)        fd.append('logo', this.form.logo)
+    if (this.form.heroImage)   fd.append('hero_image', this.form.heroImage)
+    if (this.form.aboutImage)  fd.append('about_image', this.form.aboutImage)
     if (this.form.pdfDocument) fd.append('pdf_file', this.form.pdfDocument)
 
     // ponuda
@@ -459,8 +465,6 @@ export default {
         fd.append(`offer_items[${i}][image]`, item.image)
       }
     })
-
-    // for (const [k, v] of fd.entries()) console.log('FD', k, v)
 
     const { data } = await api.post('/free-site-request', fd)
     this.successMessage = this.$t?.('proform.success') || 'Zahtev uspešno poslat.'

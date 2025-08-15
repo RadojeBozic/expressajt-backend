@@ -1839,6 +1839,8 @@
     "footerLink": "Express web platforme"
   },
   "classicPreviewPro": {
+    "openPdfInNewTab": "Otvori PDF u novom tabu.",
+    "downloadPdf": "Preuzmi PDF",
     "nav": {
       "about": "O nama",
       "offer": "Ponuda",

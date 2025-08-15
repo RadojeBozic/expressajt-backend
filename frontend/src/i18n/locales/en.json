@@ -1830,6 +1830,8 @@
     "footerLink": "Express web platform"
   },
   "classicPreviewPro": {
+    "openPdfInNewTab": "Open PDF in new tab.",
+    "downloadPdf": "Download PDF",
     "nav": {
       "about": "About Us",
       "offer": "Our Offer",
