@@ -14,6 +14,19 @@
 
           <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
+            title="🏡 Pekara Maja/ FREE - besplatna varijanta"
+            description="Primer besplatne verzije."
+            link="/prezentacije/pekaraposlasticarnica-maja-689f14fe2a983"
+          />
+
+          <DemoBox
+            title="🏡 Pekara Maja / PRO paket"
+            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
+            link="/prezentacije/pekaraposlasticarnica-maja-689f152ff16f5"
+          />
+
+
+          <DemoBox
             title="🏡 Cvećara Flover / FREE - besplatna varijanta"
             description="Primer besplatne verzije."
             link="/prezentacije/cvecara-flower-689eccc2cc5fd"
