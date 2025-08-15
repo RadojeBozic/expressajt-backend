@@ -1,10 +1,8 @@
 <template>
   <section>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-      <!-- Particles animation -->
       <Particles class="absolute inset-0 -z-10" />
 
-      <!-- Illustration -->
       <div
         class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden"
         aria-hidden="true"
@@ -36,9 +34,9 @@
             <strong>{{ $t('contact.info.email_title') }}:</strong>
             <a
               class="text-purple-400 hover:underline"
-              :href="`mailto:${$t('contact.info.email_value')}`"
+              :href="`mailto:${fullEmail}`"
             >
-              {{ $t('contact.info.email_value') }}
+              {{ displayEmail }}
             </a>
           </li>
 
@@ -64,10 +62,18 @@ export default {
   name: 'ContactInfo',
   components: { Particles },
   computed: {
-    // Ako u translation fajlu prikazuješ broj s razmacima (npr. "+381 64 123 4567"),
-    // koristi čist format za tel: link:
+    fullEmail() {
+      const user = String(this.$t('contact.info.email_user')).trim()
+      const domain = String(this.$t('contact.info.email_domain')).trim()
+      return `${user}@${domain}`
+    },
+    // Po želji prikaži sa tankim razmakom oko @ (teže botovima, ljudima isto čitljivo)
+    displayEmail() {
+      const [u, d] = [this.$t('contact.info.email_user'), this.$t('contact.info.email_domain')]
+      return `${u}@${d}`
+      // ako želiš diskretnu zaštitu: return `${u} @ ${d}`  // NBSP oko @
+    },
     rawPhone() {
-      // povuci vrednost iz i18n i ukloni razmake/slash/tačke
       const p = this.$t('contact.info.phone_value')
       return String(p).replace(/[\s().-]/g, '')
     },
