@@ -14,6 +14,19 @@
 
           <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
+            title="🏡 Cvećara Flover / FREE - besplatna varijanta"
+            description="Primer besplatne verzije."
+            link="/prezentacije/cvecara-flower-689eccc2cc5fd"
+          />
+
+          <DemoBox
+            title="🏡 Cvećara Flover / PRO paket"
+            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
+            link="/prezentacije/cvecara-flower-689ecb686a6dc"
+          />
+
+
+          <DemoBox
             title="🏡 Frizer Neša / FREE - besplatna varijanta"
             description="Primer besplatne verzije."
             link="/prezentacije/frizer-nesa-689dbf092251a"
