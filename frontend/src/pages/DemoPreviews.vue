@@ -14,52 +14,52 @@
 
           <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
           <DemoBox
-            title="🏡 Pekara Maja/ FREE - besplatna varijanta"
-            description="Primer besplatne verzije."
+            title="🏡 Pekara Maja/ {{ $t('demoPreviews.title_free') }}"
+            description="{{ $t('demoPreviews.description_free') }}"
             link="/prezentacije/pekaraposlasticarnica-maja-689f14fe2a983"
           />
 
           <DemoBox
-            title="🏡 Pekara Maja / PRO paket"
-            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
+            title="🏡 Pekara Maja / {{ $t('demoPreviews.title_pro') }}"
+            description="{{ $t('demoPreviews.description_pro') }}"
             link="/prezentacije/pekaraposlasticarnica-maja-689f152ff16f5"
           />
 
 
           <DemoBox
-            title="🏡 Cvećara Flover / FREE - besplatna varijanta"
-            description="Primer besplatne verzije."
+            title="🏡 Cvećara Flover / {{ $t('demoPreviews.title_free') }}"
+            description="{{ $t('demoPreviews.description_free') }}"
             link="/prezentacije/cvecara-flower-689eccc2cc5fd"
           />
 
           <DemoBox
-            title="🏡 Cvećara Flover / PRO paket"
-            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
+            title="🏡 Cvećara Flover / {{ $t('demoPreviews.title_pro') }}"
+            description="{{ $t('demoPreviews.description_pro') }}"
             link="/prezentacije/cvecara-flower-689ecb686a6dc"
           />
 
 
           <DemoBox
-            title="🏡 Frizer Neša / FREE - besplatna varijanta"
-            description="Primer besplatne verzije."
+            title="🏡 Frizer Neša / {{ $t('demoPreviews.title_free') }}"
+            description="{{ $t('demoPreviews.description_free') }}"
             link="/prezentacije/frizer-nesa-689dbf092251a"
           />
 
           <DemoBox
-            title="🏡 Frizer Neša / PRO paket"
-            description="Primer pro prezentacije, sa minimumom dodatne usluge.Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga."
+            title="🏡 Frizer Neša / {{ $t('demoPreviews.title_pro') }}"
+            description="{{ $t('demoPreviews.description_pro') }}"
             link="/prezentacije/frizer-nesa-689db59a24081"
           />
 
            <DemoBox
-            title="🏡 HIT Auto/ FREE - besplatna varijanta"
-            description="Primer besplatne verzije; Dodata izrada logoa 990,00 din"
+            title="🏡 HIT Auto/ {{ $t('demoPreviews.title_free') }}"
+            description="{{ $t('demoPreviews.description_free') }}"
             link="/prezentacije/hit-auto-sabac-689ddd8396c41"
           />
 
            <DemoBox
-            title="🏡 HIT Auto/ modern - pro varijanta"
-            description="Primer pro prezentacije, sa izradom logoa. Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga"
+            title="🏡 HIT Auto/ {{ $t('demoPreviews.title_pro') }}"
+            description="{{ $t('demoPreviews.description_pro') }}"
             link="/prezentacije/hit-auto-sabac-689ddf3418f94"
           />
 
