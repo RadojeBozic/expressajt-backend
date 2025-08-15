@@ -1,79 +1,69 @@
+<script>
+import DemoBox from '../components/DemoBox.vue'
+import Header from '../partials/Header.vue'
+import Footer from '../partials/Footer.vue'
+
+export default {
+  name: 'DemoPreviews',
+  components: { DemoBox, Header, Footer },
+  computed: {
+    demos() {
+      return [
+        {
+          name: 'Pekara Maja',
+          free: '/prezentacije/pekaraposlasticarnica-maja-689f14fe2a983',
+          pro:  '/prezentacije/pekaraposlasticarnica-maja-689f152ff16f5',
+        },
+        {
+          name: 'Cvećara Flover',
+          free: '/prezentacije/cvecara-flower-689eccc2cc5fd',
+          pro:  '/prezentacije/cvecara-flower-689ecb686a6dc',
+        },
+        {
+          name: 'Frizer Neša',
+          free: '/prezentacije/frizer-nesa-689dbf092251a',
+          pro:  '/prezentacije/frizer-nesa-689db59a24081',
+        },
+        {
+          name: 'HIT Auto',
+          free: '/prezentacije/hit-auto-sabac-689ddd8396c41',
+          pro:  '/prezentacije/hit-auto-sabac-689ddf3418f94',
+        },
+      ]
+    },
+  },
+  methods: {
+    tFree(name) {
+      return `🏡 ${name} / ${this.$t('demoPreviews.title_free')}`
+    },
+    tPro(name) {
+      return `🏡 ${name} / ${this.$t('demoPreviews.title_pro')}`
+    },
+  },
+}
+</script>
+
 <template>
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
     <Header />
 
     <section class="min-h-screen bg-slate-900 text-white py-16 px-4 sm:px-6">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-6 mt-[100px]">{{ $t('demoPreviews.title') }}</h1>
+        <h1 class="text-3xl font-bold text-center mb-6 mt-[100px]">
+          {{ $t('demoPreviews.title') }}
+        </h1>
+
         <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
           {{ $t('demoPreviews.subtitle') }}
         </p>
 
-        <!-- Ručno dodaj koliko god DemoBox-ova želiš -->
         <div class="grid md:grid-cols-2 gap-6">
-
-          <!-- PRIMERI (slobodno menjaj/povećavaj listu) -->
-          <DemoBox
-            title="🏡 Pekara Maja/ {{ $t('demoPreviews.title_free') }}"
-            description="{{ $t('demoPreviews.description_free') }}"
-            link="/prezentacije/pekaraposlasticarnica-maja-689f14fe2a983"
-          />
-
-          <DemoBox
-            title="🏡 Pekara Maja / {{ $t('demoPreviews.title_pro') }}"
-            description="{{ $t('demoPreviews.description_pro') }}"
-            link="/prezentacije/pekaraposlasticarnica-maja-689f152ff16f5"
-          />
-
-
-          <DemoBox
-            title="🏡 Cvećara Flover / {{ $t('demoPreviews.title_free') }}"
-            description="{{ $t('demoPreviews.description_free') }}"
-            link="/prezentacije/cvecara-flower-689eccc2cc5fd"
-          />
-
-          <DemoBox
-            title="🏡 Cvećara Flover / {{ $t('demoPreviews.title_pro') }}"
-            description="{{ $t('demoPreviews.description_pro') }}"
-            link="/prezentacije/cvecara-flower-689ecb686a6dc"
-          />
-
-
-          <DemoBox
-            title="🏡 Frizer Neša / {{ $t('demoPreviews.title_free') }}"
-            description="{{ $t('demoPreviews.description_free') }}"
-            link="/prezentacije/frizer-nesa-689dbf092251a"
-          />
-
-          <DemoBox
-            title="🏡 Frizer Neša / {{ $t('demoPreviews.title_pro') }}"
-            description="{{ $t('demoPreviews.description_pro') }}"
-            link="/prezentacije/frizer-nesa-689db59a24081"
-          />
-
-           <DemoBox
-            title="🏡 HIT Auto/ {{ $t('demoPreviews.title_free') }}"
-            description="{{ $t('demoPreviews.description_free') }}"
-            link="/prezentacije/hit-auto-sabac-689ddd8396c41"
-          />
-
-           <DemoBox
-            title="🏡 HIT Auto/ {{ $t('demoPreviews.title_pro') }}"
-            description="{{ $t('demoPreviews.description_pro') }}"
-            link="/prezentacije/hit-auto-sabac-689ddf3418f94"
-          />
-
-          <!-- 👇 Ovde samo kopiraj i menjaj -->
-          <!--
-          <DemoBox
-            title="✳️ Naziv prezentacije / modern"
-            description="Kratak opis prezentacije."
-            link="/prezentacije/tvoj-slug-abcdef123456"
-          />
-          -->
+          <template v-for="d in demos" :key="d.name">
+            <DemoBox :title="tFree(d.name)" :description="$t('demoPreviews.description_free')" :link="d.free" />
+            <DemoBox :title="tPro(d.name)"  :description="$t('demoPreviews.description_pro')"  :link="d.pro"  />
+          </template>
         </div>
 
-        <!-- CTA dugmad -->
         <div class="text-center mt-12 space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 justify-center mt-2">
             <router-link
@@ -97,14 +87,3 @@
     <Footer />
   </div>
 </template>
-
-<script>
-import DemoBox from '../components/DemoBox.vue'
-import Header from '../partials/Header.vue'
-import Footer from '../partials/Footer.vue'
-
-export default {
-  name: 'DemoPreviews',
-  components: { DemoBox, Header, Footer },
-}
-</script>

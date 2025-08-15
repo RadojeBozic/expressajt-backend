@@ -1791,7 +1791,11 @@
   "registerAndCreate": "🚀 Register and create your site",
   "note": "You don't need to register to test the form:",
   "freeSiteButton": "📝 Create your FREE presentation",
-  "proSiteButton": "🚀 Create your PRO presentation"
+  "proSiteButton": "🚀 Create your PRO presentation",
+  "title_free": "FREE - free version",
+    "title_pro": "PRO - paid version",
+    "description_free": "Example of the free version. Optional logo design: 10 €",
+    "description_pro": "Example of the PRO presentation with logo design. Price from 10 € to 50 € depending on the level of additional services. Domain purchase available at the best rates."
 },
 "requestModal": {
   "title": "📩 Request an Offer",
