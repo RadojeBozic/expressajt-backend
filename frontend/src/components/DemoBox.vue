@@ -14,7 +14,7 @@
       :rel="componentTag === 'a' && newTab ? 'noopener noreferrer' : null"
       class="mt-auto inline-block text-center bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded text-sm transition"
     >
-      🌐 Pogledaj prezentaciju
+      🌐 {{ $t('demoBox.demo_button') }}
     </component>
   </div>
 </template>

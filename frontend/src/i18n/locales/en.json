@@ -1797,6 +1797,9 @@
     "description_free": "Example of the free version. Optional logo design: 10 €",
     "description_pro": "Example of the PRO presentation with logo design. Price from 10 € to 50 € depending on the level of additional services. Domain purchase available at the best rates."
 },
+"demoBox": {
+  "demo_button": "View presentation"
+},
 "requestModal": {
   "title": "📩 Request an Offer",
   "subtitle": "Fill out the form to receive a personalized offer for the service:",

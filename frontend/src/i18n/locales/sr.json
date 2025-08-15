@@ -1806,6 +1806,9 @@
   "description_free": "Primer besplatne verzije. Dodatna izrada logoa 990,00 din",
   "description_pro": "Primer pro prezentacije, sa izradom logoa. Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga. Moguća kupovina domena po najpovoljnijim uslovima."
 },
+"demoBox": {
+  "demo_button": "Pogledajte prezentaciju"
+},
 "requestModal": {
   "title": "📩 Zatraži ponudu",
   "subtitle": "Popunite formular i dobićete personalizovanu ponudu za uslugu:",
