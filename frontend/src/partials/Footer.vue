@@ -21,7 +21,7 @@
             <ul class="flex">
               <!-- Facebook -->
               <li>
-                <a href="https://facebook.com/gbsplatform" target="_blank" aria-label="Facebook"
+                <a href="https://www.facebook.com/profile.php?id=61579459559619" target="_blank" aria-label="Facebook"
                   class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out">
                   <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 4.88 3.66 8.93 8.44 9.83v-6.96H8.08v-2.87h2.36V9.41c0-2.33 1.38-3.62 3.5-3.62.7 0 1.42.12 1.42.12v2.6h-1.03c-1.01 0-1.32.63-1.32 1.28v1.53h2.25l-.36 2.87h-1.89v6.96C18.34 21 22 16.95 22 12.07z"/>
