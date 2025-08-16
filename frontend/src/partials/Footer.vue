@@ -39,10 +39,11 @@
                 </a>
               </li>
 
-             <li>
-              <a href="https://www.linkedin.com/in/radoje-bo%C5%BEi%C4%87-9b199930b/" target="_blank" aria-label="LinkedIn"
-                class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out">
-                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <!-- LinkedIn -->
+              <li>
+                <a href="https://www.linkedin.com/in/radoje-bo%C5%BEi%C4%87-9b199930b/" target="_blank" aria-label="LinkedIn"
+                  class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out">
+                  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
                     2.24 5 5 5h14c2.76 0 5-2.24 
                     5-5v-14c0-2.76-2.24-5-5-5zm-11 
