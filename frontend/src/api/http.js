@@ -6,10 +6,21 @@ import axios from 'axios'
  * - U prod-u je takođe /api (backend servira build)
  * - WEB_BASE služi za /sanctum/csrf-cookie, /login, /logout…
  */
-const API_BASE = import.meta.env.VITE_API_URL || '/api'
+// --- BEGIN base URLs ---
+const RUNTIME_API = typeof window !== 'undefined' && window.__API_BASE_URL
+const RUNTIME_WEB = typeof window !== 'undefined' && window.__WEB_BASE_URL
+const isLocal = typeof window !== 'undefined' && /(localhost|127\.0\.0\.1)/.test(window.location.hostname)
+
+const API_BASE =
+  RUNTIME_API ||
+  import.meta.env.VITE_API_URL ||
+  (isLocal ? 'http://localhost:8000/api' : '/api')
+
 const WEB_BASE =
+  RUNTIME_WEB ||
   import.meta.env.VITE_WEB_BASE_URL ||
-  (typeof window !== 'undefined' ? `${window.location.origin}/` : '/')
+  (isLocal ? 'http://localhost:8000' : '/')
+// --- END base URLs ---
 
 /** Pomoćno: da li smo u dev modu (lakši logging) */
 const DEV = import.meta.env.DEV === true
