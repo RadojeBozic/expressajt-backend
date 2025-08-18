@@ -42,14 +42,15 @@
   <!-- Icons / CSS -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script>
+  window.__API_BASE_URL = '/api';
+  window.__WEB_BASE_URL = '/';
+</script>
 </head>
 
   <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
     <div id="app"></div>
-    <script>
-        window.__API_BASE_URL = '/api';
-        window.__WEB_BASE_URL = '/';
-    </script>
+    
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
