@@ -1,94 +1,79 @@
+// src/api/http.js
 import axios from 'axios'
 
-/**
- * BAZE iz okruženja
- * - U dev-u koristimo Vite proxy (API ostaje relativan: /api)
- * - U prod-u je takođe /api (backend servira build)
- * - WEB_BASE služi za /sanctum/csrf-cookie, /login, /logout…
- */
-// --- BEGIN base URLs ---
-const RUNTIME_API = typeof window !== 'undefined' && window.__API_BASE_URL
-const RUNTIME_WEB = typeof window !== 'undefined' && window.__WEB_BASE_URL
-const isLocal = typeof window !== 'undefined' && /(localhost|127\.0\.0\.1)/.test(window.location.hostname)
+// ------------------------------
+// BASE URL konfiguracija
+// ------------------------------
+const isBrowser = typeof window !== 'undefined'
+const isLocal = isBrowser && /(localhost|127\.0\.0\.1)/.test(window.location.hostname)
 
+const RUNTIME_API = isBrowser && window.__API_BASE_URL
+const RUNTIME_WEB = isBrowser && window.__WEB_BASE_URL
+
+// Kada je lokalno → pretpostavi Laravel na :8000; u produkciji → relativno /api
 const API_BASE =
   RUNTIME_API ||
-  import.meta.env.VITE_API_URL ||
+  import.meta.env?.VITE_API_URL ||
   (isLocal ? 'http://localhost:8000/api' : '/api')
 
 const WEB_BASE =
   RUNTIME_WEB ||
-  import.meta.env.VITE_WEB_BASE_URL ||
+  import.meta.env?.VITE_WEB_BASE_URL ||
   (isLocal ? 'http://localhost:8000' : '/')
 
+// ------------------------------
+// Axios instance-i
+// ------------------------------
 export const web = axios.create({
   baseURL: WEB_BASE,
   withCredentials: true,
-  headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+  headers: {
+    Accept: 'application/json',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept-Language': isBrowser ? (navigator.language || 'en') : 'en',
+  },
 })
 
 export const api = axios.create({
   baseURL: API_BASE,
   withCredentials: true,
-  headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+  headers: {
+    Accept: 'application/json',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept-Language': isBrowser ? (navigator.language || 'en') : 'en',
+  },
 })
 
-// CSRF header iz cookie-ja (ako postoji)
-function attachXsrf(config) {
-  try {
-    const m = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/)
-    if (m) config.headers['X-XSRF-TOKEN'] = decodeURIComponent(m[1])
-  } catch {}
-  return config
-}
-web.interceptors.request.use(attachXsrf)
-api.interceptors.request.use(attachXsrf)
-
-export function getCsrfCookie() {
-  return web.get('/sanctum/csrf-cookie')
-}
-
-// Dev logger
-const DEV = import.meta.env.DEV === true
-for (const client of [web, api]) {
-  client.interceptors.response.use(
-    r => { if (DEV) console.log(`✅ ${r.config.method?.toUpperCase()} ${r.config.url} → ${r.status}`); return r },
-    e => { if (DEV) console.error(`❌ ${e.config?.method?.toUpperCase()} ${e.config?.url} → ${e.response?.status}`); return Promise.reject(e) }
-  )
-}
-// --- END base URLs ---
-
-
-
-/** Shared defaults */
-const commonHeaders = {
-  Accept: 'application/json',
-  'X-Requested-With': 'XMLHttpRequest',
-  // (opciono) prosledi jezik browsera backendu
-  'Accept-Language': typeof navigator !== 'undefined' ? navigator.language : 'en',
-}
-
-
-
-
-/** Sanctum CSRF cookie/header imena */
+// Sanctum cookie/header imena
 for (const client of [web, api]) {
   client.defaults.xsrfCookieName = 'XSRF-TOKEN'
   client.defaults.xsrfHeaderName = 'X-XSRF-TOKEN'
 }
 
-/** Ručno ubaci X-XSRF-TOKEN iz cookie-ja (decode-ovan) – pomaže u edge slučajevima */
+// ------------------------------
+// Helperi
+// ------------------------------
+
+// Učitaj CSRF cookie (uvek preko WEB_BASE)
+export function getCsrfCookie() {
+  return web.get('/sanctum/csrf-cookie', { withCredentials: true })
+}
+
+// Ručno ubaci X-XSRF-TOKEN iz cookie-ja (decode-ovan)
 function attachXsrf(config) {
   try {
-    const m = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/)
-    if (m) config.headers['X-XSRF-TOKEN'] = decodeURIComponent(m[1])
+    if (isBrowser) {
+      const m = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/)
+      if (m) config.headers['X-XSRF-TOKEN'] = decodeURIComponent(m[1])
+    }
   } catch {}
   return config
 }
 web.interceptors.request.use(attachXsrf)
 api.interceptors.request.use(attachXsrf)
 
-/** Lagani dev loger (bez spama u production-u) */
+// Lagani dev-logger + 419 retry
+const DEV = import.meta.env?.DEV === true
 for (const client of [web, api]) {
   client.interceptors.response.use(
     (response) => {
@@ -113,19 +98,21 @@ for (const client of [web, api]) {
         } catch {}
       }
 
-      // 419 = CSRF token mismatch / session expired → povuci novi csrf cookie i probaj JEDNOM ponovo
+      // 419 = CSRF mismatch / session expired → povuci novi CSRF i probaj JEDNOM ponovo
       const status = error?.response?.status
       const cfg = error?.config
-      const isSafeToRetry =
-        status === 419 && cfg && !cfg.__csrfRetried && (cfg.baseURL?.includes('/api') || cfg.baseURL?.endsWith('/'))
+      const canRetry =
+        status === 419 && cfg && !cfg.__csrfRetried &&
+        (cfg.baseURL?.includes('/api') || cfg.baseURL?.endsWith('/'))
 
-      if (isSafeToRetry) {
+      if (canRetry) {
         try {
           await getCsrfCookie()
           cfg.__csrfRetried = true
+          // Retry preko istog klijenta koji je pao
           return (cfg.baseURL === API_BASE ? api : web).request(cfg)
-        } catch (e) {
-          // padamo na originalnu grešku
+        } catch {
+          // pada na originalnu grešku ispod
         }
       }
 
@@ -134,13 +121,7 @@ for (const client of [web, api]) {
   )
 }
 
-/** Učitaj CSRF cookie (Sanctum) pre POST/PUT/DELETE na auth rutama */
-export function getCsrfCookie() {
-  // mora na WEB domenu, ne /api
-  return web.get('/sanctum/csrf-cookie', { withCredentials: true })
-}
-
-/** Helper: bezbedno čitanje /api/user (401 tretiraj kao guest) */
+// Bezbedno čitanje ulogovanog user-a (401 → null)
 export async function getCurrentUserSafe() {
   try {
     const { data } = await api.get('/user')
