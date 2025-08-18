@@ -82,7 +82,6 @@ export default {
       success: '',
       error: '',
       loading: false,
-      clearTimer: null,
     }
   },
   methods: {
@@ -91,55 +90,39 @@ export default {
       this.success = ''
       this.error = ''
 
-      // brza validacija
-      if (!this.form.name || !this.form.email || !this.form.message) {
+      if (!this.form.name?.trim() || !this.form.email?.trim() || !this.form.message?.trim()) {
         this.error = this.$t?.('contact.required') || 'Sva polja su obavezna.'
         return
       }
 
       this.loading = true
       try {
-        // /api/contact je javna ruta → nije neophodan CSRF cookie
         await api.post('/contact', {
-          name: this.form.name,
-          email: this.form.email,
-          message: this.form.message,
+          name: this.form.name.trim(),
+          email: this.form.email.trim(),
+          message: this.form.message.trim(),
           newsletter: !!this.form.newsletter,
         })
-
         this.success = this.$t?.('contact.success') || 'Poruka uspešno poslata!'
         this.form = { name: '', email: '', message: '', newsletter: false }
-        this.queueClear('success')
       } catch (err) {
         console.error('❌ Kontakt greška:', err?.response?.data || err)
-        const firstError =
-          err?.response?.data?.errors &&
-          Object.values(err.response.data.errors).flat()?.[0]
-
-        this.error =
-          firstError ||
-          err?.response?.data?.message ||
-          this.$t?.('contact.error') ||
-          'Došlo je do greške pri slanju.'
-        this.queueClear('error')
+        // 422 → prikaži prvu poruku
+        if (err?.response?.status === 422 && err?.response?.data?.errors) {
+          const first = Object.values(err.response.data.errors).flat()?.[0]
+          this.error = first || 'Proveri unete podatke.'
+        } else {
+          this.error = err?.response?.data?.message || 'Došlo je do greške pri slanju.'
+        }
       } finally {
         this.loading = false
       }
     },
-    queueClear(kind) {
-      clearTimeout(this.clearTimer)
-      this.clearTimer = setTimeout(() => {
-        if (kind === 'success') this.success = ''
-        if (kind === 'error') this.error = ''
-      }, 5000)
-    },
-  },
-  beforeUnmount() {
-    clearTimeout(this.clearTimer)
   },
   mounted() {
     this.success = ''
     this.error = ''
+    this.form = { name: '', email: '', message: '', newsletter: false }
   },
 }
 </script>

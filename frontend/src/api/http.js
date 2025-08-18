@@ -20,10 +20,45 @@ const WEB_BASE =
   RUNTIME_WEB ||
   import.meta.env.VITE_WEB_BASE_URL ||
   (isLocal ? 'http://localhost:8000' : '/')
+
+export const web = axios.create({
+  baseURL: WEB_BASE,
+  withCredentials: true,
+  headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+})
+
+export const api = axios.create({
+  baseURL: API_BASE,
+  withCredentials: true,
+  headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+})
+
+// CSRF header iz cookie-ja (ako postoji)
+function attachXsrf(config) {
+  try {
+    const m = document.cookie.match(/(?:^|;\s*)XSRF-TOKEN=([^;]+)/)
+    if (m) config.headers['X-XSRF-TOKEN'] = decodeURIComponent(m[1])
+  } catch {}
+  return config
+}
+web.interceptors.request.use(attachXsrf)
+api.interceptors.request.use(attachXsrf)
+
+export function getCsrfCookie() {
+  return web.get('/sanctum/csrf-cookie')
+}
+
+// Dev logger
+const DEV = import.meta.env.DEV === true
+for (const client of [web, api]) {
+  client.interceptors.response.use(
+    r => { if (DEV) console.log(`✅ ${r.config.method?.toUpperCase()} ${r.config.url} → ${r.status}`); return r },
+    e => { if (DEV) console.error(`❌ ${e.config?.method?.toUpperCase()} ${e.config?.url} → ${e.response?.status}`); return Promise.reject(e) }
+  )
+}
 // --- END base URLs ---
 
-/** Pomoćno: da li smo u dev modu (lakši logging) */
-const DEV = import.meta.env.DEV === true
+
 
 /** Shared defaults */
 const commonHeaders = {
@@ -33,21 +68,8 @@ const commonHeaders = {
   'Accept-Language': typeof navigator !== 'undefined' ? navigator.language : 'en',
 }
 
-/** WEB klijent (sanctum, login, logout, register…) */
-export const web = axios.create({
-  baseURL: WEB_BASE,
-  withCredentials: true,
-  headers: { ...commonHeaders },
-  timeout: 20000,
-})
 
-/** API klijent (za /api/* rute) */
-export const api = axios.create({
-  baseURL: API_BASE,
-  withCredentials: true,
-  headers: { ...commonHeaders },
-  timeout: 20000,
-})
+
 
 /** Sanctum CSRF cookie/header imena */
 for (const client of [web, api]) {
