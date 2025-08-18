@@ -393,8 +393,8 @@
   "title": "Everything you need to know",
   "questions": {
     "q1": {
-      "title": "What is the Express Websites platform?",
-      "text": "Express Websites is a modular business platform for creating websites, online stores, and advanced design solutions."
+      "title": "What is the Express web platform?",
+      "text": "Express web is a modular business platform for creating websites, online stores, and advanced design solutions."
     },
     "q2": {
       "title": "What are the prices and usage plans?",
@@ -413,7 +413,7 @@
       "text": "Yes, the starter plan is free and includes basic functionality."
     },
     "q6": {
-      "title": "Is Express Websites accessible for small and medium businesses?",
+      "title": "Is Express web accessible for small and medium businesses?",
       "text": "That’s exactly our mission – making digitalization accessible to everyone."
     }
   }

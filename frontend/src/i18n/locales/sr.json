@@ -401,8 +401,8 @@
   "title": "Sve što treba da znate",
   "questions": {
     "q1": {
-      "title": "Šta je platforma Express Sajtovi?",
-      "text": "Express Sajtovi je modularna poslovna platforma koja omogućava izradu sajtova, online prodavnica i naprednih dizajnerskih rešenja."
+      "title": "Šta je platforma Express web?",
+      "text": "Express web je modularna poslovna platforma koja omogućava izradu sajtova, online prodavnica i naprednih dizajnerskih rešenja."
     },
     "q2": {
       "title": "Koje su cene i planovi korišćenja?",
@@ -421,7 +421,7 @@
       "text": "Da, početni plan je besplatan i sadrži osnovne funkcionalnosti."
     },
     "q6": {
-      "title": "Da li je platforma Express Sajtovi pristupačna za mala i srednja preduzeća?",
+      "title": "Da li je platforma Express web pristupačna za mala i srednja preduzeća?",
       "text": "Upravo to nam je cilj – da digitalizacija bude dostupna svakome."
     }
   }
