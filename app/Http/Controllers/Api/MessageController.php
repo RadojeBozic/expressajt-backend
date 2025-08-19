@@ -38,5 +38,27 @@ class MessageController extends Controller
 
     return response()->json(['message' => 'Poruka obrisana.']);
 }
+
+public function mine(Request $request)
+    {
+        $user = $request->user();
+        if (!$user) return response()->json([], 200);
+
+        $q = Message::query()->latest();
+
+        if (Schema::hasColumn('messages', 'user_id')) {
+            // primarno user_id
+            $q->where('user_id', $user->id);
+            // fallback – ako su stare poruke bez user_id, pokupi ih po email-u
+            $q->orWhere(function ($qq) use ($user) {
+                $qq->whereNull('user_id')->where('email', $user->email);
+            });
+        } else {
+            // nema user_id kolone – filter po email-u
+            $q->where('email', $user->email);
+        }
+
+        return response()->json($q->get());
+    }
 }
 
