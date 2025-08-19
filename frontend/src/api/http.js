@@ -10,7 +10,7 @@ const isLocal = isBrowser && /(localhost|127\.0\.0\.1)/.test(window.location.hos
 const RUNTIME_API = isBrowser && window.__API_BASE_URL
 const RUNTIME_WEB = isBrowser && window.__WEB_BASE_URL
 
-// Kada je lokalno → pretpostavi Laravel na :8000; u produkciji → relativno /api
+// Lokalno → pretpostavi Laravel na :8000; u prod → relativno /api
 const API_BASE =
   RUNTIME_API ||
   import.meta.env?.VITE_API_URL ||
@@ -109,7 +109,6 @@ for (const client of [web, api]) {
         try {
           await getCsrfCookie()
           cfg.__csrfRetried = true
-          // Retry preko istog klijenta koji je pao
           return (cfg.baseURL === API_BASE ? api : web).request(cfg)
         } catch {
           // pada na originalnu grešku ispod
