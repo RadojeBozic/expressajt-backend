@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '@/api/http'
 import Particles from './Particles.vue'
 import RequestOfferModal from './RequestOfferModal.vue'
 import StripeCheckout from './StripeCheckout.vue'
@@ -135,7 +135,7 @@ export default {
       try {
         const token = 'tok_visa'
 
-        const res = await axios.post('http://localhost:8080/api/stripe/checkout', {
+        const res = await api.post('/stripe/checkout', {
           amount: 3000,
           currency: 'eur',
           description: 'Premium plan test',

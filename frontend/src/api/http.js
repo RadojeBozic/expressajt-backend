@@ -1,16 +1,11 @@
-// src/api/http.js
 import axios from 'axios'
 
-// ------------------------------
-// BASE URL konfiguracija
-// ------------------------------
+// BASE URLS
 const isBrowser = typeof window !== 'undefined'
-const isLocal = isBrowser && /(localhost|127\.0\.0\.1)/.test(window.location.hostname)
-
+const isLocal   = isBrowser && /(localhost|127\.0\.0\.1)/.test(window.location.hostname)
 const RUNTIME_API = isBrowser && window.__API_BASE_URL
 const RUNTIME_WEB = isBrowser && window.__WEB_BASE_URL
 
-// Lokalno → pretpostavi Laravel na :8000; u prod → relativno /api
 const API_BASE =
   RUNTIME_API ||
   import.meta.env?.VITE_API_URL ||
@@ -21,9 +16,7 @@ const WEB_BASE =
   import.meta.env?.VITE_WEB_BASE_URL ||
   (isLocal ? 'http://localhost:8000' : '/')
 
-// ------------------------------
-// Axios instance-i
-// ------------------------------
+// INSTANCES
 export const web = axios.create({
   baseURL: WEB_BASE,
   withCredentials: true,
@@ -44,22 +37,17 @@ export const api = axios.create({
   },
 })
 
-// Sanctum cookie/header imena
-for (const client of [web, api]) {
-  client.defaults.xsrfCookieName = 'XSRF-TOKEN'
-  client.defaults.xsrfHeaderName = 'X-XSRF-TOKEN'
+for (const c of [web, api]) {
+  c.defaults.xsrfCookieName = 'XSRF-TOKEN'
+  c.defaults.xsrfHeaderName = 'X-XSRF-TOKEN'
 }
 
-// ------------------------------
-// Helperi
-// ------------------------------
-
-// Učitaj CSRF cookie (uvek preko WEB_BASE)
+// CSRF COOKIE
 export function getCsrfCookie() {
   return web.get('/sanctum/csrf-cookie', { withCredentials: true })
 }
 
-// Ručno ubaci X-XSRF-TOKEN iz cookie-ja (decode-ovan)
+// XSRF HEADER from cookie (edge slučajevi)
 function attachXsrf(config) {
   try {
     if (isBrowser) {
@@ -72,55 +60,32 @@ function attachXsrf(config) {
 web.interceptors.request.use(attachXsrf)
 api.interceptors.request.use(attachXsrf)
 
-// Lagani dev-logger + 419 retry
+// DEV logger + 419 retry
 const DEV = import.meta.env?.DEV === true
-for (const client of [web, api]) {
-  client.interceptors.response.use(
-    (response) => {
-      if (DEV) {
-        try {
-          const m = response.config.method?.toUpperCase()
-          const u = response.config.url
-          // eslint-disable-next-line no-console
-          console.log(`✅ ${m} ${u} → ${response.status}`)
-        } catch {}
-      }
-      return response
+for (const c of [web, api]) {
+  c.interceptors.response.use(
+    (r) => {
+      if (DEV) console.log(`✅ ${r.config.method?.toUpperCase()} ${r.config.url} → ${r.status}`)
+      return r
     },
-    async (error) => {
-      if (DEV) {
-        try {
-          const m = error.config?.method?.toUpperCase()
-          const u = error.config?.url
-          const st = error.response?.status
-          // eslint-disable-next-line no-console
-          console.error(`❌ ${m} ${u} → ${st}`)
-        } catch {}
-      }
-
-      // 419 = CSRF mismatch / session expired → povuci novi CSRF i probaj JEDNOM ponovo
-      const status = error?.response?.status
-      const cfg = error?.config
-      const canRetry =
-        status === 419 && cfg && !cfg.__csrfRetried &&
-        (cfg.baseURL?.includes('/api') || cfg.baseURL?.endsWith('/'))
-
+    async (e) => {
+      if (DEV) console.error(`❌ ${e.config?.method?.toUpperCase()} ${e.config?.url} → ${e.response?.status}`)
+      const status = e?.response?.status
+      const cfg    = e?.config
+      const canRetry = status === 419 && cfg && !cfg.__csrfRetried
       if (canRetry) {
         try {
           await getCsrfCookie()
           cfg.__csrfRetried = true
           return (cfg.baseURL === API_BASE ? api : web).request(cfg)
-        } catch {
-          // pada na originalnu grešku ispod
-        }
+        } catch {}
       }
-
-      return Promise.reject(error)
+      return Promise.reject(e)
     }
   )
 }
 
-// Bezbedno čitanje ulogovanog user-a (401 → null)
+// /api/user bez “crvenila” kad nisi logovan
 export async function getCurrentUserSafe() {
   try {
     const { data } = await api.get('/user')
