@@ -9,6 +9,11 @@ export default {
   computed: {
     demos() {
       return [
+         {
+          name: 'Pet shop Dona',
+          free: '/prezentacije/dona-pet-shop-68a5a1d4436b4',
+          pro:  '/prezentacije/dona-pet-shop-68a5a1c12675e',
+        },
         {
           name: 'Pekara Maja',
           free: '/prezentacije/pekaraposlasticarnica-maja-689f14fe2a983',
