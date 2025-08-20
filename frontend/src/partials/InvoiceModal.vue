@@ -1,6 +1,14 @@
 <template>
   <div v-if="visible" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-16 mb-16">
     <div class="bg-slate-800 text-white rounded-lg p-6 w-full max-w-lg shadow-lg relative">
+
+  <!-- X zatvaranje u gornjem desnom uglu -->
+    <button @click="$emit('close')"
+       class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full bg-red-600/90 hover:bg-red-700 text-white"
+       aria-label="Zatvori"
+       title="Zatvori"
+    >✕</button>
+
       <h2 class="text-2xl font-bold mb-4 mt-16 text-center">{{ $t('invoice.title') }}</h2>
 
       <!-- Forma -->
