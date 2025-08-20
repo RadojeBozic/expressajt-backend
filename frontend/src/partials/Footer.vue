@@ -233,7 +233,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/cookie-policy" class="text-slate-400 hover:text-slate-200">
+              <router-link to="/footer/legals/cookie-policy" class="text-slate-400 hover:text-slate-200">
                 🍪 {{ $t('footer.cookiePolicy') }}
               </router-link>
             </li>

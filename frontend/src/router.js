@@ -138,6 +138,9 @@ const router = createRouter({
     { path: '/footer/legals/refund', name: 'RefundPage', component: () => import('./pages/footer/legals/Refund.vue') },
     { path: '/footer/legals/terms_conditions', name: 'TermsConditionsPage', component: () => import('./pages/footer/legals/Terms.vue') },
     { path: '/footer/legals/privacy', name: 'PrivacyPage', component: () => import('./pages/footer/legals/Privacy.vue') },
+    { path: '/footer/legals/cookie-policy', name: 'CookiePolicyPage', component: () => import('./pages/footer/legals/CookiePolicy.vue') },
+    { path: '/footer/legals/brandkit', name: 'BrandPage', component: () => import('./pages/footer/legals/Brandkit.vue') },
+
 
     // Nove stranice
     { path: '/pricing-detailed', name: 'PricingDetailed', component: () => import('@/partials/PricingDetailed.vue') },

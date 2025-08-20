@@ -13,7 +13,7 @@
       </div>
 
       <!-- Content -->
-      <div class="pt-32 pb-16 md:pt-20 md:pb-32"> <!-- podešavanje margine -->
+      <div class="pt-32 pb-16 md:pt-32 md:pb-24"> <!-- podešavanje margine -->
         <div class="max-w-3xl mx-auto text-center">
 
           <!-- Label -->
@@ -29,9 +29,7 @@
           </div>
 
           <!-- Title & Description -->
-            <p class="text-lg text-slate-300 mb-8" data-aos="fade-down" data-aos-delay="200">
-            {{ t('hero.description') }}
-          </p>
+          
           <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">
             {{ t('hero.title') }}
           </h1>
