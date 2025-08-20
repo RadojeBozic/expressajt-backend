@@ -1837,7 +1837,9 @@
   "pdf": "📄 Priloženi dokument",
   "contact": "📞 Kontakt",
   "social": "Pratite nas:",
-  "backToTop": "Nazad na vrh ↑"
+  "backToTop": "Nazad na vrh ↑",
+  "downloadPdf": "Preuzmi PDF",
+  "openPdfInNewTab": "Otvori PDF u novom tabu"
 },
 "classicPreview": {
     "activityTitle": "📋 Opis delatnosti",
@@ -1880,7 +1882,9 @@
     "pdf": "📄 Priloženi dokument",
     "contact": "📞 Kontakt",
     "social": "Pratite nas:",
-    "backToTop": "Nazad na vrh ↑"
+    "backToTop": "Nazad na vrh ↑",
+    "downloadPdf": "Preuzmi PDF",
+    "openPdfInNewTab": "Otvori PDF u novom tabu"
   },
   "galleryPreview": {
     "activityTitle": "📋 Opis delatnosti",
@@ -1901,7 +1905,9 @@
     "pdf": "📄 Priloženi dokument",
     "contact": "📞 Kontakt",
     "social": "Pratite nas:",
-    "backToTop": "Nazad na vrh ↑"
+    "backToTop": "Nazad na vrh ↑",
+    "downloadPdf": "Preuzmi PDF",
+    "openPdfInNewTab": "Otvori PDF u novom tabu"
   },
   "modernPreview": {
     "activityTitle": "📋 Opis delatnosti",
@@ -1922,7 +1928,9 @@
     "pdf": "📄 Priloženi dokument",
     "contact": "📞 Kontakt",
     "social": "Pratite nas:",
-    "backToTop": "Nazad na vrh ↑"
+    "backToTop": "Nazad na vrh ↑",
+    "downloadPdf": "Preuzmi PDF",
+    "openPdfInNewTab": "Otvori PDF u novom tabu"
   },
   "adminMessages": {
     "title": "Admin poruke 1",

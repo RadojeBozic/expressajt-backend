@@ -1828,7 +1828,9 @@
   "pdf": "📄 Attached Document",
   "contact": "📞 Contact",
   "social": "Follow us:",
-  "backToTop": "Back to top ↑"
+  "backToTop": "Back to top ↑",
+  "downloadPdf": "Download PDF",
+  "openPdfInNewTab": "Open PDF in new tab"
 },
 "classicPreview": {
     "activityTitle": "\ud83d\udccb Business Activity",
@@ -1871,7 +1873,9 @@
     "pdf": "\ud83d\udcc4 Attached Document",
     "contact": "\ud83d\udcde Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191"
+    "backToTop": "Back to top \u2191",
+    "downloadPdf": "Download PDF",
+    "openPdfInNewTab": "Open PDF in new tab"
   },
   "galleryPreview": {
     "activityTitle": "\ud83d\udccb Business Activity",
@@ -1892,7 +1896,9 @@
     "pdf": "\ud83d\udcc4 Attached Document",
     "contact": "\ud83d\udcde Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191"
+    "backToTop": "Back to top \u2191",
+    "downloadPdf": "Download PDF",
+    "openPdfInNewTab": "Open PDF in new tab"
   },
   "modernPreview": {
     "activityTitle": "\ud83d\udccb Business Activity",
@@ -1913,7 +1919,9 @@
     "pdf": "\ud83d\udcc4 Attached Document",
     "contact": "\ud83d\udcde Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191"
+    "backToTop": "Back to top \u2191",
+    "downloadPdf": "Download PDF",
+    "openPdfInNewTab": "Open PDF in new tab"
   },
   "adminMessages": {
     "title": "Admin Messages",
