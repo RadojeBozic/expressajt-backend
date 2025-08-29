@@ -7,7 +7,7 @@
       <!-- Illustration -->
       <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
         <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-          <img src="../images/glow-bottom.svg" class="max-w-none" width="446" height="174" alt="Hero Illustration" />
+          <img src="../images/glow-bottom.svg" class="max-w-none" width="116" height="74" alt="Hero Illustration" />
         </div>
       </div>
 

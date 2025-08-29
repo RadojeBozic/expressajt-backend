@@ -11,8 +11,8 @@
           <img
             src="../images/glow-bottom.svg"
             class="max-w-none"
-            width="1146"
-            height="274"
+            width="146"
+            height="74"
             alt="Hero Illustration"
           />
         </div>
