@@ -9,6 +9,11 @@ export default {
   computed: {
     demos() {
       return [
+        {
+          name: 'TRUBAČI BEOGRAD MIHAJLO SPASIĆ',
+          free: '/preview/mihajlo-spasic-trubaci-bg-68b4c5a665b0e',
+          free:  '/preview/mihajlo-spasic-trubaci-bg-68b4c5a665b0e',
+        },
          {
           name: 'Pet shop Dona',
           free: '/prezentacije/dona-pet-shop-68a5a1d4436b4',
