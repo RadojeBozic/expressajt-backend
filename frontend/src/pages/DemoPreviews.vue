@@ -10,7 +10,7 @@ export default {
     demos() {
       return [
         {
-          name: 'TRUBAČI BEOGRAD MIHAJLO SPASIĆ',
+          name: 'TRUBAČI - Beograd, Mihajlo Spasić',
           free: '/prezentacije/mihajlo-spasic-trubaci-bg-68b4c5a665b0e',
           pro:  '/prezentacije/mihajlo-spasic-trubaci-bg-68b4c5a665b0e',
         },
