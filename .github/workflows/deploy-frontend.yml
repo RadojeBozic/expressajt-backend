@@ -36,26 +36,7 @@ jobs:
           npm run build
           test -d dist || (echo "❌ Build nije kreirao dist/"; exit 1)
 
-      # === DEPLOY (SFTP kao APP USER) ===
-      - name: Deploy dist via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0   # <— precizan tag
-        with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASS }}
-          protocol: sftp
-          port: 22
-          local-dir: frontend/dist/
-          server-dir: public_html/public/
-          dangerous-clean-slate: true
-          exclude: |
-            index.php
-            storage
-            .htaccess
-          log-level: verbose
-
-
-      # === ARTISAN (SSH kao MASTER USER) – opciono ===
+      # 1) (Opcionalno, ali preporučeno) Očisti stare assete preko SSH (MASTER)
       - name: Load master SSH key
         uses: webfactory/ssh-agent@v0.9.0
         with:
@@ -66,6 +47,26 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H "${{ secrets.MASTER_SSH_HOST }}" >> ~/.ssh/known_hosts
 
+      - name: Clean old assets on server (via SSH)
+        run: |
+          ssh "${{ secrets.MASTER_SSH_USER }}"@"${{ secrets.MASTER_SSH_HOST }}" \
+            "rm -rf '${{ env.DEST }}'/assets/* || true"
+
+      # 2) Deploy preko SFTP kao APP user (SFTP-only)
+      - name: Deploy dist via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server:     ${{ secrets.SFTP_HOST }}
+          username:   ${{ secrets.SFTP_USER }}
+          password:   ${{ secrets.SFTP_PASS }}
+          port:       22
+          sftp_only:  true
+          # pošalji SVE iz dist/
+          local_path:  'frontend/dist/*'
+          # VAŽNO: path relativan za SFTP root (bez /home/...)
+          remote_path: 'public_html/public/'
+
+      # 3) Laravel cache clear (MASTER SSH)
       - name: Clear Laravel caches
         run: |
           ssh "${{ secrets.MASTER_SSH_USER }}"@"${{ secrets.MASTER_SSH_HOST }}" \
