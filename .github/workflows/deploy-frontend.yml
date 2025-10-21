@@ -30,70 +30,50 @@ jobs:
 
       - name: Install & Build (frontend)
         working-directory: frontend
-        shell: bash
         run: |
           set -euo pipefail
           npm ci
           npm run build
 
-      # ✅ Umesto ručne pripreme ključa — koristimo agent koji sve sredi
       - name: Load SSH key
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Trust host
-        shell: bash
+      - name: Trust Cloudways host
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
 
-      - name: Deploy dist to Cloudways public/
-        shell: bash
+      - name: Deploy frontend to Cloudways
         run: |
           set -euo pipefail
 
-          # ⛳ koristimo HOME-relativnu putanju (chroot-friendly za SFTP/SCP)
-          APP_ROOT="~/applications/ascqrnhbfh/public_html"
+          APP_ROOT="/home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html"
           DEST="$APP_ROOT/public"
 
-          echo "== Ensure remote dirs exist (HOME-relative) =="
-          ssh "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\" && ls -ld \"$DEST\" \"$DEST/assets\""
+          echo "== Ensure remote dirs exist =="
+          ssh "$SSH_USER@$SSH_HOST" "mkdir -p \"$DEST/assets\""
 
-          echo "== Clean old hashed assets =="
+          echo "== Clean old assets =="
           ssh "$SSH_USER@$SSH_HOST" "rm -rf \"$DEST/assets\"/* || true"
 
-          echo "== Upload assets =="
-          if compgen -G "frontend/dist/assets/*" > /dev/null; then
-            # šaljemo *sadržaj* direktorijuma (suffix ".")
+          echo "== Upload new build =="
+          if [ -d "frontend/dist/assets" ]; then
             scp -r frontend/dist/assets/. "$SSH_USER@$SSH_HOST:$DEST/assets/"
           else
-            echo "No local assets to upload (frontend/dist/assets is empty?)"
+            echo "⚠️ No local assets found in frontend/dist/assets"
           fi
 
           echo "== Upload index.html =="
           scp frontend/dist/index.html "$SSH_USER@$SSH_HOST:$DEST/index.html"
 
-      - name: Clear Laravel caches (optional)
-        shell: bash
+      - name: Clear Laravel caches
         run: |
-          set -euo pipefail
           ssh "$SSH_USER@$SSH_HOST" \
-            'cd ~/applications/ascqrnhbfh/public_html && php artisan optimize:clear || true'
-
-      - name: Clear Laravel caches (optional)
-        shell: bash
-        run: |
-          ssh -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" \
             'cd /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html && php artisan optimize:clear || true'
 
-
-      - name: Sanity check remote path & user
-        shell: bash
+      - name: Sanity check remote path
         run: |
-          set -euo pipefail
-          echo "== Who am I on remote =="
-          ssh "$SSH_USER@$SSH_HOST" 'whoami; echo "HOME=$HOME"; pwd || true'
-          echo "== Check app dirs under HOME =="
-          ssh "$SSH_USER@$SSH_HOST" 'ls -ld ~/applications ~/applications/ascqrnhbfh ~/applications/ascqrnhbfh/public_html ~/applications/ascqrnhbfh/public_html/public || true'
+          ssh "$SSH_USER@$SSH_HOST" \
+            'echo "== User info =="; whoami; pwd; echo "== Files =="; ls -l /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public'
