@@ -38,21 +38,22 @@ jobs:
 
       # === DEPLOY (SFTP kao APP USER) ===
       - name: Deploy dist via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0   # <— precizan tag
         with:
-          server: ${{ secrets.SFTP_HOST }}         # 64.226.68.160
-          username: ${{ secrets.SFTP_USER }}       # expressajt
-          password: ${{ secrets.SFTP_PASS }}       # lozinka iz Application Credentials
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
           protocol: sftp
           port: 22
           local-dir: frontend/dist/
-          server-dir: public_html/public/          # relativno od SFTP root-a
+          server-dir: public_html/public/
           dangerous-clean-slate: true
           exclude: |
             index.php
             storage
             .htaccess
           log-level: verbose
+
 
       # === ARTISAN (SSH kao MASTER USER) – opciono ===
       - name: Load master SSH key
