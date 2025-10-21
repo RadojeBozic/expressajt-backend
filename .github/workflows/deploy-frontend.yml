@@ -46,14 +46,15 @@ jobs:
           protocol: sftp
           port: 22
           local-dir: frontend/dist/
-          server-dir: /home/1475017.cloudwaysapps.com/ascqrnhbfh/public_html/public/
-          # obriši fajlove na serveru koji više ne postoje lokalno (hashirani assets)
+          # KLJUČNO: relativno od SFTP root-a (app usera), BEZ /home/...
+          server-dir: public_html/public/
+          # obriši što lokalno više ne postoji (hashirani assets)
           dangerous-clean-slate: true
-          # NE diraj Laravel fajlove
           exclude: |
             index.php
             storage
             .htaccess
+          log-level: verbose
 
       # === ARTISAN (SSH kao MASTER USER) – opciono, ali preporučeno ===
       - name: Load master SSH key
