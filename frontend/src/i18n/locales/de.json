@@ -1215,23 +1215,22 @@
   }
 },
 "design": {
-      "title": "Express Design",
-      "subtitle": "Logo, banner, and social media design — fast, creative, and powered by AI.",
-      "offerTitle": "What we offer",
-      "offer": {
-        "1": "Logo design – custom-made or using Canva Pro templates",
-        "2": "Banners, business cards, social media posts",
-        "3": "AI-generated proposals based on your business description",
-        "4": "Branded PDFs and Canva files ready for print"
-      },
-      "aiTitle": "AI + Canva Pro",
-      "aiText": "We use the best of both worlds: artificial intelligence and professional Canva Pro templates. Don't have an idea? Just describe your business — we'll propose a solution.",
-      "ctaTitle": "Start your Express design",
-      "ctaText": "Send us a description and get the first draft within 24 hours.",
-      "ctaButton": "Send request"
-    },
-     
-    "domain": {
+  "title": "Express Design",
+  "subtitle": "Logo-, Banner- und Social-Media-Design – schnell, kreativ und KI-gestützt.",
+  "offerTitle": "Unser Angebot",
+  "offer": {
+    "1": "Logo-Design – individuell oder auf Basis von Canva-Pro-Templates",
+    "2": "Banner, Visitenkarten, Social-Media-Posts",
+    "3": "KI-gestützte Entwürfe basierend auf Ihrer Unternehmensbeschreibung",
+    "4": "Gebrandete PDFs und Canva-Dateien – druckfertig"
+  },
+  "aiTitle": "KI + Canva Pro",
+  "aiText": "Wir verbinden das Beste aus zwei Welten: künstliche Intelligenz und professionelle Canva-Pro-Templates. Keine Idee? Beschreiben Sie Ihr Business – wir schlagen passende Lösungen vor.",
+  "ctaTitle": "Starten Sie Ihr Express Design",
+  "ctaText": "Senden Sie uns eine kurze Beschreibung – Sie erhalten den ersten Entwurf innerhalb von 24 Stunden.",
+  "ctaButton": "Anfrage senden"
+},  
+  "domain": {
   "badge": "Domain- & Hosting-Services",
   "title": "Unterstützung bei Domain und Hosting – schnell und stressfrei",
   "subtitle": "Unsicher, wo Sie eine Domain kaufen sollen? Welches Hosting ist geeignet? Wir unterstützen Sie mit verlässlichen Partnern und transparenten Empfehlungen.",
