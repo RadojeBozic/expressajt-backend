@@ -6,5 +6,528 @@
   "title": "Express Design – KI + Canva Pro, schnell und einfach",
   "description": "Wir bieten schnelle und effiziente Design-Dienstleistungen, unterstützt durch KI und Canva Pro, sowie individuelles kreatives Design. Mit Express Design erhalten Sie Logos, Banner und Grafiken für soziale Medien in Rekordzeit.",
   "button": "Design anfragen"
+},
+"cta02": {
+  "label": "Sicherheitsorientierte Plattform",
+  "title": "Stärken Sie die Sicherheit Ihres Unternehmens",
+  "description": "Unsere Technologie ist robust, skalierbar und auf moderne Bedrohungen zugeschnitten. Wir sind der Meinung, dass Sicherheit kein Luxus sein darf – sondern Standard sein muss.",
+  "button": "Jetzt starten"
+},
+
+"hero": {
+  "label": "Jetzt auf Fiverr verfügbar – globales Angebot, lokaler Support.",
+  "title": "Express Web – Ihr erster Schritt zur digitalen Präsenz",
+  "descriptions": "Erstellen Sie eine moderne, schnelle und optimierte Website ohne Komplikationen. Ideal für kleine Unternehmen, Unternehmer und Vereine.",
+  "primary_button": "Express Mini-Website in 5 Minuten – kostenlos",
+  "secondary_button": "Komplette Websites ab 10 € pro Jahr"
+},
+"features_global": {
+  "label": "Was bieten wir an?",
+  "title": "Entwicklung fortschrittlicher Weblösungen",
+  "description": "Website-Erstellung, Webanwendungen, moderne E-Commerce-Plattformen und individuelle Softwarelösungen.",
+  "tabs": {
+    "1": "Webanwendungen",
+    "2": "Onlineshops",
+    "3": "Express Design – KI + Canva Pro"
+  }
+},
+"features02": {
+  "title": "Geschäftslösungen",
+  "description": "Stärken Sie Ihr Unternehmen mit einzigartigen digitalen Lösungen. Wichtig ist, wer Sie sind – aber auch, wie andere Sie wahrnehmen und erleben.",
+  "box1": {
+    "title": "Demo – Onlineshop",
+    "text": "Agro Shop ist weit mehr als ein klassischer Onlineshop – es handelt sich um eine vollständige digitale Plattform für den Verkauf landwirtschaftlicher Produkte, mit Geschäftsmodulen und Logik, die einem seriösen Unternehmen oder einer Bio-Genossenschaft gerecht werden. Sie schafft Vertrauen zwischen Produzenten, Distributoren und Käufern. Funktionsreich und anpassbar an jede Produktkategorie.",
+    "button": "Agro Shop besuchen"
+  },
+  "box2": {
+    "title": "Digitale Kontrolle",
+    "text": "Unsere Softwarelösungen ermöglichen eine einfache Verwaltung von Kunden, Rechnungen, Produkten und Verkäufen – alles über eine zentrale Plattform."
+  },
+  "box3": {
+    "title": "Sicherheit und Skalierbarkeit",
+    "text": "Wir implementieren moderne Sicherheitspraktiken, Architektur- und Performance-Techniken, damit Ihr System widerstandsfähig, schnell und wachstumsbereit ist."
+  },
+  "list": {
+    "filters": {
+      "title": "Webentwicklung",
+      "text": "Professionelle, moderne und schnelle Webpräsentationen, optimiert für alle Endgeräte."
+    },
+    "configurable": {
+      "title": "E-Commerce-Lösungen",
+      "text": "Komplette Onlineshops mit Unterstützung für mehrere Sprachen, Währungen und Zahlungsoptionen."
+    },
+    "adaptable": {
+      "title": "ERP-Module",
+      "text": "Zentralisierte Verwaltung von Kunden, Produkten, Rechnungen und Geschäftsprozessen."
+    },
+    "authorization": {
+      "title": "Beratung & digitale Strategie",
+      "text": "Wir unterstützen Unternehmen beim Aufbau effektiver digitaler Strategien und der Optimierung von Prozessen."
+    },
+    "management": {
+      "title": "Sicherheit & Wartung",
+      "text": "Implementierung von Sicherheitsprotokollen, Backup-Systemen und technischer Unterstützung rund um die Uhr."
+    },
+    "building": {
+      "title": "Individuelle Lösungen",
+      "text": "Wir entwickeln maßgeschneiderte Anwendungen, die exakt auf Ihre Anforderungen und Spezifikationen abgestimmt sind."
+    }
+  }
+},
+"features03": {
+  "title": "Responsives Design",
+  "description": "Unsere Anwendungen sind zu 100 % responsiv und für Mobiltelefone, Tablets sowie Desktop-Geräte optimiert. Wir gewährleisten eine konsistente und nahtlose Nutzererfahrung auf allen Bildschirmgrößen."
+},
+"features04": {
+  "title": "Geschwindigkeit und Flexibilität",
+  "description": "Unterschiedliche Lösungen erfordern unterschiedliche Umsetzungszeiten – von wenigen Minuten bis zu mehreren Wochen. Unsere Plattform ermöglicht eine schnelle Anpassung und Implementierung neuer Funktionen, sodass sich Ihre Anwendung kontinuierlich mit Ihrem Unternehmen weiterentwickelt.",
+  "groups": [
+    {
+      "title": "Schnellste Lösungen – von 10 Minuten bis 1 Tag",
+      "features": [
+        {
+          "title": "Express FREE Website",
+          "description": "Kostenlose Website in 5–10 Minuten – einfach, schnell und ohne Programmierkenntnisse. Geeignet für persönliche Projekte, kleine Unternehmenspräsentationen und ähnliche Anwendungsfälle."
+        },
+        {
+          "title": "Express PRO Website (ab 10 € / Jahr)",
+          "description": "Erweiterte Webpräsentation mit zusätzlichen Sektionen, PDF-Integration, Karte und Kontaktformular."
+        },
+        {
+          "title": "Express W3 Website (ab 199 € / Jahr)",
+          "description": "Individuelle Unternehmenspräsentation innerhalb eines Tages – inklusive Hosting und Domain."
+        }
+      ]
+    },
+    {
+      "title": "Express-Lösungen – bis zu 7 Tage",
+      "features": [
+        {
+          "title": "Express CRUIP Website",
+          "description": "Moderne Webpräsentationen auf Basis des Cruip-UI-Designs mit hochwertigen visuellen Effekten. Lieferzeit: 4–5 Tage."
+        },
+        {
+          "title": "Express Original Website",
+          "description": "Vollständig individuell entwickelte Website – maßgeschneidert, einzigartig und exklusiv. Lieferzeit: 5–7 Tage."
+        },
+        {
+          "title": "Express Basic Shop",
+          "description": "Onlineshop mit grundlegenden Funktionen – Warenkorb, Checkout und SEO-Basis. Lieferzeit: 5–7 Tage."
+        }
+      ]
+    },
+    {
+      "title": "Mega-Lösungen – bis zu 2 Wochen",
+      "features": [
+        {
+          "title": "Express UNI Shop",
+          "description": "Vielseitiger Onlineshop mit Filtern, Partnerbereichen und Dashboard-Funktionen. Lieferzeit: 10–14 Tage."
+        },
+        {
+          "title": "Domain- & Hosting-Service",
+          "description": "Beratung und Unterstützung bei der Auswahl und dem Erwerb von Domain und Hosting – inklusive Support und Provision. Einrichtungszeit: 1–2 Tage."
+        },
+        {
+          "title": "Website-Wartung",
+          "description": "Unterstützung bei Anpassungen, SEO, Sicherheit und Backups. Verfügbar monatlich oder nach Bedarf. Zeitrahmen: nach Vereinbarung."
+        }
+      ]
+    }
+  ]
+},
+"features05": {
+  "title": "Was unterscheidet uns von anderen?",
+  "description": "Wir setzen auf modernste Technologien und Werkzeuge für die Entwicklung von Webanwendungen. Unsere Plattform basiert auf Laravel, Livewire und Bootstrap und ermöglicht eine schnelle sowie effiziente Umsetzung moderner Weblösungen.",
+  "description01": "Moderne Templates, individuell auf Ihr Unternehmen zugeschnitten. Wir nutzen Cruip-Designs und passen jedes Projekt gezielt an Ihre Anforderungen an.",
+  "description02": "Modulare Architektur – skalieren Sie nach Bedarf. Funktionen können jederzeit hinzugefügt oder entfernt werden, ohne ein neues System entwickeln zu müssen.",
+  "description03": "Vollständig lokalisierte Lösung. Unterstützung für serbische Sprache, Preisgestaltung in Dinar sowie Anpassung an lokale gesetzliche Vorgaben.",
+  "description04": "Transparente Preisgestaltung – keine versteckten Kosten. Sie zahlen ausschließlich für die Leistungen, die Sie tatsächlich nutzen.",
+  "description05": "Zugriff auf den Backend-Code und Integrationen. Fortgeschrittene Nutzer können ERP-, CRM- und weitere externe Systeme anbinden.",
+  "description06": "Professioneller Support aus Serbien. Unser lokales Team kennt den Markt und versteht Ihre geschäftlichen Anforderungen."
+},
+"pricing": {
+  "label": "Pakete und Preise",
+  "title": "Alle Preise sind indikativ und können angepasst werden.",
+  "description": "Unser Ansatz ermöglicht eine vollständige Individualisierung für jeden Kunden. Wählen Sie das passende Paket und entwickeln Sie Ihr Unternehmen mit unserer Unterstützung weiter.",
+  "toggle": {
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "pay yearly": "Jährlich bezahlen"
+  },
+  "plans": {
+    "pro": {
+      "title": "Plus",
+      "description": "Website-Präsentationen.",
+      "mo": "Monat",
+      "label": "Website-Präsentationen.",
+      "get_started": "Jetzt starten",
+      "unlimited": "Unbegrenzt"
+    },
+    "team": {
+      "title": "Pro",
+      "description": "Online-Shop – Basisversion.",
+      "mo": "Monat",
+      "label": "Online-Shop – Basisversion.",
+      "get_started": "Jetzt starten",
+      "unlimited": "Unbegrenzt"
+    },
+    "enterprise": {
+      "title": "Advanced",
+      "description": "Online-Shop – erweiterte Version.",
+      "mo": "Monat",
+      "label": "Online-Shop – erweiterte Version.",
+      "get_started": "Jetzt starten",
+      "unlimited": "Unbegrenzt"
+    },
+    "usage": "Nutzung",
+    "social": "HTML-Seiten",
+    "custom": "CSS-Stile",
+    "unlimited": "Unbegrenzt",
+    "limited": "Begrenzt",
+    "use_role": "Erweiterte Bootstrap-Stile",
+    "external": "JavaScript",
+    "features": "Erweiterte Funktionen",
+    "customs": "React / Vue / Angular",
+    "advance": "Effekte & Animationen",
+    "extra": "Logo-Design",
+    "ad_roles": "Bildbearbeitung",
+    "deploy": "Responsives Design",
+    "enterprises": "Hosting & Domain",
+    "spec": "Auf Anfrage verfügbar",
+    "support": "Zusätzliche Leistungen",
+    "premium_supp": "Wartung"
+  }
+},
+"testimonials": {
+  "items": [
+    {
+      "quote": "Anfangs war ich dieser Plattform gegenüber skeptisch, doch die Ergebnisse kamen sehr schnell. Dieses System hat meine Arbeitsweise grundlegend verändert. Heute kann ich mich auf Wachstum konzentrieren statt auf administrative Aufgaben.",
+      "name": "Miroslav Božić",
+      "role": "Gründer von Agro-BiM"
+    },
+    {
+      "quote": "Dieses System hat mir geholfen, meine Zeit und Ressourcen deutlich besser zu organisieren. So kann ich mich auf das Wesentliche konzentrieren. Die Agentur Express Web arbeitet professionell und effizient.",
+      "name": "Bojana Popić",
+      "role": "Gründerin von Agro-BiM"
+    },
+    {
+      "quote": "Express Web hat unsere Online-Präsenz maßgeblich verbessert. Das Team arbeitet äußerst professionell und engagiert. Alle Anforderungen wurden termingerecht und in hoher Qualität umgesetzt.",
+      "name": "Zoran Stojanović",
+      "role": "Metox GmbH"
+    }
+  ]
+},
+"footer": {
+  "cookiePolicy": "Cookie-Richtlinie",
+  "copyright": "Alle Rechte vorbehalten.",
+  "products": "Produkte",
+  "company": "Unternehmen",
+  "resources": "Ressourcen",
+  "legals": "Rechtliches",
+  "legal": {
+    "name": "EXPRESS WEB Belgrad-Palilula",
+    "mb": "Firmen-ID: 68170168",
+    "pib": "Umsatzsteuer-ID: 115191597",
+    "account": "Konto:",
+    "reports": "Finanzberichte"
+  },
+  "links": {
+    "features": "Funktionen",
+    "integrations": "Integrationen",
+    "pricing": "Preise & Pakete",
+    "changelog": "Änderungsprotokoll",
+    "method": "Unsere Methode",
+    "about": "Über uns",
+    "diversity": "Vielfalt & Inklusion",
+    "blog": "Blog",
+    "careers": "Karriere",
+    "finance": "Finanzberichte",
+    "community": "Community",
+    "terms": "Nutzungsbedingungen",
+    "vulnerability": "Sicherheitslücke melden",
+    "refund": "Rückerstattungsrichtlinie",
+    "terms_conditions": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "brandkit": "Markenmaterial"
+  }
+},
+"header": {
+  "menu": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "faq": "FAQ",
+    "projects": "Projekte",
+    "pricing": "Preise",
+    "integrations": "Integrationen",
+    "customers": "Kunden",
+    "changelog": "Änderungsprotokoll",
+    "signin": "Anmelden",
+    "signup": "Registrieren",
+    "toggle": "Menü",
+    "account": "Mein Konto",
+    "admin": "Admin-Bereich",
+    "logout": "Abmelden",
+    "language_sr": "Serbisch",
+    "language_en": "Englisch",
+    "cart": "Warenkorb"
+  }
+},
+"auth": {
+  "sign_in_title": "Anmeldung zu Ihrem Konto",
+  "email": "E-Mail-Adresse",
+  "password": "Passwort",
+  "forgot": "Passwort vergessen?",
+  "sign_in_button": "Anmelden",
+  "no_account": "Noch kein Konto?",
+  "sign_up": "Registrieren",
+  "or": "oder",
+  "continue_twitter": "Mit Twitter fortfahren",
+  "continue_github": "Mit GitHub fortfahren",
+  "error": "Ungültige Daten!",
+  "success": "Erfolgreich angemeldet!",
+  "invalid_credentials": "Ungültige E-Mail-Adresse oder Passwort.",
+  "validation_error": "Bei der Validierung ist ein Fehler aufgetreten."
+},
+"register": {
+  "title_register": "Kostenloses Konto erstellen",
+  "company": "Firmenname",
+  "fullname": "Vollständiger Name",
+  "email": "E-Mail-Adresse",
+  "password": "Passwort",
+  "referrer": "Wie haben Sie von uns erfahren?",
+  "message": "Nachricht eingeben",
+  "message_placeholder": "Meine Nachricht lautet …",
+  "referrer_options": {
+    "google": "Google",
+    "medium": "Medium",
+    "github": "GitHub"
+  },
+  "title": "Registrieren",
+  "button": "Registrieren",
+  "already": "Bereits ein Konto?",
+  "signin": "Anmelden",
+  "or": "oder",
+  "continue_twitter": "Mit Twitter fortfahren",
+  "continue_github": "Mit GitHub fortfahren",
+  "name_business": "GBS Platform GmbH",
+  "name_manager": "Marko Marković",
+  "error": "Validierungsfehler.",
+  "success": "Registrierung erfolgreich! Bitte melden Sie sich an."
+},
+"reset": {
+  "title": "Passwort zurücksetzen",
+  "email": "E-Mail-Adresse",
+  "email_placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+  "button": "Anfrage senden",
+  "error": "Validierungsfehler."
+},
+"pricing_hero": {
+  "hero": {
+    "label": "Sicherheitsorientierte Plattform",
+    "title": "Einfache Pakete für alle",
+    "description": "Reduzieren Sie Betriebskosten und verabschieden Sie sich von langsamen, wartungsintensiven Anwendungen. Sie erhalten leistungsstarke Werkzeuge mit Fokus auf exzellente Benutzererfahrung."
+  }
+},
+"gbs_services": {
+  "section_label": "Demnächst verfügbar",
+  "section_title": "GBS (Global Business Systems) und Express Web",
+  "section_description": "GBS (Global Business Systems) bietet eine modulare Plattform für kleine und mittelständische Unternehmen mit dem Ziel, Geschäftsprozesse zu digitalisieren, zu automatisieren und nachhaltig zu optimieren.",
+
+  "items": {
+    "title1": "Websites mit einem Klick – Express Web (erweitert)",
+    "description1": "Schnelle Erstellung professioneller Unternehmenswebsites mithilfe von Vorlagen (Laravel + Livewire + Bootstrap). Inklusive Kontaktformulare, Galerien, Karten und FAQ-Bereiche.",
+
+    "title2": "MyMaXico – kostenloser Online-Shop",
+    "description2": "Vollständig kostenlos für 20 bis 100 Produkte – ohne Domain- oder Hosting-Kosten. Alles ist inklusive! Ideal für kleine Produzenten, Handwerker, Künstler und lokale Anbieter.",
+
+    "title3": "Online-Shops & Multi-Vendor-Plattformen – Express Shop (erweitert)",
+    "description3": "Leistungsfähige E-Commerce-Systeme mit Modulen für Lieferanten, Hersteller und Partner. Inklusive SEO-Optimierung, Stripe, PayPal und Zahlung per Nachnahme.",
+
+    "title4": "Erweiterte Web-Apps sowie ERP- & CRM-Lösungen",
+    "description4": "Unsere Plattform zeigt, wie moderne Webtechnologien für skalierbare und effiziente SaaS-Lösungen eingesetzt werden können. Inklusive ERP-, CRM- und weiterer Geschäftsanwendungen.",
+
+    "title5": "AI as a Service",
+    "description5": "Automatisierte Inhaltserstellung, Bildgenerierung und E-Mail-Kampagnen mithilfe künstlicher Intelligenz. Enthält Chatbots, SEO-Analysen und Content-Übersetzungen.",
+
+    "title6": "Schulung & Support",
+    "description6": "Benutzerschulungen über Video-Tutorials und PDF-Anleitungen. Technischer Support sowie Unterstützung bei Hosting und Systemkonfiguration.",
+
+    "learn_more": "Mehr erfahren"
+  }
+},
+"story": {
+  "title": "Unsere Geschichte (bis heute)",
+  "paragraph1": "Alles begann mit einem Laptop und einer großen Idee. Ein gebrauchter Laptop, eine alte Tastatur und der starke Wunsch, etwas Wertvolles zu schaffen – das war unser Anfang. Die Investition in Wissen war das größte Risiko, aber zugleich die beste Entscheidung, die wir getroffen haben.",
+  "paragraph2": "Wir haben aus jeder Herausforderung gelernt. Es gab keine einfachen Schritte, doch jedes Problem half uns, Technologie, Markt und vor allem – Menschen – besser zu verstehen. Wir sind überzeugt, dass die besten Lösungen durch kontinuierliche Prozesse entstehen, nicht über Nacht.",
+  "paragraph3": "Von der Idee bis zum Launch – alles wird intern entwickelt. Sämtliche Systeme, das Design sowie die Backend-Funktionalitäten entstehen unter einem Dach. So behalten wir die volle Qualitätskontrolle und können schneller auf die Bedürfnisse unserer Kunden reagieren.",
+  "paragraph4": "Wir behalten das große Ganze im Blick und achten gleichzeitig auf jedes Detail. Von UX-Design bis zur Systemarchitektur gehen wir jede Aufgabe mit höchster Sorgfalt an. Unser Fokus liegt auf Benutzererlebnis, Sicherheit und nachhaltigen Lösungen.",
+  "paragraph5": "Express Websites ist nicht nur ein Team – wir sind Ihr Wachstumspartner. Wir bieten mehr als nur Lösungen: Engagement und Verlässlichkeit. Wenn Sie wachsen, wachsen wir gemeinsam. Unsere Vision ist klar: Mit jedem Projekt schaffen wir langfristiges Vertrauen."
+},
+"hero_about": {
+  "subtitle": "Fortschrittliche Lösungen für die digitale Transformation",
+  "title": "Willkommen in der Welt des positiven Wandels"
+},
+"support_cta": {
+  "heading": "Benötigen Sie zusätzliche Unterstützung?",
+  "button": "Support-Center kontaktieren"
+},
+"support": {
+  "title": "Support-Center",
+  "subtitle": "Haben Sie eine Frage? Wir sind für Sie da – finden Sie schnell Antworten oder kontaktieren Sie uns direkt.",
+  "description": "Unser Team unterstützt Sie gerne. Ob Fragen zu unseren Dienstleistungen oder technische Unterstützung – zögern Sie nicht, uns zu kontaktieren.",
+  "faq_title": "Häufig gestellte Fragen",
+  "faq": [
+    { "q": "Wie registriere ich mich?", "a": "Klicken Sie auf „Registrieren“ und geben Sie Ihre grundlegenden Daten ein." },
+    { "q": "Wie kann ich meine Unternehmensdaten aktualisieren?", "a": "Melden Sie sich an und klicken Sie in Ihrem Unternehmensprofil auf „Bearbeiten“." },
+    { "q": "Wie kann ich den Support kontaktieren?", "a": "Nutzen Sie das Kontaktformular oder schreiben Sie uns direkt per E-Mail." }
+  ],
+  "cta_title": "Haben Sie noch Fragen?",
+  "cta_subtitle": "Unser Support-Team hilft Ihnen gerne weiter.",
+  "cta_button": "Kontakt aufnehmen"
+},
+"faqs": {
+  "label": "Häufig gestellte Fragen",
+  "title": "Alles, was Sie wissen müssen",
+  "questions": {
+    "q1": {
+      "title": "Was ist die Express-Web-Plattform?",
+      "text": "Express Web ist eine modulare Business-Plattform zur Erstellung von Websites, Online-Shops und fortschrittlichen Designlösungen."
+    },
+    "q2": {
+      "title": "Welche Preise und Nutzungsmodelle gibt es?",
+      "text": "Wir bieten flexible Preispakete, einschließlich kostenloser Optionen für kleine Unternehmen und Selbstständige."
+    },
+    "q3": {
+      "title": "Kann ich das Express-Branding von meiner Website entfernen?",
+      "text": "Ja. Im Premium-Paket können Sie das Plattform-Branding entfernen und Ihr eigenes hinzufügen."
+    },
+    "q4": {
+      "title": "Welche Nutzerdaten kann ich erfassen?",
+      "text": "Sie können grundlegende Informationen wie Name, E-Mail-Adresse, Bestellungen und Analysedaten erfassen."
+    },
+    "q5": {
+      "title": "Gibt es eine kostenlose Version?",
+      "text": "Ja, das Starter-Paket ist kostenlos und enthält grundlegende Funktionen."
+    },
+    "q6": {
+      "title": "Ist Express Web für kleine und mittelständische Unternehmen geeignet?",
+      "text": "Genau das ist unsere Mission – Digitalisierung für alle zugänglich zu machen."
+    }
+  }
+},
+"contact": {
+  "title": "Kontakt",
+  "description": "Haben Sie eine Frage, einen Vorschlag oder Interesse an einer Zusammenarbeit? Senden Sie uns eine Nachricht über dieses Formular oder kontaktieren Sie uns direkt über die unten angegebenen Kontaktdaten.",
+  "form": {
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "message": "Ihre Nachricht",
+    "submit": "Nachricht senden",
+    "newsletter": "Newsletter abonnieren"
+  },
+  "info": {
+    "address_title": "Unsere Adresse",
+    "address_line1": "Radoje Božić e.U. (Einzelunternehmer) – Computerprogrammierung EXPRESS WEB Beograd-Palilula",
+    "address_line2": "Vitezova Karađorđeve Zvezde 50, 11050 Belgrad, Serbien",
+    "email_title": "Kontakt-E-Mail",
+    "email_user": "office",
+    "email_domain": "express-web.express",
+    "phone_title": "Telefon",
+    "phone_value": "+381 61 217 90 13"
+  },
+  "social": {
+    "title": "Folgen Sie uns",
+    "facebook": "Facebook-Seite",
+    "instagram": "Instagram-Profil"
+  },
+  "links": {
+    "title": "Nützliche Links",
+    "regulations": "Gesetzliche Regelungen",
+    "advertising_law": "Werbegesetz",
+    "ecommerce_law": "E-Commerce-Gesetz",
+    "tax_policy": "Steuerrichtlinien",
+    "education": "Bildung",
+    "web_history": "Geschichte des Webs",
+    "ai_history": "Geschichte der künstlichen Intelligenz"
+  },
+  "success": "Ihre Nachricht wurde erfolgreich gesendet!",
+  "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+},
+"about": {
+  "title": "Über uns",
+  "intro": "Express Web ist eine Agentur-Initiative innerhalb der GBS-Plattform und hat sich zum Ziel gesetzt, kleinen und mittelständischen Unternehmen einen schnellen, modernen und bezahlbaren digitalen Auftritt zu ermöglichen.",
+  "p1": "GBS (Global Business Systems) ist eine technologische Plattform, die mehrere unabhängige Dienste und Anwendungen unter einem modularen Dach vereint. Express Web ist als Einstiegspunkt konzipiert – ein praktisches Werkzeug für die schnelle Erstellung von Websites.",
+  "p2": "Die Express-Pakete ermöglichen es Nutzern, innerhalb von nur 10 Minuten eine Basispräsentation zu erhalten, eine PRO-Version innerhalb weniger Stunden sowie vollwertige E-Commerce- oder Business-Anwendungen in den folgenden Entwicklungsstufen.",
+  "p3": "Unser Team vereint Erfahrung in der Softwareentwicklung (Laravel, Vue, Tailwind), im Design, in UI/UX-Praktiken sowie in der Entwicklung von Geschäftsprozessen und Vertriebssystemen. Alle Lösungen werden lokal entwickelt – in Serbien, mit tiefem Verständnis des regionalen Marktes.",
+  "p4": "Die Plattform ist vollständig skalierbar: Nutzer können mit einer kostenlosen Website starten und ihre Lösung später erweitern – ohne Migration oder Systemwechsel. Alle Module sind bereits vorbereitet und können bei Bedarf freigeschaltet werden.",
+  "p5": "Express Web ist nicht das Ziel, sondern der Einstieg. Über die GBS-Plattform entwickeln wir kontinuierlich neue Services: ERP-, CRM- und Marketplace-Lösungen, Buchhaltungsanwendungen, Bildungstools, Systeme für Reiseagenturen und vieles mehr.",
+  "p6": "Unser Ziel ist es, digitale Transformation nicht teuer, kompliziert oder ausschließlich großen Unternehmen vorzubehalten – sondern sie sofort verfügbar, verständlich und individuell anpassbar für alle zu machen."
+},
+"blog": {
+  "title": "Express Blog",
+  "intro": "Tipps, Inspirationen und Best Practices aus der Welt der Websites, der Digitalisierung und des Kleinunternehmertums in Serbien.",
+  "post1": {
+    "title": "Wie erhält man eine Website in 10 Minuten – ganz ohne Entwickler?",
+    "text": "Wir erklären Schritt für Schritt, wie die Express-FREE-Website funktioniert – und was ein Kleinunternehmer komplett kostenlos erhält."
+  },
+  "post2": {
+    "title": "PRO-Paket – lohnt sich die Investition?",
+    "text": "Vergleich zwischen der FREE- und der PRO-Version einer Website. Kosten, Leistungsumfang und ob sich diese Investition für Ihr Unternehmen lohnt."
+  },
+  "post3": {
+    "title": "Wie sieht die Zusammenarbeit mit dem Express-Team aus?",
+    "text": "Vom ersten Klick bis zur fertigen Website. Was Sie im Prozess erwartet, wie lange es dauert und wer Sie dabei unterstützt."
+  },
+  "notice": "Demnächst verfügbar: CMS für Nutzerberichte, Tutorials und Fachbeiträge – bleiben Sie dran."
+},
+"diversity": {
+  "title": "Vielfalt und Inklusion",
+  "intro": "Bei Express Web sind wir überzeugt, dass vielfältige Teams zu besseren Lösungen führen. Unser Ansatz ist offen, inklusiv und werteorientiert.",
+  "p1": "Wir diskriminieren nicht aufgrund von Geschlecht, Herkunft, Religion, Behinderung, Alter oder anderen persönlichen Merkmalen. Unterschiedliche Meinungen, Perspektiven und Erfahrungen werden geschätzt, da sie unsere Arbeit bereichern.",
+  "p2": "Unser Team besteht aus Menschen mit unterschiedlichen Hintergründen – von Entwicklern und Designern bis hin zu Analysten und Pädagogen. Alle haben die gleichen Chancen, sich einzubringen und entsprechend ihrem Potenzial weiterzuentwickeln.",
+  "p3": "Bei der Entwicklung von Inhalten, Systemen und Tools achten wir stets darauf, dass diese barrierefrei, lokalisiert und für alle Nutzer verständlich und nutzbar sind – unabhängig von Ausbildung oder technischem Vorwissen.",
+  "p4": "Wir fördern faire Zusammenarbeit, gemeinsames Lernen und Wissensaustausch – denn inklusive Arbeitsumgebungen schaffen die kreativsten Lösungen."
+},
+"careers": {
+  "title": "Karriere bei der GBS-Plattform und der Express Web Agentur",
+  "intro": "Werden Sie Teil eines Teams, das moderne Business-Lösungen entwickelt. Die ersten 6 Monate erfolgen auf Freelance-Basis, 100 % remote (Homeoffice).",
+  "cta": "Senden Sie Ihre Bewerbung über das Kontaktformular",
+
+  "p1": {
+    "title": "Frontend-Entwickler (Junior)",
+    "text": "Grundkenntnisse in HTML, CSS, JavaScript und Bootstrap. Bevorzugt: Vue oder React. Teamarbeit, Mitarbeit an bestehenden Komponenten und praxisorientiertes Lernen.",
+    "time": "Arbeitszeit: flexibel",
+    "pay": "Vergütung: 400–600 EUR/Monat",
+    "type": "Vertragsart: Freelance / externer Mitarbeiter"
+  },
+  "p2": {
+    "title": "Frontend-Entwickler (Senior)",
+    "text": "Erfahrung mit Vue, Tailwind, Animationen und Performance-Optimierung. Entwicklung individueller Komponenten und UI-Systeme.",
+    "time": "Arbeitszeit: flexibel / nach Vereinbarung",
+    "pay": "Vergütung: 800–1200 EUR/Monat",
+    "type": "Vertragsart: Freelance / externer Mitarbeiter"
+  },
+  "p3": {
+    "title": "Backend-Entwickler (Junior)",
+    "text": "Grundkenntnisse in PHP und dem Laravel-Framework. Arbeit mit MySQL-Datenbanken, API-Routen und Verständnis der MVC-Architektur.",
+    "time": "Arbeitszeit: flexibel",
+    "pay": "Vergütung: 400–600 EUR/Monat",
+    "type": "Vertragsart: Freelance / externer Mitarbeiter"
+  },
+  "p4": {
+    "title": "Backend-Entwickler (Senior)",
+    "text": "Fundierte Kenntnisse in Laravel und MySQL, API-Integration, Authentifizierung, Sicherheit und effiziente Code-Entwicklung.",
+    "time": "Arbeitszeit: flexibel / nach Vereinbarung",
+    "pay": "Vergütung: 1000–1400 EUR/Monat",
+    "type": "Vertragsart: Freelance / externer Mitarbeiter"
+  },
+  "p5": {
+    "title": "Sales Manager",
+    "text": "Vertrieb und Vermarktung der GBS-Plattform und der Express Web Agentur. Aktive Neukundengewinnung sowie Pflege bestehender Kundenbeziehungen.",
+    "time": "Arbeitszeit: flexibel / nach Vereinbarung",
+    "pay": "Vergütung: nach Vereinbarung",
+    "type": "Vertragsart: Freelance / externer Mitarbeiter"
+  }
 }
 }
