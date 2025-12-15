@@ -1230,7 +1230,7 @@
       "ctaText": "Send us a description and get the first draft within 24 hours.",
       "ctaButton": "Send request"
     },
-     "service": {
+     
     "domain": {
   "badge": "Domain- & Hosting-Services",
   "title": "Unterstützung bei Domain und Hosting – schnell und stressfrei",
@@ -1258,7 +1258,7 @@
       "text": "Wir konfigurieren HTTPS und automatische Backups – damit Ihre Website zuverlässig und sicher läuft."
     }
   }
-}
+
      },
      "maintenance": {
   "badge": "Website-Wartung",
