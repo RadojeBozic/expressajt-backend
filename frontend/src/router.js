@@ -25,7 +25,7 @@ import AdminUsers from './partials/admin/AdminUsers.vue'
 
 // Servisi
 import ServiceFreeSite from './services/ServiceFreeSite.vue'
-import ServiceProSite from './services/ProSiteForm.vue'          // ako ti je baš services/ProSiteForm.vue, ostavi tako
+import ServiceProSite from './services/ServiceProSite.vue'          // ako ti je baš services/ProSiteForm.vue, ostavi tako
 import ServiceW3Site from './services/ServiceW3Site.vue'
 import ServiceCruipSite from './services/ServiceCruipSite.vue'
 import ServiceOriginalSite from './services/ServiceOriginalSite.vue'
