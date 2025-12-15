@@ -74,6 +74,9 @@
               <button @click="setLanguage('en')" class="flex items-center w-full px-3 py-2 text-sm text-slate-300 hover:bg-slate-700">
                 <img src="../images/flag-uk.png" class="w-4 h-4 mr-2" /> EN
               </button>
+              <button @click="setLanguage('de')" class="flex items-center w-full px-3 py-2 text-sm text-slate-300 hover:bg-slate-700">
+                <img src="../images/flag-de.png" class="w-4 h-4 mr-2" /> DE
+              </button>
             </div>
           </div>
 
@@ -104,6 +107,9 @@
             </button>
             <button @click="setLanguage('en')" class="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
               <img src="../images/flag-uk.png" class="w-4 h-4" /> EN
+            </button>
+            <button @click="setLanguage('de')" class="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
+              <img src="../images/flag-de.png" class="w-4 h-4" /> DE
             </button>
           </li>
         </ul>
@@ -141,14 +147,21 @@ export default {
   },
 
   computed: {
-    // Zastavice (koristi bundler-friendly URL, a u templatu: <img :src="currentFlag" .../>)
     currentFlag() {
-      const isSr = this.$i18n?.locale === 'sr'
-      return new URL(isSr ? '../images/flag-rs.png' : '../images/flag-uk.png', import.meta.url).href
-    },
-    currentLabel() {
-      return this.$i18n?.locale === 'sr' ? 'SR' : 'EN'
-    },
+  const locale = this.$i18n?.locale || 'sr'
+  const map = {
+    sr: '../images/flag-rs.png',
+    en: '../images/flag-uk.png',
+    de: '../images/flag-de.png',
+  }
+  return new URL(map[locale] || map.sr, import.meta.url).href
+  },
+  currentLabel() {
+    const locale = this.$i18n?.locale || 'sr'
+    const map = { sr: 'SR', en: 'EN', de: 'DE' }
+    return map[locale] || 'SR'
+  },
+
 
     // Korpa (wrappuje ref-ove iz store-a)
     cart()       { return this.cartStore.cart?.value || [] },
