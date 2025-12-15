@@ -1183,7 +1183,6 @@
         "subtitle": "Connecting with Stripe, Mailchimp, Google Maps, and other services.",
         "description": "Automate processes and enhance site functionality through integrations."
       }
-
     }
   },
   "service": {
@@ -1260,7 +1259,6 @@
         }
       }
     }
-    
   },
   "maintenance": {
       "badge": "Website Maintenance",

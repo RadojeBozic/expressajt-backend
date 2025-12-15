@@ -529,5 +529,1034 @@
     "pay": "Vergütung: nach Vereinbarung",
     "type": "Vertragsart: Freelance / externer Mitarbeiter"
   }
+},
+"finance": {
+  "title": "Finanzberichte",
+  "intro": "Übersicht über zentrale Finanzkennzahlen gemäß den Grundsätzen der unternehmerischen Transparenz. Diese Berichte umfassen die Entwicklung der GBS-Plattform, Umsätze der Express-Web-Dienstleistungen sowie Investitionen in die Infrastruktur.",
+  "download": "Der Download wird in Kürze verfügbar sein",
+  "r2025": {
+    "title": "Jahresbericht 2025",
+    "description": "Zusammenfassung der Einnahmen und Ausgaben im Zusammenhang mit der Entwicklung der GBS-Plattform und der Express-Web-Agentur im laufenden Jahr."
+  },
+  "r2024": {
+    "title": "Jahresbericht 2024",
+    "description": "Einblick in Investitionen in Serverinfrastruktur, Open-Source-Komponenten und die Weiterentwicklung von Funktionen."
+  },
+  "r2023": {
+    "title": "Pilotphase und Erstfinanzierung (2023)",
+    "description": "Bericht über Anfangskosten, Testphase sowie den Aufbau der Teamstruktur."
+  }
+},
+"changelog": {
+  "title": "Updates und Verbesserungen (Changelog)",
+  "intro": "Hier finden Sie eine Übersicht über wichtige Updates, Verbesserungen und neu implementierte Funktionen der Plattform.",
+  "c1": {
+    "date": "2025-07-22",
+    "version": "Version 1.4.0",
+    "i1": "Hinzufügen der Seite „Changelog“ zur Nachverfolgung von Aktualisierungen",
+    "i2": "Verbesserte visuelle Darstellung des Feature-Bereichs",
+    "i3": "Neue Integrationen hinzugefügt: Google Analytics und Facebook Pixel"
+  },
+  "c2": {
+    "date": "2025-07-15",
+    "version": "Version 1.3.5",
+    "i1": "Download von PRO-Präsentationen im PDF-Format aktiviert",
+    "i2": "Fehlerbehebung bei der Darstellung von YouTube-Videos"
+  },
+  "c3": {
+    "date": "2025-07-01",
+    "version": "Version 1.3.0",
+    "i1": "Neue Demo-Websites im Bereich /demo hinzugefügt",
+    "i2": "Verbesserte Sicherheitsschicht für die Backend-API",
+    "i3": "Neue Benutzerrollen im Admin-Panel eingeführt"
+  }
+},
+"features": {
+  "title": "Express Web – Leistungen und Möglichkeiten",
+  "intro": "Express Web ist eine modulare Plattform zur Erstellung von Websites, Präsentationen und Online-Shops mit flexibel erweiterbaren Zusatzoptionen und Dienstleistungen.",
+  "f1": {
+    "title": "Express FREE Website",
+    "desc": "Kostenlose Website in 5–10 Minuten – ohne Programmierung. Wählen Sie ein Template und fügen Sie Ihre Inhalte einfach hinzu."
+  },
+  "f2": {
+    "title": "Express PRO Website",
+    "desc": "Erweiterte Präsentation mit zusätzlichen Sektionen, PDF-Dokumenten, Karte, Videoinhalten und erweiterten Kontaktmöglichkeiten."
+  },
+  "f3": {
+    "title": "Express W3 Website",
+    "desc": "Schnelle One-Day-Website auf Basis klarer und einfacher W3CSS-Templates – ideal für Unternehmer."
+  },
+  "f4": {
+    "title": "Express CRUIP Website",
+    "desc": "Moderne Webpräsentationen mit hochwertigem UI-Design, interaktiven Sektionen und Animationen. Lieferzeit: 4–5 Tage."
+  },
+  "f5": {
+    "title": "Express Original Website",
+    "desc": "Individuell entwickelte Website nach Kundenanforderung – einzigartiges Design, Logik und Inhalte."
+  },
+  "f6": {
+    "title": "Express Basic Shop",
+    "desc": "Online-Shop mit grundlegenden Funktionen: Produktverwaltung, Warenkorb, Checkout und SEO-Optimierung."
+  },
+  "f7": {
+    "title": "Express UNI Shop",
+    "desc": "Erweiterter Multi-Vendor-Shop mit Dashboards, Statistiken, Filtern und Integrationen."
+  },
+  "f8": {
+    "title": "Domain- & Hosting-Service",
+    "desc": "Unterstützung bei der Auswahl von Hosting und Domain – Beratung, Einrichtung und laufender Support."
+  },
+  "f9": {
+    "title": "Website-Wartung",
+    "desc": "Support-Paket: Backups, Inhaltsänderungen, SEO, Abschnittsaktualisierungen und Beratung nach Bedarf."
+  },
+  "f10": {
+    "title": "Express Design",
+    "desc": "Schneller und effizienter Design-Service für visuelle Präsentationen und Marketing – vom Logo bis zu Social-Media-Grafiken."
+  },
+  "f11": {
+    "title": "Express Übersetzung",
+    "desc": "Schnelle und präzise Inhaltslokalisierung in mehrere Sprachen – für Web, Marketing und rechtliche Inhalte."
+  }
+},
+"integrations": {
+  "title": "Systemintegrationen",
+  "intro": "Unsere Plattform unterstützt die Integration zentraler Dienste, um Ihr Unternehmen funktionaler, schneller und sicherer zu machen.",
+  "i1": {
+    "title": "Stripe",
+    "desc": "Online-Zahlungen direkt über Ihre Website – sichere Kartenzahlungen mit integrierten Sicherheitsstandards (3D Secure, PCI-DSS)."
+  },
+  "i2": {
+    "title": "Mailchimp",
+    "desc": "Erfassung von E-Mail-Adressen und Versand von Newsletter-Kampagnen. Ideal für Marketing, Promotion und Nutzerbindung."
+  },
+  "i3": {
+    "title": "Google Maps",
+    "desc": "Unternehmensstandort direkt auf der Website – integriert im Kontaktformular oder in einem eigenen Abschnitt."
+  },
+  "i4": {
+    "title": "YouTube",
+    "desc": "Einbindung von Videoinhalten – Präsentationen, Tutorials oder Werbevideos. Die Videos werden direkt auf der Website angezeigt."
+  },
+  "i5": {
+    "title": "Facebook & Instagram",
+    "desc": "Integration sozialer Netzwerke, Anzeige von Beiträgen, automatisches Teilen und Verknüpfung mit Ihrer Unternehmensseite."
+  },
+  "i6": {
+    "title": "Google Analytics & Tag Manager",
+    "desc": "Detaillierte Besucheranalysen, Conversion-Tracking, A/B-Tests und Optimierung von Marketingkampagnen."
+  }
+},
+"method": {
+  "title": "Unsere Arbeitsweise",
+  "intro": "Unsere Art der Anwendungsentwicklung ist schnell, transparent und nutzerorientiert. Wir konzentrieren uns auf praxisnahe Lösungen mit minimaler Komplexität und maximalem Mehrwert.",
+  "step1": {
+    "title": "Bedarfsanalyse:",
+    "desc": "Jedes Projekt beginnt mit einem Gespräch und einer Analyse der Anforderungen, der Branche und der Ziele des Kunden."
+  },
+  "step2": {
+    "title": "Individuelle Modulauswahl:",
+    "desc": "Wir wählen bestehende Module aus oder entwickeln neue – effizient, zielgerichtet und bedarfsgerecht."
+  },
+  "step3": {
+    "title": "Schnelle MVP-Bereitstellung:",
+    "desc": "Wir liefern eine funktionale Startversion, sodass das System unter realen Bedingungen genutzt und getestet werden kann."
+  },
+  "step4": {
+    "title": "Iteratives Testen und Optimieren:",
+    "desc": "Jede Version wird überprüft, Nutzerfeedback berücksichtigt und Funktionen kontinuierlich angepasst."
+  },
+  "step5": {
+    "title": "Volle Kontrolle und Eigentum:",
+    "desc": "Der Code ist transparent, die Daten bleiben beim Kunden, und Integrationen mit ERP-, CRM- und anderen Systemen sind jederzeit möglich."
+  },
+  "step6": {
+    "title": "Unbegrenzte Skalierbarkeit:",
+    "desc": "Das System lässt sich problemlos erweitern – ohne Refactoring, mit voller Modularität und langfristiger Nachhaltigkeit."
+  }
+},
+"community": {
+  "title": "Community und Express-Web-Präsenz",
+  "intro": "Unser Ziel ist der Aufbau einer Community aus Nutzern, Entwicklern und Partnern, die gemeinsam zu einer offenen und modernen digitalen Infrastruktur beitragen.",
+  "social": {
+    "title": "Aktivität in sozialen Netzwerken",
+    "desc": "Folgen Sie uns auf Facebook, Instagram und GitHub. Dort teilen wir Tutorials, Ankündigungen, Tipps sowie Interviews mit Nutzern und Entwicklern."
+  },
+  "github": {
+    "title": "Open Source und GitHub-Beiträge",
+    "desc": "Unser Code und unsere Module werden auf GitHub verfügbar sein. Sie können Projekte forken, Issues eröffnen, zur Entwicklung beitragen und Verbesserungen teilen."
+  },
+  "forums": {
+    "title": "Teilnahme an Foren und IT-Communities",
+    "desc": "Wir planen eine aktive Teilnahme an Branchenforen, in denen wir Wissen austauschen und über neue Technologien diskutieren."
+  }
+},
+"terms": {
+  "title": "Nutzungsbedingungen",
+  "intro": "Bitte lesen Sie die folgenden Nutzungsbedingungen sorgfältig durch, bevor Sie Express Web verwenden. Durch die Nutzung unserer Dienste erklären Sie sich mit allen aufgeführten Bestimmungen einverstanden.",
+  "1": {
+    "title": "Allgemeine Bestimmungen",
+    "text": "Express Web bietet die Erstellung von Websites, Online-Shops und digitalen Geschäftslösungen an. Die Dienste stehen natürlichen und juristischen Personen zur Verfügung, die diesen Nutzungsbedingungen zustimmen."
+  },
+  "2": {
+    "title": "Rechte und Pflichten der Nutzer",
+    "text": "Der Nutzer ist für die Richtigkeit und Sicherheit der eingegebenen Daten verantwortlich. Die Nutzung der Plattform zu rechtswidrigen Zwecken ist strengstens untersagt."
+  },
+  "3": {
+    "title": "Geistiges Eigentum",
+    "text": "Alle Inhalte, einschließlich Software, Design und Texte, sind Eigentum von Express Web, sofern nicht anders angegeben. Eine unbefugte Nutzung ist ohne schriftliche Zustimmung untersagt."
+  },
+  "4": {
+    "title": "Haftungsausschluss",
+    "text": "Wir bemühen uns, die Plattform rund um die Uhr verfügbar zu halten, übernehmen jedoch keine Garantie für eine unterbrechungsfreie Verfügbarkeit und haften nicht für Schäden, die durch Ausfälle entstehen."
+  },
+  "5": {
+    "title": "Änderungen der Nutzungsbedingungen",
+    "text": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Nutzer werden per E-Mail oder über eine Mitteilung auf der Website informiert."
+  },
+  "6": {
+    "title": "Kontakt",
+    "text": "Bei Fragen oder Anmerkungen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte über das ",
+    "link": "Kontaktformular"
+  },
+  "7": {
+    "title": "Gültigkeitsdauer",
+    "text": "Diese Nutzungsbedingungen treten mit dem Datum der Veröffentlichung auf unserer Website in Kraft. Letzte Aktualisierung: Juli 2025."
+  }
+},
+"vuln": {
+  "title": "Sicherheitslücke melden",
+  "intro": "Wenn Sie eine Sicherheitslücke auf der Express-Web-Plattform entdeckt haben, melden Sie diese bitte über dieses Formular. Sie helfen uns dabei, ein sicheres System für alle Nutzer zu gewährleisten.",
+  "name": "Vollständiger Name",
+  "summary": "Kurze Beschreibung der Sicherheitslücke",
+  "details": "Detaillierte Beschreibung / Schritte zur Reproduktion",
+  "submit": "✅ Meldung absenden",
+  "sending": "⏳ Wird gesendet...",
+  "success": "✅ Ihre Meldung wurde erfolgreich übermittelt. Vielen Dank!",
+  "error": "⚠️ Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+},
+"brandkit": {
+  "title": "Brand Kit",
+  "intro": "Diese Seite enthält grundlegende Richtlinien zur Verwendung der Logos, Farben und Schriftarten von Express Web gemäß unserer visuellen Identität.",
+  "allowed": {
+    "title": "Erlaubte Nutzung",
+    "item1": "Verwendung des Express-Web-Logos im Rahmen von Partnerschaften und Empfehlungen.",
+    "item2": "Nutzung der Markenfarben und Schriftarten zur Integration in Ihre eigene Lösung.",
+    "item3": "Nennung der Express-Web-Plattform als technologische Lösung (mit korrekter Quellenangabe)."
+  },
+  "forbidden": {
+    "title": "Unzulässige Nutzung",
+    "item1": "Veränderung des Logos oder der Farbkombinationen außerhalb der genehmigten Richtlinien.",
+    "item2": "Falsche Darstellung als Mitglied des Express-Web-Teams.",
+    "item3": "Verwendung von Markenelementen in einem Kontext, der dem Ruf der Plattform schaden könnte."
+  },
+  "colors": {
+    "title": "Zentrale Farbpalette"
+  },
+  "font": {
+    "title": "Schriftarten",
+    "text": "Die Plattform verwendet moderne Sans-Serif-Schriftarten: Inter, Roboto und system-ui."
+  },
+  "download": {
+    "title": "Downloads",
+    "text": "Logos werden in Kürze in den Formaten PNG, SVG und AI verfügbar sein. Bis dahin können Sie uns über das ",
+    "link": "Kontaktformular"
+  }
+},
+"cookie": {
+  "title": "Cookie- und Analyse-Richtlinie",
+  "intro": "Wir verwenden Plausible Analytics im cookielosen Modus, um den Website-Traffic zu verstehen und die Benutzererfahrung zu verbessern. Wir erheben keine personenbezogenen Daten und setzen keine Cookies für Analysezwecke ein.",
+  "1": {
+    "title": "Was sind Cookies?",
+    "text": "Cookies sind kleine Dateien, die eine Website im Browser speichert, um bestimmte Einstellungen oder Aktivitäten zu merken. Diese Richtlinie erklärt, wie wir Besuche messen, ohne Cookies zu verwenden."
+  },
+  "2": {
+    "title": "Plausible – cookielose Analyse",
+    "text": "Wir nutzen Plausible Analytics (cookielos) zur Messung des Website-Traffics. Es werden keine Analyse-Cookies auf Ihrem Gerät gesetzt. Die Daten sind aggregiert und anonym und werden ausschließlich für statistische Auswertungen verwendet (besuchte Seiten, Traffic-Quellen, Länder, Gerätetypen)."
+  },
+  "3": {
+    "title": "Verarbeitete Daten",
+    "text": "Plausible verarbeitet aggregierte, anonyme Daten wie Seiten-URL, Seitentitel, Referrer sowie eine ungefähre geografische Zuordnung auf Basis der IP-Adresse – ohne IP-Adressen zu speichern oder Besucher zu identifizieren.",
+    "li1": "Seitenaufrufe und In-App-Routenwechsel",
+    "li2": "Referrer und Kampagnen (sofern UTM-Parameter vorhanden sind)",
+    "li3": "Aggregierte Informationen zu Geräten und Ländern"
+  },
+  "4": {
+    "title": "Kein Profiling, kein Remarketing, keine Weitergabe",
+    "text": "Wir verfolgen keine einzelnen Nutzer, erstellen keine Profile, betreiben kein Remarketing und geben keine Daten an Dritte weiter. Die anonyme Analyse hilft uns, die Nutzung zu verstehen und technische Probleme zu beheben."
+  },
+  "5": {
+    "title": "Kontakt & Datenschutz",
+    "text": "Bei Fragen zum Datenschutz oder zu dieser Richtlinie kontaktieren Sie uns bitte über den",
+    "link": "Kontakt"
+  },
+  "6": {
+    "title": "Änderungen der Richtlinie",
+    "text": "Wir behalten uns vor, diese Richtlinie gelegentlich zu aktualisieren, um gesetzlichen Anforderungen zu entsprechen oder die Verständlichkeit zu verbessern. Die jeweils aktuelle Version wird stets auf dieser Seite veröffentlicht."
+  }
+},
+"privacy": {
+  "title": "Datenschutzerklärung",
+  "intro": "Der Schutz Ihrer Privatsphäre ist uns sehr wichtig. Nachfolgend erfahren Sie, wie wir Ihre Daten erfassen, verwenden und schützen.",
+  "p1": {
+    "title": "Erhobene Daten:",
+    "text": "Wir erfassen ausschließlich grundlegende Kontaktdaten, die Nutzer freiwillig angeben (Name, E-Mail-Adresse, Telefonnummer usw.)."
+  },
+  "p2": {
+    "title": "Verwendung der Daten:",
+    "text": "Die Daten werden ausschließlich zur Kommunikation mit Nutzern und zur Verbesserung unserer Dienstleistungen verwendet."
+  },
+  "p3": {
+    "title": "Datensicherheit:",
+    "text": "Ihre Daten werden geschützt und ohne Ihre ausdrückliche Zustimmung niemals an Dritte weitergegeben."
+  },
+  "p4": {
+    "title": "Cookies:",
+    "text": "Die Plattform verwendet Cookies ausschließlich für notwendige Funktionalitäten. Für Analysen setzen wir auf eine cookielose Lösung. Cookies können in den Browsereinstellungen deaktiviert werden."
+  },
+  "p5": {
+    "title": "Rechte der Nutzer:",
+    "text": "Sie haben jederzeit das Recht, Auskunft über Ihre gespeicherten Daten zu verlangen sowie deren Berichtigung oder Löschung zu beantragen."
+  },
+  "p6": {
+    "title": "Gültigkeitsdauer:",
+    "text": "Diese Datenschutzerklärung tritt mit dem Datum der Veröffentlichung auf der Express-Web-Plattform in Kraft und gilt bis zu ihrem Widerruf. Letzte Aktualisierung: Juli 2025."
+  },
+  "p7": {
+    "title": "Kontakt:",
+    "text": "Für alle datenschutzbezogenen Anfragen kontaktieren Sie uns bitte über die ",
+    "link": "Kontaktseite"
+  }
+},
+"refund": {
+  "title": "Rückerstattungsrichtlinie",
+  "intro": "Die Zufriedenheit unserer Kunden hat für uns höchste Priorität. Sollten Sie ein Problem mit einem kostenpflichtigen Service haben, lesen Sie bitte die folgenden Bestimmungen.",
+  "p1": {
+    "title": "Bedingungen für Rückerstattungen:",
+    "text": "Rückerstattungen sind innerhalb von 7 Tagen nach Zahlungseingang möglich, sofern der Service nicht wesentlich genutzt wurde."
+  },
+  "p2": {
+    "title": "Nicht erstattungsfähige Fälle:",
+    "text": "Nutzer, die erweiterte Funktionen aktiviert, Inhalte exportiert oder mehr als 30 % des Pakets genutzt haben, sind von einer Rückerstattung ausgeschlossen."
+  },
+  "p3": {
+    "title": "Antragsverfahren:",
+    "text": "Um eine Rückerstattung zu beantragen, senden Sie bitte Ihre Anfrage über das Kontaktformular und geben Sie den Grund sowie die Zahlungsdetails klar an."
+  },
+  "p4": {
+    "title": "Bearbeitungszeit:",
+    "text": "Alle Rückerstattungsanfragen werden innerhalb von 5 Werktagen geprüft. Nach Genehmigung erfolgt die Rückerstattung innerhalb von 10 Werktagen."
+  },
+  "p5": {
+    "title": "Kontakt:",
+    "text": "Bitte senden Sie alle rückerstattungsbezogenen Anfragen über die ",
+    "link": "Kontaktseite"
+  }
+},
+
+"terms_use": {
+  "title": "Nutzungsbedingungen",
+  "intro": "Bitte lesen Sie die folgenden Bedingungen sorgfältig, bevor Sie die GBS-Plattform und die Dienste von Express Web nutzen.",
+  "p1": {
+    "title": "Allgemeine Bestimmungen:",
+    "text": "Durch die Nutzung dieser Plattform akzeptieren Sie alle aufgeführten Bedingungen und verpflichten sich, diese einzuhalten."
+  },
+  "p2": {
+    "title": "Rechte und Pflichten der Nutzer:",
+    "text": "Nutzer sind verpflichtet, korrekte Angaben zu machen und die Plattform nicht für illegale Aktivitäten zu verwenden."
+  },
+  "p3": {
+    "title": "Haftungsbeschränkung:",
+    "text": "Die Express Web Agentur übernimmt keine Verantwortung für von Nutzern eingegebene Inhalte oder für mögliche technische Unterbrechungen."
+  },
+  "p4": {
+    "title": "Änderungen der Bedingungen:",
+    "text": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Nutzer werden entsprechend informiert."
+  },
+  "p5": {
+    "title": "Anwendbares Recht:",
+    "text": "Alle Rechtsbeziehungen zwischen Nutzern und der Express-Web-Plattform unterliegen dem Recht der Republik Serbien sowie der Länder, in denen Express Web tätig ist."
+  },
+  "p6": {
+    "title": "Gültigkeitsdauer:",
+    "text": "Diese Nutzungsbedingungen treten am Tag der Veröffentlichung auf der Express-Web-Plattform in Kraft und gelten bis zu ihrem Widerruf. Letzte Aktualisierung: Juli 2025."
+  },
+  "p7": {
+    "title": "Kontakt:",
+    "text": "Für weitere Informationen kontaktieren Sie uns bitte über die ",
+    "link": "Kontaktseite"
+  }
+},
+"admin": {
+  "title": "Admin-Dashboard",
+  "users": "Benutzer",
+  "messages": "Nachrichten",
+  "sites": "Websites",
+  "stats": "Statistiken",
+  "vulnerabilities": "Sicherheitsmeldungen"
+},
+"dashboard": {
+  "welcome": "Willkommen",
+  "user": "Benutzer",
+  "registered": "Sie haben sich erfolgreich auf der Plattform registriert.",
+  "profile": {
+    "title": "Mein Profil",
+    "name": "Name:",
+    "email": "E-Mail:",
+    "delete": "Mein Konto löschen"
+  },
+  "messages": {
+    "title": "Meine Nachrichten",
+    "empty": "Sie haben keine Nachrichten."
+  },
+  "services": {
+    "title": "Unsere Express-Services",
+    "interest": "Ich bin interessiert",
+    "list": {
+      "free": {
+        "title": "Express FREE Website",
+        "desc": "Kostenlose Website in 5–10 Minuten – einfach, schnell, ohne Programmierung."
+      },
+      "pro": {
+        "title": "Express PRO Website",
+        "desc": "Erweiterte Präsentation mit zusätzlichen Bereichen, PDF, Karte und Kontaktformular."
+      },
+      "w3": {
+        "title": "Express W3 Website",
+        "desc": "Individuelle Business-Website an einem Tag – W3-basiert, schnell und übersichtlich."
+      },
+      "cruip": {
+        "title": "Express CRUIP Website",
+        "desc": "Moderne Website mit Cruip-UI und Animationen. Lieferzeit: 4–5 Tage."
+      },
+      "original": {
+        "title": "Express Original Website",
+        "desc": "Individuelle Entwicklung von Grund auf – einzigartig und exklusiv."
+      },
+      "basicshop": {
+        "title": "Express Basic Shop",
+        "desc": "Online-Shop mit Grundfunktionen – Warenkorb, Checkout und SEO."
+      },
+      "unishop": {
+        "title": "Express UNI Shop",
+        "desc": "Multi-Vendor-Shop mit Filtern, Partnern und Verwaltungs-Dashboard."
+      },
+      "domain": {
+        "title": "Domain- & Hosting-Service",
+        "desc": "Unterstützung beim Kauf von Domain und Hosting – Einrichtung und Support inklusive."
+      },
+      "maintenance": {
+        "title": "Website-Wartung",
+        "desc": "Inhaltsänderungen, SEO, Sicherheit und Backups – monatlich oder nach Bedarf."
+      },
+      "design": {
+        "title": "Express Design",
+        "desc": "Logos, Banner, Social Media – KI-gestütztes Design mit Canva Pro."
+      },
+      "seo": {
+        "title": "Express SEO",
+        "desc": "Suchmaschinenoptimierung – Keywords, Performance und Struktur."
+      },
+      "marketing": {
+        "title": "Express Marketing",
+        "desc": "Social-Media- und Google-Kampagnen – gezielte Ansprache und Erfolgsmessung."
+      },
+      "translation": {
+        "title": "Express Übersetzungen",
+        "desc": "Professionelle Übersetzungen für Websites, Dokumente und Marketing."
+      }
+    }
+  }
+},
+"freesite": {
+  "title": "Website-Erstellung mit einem Klick",
+  "note": "Bitte füllen Sie alle Felder sorgfältig aus. Alle Angaben sind erforderlich (außer Logo), damit wir eine vollständige und professionelle Website erstellen können. Erlaubte Bildformate: JPG/PNG/WebP bis zu 4 MB. Größere Dateien werden automatisch abgelehnt.",
+  "submit": "✅ Anfrage senden",
+  "loading": "⏳ Wird gesendet...",
+  "success": "✅ Anfrage erfolgreich übermittelt!",
+  "noticeAfterSubmit": "Nach Freigabe durch den Administrator erhalten Sie die Präsentation an die angegebene E-Mail-Adresse – spätestens innerhalb von 24 Stunden.",
+  "sections": {
+    "general": "Allgemeine Informationen",
+    "hero": "Hero-Bereich",
+    "about": "Über uns",
+    "offer": "Unser Angebot",
+    "template": "Vorlage auswählen *"
+  },
+  "fields": {
+    "name": "z. B. Bäckerei Jovanović",
+    "description": "Kurze Unternehmensbeschreibung (max. 1000 Zeichen)",
+    "email": "E-Mail-Adresse",
+    "phone": "+381 64 123 4567",
+    "facebook": "https://facebook.com/profil",
+    "instagram": "https://instagram.com/profil",
+    "logo": "Logo (optional)",
+
+    "heroImage": "Hauptbild (Hintergrund)",
+    "heroTitle": "Titel (z. B. Qualität aus Tradition)",
+    "heroSubtitle": "Kurzer Untertitel (max. 250 Zeichen)",
+
+    "aboutImage": "Foto des Unternehmens oder Teams",
+    "aboutTitle": "Abschnittstitel (z. B. Wer wir sind)",
+    "aboutText": "Detaillierte Beschreibung (bis zu 1000 Zeichen)",
+
+    "offerTitle": "Abschnittstitel (z. B. Unsere Leistungen)",
+    "offerItemTitle": "z. B. Webdesign",
+    "addOffer": "➕ Element hinzufügen",
+    "remove": "✖ Element entfernen"
+  },
+  "templates": {
+    "classic": "Klassisch",
+    "modern": "Modern",
+    "gallery": "Galerie",
+    "biznis": "Business",
+    "dark": "Dunkler Modus"
+  },
+  "errors": {
+    "image": "⚠️ Das Bild muss kleiner als 4 MB sein und ein gültiges Format haben.",
+    "general": "⚠️ Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "offerImage": "⚠️ Das Bild im Element {{index}} ist ungültig oder zu groß."
+  }
+},
+"siteview": {
+  "previewOf": "Website-Vorschau:",
+  "notFound": "Nicht gefunden",
+  "pro": {
+    "title": "Dies ist eine PRO-Präsentation.",
+    "editBlocked": "Die Bearbeitung wird nach der Aktivierung freigeschaltet."
+  },
+  "contactSupport": "Support kontaktieren",
+  "free": {
+    "title": "Ihre KOSTENLOSE Website ist bereit!",
+    "linkMessage": "Hier ist Ihr Freigabe-Link:"
+  },
+  "copy": "Kopieren",
+  "copied": "Link erfolgreich in die Zwischenablage kopiert ✅",
+  "notSatisfied": "Nicht zufrieden?",
+  "fillAgain": "Formular erneut ausfüllen",
+  "openPreview": "Nur Präsentation öffnen",
+  "pdfHint": "Zum Speichern als PDF öffnen Sie die Vorschau und nutzen STRG+P → Als PDF speichern.",
+  "edit": "Bearbeiten",
+  "delete": "Löschen",
+  "loading": "Wird geladen...",
+  "confirmDelete": "Sind Sie sicher, dass Sie diese Präsentation löschen möchten?",
+  "deleted": "🗑 Die Präsentation wurde erfolgreich gelöscht.",
+  "errors": {
+    "fetch": "⚠️ Präsentationsdaten konnten nicht geladen werden.",
+    "delete": "⚠️ Löschen nicht möglich. Bitte erneut versuchen."
+  }
+},
+"edit": {
+  "title": "Präsentation bearbeiten",
+  "version": "FREE-Version",
+  "loading": "⏳ Wird gespeichert...",
+  "submit": "💾 Änderungen speichern",
+  "sections": {
+    "general": "Allgemeine Informationen",
+    "hero": "Hero-Bereich",
+    "about": "Über uns",
+    "offer": "Unser Angebot",
+    "template": "Vorlagenauswahl"
+  },
+  "fields": {
+    "name": "Firmenname *",
+    "description": "Unternehmensbeschreibung *",
+    "email": "E-Mail *",
+    "phone": "Telefon *",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "heroTitle": "Titel *",
+    "heroSubtitle": "Untertitel *",
+    "aboutTitle": "Abschnittstitel *",
+    "aboutText": "Unternehmensbeschreibung *",
+    "offerTitle": "Titel des Angebotsbereichs (z. B. Unsere Leistungen)",
+    "offerItemTitle": "Elementname (z. B. Webdesign)",
+    "addOffer": "➕ Element hinzufügen",
+    "remove": "✖ Element entfernen",
+    "chooseTemplate": "Vorlage auswählen"
+  },
+  "templates": {
+    "classic": "Klassisch",
+    "modern": "Modern",
+    "gallery": "Galerie",
+    "biznis": "Business",
+    "dark": "Dunkler Modus"
+  },
+  "success": "✅ Präsentation erfolgreich gespeichert. Weiterleitung...",
+  "errors": {
+    "load": "⚠️ Fehler beim Laden der Daten.",
+    "save": "⚠️ Fehler beim Speichern der Daten.",
+    "image": "⚠️ Das Bild im Element {{index}} ist ungültig oder zu groß."
+  }
+},
+"projects": {
+  "title": "Unsere Express-Projekte",
+  "intro": "Entdecken Sie die verfügbaren Systeme und Services – jedes Projekt ist auf reale Geschäftsanforderungen zugeschnitten.",
+  "more": "Mehr über das Projekt erfahren",
+  "items": {
+    "1": {
+      "title": "Express FREE Website",
+      "subtitle": "Website in 5 Minuten – kostenlos und ohne Programmierung.",
+      "description": "Der Nutzer füllt ein Formular aus, wählt eine Vorlage, und das System erstellt automatisch eine Website. Ideal für kleine Unternehmen und Einzelpersonen."
+    },
+    "2": {
+      "title": "Express PRO Website",
+      "subtitle": "Erweiterte Online-Präsentation für einen professionellen Auftritt.",
+      "description": "PDFs, Videos, zusätzliche Abschnitte, Kontaktformulare und mehr – inklusive SEO und Support."
+    },
+    "3": {
+      "title": "Express W3 Website",
+      "subtitle": "Einzigartige Business-Präsentation in 1 Tag.",
+      "description": "Schnelle Umsetzung mit W3Schools-Vorlagen – einfach, responsiv und mobiloptimiert."
+    },
+    "4": {
+      "title": "Express CRUIP Website",
+      "subtitle": "Moderne und animierte Präsentationen.",
+      "description": "Basierend auf Cruip-Design – ideal für Tech-Unternehmen, Start-ups und SaaS-Kunden."
+    },
+    "5": {
+      "title": "Express Original Website",
+      "subtitle": "Individuell entwickelte Website – Design und Funktionen von Grund auf.",
+      "description": "Maßgeschneiderte Lösungen für anspruchsvolle Kunden und spezialisierte Branchen."
+    },
+    "6": {
+      "title": "Express Basic Shop",
+      "subtitle": "Online-Shop mit grundlegenden Funktionen.",
+      "description": "Warenkorb, Checkout, Admin-Panel und SEO – alles, was Sie für den Verkaufsstart benötigen."
+    },
+    "7": {
+      "title": "Express UNI Shop",
+      "subtitle": "Erweiterte Multi-Vendor- oder B2B-Plattform.",
+      "description": "Marktplatz mit Händler-Dashboards, Filtern, Stripe-Integration und Mehrsprachigkeit."
+    },
+    "8": {
+      "title": "Domain- & Hosting-Service",
+      "subtitle": "Unterstützung beim Kauf und der Einrichtung von Domains.",
+      "description": "Domainregistrierung, Hosting-Einrichtung, SSL-Zertifikate und E-Mail-Konfiguration."
+    },
+    "9": {
+      "title": "Website-Wartung",
+      "subtitle": "Technischer Support, SEO, Backups und Updates.",
+      "description": "Monatliche oder einmalige Wartung, Sicherheitsmaßnahmen und Inhaltsanpassungen."
+    },
+    "10": {
+      "title": "Express Design",
+      "subtitle": "Logos, Banner, Social Media – KI + Canva Pro.",
+      "description": "Schnelle und kreative Branding-Lösungen mit Unterstützung künstlicher Intelligenz."
+    },
+    "11": {
+      "title": "Express SEO",
+      "subtitle": "Website-Optimierung für bessere Google-Rankings.",
+      "description": "Keyword-Analyse, Content-Optimierung und technische Verbesserungen für mehr Sichtbarkeit."
+    },
+    "12": {
+      "title": "Express KI-Chatbot",
+      "subtitle": "Automatisierter Support mit einem KI-Chatbot.",
+      "description": "Schnelle Integration für FAQs, Support und Interaktion mit Website-Besuchern."
+    },
+    "13": {
+      "title": "Express Newsletter",
+      "subtitle": "E-Mail-Marketing-Lösung für Ihre Zielgruppe.",
+      "description": "Newsletter erstellen und versenden, Analysen verfolgen und Nutzerbindung steigern."
+    },
+    "14": {
+      "title": "Express Analytics",
+      "subtitle": "Besuchertracking und Website-Analyse.",
+      "description": "Integration von Google Analytics und Performance-Reports."
+    },
+    "15": {
+      "title": "Express Social Media",
+      "subtitle": "Social-Media-Management und Kampagnen.",
+      "description": "Content-Planung, Erstellung und Performance-Tracking für soziale Netzwerke."
+    },
+    "16": {
+      "title": "Express Marketing",
+      "subtitle": "Ganzheitliche Marketingstrategie für Ihr Unternehmen.",
+      "description": "Planung und Umsetzung von Kampagnen – SEO, PPC und Social Media."
+    },
+    "17": {
+      "title": "Express Übersetzungen",
+      "subtitle": "Professionelle Übersetzungen für Ihre Zielgruppe.",
+      "description": "Hochwertige Übersetzungen, Lokalisierung und sprachliche Anpassung von Inhalten."
+    },
+    "18": {
+      "title": "Express Integrationen",
+      "subtitle": "Anbindung an Stripe, Mailchimp, Google Maps und weitere Dienste.",
+      "description": "Automatisierung von Prozessen und Erweiterung der Website-Funktionalität durch Integrationen."
+    }
+  }
+},
+"service": {
+  "cruipsite": {
+  "badge": "Cruip UI + Tailwind-Effekte",
+  "title": "Express CRUIP Website – moderne Präsentation in 5 Tagen",
+  "subtitle": "Attraktives UI, Mikroanimationen und Startup-Ästhetik – umgesetzt mit Cruip-Templates und Komponenten.",
+  "cta": "Ich möchte eine CRUIP-Website →",
+  "points": {
+    "1": {
+      "title": "Schnelle Umsetzung:",
+      "text": "Basierend auf einem ausgewählten Template – mit Ihren Inhalten und Bildern – Lieferung in 4–5 Werktagen."
+    },
+    "2": {
+      "title": "Conversion-orientiertes Design:",
+      "text": "CTA-Buttons, Social-Proof-Sektionen, moderne Galerien sowie Newsletter-Formular."
+    },
+    "3": {
+      "title": "20+ verfügbare Cruip-Templates:",
+      "text": "Startup, App, SaaS, Portfolio und mehr – vollständig auf Ihren Anwendungsfall angepasst."
+    },
+    "4": {
+      "title": "Funktionen:",
+      "text": "Kontaktformular, Leistungsübersicht, Galerie, Blog (optional) sowie Integrationen wie Google Maps, Mailchimp usw."
+    },
+    "5": {
+      "title": "Preis:",
+      "text": "Ab 360 € – abhängig von Komplexität und Anzahl der Sektionen."
+    }
+  }
+},
+"design": {
+      "title": "Express Design",
+      "subtitle": "Logo, banner, and social media design — fast, creative, and powered by AI.",
+      "offerTitle": "What we offer",
+      "offer": {
+        "1": "Logo design – custom-made or using Canva Pro templates",
+        "2": "Banners, business cards, social media posts",
+        "3": "AI-generated proposals based on your business description",
+        "4": "Branded PDFs and Canva files ready for print"
+      },
+      "aiTitle": "AI + Canva Pro",
+      "aiText": "We use the best of both worlds: artificial intelligence and professional Canva Pro templates. Don't have an idea? Just describe your business — we'll propose a solution.",
+      "ctaTitle": "Start your Express design",
+      "ctaText": "Send us a description and get the first draft within 24 hours.",
+      "ctaButton": "Send request"
+    },
+     "service": {
+    "domain": {
+  "badge": "Domain- & Hosting-Services",
+  "title": "Unterstützung bei Domain und Hosting – schnell und stressfrei",
+  "subtitle": "Unsicher, wo Sie eine Domain kaufen sollen? Welches Hosting ist geeignet? Wir unterstützen Sie mit verlässlichen Partnern und transparenten Empfehlungen.",
+  "cta": "Domain-/Hosting-Empfehlung anfordern →",
+  "points": {
+    "1": {
+      "title": "Hilfe bei der Domain-Auswahl:",
+      "text": "Wir prüfen die Verfügbarkeit von .rs, .com, .net und weiteren Endungen und empfehlen passende Optionen."
+    },
+    "2": {
+      "title": "Domain-Registrierung über uns:",
+      "text": "Unsere Partner bieten oft bessere Konditionen und eine zentrale Verwaltung Ihrer Domains."
+    },
+    "3": {
+      "title": "Hosting-Empfehlungen:",
+      "text": "Shared, Cloud oder VPS – abhängig von Ihrem Projekt empfehlen wir die beste Lösung und übernehmen die Einrichtung."
+    },
+    "4": {
+      "title": "Partner-Modell:",
+      "text": "Bei Kauf über uns erhalten Sie Support, Geschwindigkeit und Sicherheit – wir arbeiten dabei auf Provisionsbasis."
+    },
+    "5": {
+      "title": "SSL-Zertifikat und Sicherheit:",
+      "text": "Wir konfigurieren HTTPS und automatische Backups – damit Ihre Website zuverlässig und sicher läuft."
+    }
+  }
 }
+     },
+     "maintenance": {
+  "badge": "Website-Wartung",
+  "title": "Professionelle Betreuung — ganz ohne Stress",
+  "subtitle": "Inhaltsaktualisierungen, Sicherheit, Performance und technischer Support — schnell, zuverlässig und jederzeit verfügbar.",
+  "cta": "Website-Wartung anfragen →",
+  "points": {
+    "1": {
+      "icon": "🔄",
+      "title": "Inhaltsaktualisierungen:",
+      "text": "Hinzufügen neuer Bereiche, Austausch von Bildern und Aktualisierung von Texten — ohne technische Vorkenntnisse."
+    },
+    "2": {
+      "icon": "🔐",
+      "title": "Sicherheit und Schutz:",
+      "text": "Aktiver Schutz der Website, Überwachung von Angriffen, System-Backups und Datenbanksicherungen."
+    },
+    "3": {
+      "icon": "🚀",
+      "title": "Geschwindigkeit und Optimierung:",
+      "text": "Cache-Bereinigung, Ladezeit-Optimierung, Fehlerüberwachung und Performance-Analysen."
+    },
+    "4": {
+      "icon": "📈",
+      "title": "SEO-Wartung:",
+      "text": "Überprüfung von Meta-Tags, Seitenstruktur und Google-Sichtbarkeit. Unterstützung bei Ranking und technischem SEO."
+    },
+    "5": {
+      "icon": "📩",
+      "title": "Support und Beratung:",
+      "text": "Support per E-Mail oder WhatsApp. Schnelle Reaktionszeiten und effiziente Problemlösung."
+    }
+  }
+},
+"basicshop": {
+  "badge": "Einstiegs-E-Commerce-Paket",
+  "title": "Starten Sie noch heute Ihren Online-Shop",
+  "subtitle": "Ein einfacher und schneller Einstieg in den Online-Verkauf — ideal für kleine Unternehmen und lokale Produzenten.",
+  "featuresTitle": "Was ist enthalten?",
+  "features": {
+    "1": "Moderne Startseite mit Produktpräsentation",
+    "2": "Warenkorbsystem mit Bestellübermittlung",
+    "3": "Checkout-Formular mit Benachrichtigungen",
+    "4": "SEO-Optimierung für Google-Suche",
+    "5": "Mobile Version (responsives Design)",
+    "6": "CMS zur Verwaltung von Produkten und Kategorien"
+  },
+  "idealTitle": "Ideal geeignet für:",
+  "idealFor": {
+    "1": "Klein- und Familienbetriebe",
+    "2": "Landwirtschaftliche Betriebe und Produzenten",
+    "3": "Lebensmittelhersteller und Handwerker",
+    "4": "Lokale Marken mit einfachem Verkaufsbedarf"
+  },
+  "cta": {
+    "title": "Interesse an einem Basic Shop?",
+    "text": "Klicken Sie unten und füllen Sie das Kontaktformular aus — Sie erhalten innerhalb von 24 Stunden ein Angebot.",
+    "button": "Anfrage senden"
+  }
+},
+"original": {
+  "badge": "Individuelles Design",
+  "title": "Express Original Website — vollständig nach Ihren Anforderungen",
+  "subtitle": "Wir entwickeln einzigartige Websites von Grund auf — ohne Vorlagen. Komplett nach Ihren Bedürfnissen umgesetzt innerhalb von 5–7 Werktagen.",
+  "cta": "Individuelle Website anfragen →",
+  "points": {
+    "1": {
+      "icon": "🛠️",
+      "title": "Vorgehensweise:",
+      "text": "Wir analysieren Ihre Anforderungen, schlagen eine geeignete Struktur vor und gestalten das Projekt exakt nach Ihrer Vision."
+    },
+    "2": {
+      "icon": "📌",
+      "title": "Keine Einschränkungen:",
+      "text": "Anzahl der Seiten, Sektionen und Funktionen — alles erfolgt nach individueller Vereinbarung. Sie behalten die volle Kontrolle."
+    },
+    "3": {
+      "icon": "📸",
+      "title": "Inhalte & SEO:",
+      "text": "Unterstützung bei Texten, Bildauswahl sowie grundlegender Suchmaschinenoptimierung."
+    },
+    "4": {
+      "icon": "🔐",
+      "title": "Admin-Bereich (optional):",
+      "text": "Auf Wunsch stellen wir einen Admin-Zugang bereit, damit Sie Inhalte selbstständig verwalten können — ohne Entwickler."
+    },
+    "5": {
+      "icon": "🚀",
+      "title": "Lieferzeit:",
+      "text": "5 bis 7 Werktage inklusive Abstimmungen, Korrekturen und Veröffentlichung."
+    },
+    "6": {
+      "icon": "💰",
+      "title": "Preis:",
+      "text": "Ab 490 € — abhängig von Umfang und Komplexität (Preis auf Anfrage)."
+    }
+  }
+},
+"pro": {
+  "badge": "🚀 Premium-Optionen für Ihre Website",
+  "title": "PRO-Version – mehr Funktionen, stärkere Wirkung",
+  "featuresTitle": "Was ist im PRO-Paket enthalten?",
+  "features": {
+    "1": {
+      "icon": "📄",
+      "title": "PDF-Dokument",
+      "text": " – Preisliste, Broschüre oder individuelles Angebot."
+    },
+    "2": {
+      "icon": "🎬",
+      "title": "YouTube-Video",
+      "text": " – Präsentieren Sie Ihr Unternehmen dynamisch."
+    },
+    "3": {
+      "icon": "🔗",
+      "title": "Anker-Navigation",
+      "text": " – Direkter Zugriff auf einzelne Seitenabschnitte."
+    },
+    "4": {
+      "icon": "📱",
+      "title": "Erweiterter Kontaktbereich",
+      "text": " – Mehrere Telefonnummern, Adressen und E-Mail-Adressen."
+    },
+    "5": {
+      "icon": "🛒",
+      "title": "Erweitertes Angebot",
+      "text": " – Präsentation von bis zu 12 Dienstleistungen oder Produkten."
+    },
+    "6": {
+      "icon": "🌐",
+      "title": "Eigene Domain",
+      "text": " – Anbindung Ihrer .com- oder .rs-Domain inklusive SEO-Unterstützung."
+    }
+  },
+  "faq": {
+    "badge": "PRO-Paket – Häufige Fragen",
+    "title": "Alles Wissenswerte vor dem Upgrade",
+    "items": {
+      "1": {
+        "q": "Was kostet die PRO-Version?",
+        "a": "Der Jahrespreis liegt zwischen 10 und 50 € und beinhaltet alle PRO-Funktionen sowie priorisierten Support."
+      },
+      "2": {
+        "q": "Kann ich meine eigene Domain verwenden?",
+        "a": "Ja — Sie können Ihre eigene Domain (z. B. ihreseite.de) ohne zusätzliche Kosten anbinden."
+      },
+      "3": {
+        "q": "Ist SEO enthalten?",
+        "a": "Ja — PRO-Websites sind SEO-optimiert, mit strukturierten Daten und hoher Performance."
+      },
+      "4": {
+        "q": "Welche zusätzlichen Bereiche sind enthalten?",
+        "a": "Video, PDF, erweiterter Kontaktbereich, zusätzliche Angebote, Galerie und weitere Layout-Optionen."
+      },
+      "5": {
+        "q": "Kann ich meine Website später aktualisieren?",
+        "a": "Ja — entweder über den Admin-Bereich oder durch Änderungsanfragen an unser Team."
+      },
+      "6": {
+        "q": "Ist Support enthalten?",
+        "a": "Ja — PRO-Kunden erhalten priorisierten Support per E-Mail."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ihre professionelle Website – in wenigen Minuten startklar",
+    "text": "Klicken Sie unten, um Ihre PRO-Präsentation sofort zu starten. Der Prozess ist geführt und effizient.",
+    "button": "PRO-Präsentation erstellen",
+    "demo": "Demoversion ansehen"
+  }
+},
+"w3site": {
+  "badge": "🎨 W3Schools Express Design",
+  "title": "Einzigartige Website in 2–3 Tagen mit W3Schools",
+  "sectionTitle": "Individuelle Website – geliefert in etwas mehr als 24 Stunden",
+  "points": {
+    "1": "⚡ Schnelle Umsetzung und einzigartiger Inhalt basierend auf Ihren Anforderungen.",
+    "2": "🎯 Individuell angepasste W3Schools-Vorlagen – ansprechend, SEO-freundlich und responsiv.",
+    "3": "🧩 Optionale Erweiterungen – Kontaktformulare, Galerien, Referenzen, Google Maps.",
+    "4": "💡 Ideal für Handwerker, Kleinstunternehmer und Hobbyprojekte.",
+    "5": "🛠 Festpreis ab 199 € – alles inklusive. Zahlung nach Lieferung."
+  },
+  "ctaTitle": "Bereit für eine einzigartige Website?",
+  "ctaText": "Senden Sie uns Ihre Inhalte und Wünsche – wir übernehmen den Rest. Keine Verzögerungen, kein Aufwand.",
+  "ctaButton": "Jetzt kontaktieren"
+},
+"seo": {
+  "badge": "🔍 Express SEO-Optimierung",
+  "title": "Mehr Sichtbarkeit bei Google in nur wenigen Tagen",
+  "sectionTitle": "Maßgeschneiderte SEO-Dienstleistungen – schnell, präzise und effektiv",
+  "points": {
+    "1": "📈 Website-Optimierung für bessere Rankings und höhere Sichtbarkeit.",
+    "2": "🔗 Linkbuilding und On-Page-SEO-Konfiguration.",
+    "3": "🧠 Wettbewerbsanalyse und gezielte Keyword-Recherche.",
+    "4": "🛠 Technisches SEO – Ladegeschwindigkeit, mobile Optimierung, Indexierung.",
+    "5": "📊 Fortschrittskontrolle und Berichte – monatliche Performance-Reports."
+  },
+  "ctaTitle": "Bereit für bessere Google-Rankings?",
+  "ctaText": "Kontaktieren Sie uns und erfahren Sie, wie Sie die Spitze der Suchergebnisse erreichen.",
+  "ctaButton": "SEO-Angebot anfordern"
+},
+"marketing": {
+  "badge": "📢 Express Digital Marketing",
+  "title": "Marketing, das Ergebnisse liefert – schnell und effektiv",
+  "sectionTitle": "Ganzheitliche Unterstützung für Ihre Online-Präsenz",
+  "points": {
+    "1": "🎯 Zielgerichtete Werbung über Google Ads und Facebook Ads.",
+    "2": "📱 Erstellung von Social-Media-Inhalten und Account-Verwaltung.",
+    "3": "✍️ Erstellung von Werbe- und SEO-optimierten Blogartikeln.",
+    "4": "📊 Kampagnenanalyse, Conversion-Tracking und Leistungsberichte.",
+    "5": "💼 Ideal für kleine Unternehmen, Start-ups und lokale Dienstleister."
+  },
+  "ctaTitle": "Bereit für den digitalen Auftritt?",
+  "ctaText": "Kontaktieren Sie uns und steigern Sie die Sichtbarkeit Ihrer Marke.",
+  "ctaButton": "Marketing-Angebot anfordern"
+},
+"translations": {
+  "badge": "🗣️ Express Übersetzungsservice",
+  "title": "Schnelle und zuverlässige Übersetzungen für jeden Bedarf",
+  "sectionTitle": "Professionelle Übersetzungen in über 20 Sprachen",
+  "points": {
+    "1": "🌍 Übersetzung von Dokumenten, Websites und Marketingmaterialien.",
+    "2": "👨‍⚖️ Übersetzung von Geschäfts-, technischen und Werbetexten.",
+    "3": "🔄 Software- und App-Lokalisierung inklusive technischer Dokumentationen.",
+    "4": "🧾 Lieferung im PDF- oder Word-Format auf Wunsch.",
+    "5": "⏱ Bearbeitungszeit 24–72 Stunden, Express-Optionen verfügbar."
+  },
+  "ctaTitle": "Benötigen Sie eine professionelle Übersetzung?",
+  "ctaText": "Senden Sie uns das Dokument oder den Link – wir liefern die Übersetzung schnell und zuverlässig.",
+  "ctaButton": "Übersetzungsangebot anfordern"
+}
+},
+"landing": {
+  "freesite": {
+    "badge": "Erstellen Sie Ihre Website völlig kostenlos",
+    "title": "One-Click-Website – kostenlose Online-Präsentation",
+    "subtitle": "Sie wissen nicht, wo Sie anfangen sollen? Kein Problem – Ihre Website ist in 5 Minuten fertig.",
+
+    "points": {
+      "1": {
+        "title": "Schneller Start.",
+        "text": "Design auswählen, Inhalte eingeben und veröffentlichen. Keine Installation, kein Stress."
+      },
+      "2": {
+        "title": "Moderne Templates.",
+        "text": "Professionelles Erscheinungsbild, responsive auf allen Geräten – Laptop, Smartphone, Tablet."
+      },
+      "3": {
+        "title": "Erweiterungen nach Wunsch.",
+        "text": "Galerie, Karte, Kontakt, Angebot oder Über uns – vollständig modular aufgebaut."
+      },
+      "4": {
+        "title": "Mobile Version inklusive.",
+        "text": "Responsives Design – perfekte Darstellung auf jeder Bildschirmgröße."
+      },
+      "5": {
+        "title": "Ihr Link – sofort verfügbar.",
+        "text": "Erhalten Sie Ihre Subdomain: ihr-unternehmen.freesite.rs – einfach zu teilen."
+      }
+    },
+
+    "faq": {
+      "title": "Alles, was Sie wissen müssen",
+      "items": {
+        "1": {
+          "q": "Benötige ich einen Entwickler?",
+          "a": "Nein. Alles erfolgt visuell. Keine Programmierkenntnisse erforderlich."
+        },
+        "2": {
+          "q": "Kann ich meine eigene Domain verbinden?",
+          "a": "In der kostenlosen Version erhalten Sie eine Subdomain; in der PRO-Version können Sie Ihre eigene Domain verbinden."
+        },
+        "3": {
+          "q": "Wie viele Bereiche kann ich erstellen?",
+          "a": "FREE: bis zu 5 Bereiche. PRO: unbegrenzt + zusätzliche Templates."
+        },
+        "4": {
+          "q": "Welche Technologien werden verwendet?",
+          "a": "Laravel, TailwindCSS und Vue – optimiert für Geschwindigkeit, SEO und Sicherheit."
+        },
+        "5": {
+          "q": "Kann ich die Website später bearbeiten?",
+          "a": "Ja. Sie können sich jederzeit einloggen und Inhalte oder Bilder aktualisieren."
+        },
+        "6": {
+          "q": "Wie lange kann ich die kostenlose Version nutzen?",
+          "a": "So lange Sie möchten. Ein Upgrade auf PRO ist jederzeit möglich – ohne Datenverlust."
+        }
+      }
+    },
+
+    "cta": {
+      "title": "Kein Code. Keine Zahlung. Kein Aufwand.",
+      "text": "Klicken Sie unten und starten Sie Ihre kostenlose Business- oder Hobby-Website.",
+      "button": "Jetzt Website starten – ohne Wartezeit!",
+      "demo": "Demo-Version ansehen"
+    }
+  }
+}
+
 }
