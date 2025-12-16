@@ -1490,7 +1490,6 @@
       "ctaText": "Send us the document or link \u2013 we\u2019ll send you the translation quickly.",
       "ctaButton": "Request translation quote"
     }
-  
     },
     "landing": {
     "freesite": {
@@ -1646,8 +1645,7 @@
       "a": "Yes. We provide seamless migration without data loss."
     }
   }
-}
-,
+},
     "cta": {
       "title": "Want to launch your online store?",
       "text": "Register and start the process for your store today!",
@@ -2118,12 +2116,6 @@
       "account": "Bank account: 105000000331557669"
     }
   }
-
-
-
-
-
-
     }
 
 

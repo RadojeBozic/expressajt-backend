@@ -1495,7 +1495,6 @@
     "badge": "Erstellen Sie Ihre Website völlig kostenlos",
     "title": "One-Click-Website – kostenlose Online-Präsentation",
     "subtitle": "Sie wissen nicht, wo Sie anfangen sollen? Kein Problem – Ihre Website ist in 5 Minuten fertig.",
-
     "points": {
       "1": {
         "title": "Schneller Start.",
@@ -1518,7 +1517,6 @@
         "text": "Erhalten Sie Ihre Subdomain: ihr-unternehmen.freesite.rs – einfach zu teilen."
       }
     },
-
     "faq": {
       "title": "Alles, was Sie wissen müssen",
       "items": {
@@ -1548,7 +1546,6 @@
         }
       }
     },
-
     "cta": {
       "title": "Kein Code. Keine Zahlung. Kein Aufwand.",
       "text": "Klicken Sie unten und starten Sie Ihre kostenlose Business- oder Hobby-Website.",
@@ -1556,6 +1553,567 @@
       "demo": "Demo-Version ansehen"
     }
   }
+},
+"shop": {
+  "hero": {
+  "badge": "✔️ Wir entwickeln beides – individuell nach Ihren Bedürfnissen",
+  "title": "Leistungsstarker Online-Shop oder Multi-Vendor-Plattform?"
+},
+"section": {
+  "title": "Wenn Sie einen Marktplatz wie Amazon starten möchten – wir haben die Lösung",
+  "paragraphs": {
+    "1": {
+      "title": "Individueller Online-Shop",
+      "text": "Starten Sie Ihren eigenen E-Commerce-Shop ohne zusätzliche Tools. Alles ist enthalten – Produkte, Warenkorb, Bestellprozess und E-Mail-Benachrichtigungen."
+    },
+    "2": {
+      "title": "Multi-Vendor-Plattformen für größere Märkte",
+      "text": "Möchten Sie etwas wie Amazon oder Etsy aufbauen? Wir entwickeln leistungsstarke Systeme, in denen jeder Anbieter ein eigenes Admin-Panel erhält."
+    },
+    "3": {
+      "title": "Unbegrenzte Skalierbarkeit",
+      "text": "Unser System unterstützt Tausende von Produkten und Nutzern und wächst mit Ihrem Unternehmen."
+    },
+    "4": {
+      "title": "Direkte und sichere Zahlungen",
+      "text": "Stripe und andere Zahlungssysteme ermöglichen sichere Direktzahlungen – ohne Provision."
+    },
+    "5": {
+      "title": "Erweiterte Analysen und Kontrolle",
+      "text": "Verfolgen Sie Conversions, Statistiken, Produkte und Anbieter über ein visuelles Dashboard."
+    },
+    "6": {
+      "title": "Mobile Unterstützung und App",
+      "text": "Responsives Design sowie optionale mobile App für Android/iOS."
+    }
+  }
+},
+"faq": {
+  "title": "Häufig gestellte Fragen",
+  "subtitle": "Alles, was Sie wissen müssen",
+  "items": {
+    "1": {
+      "q": "Kann ich Produkte selbst hinzufügen?",
+      "a": "Ja. Sie erhalten ein eigenes Admin-Panel zum Hinzufügen, Bearbeiten und Löschen von Produkten sowie zur Auftragsverfolgung."
+    },
+    "2": {
+      "q": "Unterstützen Sie mehrere Anbieter?",
+      "a": "Ja. Das System ermöglicht eine unbegrenzte Anzahl von Anbietern mit getrennten Zugriffsrechten."
+    },
+    "3": {
+      "q": "Wie werden Zahlungen abgewickelt?",
+      "a": "Zahlungen gehen direkt an die Anbieter über Stripe oder andere angebundene Zahlungsmethoden."
+    },
+    "4": {
+      "q": "Sind mehrere Sprachen und Währungen möglich?",
+      "a": "Selbstverständlich. Die Plattform unterstützt Mehrsprachigkeit und Währungsumrechnung."
+    },
+    "5": {
+      "q": "Wie lange dauert die Einrichtung?",
+      "a": "Einzelner Shop: 10–15 Tage. Multi-Vendor-Plattform: bis zu 20 Tage inklusive Tests."
+    },
+    "6": {
+      "q": "Ist das Design anpassbar?",
+      "a": "Ja. Sie können Vorlagen wählen oder eigene Farben, Schriftarten und Ihr Branding verwenden."
+    },
+    "7": {
+      "q": "Kann ich Rabatte und Aktionen erstellen?",
+      "a": "Ja. Gutscheincodes, Kampagnen, hervorgehobene Produkte und saisonale Angebote werden unterstützt."
+    },
+    "8": {
+      "q": "Gibt es eine mobile App?",
+      "a": "Wir können eine native Android/iOS-App entwickeln oder eine responsive PWA-Version bereitstellen."
+    },
+    "9": {
+      "q": "Wem gehören die Daten?",
+      "a": "Ihnen. Sie haben vollständigen Zugriff und können Ihre Daten jederzeit exportieren."
+    },
+    "10": {
+      "q": "Kann ich Social Media integrieren?",
+      "a": "Ja. Facebook Shop, Instagram-Katalog, Produkt-Sharing und weitere Integrationen sind verfügbar."
+    },
+    "11": {
+      "q": "Unterstützen Sie B2B-Verkäufe?",
+      "a": "Ja. Die Plattform kann auch als B2B- oder Großhandelssystem genutzt werden."
+    },
+    "12": {
+      "q": "Ist eine Migration von Shopify/WooCommerce möglich?",
+      "a": "Ja. Wir bieten eine reibungslose Migration ohne Datenverlust."
+    }
+  }
+},
+"cta": {
+  "title": "Möchten Sie Ihren Online-Shop starten?",
+  "text": "Registrieren Sie sich und starten Sie noch heute den Aufbau Ihres Shops.",
+  "buttons": {
+    "shop": "Beispiel für klassischen Online-Shop",
+    "market": "Marktplatz – Großhandel und Multi-Vendor"
+  }
 }
+},
+"pricing_global": {
+  "services": {
+    "1": {
+      "title": "Business-Präsentation (Starter)",
+      "price": "ab 10 € pro Jahr",
+      "description": "Ideal für einen Lebenslauf, ein Portfolio oder eine One-Page-Seite. Vorlagenbasiert, automatisch generiert. Bearbeitbar über ein Formular."
+    },
+    "2": {
+      "title": "Business-Präsentation (Basic)",
+      "price": "ab 20 € pro Jahr",
+      "description": "Enthält: Kontaktformular, Google Map, PDF, Links, zusätzliche Sektionen. Subdomain; Domain & Hosting ca. 60 € pro Jahr."
+    },
+    "3": {
+      "title": "Business-Präsentation (Pro)",
+      "price": "ab 30 € pro Jahr",
+      "description": "Enthält alles aus Basic plus weitere Funktionen. Domain & Hosting ca. 60 € pro Jahr."
+    },
+    "4": {
+      "title": "Business-Präsentation (Premium)",
+      "price": "ab 40 € pro Jahr",
+      "description": "Enthält alles aus Pro inkl. SEO-Unterstützung und erweiterten visuellen Blöcken. Hosting wird separat berechnet."
+    },
+    "5": {
+      "title": "Business-Präsentation (Business)",
+      "price": "ab 50 € pro Jahr",
+      "description": "Vollwertige Business-Website. Inklusive Hosting, Kontakt, Karte und Erweiterungsoptionen."
+    },
+    "6": {
+      "title": "Business-Präsentation (W3C)",
+      "price": "ab 190 € pro Jahr",
+      "description": "W3C-konforme Website mit W3Schools-Templates. Inklusive kostenloser Domain & Hosting im ersten Jahr."
+    },
+    "7": {
+      "title": "Individuelle Business-Präsentation",
+      "price": "ab 390 € pro Jahr",
+      "description": "Maßgeschneiderte Business-Website. Inklusive Kontakt, Karte, PDF, Links, Domain *.rs und SSL."
+    },
+    "8": {
+      "title": "Blog",
+      "price": "ab 390 € pro Monat",
+      "description": "Beiträge, Kategorien und Tags erstellen. Admin-Panel inklusive. SEO-fähige Struktur."
+    },
+    "9": {
+      "title": "Einfacher Online-Shop (Shop)",
+      "price": "ab 490 € pro Jahr",
+      "description": "Basis-Shop mit Produkt-, Bestell- und Zahlungsunterstützung. Erweiterbar."
+    },
+    "10": {
+      "title": "Online-Shop (Shop)",
+      "price": "ab 590 € pro Jahr",
+      "description": "Erweitertes Shop-System mit Admin-Panel und vollständigem E-Commerce-Support."
+    },
+    "11": {
+      "title": "Web-App (App)",
+      "price": "ab 990 € pro Jahr",
+      "description": "Individuelle Webanwendung mit vollständiger Funktionalität und Erweiterungsoptionen."
+    },
+    "12": {
+      "title": "Web-Plattform",
+      "price": "ab 1990 € pro Jahr",
+      "description": "Multifunktionale Plattform. Ideal für SaaS, Management oder Marktplätze."
+    },
+    "13": {
+      "title": "Web-Portal",
+      "price": "ab 2990 € pro Jahr",
+      "description": "Informationsportal mit News, Benutzerkonten und Kategorien. Flexibles Layout."
+    },
+    "14": {
+      "title": "Multi-Vendor-Shop (Shop)",
+      "price": "ab 890 € pro Jahr",
+      "description": "Multi-Seller E-Commerce wie Amazon. Händler-Dashboards, Zahlungen, Lagerbestand. Ideal für groß angelegte Verkäufe."
+    },
+    "15": {
+      "title": "Web-Service – Basic API",
+      "price": "ab 3990 € pro Jahr",
+      "description": "REST-API mit Doku, Tokens und Authentifizierung. Erweiterbare Module verfügbar."
+    },
+    "16": {
+      "title": "Web-System",
+      "price": "ab 4990 € pro Jahr",
+      "description": "Komplexes Business-System (ERP/CRM usw.) mit vollständiger Backend-Struktur."
+    },
+    "17": {
+      "title": "Web-Lösung",
+      "price": "ab 5990 € pro Jahr",
+      "description": "Enterprise-Lösung für anspruchsvolle Projekte. Vollständig erweiterbar."
+    },
+    "18": {
+      "title": "Professionelles Logo-Design",
+      "price": "ab 10 €",
+      "description": "Logo via KI + Canva mit Beratung. Final-Dateien: PNG, SVG, PDF."
+    },
+    "19": {
+      "title": "Technischer Support (monatlich)",
+      "price": "ab 10 € pro Monat",
+      "description": "1 Stunde/Monat: Inhaltsupdates, SEO-Korrekturen, Website-Speed, Anpassungen an Sektionen."
+    },
+    "20": {
+      "title": "Website-Wartung (auf Anfrage)",
+      "price": "ab 25 €/Stunde",
+      "description": "Einmalige Updates: Uploads, SEO, Inhaltsänderungen, Backups."
+    },
+    "21": {
+      "title": "Online-Übersetzungen",
+      "price": "nach Vereinbarung",
+      "description": "Textübersetzungen passend zu Ihren Anforderungen. Mehrere Sprachen verfügbar."
+    },
+    "22": {
+      "title": "SEO-Optimierung",
+      "price": "ab 50 € pro Monat",
+      "description": "Suchmaschinenoptimierung, Keyword-Recherche, Reporting & Insights."
+    },
+    "23": {
+      "title": "Social-Media-Management",
+      "price": "ab 40 € pro Monat",
+      "description": "Account-Management, Content-Erstellung, Analysen für Facebook, Instagram usw."
+    }
+  },
+  "intro": "Transparente Übersicht über alle unsere Leistungen und Preise",
+  "title": "Detaillierte Preisliste unserer Leistungen",
+  "note": "Die Preisliste entspricht unserem aktuellen Angebot und gilt für alle Neukunden. Je nach Art und Umfang der beauftragten Leistungen können zusätzliche Rabatte gewährt werden.",
+  "more": "Mehr Details ⌄",
+  "request": "Angebot anfordern"
+},
+"demoPreviews": {
+  "title": "🌍 Demo-Websites – Reale Präsentationen",
+  "subtitle": "Entdecken Sie fertige Beispiele, die mit unserem System erstellt wurden. Klicken Sie und sehen Sie, wie eine professionelle Website aussieht – ganz ohne technisches Wissen!",
+  "goToDashboard": "🛠 Zu Ihrem Konto",
+  "registerAndCreate": "🚀 Registrieren und Website erstellen",
+  "note": "Sie müssen sich nicht registrieren, um das Formular zu testen:",
+  "freeSiteButton": "📝 Kostenlose Präsentation erstellen",
+  "proSiteButton": "🚀 PRO-Präsentation erstellen",
+  "title_free": "FREE – Kostenlose Version",
+  "title_pro": "PRO – Bezahlte Version",
+  "description_free": "Beispiel der kostenlosen Version. Optionales Logo-Design: 10 €",
+  "description_pro": "Beispiel einer PRO-Präsentation inklusive Logo-Design. Preis von 10 € bis 50 € je nach Umfang zusätzlicher Leistungen. Domain-Kauf zu besten Konditionen möglich."
+},
+"demoBox": {
+  "demo_button": "Präsentation ansehen"
+},
+"requestModal": {
+  "title": "📩 Angebot anfordern",
+  "subtitle": "Füllen Sie das Formular aus, um ein individuelles Angebot für die ausgewählte Dienstleistung zu erhalten:",
+  "name": "Vollständiger Name *",
+  "email": "E-Mail *",
+  "message": "Nachricht (optional)",
+  "send": "Anfrage senden",
+  "success": "✅ Nachricht erfolgreich gesendet!",
+  "error": "❌ Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+},
+"businessPreview": {
+  "activityTitle": "📋 Geschäftstätigkeit",
+  "offerTitle": "Unser Angebot",
+  "followUs": "Folgen Sie uns:",
+  "footerText": "Stolzer Partner von",
+  "footerLink": "Express-Web-Plattformen"
+},
+"businessPreviewPro": {
+  "nav": {
+    "about": "Über uns",
+    "offer": "Angebot",
+    "contact": "Kontakt"
+  },
+  "activity": "📋 Geschäftstätigkeit",
+  "note": "Diese Präsentation ist Teil des PRO-Pakets und kann nach Zahlung (10 € / Jahr) bearbeitet werden.",
+  "video": "🎥 Video-Präsentation",
+  "pdf": "📄 Angehängtes Dokument",
+  "contact": "📞 Kontakt",
+  "social": "Folgen Sie uns:",
+  "backToTop": "Nach oben ↑",
+  "downloadPdf": "PDF herunterladen",
+  "openPdfInNewTab": "PDF in neuem Tab öffnen"
+},
+"classicPreview": {
+  "activityTitle": "📋 Geschäftstätigkeit",
+  "followUs": "Folgen Sie uns in sozialen Netzwerken:",
+  "footerText": "Stolzer Partner der",
+  "footerLink": "Express-Web-Plattform"
+},
+"classicPreviewPro": {
+  "openPdfInNewTab": "PDF in neuem Tab öffnen.",
+  "downloadPdf": "PDF herunterladen",
+  "nav": {
+    "about": "Über uns",
+    "offer": "Unser Angebot",
+    "contact": "Kontakt"
+  },
+  "activity": "📋 Geschäftstätigkeit",
+  "note": "Dies ist eine PRO-Präsentation – Inhalte können nach Aktivierung bearbeitet werden (10 € / Jahr).",
+  "video": "🎥 Video",
+  "pdf": "📄 Angehängtes Dokument",
+  "contact": "📬 Kontakt",
+  "social": "Folgen Sie uns:",
+  "backToTop": "Nach oben ↑"
+},
+"darkPreview": {
+  "activityTitle": "📋 Geschäftstätigkeit",
+  "offerTitle": "Unser Angebot",
+  "social": "Folgen Sie uns:",
+  "footerText": "Stolzer Partner von",
+  "footerLink": "Express-Web-Plattform"
+},
+"darkPreviewPro": {
+  "nav": {
+    "about": "Über uns",
+    "offer": "Angebot",
+    "contact": "Kontakt"
+  },
+  "activity": "📋 Geschäftstätigkeit",
+  "note": "Dies ist eine PRO-Präsentation – weitere Bearbeitung ist nach Zahlung (10 € / Jahr) möglich.",
+  "video": "🎥 Video-Präsentation",
+  "pdf": "📄 Angehängtes Dokument",
+  "contact": "📞 Kontakt",
+  "social": "Folgen Sie uns:",
+  "backToTop": "Nach oben ↑",
+  "downloadPdf": "PDF herunterladen",
+  "openPdfInNewTab": "PDF in neuem Tab öffnen"
+},
+"galleryPreview": {
+  "activityTitle": "📋 Geschäftstätigkeit",
+  "offerTitle": "Unser Angebot",
+  "social": "Folgen Sie uns:",
+  "footerText": "Stolzer Partner von",
+  "footerLink": "Express-Web-Plattform"
+},
+"galleryPreviewPro": {
+  "nav": {
+    "about": "Über uns",
+    "offer": "Angebot",
+    "contact": "Kontakt"
+  },
+  "activity": "📋 Geschäftstätigkeit",
+  "note": "Dies ist eine PRO-Präsentation – weitere Bearbeitung ist nach Zahlung (10 € / Jahr) möglich.",
+  "video": "🎥 Video-Präsentation",
+  "pdf": "📄 Angehängtes Dokument",
+  "contact": "📞 Kontakt",
+  "social": "Folgen Sie uns:",
+  "backToTop": "Nach oben ↑",
+  "downloadPdf": "PDF herunterladen",
+  "openPdfInNewTab": "PDF in neuem Tab öffnen"
+},
+"modernPreview": {
+  "activityTitle": "📋 Geschäftstätigkeit",
+  "offerTitle": "Unser Angebot",
+  "social": "Folgen Sie uns:",
+  "footerText": "Stolzer Partner von",
+  "footerLink": "Express-Web-Plattform"
+},
+"modernPreviewPro": {
+  "nav": {
+    "about": "Über uns",
+    "offer": "Angebot",
+    "contact": "Kontakt"
+  },
+  "activity": "📋 Geschäftstätigkeit",
+  "note": "Dies ist eine PRO-Präsentation – weitere Bearbeitung ist nach Zahlung (10 € / Jahr) möglich.",
+  "video": "🎥 Video-Präsentation",
+  "pdf": "📄 Angehängtes Dokument",
+  "contact": "📞 Kontakt",
+  "social": "Folgen Sie uns:",
+  "backToTop": "Nach oben ↑",
+  "downloadPdf": "PDF herunterladen",
+  "openPdfInNewTab": "PDF in neuem Tab öffnen"
+},
+"adminMessages": {
+  "title": "Admin-Nachrichten",
+  "contactForm": "Kontaktformular",
+  "vulnerabilities": "Gemeldete Sicherheitslücken",
+  "name": "Name",
+  "email": "E-Mail",
+  "message": "Nachricht",
+  "newsletter": "Newsletter",
+  "date": "Datum",
+  "action": "Aktion",
+  "delete": "Löschen"
+},
+"proform": {
+  "help": {
+    "toggle": "Benötigen Sie Hilfe oder eine Erklärung?",
+    "text": "📝 In diesem Formular geben Sie die Informationen ein, die in Ihrer Geschäftspräsentation angezeigt werden.\n\n🔹 Firmenname und Kontaktdaten eingeben\n🔹 Bilder und Titel für den Hero-Bereich und weitere Sektionen hinzufügen\n🔹 Beschreibung Ihrer Tätigkeiten und Produkte\n🔹 Zusätzlich: Video, PDF und Karte\n\nKI-Unterstützung ist in höheren Paketen verfügbar. Beginnen Sie mit der Eingabe – alles wird Schritt für Schritt klar!"
+  },
+  "title": "Erweiterte PRO-Präsentation",
+  "note": "Felder mit einem Sternchen (*) sind Pflichtfelder. Bitte geben Sie korrekte Informationen einschließlich Bilder und Links ein.",
+  "submit": "✅ Anfrage absenden",
+  "loading": "⏳ Wird gesendet...",
+  "success": "✅ Anfrage erfolgreich übermittelt!",
+  "noticeAfterSubmit": "Sie erhalten die Präsentation an die im Formular angegebene E-Mail-Adresse – nach Freigabe durch den Administrator und spätestens innerhalb von 24 Stunden.",
+  "error": "⚠️ Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+  "preview": "📎 Präsentation öffnen:",
+  "sections": {
+    "general": "Allgemeine Informationen",
+    "hero": "Hero-Bereich",
+    "about": "Über uns",
+    "offer": "Unser Angebot",
+    "extra": "Zusätzliche Inhalte",
+    "contact": "Kontaktdaten",
+    "template": "Template auswählen",
+    "plan": "Servicepaket"
+  },
+  "fields": {
+    "name": "Firmenname *",
+    "description": "Unternehmensbeschreibung *",
+    "email": "E-Mail-Adresse *",
+    "phone": "Telefon *",
+    "facebook": "Facebook-Link",
+    "instagram": "Instagram-Link",
+    "logo": "Logo (optional)",
 
+    "heroImage": "Hauptbild (Hintergrund) *",
+    "heroTitle": "Titel *",
+    "heroSubtitle": "Untertitel *",
+
+    "aboutImage": "Unternehmens-/Teamfoto *",
+    "aboutTitle": "Titel des Abschnitts *",
+    "aboutText": "Unternehmensbeschreibung *",
+
+    "offerTitle": "Titel des Angebotsbereichs *",
+    "offerItemTitle": "Name der Dienstleistung / des Produkts *",
+    "addOffer": "➕ Element hinzufügen",
+    "remove": "✖ Entfernen",
+
+    "pdfDocument": "PDF-Datei (Preisliste, Angebot)",
+    "youtube": "YouTube-Link (optional)",
+
+    "city": "Stadt *",
+    "street": "Straße & Hausnummer *",
+    "map": "Google-Maps-Link (optional)",
+    "phone2": "Zusätzliche Telefonnummer",
+    "phone3": "Weitere Telefonnummer",
+    "email2": "Zusätzliche E-Mail-Adresse",
+    "email3": "Weitere E-Mail-Adresse"
+  },
+  "templates": {
+    "classic": "🧾 Klassisch",
+    "modern": "✨ Modern",
+    "gallery": "🖼️ Galerie",
+    "biznis": "🏢 Business",
+    "dark": "🌙 Dunkler Modus"
+  },
+  "errors": {
+    "image": "⚠️ Das Bild muss kleiner als 4 MB sein und ein gültiges Format haben.",
+    "pdf": "⚠️ Es sind nur PDF-Dateien erlaubt.",
+    "offerImage": "⚠️ Das Bild im Element {{index}} ist ungültig oder zu groß.",
+    "general": "⚠️ Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "fetch": "⚠️ Daten aus dem Template konnten nicht geladen werden."
+  },
+  "plans": {
+    "starter": "Starter (10 € / Jahr)",
+    "basic": "Basic (20 € / Jahr)",
+    "pro": "Pro (30 € / Jahr)",
+    "premium": "Premium (40 € / Jahr)",
+    "business": "Business (50 € / Jahr)"
+  }
+},
+
+"adminSites": {
+  "title": "🌐 Eingereichte Präsentationen",
+  "noSites": "Keine Präsentationen verfügbar.",
+  "columns": {
+    "name": "Name",
+    "user": "Benutzer",
+    "type": "Typ",
+    "date": "Datum",
+    "status": "Status",
+    "actions": "Aktionen"
+  },
+  "buttons": {
+    "view": "👁 Anzeigen",
+    "edit": "✏️ Bearbeiten",
+    "approve": "✅ Freigeben",
+    "delete": "🗑 Löschen"
+  },
+  "plans": {
+    "starter": "Starter",
+    "pro": "Pro",
+    "premium": "Premium",
+    "business": "Business"
+  },
+  "statuses": {
+    "pending": "Ausstehend",
+    "active": "Aktiv",
+    "rejected": "Abgelehnt"
+  },
+  "empty": "Keine eingereichten Präsentationen.",
+  "confirmDelete": "Möchten Sie diese Präsentation wirklich löschen?",
+  "approved": "✅ Präsentation wurde freigegeben.",
+  "deleted": "🗑 Präsentation wurde gelöscht.",
+  "errorLoading": "❌ Fehler beim Laden der Präsentationen:",
+  "errorApprove": "❌ Fehler bei der Freigabe der Präsentation:",
+  "errorDelete": "❌ Fehler beim Löschen der Präsentation:"
+},
+"aihelper": {
+  "title": "Inhalte per KI vorschlagen",
+  "request": "Vorschlag anfordern",
+  "generating": "Wird generiert...",
+  "error": "Fehler bei der Kommunikation mit dem KI-Dienst.",
+  "limit": "Sie haben Ihr tägliches Limit erreicht. Bitte versuchen Sie es morgen erneut.",
+  "pdfSuggestion": "Möchten Sie, dass ich ein PDF-Dokument mit der Preisliste erstelle?",
+  "close": "Vorschlag schließen"
+},
+
+"chat": {
+  "title": "🤖 Express Web Assistent",
+  "inputPlaceholder": "Stellen Sie eine Frage...",
+  "buttonSend": "➤",
+  "assistantLabel": "Assistent",
+  "userLabel": "Sie",
+  "error": "⚠️ Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+  "default": "Hallo! Wie kann ich Ihnen helfen?",
+  "fallback": "Etwas ist schiefgelaufen.",
+  "tooltip": "Brauchen Sie Hilfe? Fragen Sie unseren KI-Assistenten!"
+},
+
+"checkout": {
+  "title": " Checkout",
+  "empty": "Ihr Warenkorb ist leer.",
+  "remove": "Entfernen",
+  "total": "Gesamtbetrag",
+  "payNow": "Zur Zahlung fortfahren",
+  "proceed": "Zur Zahlung fortfahren",
+  "chooseMethod": "Zahlungsmethode auswählen:",
+  "payCard": "Karte (Stripe)",
+  "invoice_request": "Proforma-Rechnung (RSD/EUR)",
+  "paypal": "PayPal (demnächst verfügbar)",
+  "invoiceOptions": "Währung für Proforma-Rechnung auswählen",
+  "downloadInvoice": "Proforma-Rechnung herunterladen"
+},
+
+"common": {
+  "cancel": "Abbrechen",
+  "sending": "⏳ Wird gesendet..."
+},
+
+"invoice": {
+  "title": "🧾 Proforma-Rechnung anfordern",
+  "form": {
+    "name": "Firmen- / Käufername",
+    "email": "E-Mail",
+    "currency": "Währung",
+    "description": "Beschreibung / Betreff (optional)",
+    "descriptionPlaceholder": "z. B. Express PRO Paket + Logo-Design"
+  },
+  "currency": {
+    "rsd": "RSD (Serbischer Dinar)",
+    "eur": "EUR (Fremdwährung)"
+  },
+  "items": {
+    "title": "Positionen",
+    "total": "Gesamtbetrag"
+  },
+  "amountLabel": "Zu zahlender Betrag:",
+  "submit": "✅ Anfrage absenden",
+  "downloadPdf": "Proforma (PDF) herunterladen",
+  "alert": {
+    "success": "Ihre Proforma-Anfrage wurde erfolgreich gesendet.",
+    "error": "Senden der Anfrage fehlgeschlagen."
+  },
+  "issuer": {
+    "title": "Aussteller:",
+    "name": "Radoje Božić e.K. EXPRESS WEB Belgrad-Palilula",
+    "address": "Adresse: VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Belgrad",
+    "ids": "Unternehmensnr.: 68170168 | Steuer-ID: 115191597",
+    "account": "Bankkonto: 105000000331557669"
+  }
+}
 }
