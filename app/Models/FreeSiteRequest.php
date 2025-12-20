@@ -22,7 +22,6 @@ class FreeSiteRequest extends Model
         'template',
         'slug',
         'type',
-        'plan',
 
         // Hero sekcija
         'hero_title',
@@ -52,4 +51,21 @@ class FreeSiteRequest extends Model
     protected $casts = [
         'offer_items' => 'array',
     ];
+
+        protected static function booted()
+    {
+        static::deleting(function ($site) {
+            if ($site->logo_path) Storage::disk('public')->delete($site->logo_path);
+            if ($site->hero_image) Storage::disk('public')->delete($site->hero_image);
+            if ($site->about_image) Storage::disk('public')->delete($site->about_image);
+            if ($site->pdf_file) Storage::disk('public')->delete($site->pdf_file);
+            foreach ($site->offer_items ?? [] as $item) {
+                if (isset($item['image'])) Storage::disk('public')->delete($item['image']);
+            }
+        });
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

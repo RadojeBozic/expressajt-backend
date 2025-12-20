@@ -73,7 +73,7 @@
       Radoje Božić pr Računarsko programiranje EXPRESS WEB Beograd-Palilula<br>
       VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Beograd<br>
       MB: 68170168 | PIB: 115191597<br>
-      Račun: 160-xxx-xxxxx-xx
+      Račun: 105000000331557669
     </div>
   </div>
 
@@ -149,7 +149,7 @@
   @endif
 
   <div class="section">
-    <p>Uplatu izvršiti na račun: 265-xxxxxxxxxxxx-xxi<br>
+    <p>Uplatu izvršiti na račun: 105000000331557669<br>
     U pozivu na broj upisati broj profakture.</p>
     <p>Profaktura je validna bez pečata i potpisa. Preduzetnik nije u sistemu PDV-a.</p>
     <p>Hvala na poverenju.</p>

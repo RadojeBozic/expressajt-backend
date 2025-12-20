@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -13,23 +12,19 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * Mass assignable fields.
      */
     protected $fillable = [
-            'name',
-            'email',
-            'password',
-            'message',
-            'referrer',
-            'role',
-            ];
+        'name',
+        'email',
+        'password',
+        'message',
+        'referrer',
+        'role',
+    ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
+     * Hidden attributes when serialized.
      */
     protected $hidden = [
         'password',
@@ -37,19 +32,42 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
+     * Attribute casting.
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
 
+    /**
+     * Relacija: korisnik ima više poruka
+     */
     public function messages()
     {
         return $this->hasMany(Message::class);
     }
 
+    /**
+     * Relacija: korisnik ima više zahteva za sajtove
+     */
+    public function siteRequests()
+    {
+        return $this->hasMany(FreeSiteRequest::class);
+    }
 
+    /**
+     * Provera da li je korisnik admin ili superadmin
+     */
+    public function isAdmin(): bool
+    {
+        return in_array($this->role, ['admin', 'superadmin']);
+    }
+
+    /**
+     * Provera da li je superadmin
+     */
+    public function isSuperAdmin(): bool
+    {
+        return $this->role === 'superadmin';
+    }
 }
