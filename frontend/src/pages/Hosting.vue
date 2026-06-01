@@ -41,14 +41,7 @@
         </div>
       </div>
 
-      <div class="bg-purple-600/20 border border-purple-500/40 rounded-3xl p-8 text-center">
-        <h2 class="text-2xl font-bold text-white mb-3">{{ t('hosting.cta.title') }}</h2>
-        <p class="text-slate-300 mb-6">{{ t('hosting.cta.text') }}</p>
-
-        <router-link to="/contact" class="btn bg-purple-600 hover:bg-purple-700 text-white">
-          {{ t('hosting.cta.button') }} →
-        </router-link>
-      </div>
+     
 
       <!-- Starter paket -->
 <div class="bg-gradient-to-r from-purple-600/20 to-slate-800/50 border border-purple-500/40 rounded-3xl p-8 mb-16">
@@ -78,6 +71,15 @@
   </div>
 
 </div>
+
+ <div class="bg-purple-600/20 border border-purple-500/40 rounded-3xl p-8 text-center">
+        <h2 class="text-2xl font-bold text-white mb-3">{{ t('hosting.cta.title') }}</h2>
+        <p class="text-slate-300 mb-6">{{ t('hosting.cta.text') }}</p>
+
+        <router-link to="/contact" class="btn bg-purple-600 hover:bg-purple-700 text-white">
+          {{ t('hosting.cta.button') }} →
+        </router-link>
+      </div>
 
  
 
