@@ -54,6 +54,15 @@
                 <span>{{ t('hero.secondary_button') }}</span>
               </a>
             </div>
+            <div>
+  <a
+    @click.prevent="goToHosting"
+    class="btn text-white bg-purple-600 hover:bg-purple-700 w-full transition duration-150 ease-in-out group cursor-pointer"
+  >
+    🌐 <span>{{ t('hero.hosting_button') }}</span>
+    <span class="tracking-normal text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+  </a>
+</div>
           </div>
 
         </div>
@@ -79,12 +88,14 @@ export default {
     const goToSignUp = () => router.push('/signup')
     const goToProjects = () => router.push('/projects')
     const goDemoPreviews = () => router.push('/demo')
+    const goToHosting = () => router.push('/pricing#hosting')
 
     return {
       t,
       goToSignUp,
       goToProjects,
-      goDemoPreviews
+      goDemoPreviews,
+      goToHosting
     }
   }
 }
