@@ -1,4 +1,17 @@
 <template>
+  <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+    <!-- Site header -->
+    <Header />
+
+    <!-- Page content -->
+    <main class="grow">
+
+      <Hero />
+      <RouterView />
+      <ChatWidget />
+
+    
   <section class="relative pt-32 pb-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
@@ -37,14 +50,54 @@
         </router-link>
       </div>
 
+      <!-- Starter paket -->
+<div class="bg-gradient-to-r from-purple-600/20 to-slate-800/50 border border-purple-500/40 rounded-3xl p-8 mb-16">
+
+  <div class="text-center mb-6">
+    <h2 class="text-3xl font-bold text-white">
+      🚀 {{ t('hosting.starter.title') }}
+    </h2>
+
+    <p class="text-slate-300 mt-3">
+      {{ t('hosting.starter.subtitle') }}
+    </p>
+  </div>
+
+</div>
+
+ <div class="max-w-2xl mx-auto">
+    <ul class="space-y-4 text-lg text-slate-200">
+      <li>✔ {{ t('hosting.starter.feature1') }}</li>
+      <li>✔ {{ t('hosting.starter.feature2') }}</li>
+      <li>✔ {{ t('hosting.starter.feature3') }}</li>
+    </ul>
+
+    <div class="mt-8 text-center">
+      <p class="text-purple-300 font-semibold text-lg">
+        {{ t('hosting.starter.note') }}
+      </p>
+    </div>
+  </div>
+
     </div>
   </section>
+
+    </main>
+    
+    <!-- Site footer -->
+    <Footer />
+  </div>
 </template>
 
 <script setup>
 import { useI18n } from 'vue-i18n'
+import Header from '../partials/Header.vue'
+import Footer from '../partials/Footer.vue'
+import ChatWidget from '../partials/ChatWidget.vue'
+import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
+const router = useRouter()
 
 const plans = [
   { key: 'basic' },

@@ -62,6 +62,14 @@
       }
     }
   },
+  "starter": {
+  "title": "Starter Package",
+  "subtitle": "The fastest and most affordable way to establish your online presence.",
+  "feature1": "Simple website creation: €0",
+  "feature2": "Managed Hosting: from €50/year",
+  "feature3": "Maintenance: from €10/month",
+  "note": "Ideal for entrepreneurs, craftsmen, and small businesses."
+},
   "cta": {
     "title": "Looking for hassle-free hosting?",
     "text": "Send us an inquiry and we will recommend the best hosting package based on your website, budget, and future growth plans.",

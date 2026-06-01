@@ -62,6 +62,14 @@
       }
     }
   },
+  "starter": {
+  "title": "Starter-Paket",
+  "subtitle": "Der schnellste und kostengünstigste Weg, Ihre Online-Präsenz zu starten.",
+  "feature1": "Einfache Website-Erstellung: 0 €",
+  "feature2": "Managed Hosting: ab 50 € pro Jahr",
+  "feature3": "Wartung: ab 10 € pro Monat",
+  "note": "Ideal für Unternehmer, Handwerker und kleine Unternehmen."
+},
   "cta": {
     "title": "Hosting ohne technische Komplikationen?",
     "text": "Senden Sie uns eine Anfrage und wir empfehlen Ihnen das optimale Hosting-Paket basierend auf Ihrer Website, Ihrem Budget und Ihren Entwicklungsplänen.",

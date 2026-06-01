@@ -63,6 +63,14 @@
       }
     }
   },
+    "starter": {
+  "title": "Starter Paket",
+  "subtitle": "Najbrži i najpovoljniji način da pokrenete svoje prisustvo na internetu.",
+  "feature1": "Izrada jednostavnog sajta: 0 €",
+  "feature2": "Managed Hosting: od 50 € godišnje",
+  "feature3": "Održavanje: od 10 € mesečno",
+  "note": "Idealno za preduzetnike, zanatlije i mala preduzeća."
+},
   "cta": {
     "title": "Želite hosting bez tehničkih komplikacija?",
     "text": "Pošaljite nam upit i predložićemo paket prema vašem sajtu, budžetu i planu razvoja.",
