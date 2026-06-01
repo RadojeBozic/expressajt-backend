@@ -13,6 +13,7 @@ import Dashboard from './pages/Dashboard.vue'
 import Projects from './pages/Projects.vue'
 import Pricing from './pages/Pricing.vue'
 import SelectTemplate from './pages/SelectTemplate.vue'
+import Hosting from './pages/Hosting.vue'
 
 // Auth
 import SignIn from './pages/SignIn.vue'
@@ -58,6 +59,7 @@ const router = createRouter({
     { path: '/contact', name: 'Contact', component: Contact },
     { path: '/changelog', name: 'Changelog', component: Changelog },
     { path: '/pricing', name: 'Pricing', component: Pricing },
+    { path: '/hosting', name: 'Hosting', component: Hosting },
 
     // 🧩 Integracije
     { path: '/integrations', name: 'Integrations', component: () => import('./pages/Integrations.vue') },

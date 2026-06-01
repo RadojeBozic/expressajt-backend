@@ -22,6 +22,54 @@
   "hosting_button": "Managed hosting i održavanje od 50 € godišnje"
 },
 
+"hosting": {
+  "title": "Managed hosting i održavanje za vaš poslovni sajt",
+  "subtitle": "Brz, bezbedan i održavan hosting uz tehničku podršku Express Web tima.",
+  "plans": {
+    "basic": {
+      "title": "Basic Hosting",
+      "price": "od 50 € godišnje",
+      "description": "Idealno za jednostavne prezentacione sajtove.",
+      "features": {
+        "1": "Cloud hosting",
+        "2": "SSL sertifikat",
+        "3": "Osnovni backup",
+        "4": "Tehnička podrška",
+        "5": "Jedan web sajt"
+      }
+    },
+    "business": {
+      "title": "Business Hosting",
+      "price": "od 100 € godišnje",
+      "description": "Za firme kojima je potrebna stabilnost i redovna podrška.",
+      "features": {
+        "1": "Sve iz Basic paketa",
+        "2": "Prioritetna podrška",
+        "3": "Praćenje rada sajta",
+        "4": "Osnovna SEO kontrola",
+        "5": "Do 5 GB prostora"
+      }
+    },
+    "premium": {
+      "title": "Premium Hosting",
+      "price": "od 200 € godišnje",
+      "description": "Za zahtevnije projekte, online prodavnice i aplikacije.",
+      "features": {
+        "1": "Sve iz Business paketa",
+        "2": "Napredni backup",
+        "3": "Monitoring",
+        "4": "Više domena",
+        "5": "Prioritetne intervencije"
+      }
+    }
+  },
+  "cta": {
+    "title": "Želite hosting bez tehničkih komplikacija?",
+    "text": "Pošaljite nam upit i predložićemo paket prema vašem sajtu, budžetu i planu razvoja.",
+    "button": "Zatraži hosting ponudu"
+  }
+},
+
   "features_global": {
     "label": "Šta Vam nudimo?",
     "title": "Izrada najnaprednijih web rešenja",

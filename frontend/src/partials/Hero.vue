@@ -88,7 +88,7 @@ export default {
     const goToSignUp = () => router.push('/signup')
     const goToProjects = () => router.push('/projects')
     const goDemoPreviews = () => router.push('/demo')
-    const goToHosting = () => router.push('/pricing#hosting')
+    const goToHosting = () => router.push('/hosting')
 
     return {
       t,

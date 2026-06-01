@@ -13,7 +13,6 @@
   "description": "Unsere Technologie ist robust, skalierbar und auf moderne Bedrohungen zugeschnitten. Wir sind der Meinung, dass Sicherheit kein Luxus sein darf – sondern Standard sein muss.",
   "button": "Jetzt starten"
 },
-
 "hero": {
   "label": "Jetzt auf Fiverr verfügbar – globales Angebot, lokaler Support.",
   "title": "Express Web – Ihr erster Schritt zur digitalen Präsenz",
@@ -22,6 +21,54 @@
   "secondary_button": "Komplette Websites ab 10 € pro Jahr",
   "hosting_button": "Managed Hosting und Wartung ab 50 €/Jahr"
 },
+"hosting": {
+  "title": "Managed Hosting und Wartung für Ihre Unternehmenswebsite",
+  "subtitle": "Schnelles, sicheres und professionell verwaltetes Hosting mit technischem Support durch das Express Web Team.",
+  "plans": {
+    "basic": {
+      "title": "Basic Hosting",
+      "price": "ab 50 € pro Jahr",
+      "description": "Ideal für einfache Unternehmens- und Präsentationswebsites.",
+      "features": {
+        "1": "Cloud-Hosting",
+        "2": "SSL-Zertifikat",
+        "3": "Grundlegende Backups",
+        "4": "Technischer Support",
+        "5": "Eine Website inklusive"
+      }
+    },
+    "business": {
+      "title": "Business Hosting",
+      "price": "ab 100 € pro Jahr",
+      "description": "Für Unternehmen, die Stabilität und regelmäßigen Support benötigen.",
+      "features": {
+        "1": "Alles aus dem Basic-Paket",
+        "2": "Priorisierter Support",
+        "3": "Website-Monitoring",
+        "4": "Grundlegende SEO-Kontrolle",
+        "5": "Bis zu 5 GB Speicherplatz"
+      }
+    },
+    "premium": {
+      "title": "Premium Hosting",
+      "price": "ab 200 € pro Jahr",
+      "description": "Ideal für anspruchsvolle Projekte, Online-Shops und Webanwendungen.",
+      "features": {
+        "1": "Alles aus dem Business-Paket",
+        "2": "Erweiterte Backups",
+        "3": "24/7 Monitoring",
+        "4": "Mehrere Domains",
+        "5": "Priorisierte Eingriffe"
+      }
+    }
+  },
+  "cta": {
+    "title": "Hosting ohne technische Komplikationen?",
+    "text": "Senden Sie uns eine Anfrage und wir empfehlen Ihnen das optimale Hosting-Paket basierend auf Ihrer Website, Ihrem Budget und Ihren Entwicklungsplänen.",
+    "button": "Hosting-Angebot anfordern"
+  }
+},
+
 "features_global": {
   "label": "Was bieten wir an?",
   "title": "Entwicklung fortschrittlicher Weblösungen",

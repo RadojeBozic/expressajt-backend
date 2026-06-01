@@ -21,6 +21,54 @@
   "secondary_button": "Complete sites from €10 per year",
   "hosting_button": "Managed hosting and maintenance from €50/year"
 },
+"hosting": {
+  "title": "Managed Hosting and Maintenance for Your Business Website",
+  "subtitle": "Fast, secure, and professionally maintained hosting with technical support from the Express Web team.",
+  "plans": {
+    "basic": {
+      "title": "Basic Hosting",
+      "price": "from €50/year",
+      "description": "Perfect for simple business presentation websites.",
+      "features": {
+        "1": "Cloud hosting",
+        "2": "SSL certificate",
+        "3": "Basic backups",
+        "4": "Technical support",
+        "5": "One website included"
+      }
+    },
+    "business": {
+      "title": "Business Hosting",
+      "price": "from €100/year",
+      "description": "Designed for companies that require stability and regular support.",
+      "features": {
+        "1": "Everything in Basic",
+        "2": "Priority support",
+        "3": "Website monitoring",
+        "4": "Basic SEO checks",
+        "5": "Up to 5 GB storage"
+      }
+    },
+    "premium": {
+      "title": "Premium Hosting",
+      "price": "from €200/year",
+      "description": "Ideal for demanding projects, online stores, and web applications.",
+      "features": {
+        "1": "Everything in Business",
+        "2": "Advanced backups",
+        "3": "24/7 monitoring",
+        "4": "Multiple domains",
+        "5": "Priority interventions"
+      }
+    }
+  },
+  "cta": {
+    "title": "Looking for hassle-free hosting?",
+    "text": "Send us an inquiry and we will recommend the best hosting package based on your website, budget, and future growth plans.",
+    "button": "Request Hosting Offer"
+  }
+},
+
   "features_global": {
     "label": "What do we offer?",
     "title": "Development of advanced web solutions",
