@@ -103,13 +103,6 @@ import ChatWidget from '../partials/ChatWidget.vue'
 import { useRouter } from 'vue-router'
 import Particles from '../partials/Particles.vue'
 
-export default {
-  name: 'Hosting',
-  components: {
-    Particles
-  }
-}
-
 const { t } = useI18n()
 const router = useRouter()
 
