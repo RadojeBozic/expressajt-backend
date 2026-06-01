@@ -13,6 +13,8 @@
 
     
   <section class="relative pt-32 pb-20">
+     <!-- Particles animation -->
+      <Particles class="absolute inset-0 -z-10" />
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
       <div class="max-w-3xl mx-auto text-center mb-14">
@@ -99,9 +101,18 @@ import Header from '../partials/Header.vue'
 import Footer from '../partials/Footer.vue'
 import ChatWidget from '../partials/ChatWidget.vue'
 import { useRouter } from 'vue-router'
+import Particles from '../partials/Particles.vue'
+
+export default {
+  name: 'Hosting',
+  components: {
+    Particles
+  }
+}
 
 const { t } = useI18n()
 const router = useRouter()
+
 
 const plans = [
   { key: 'basic' },
