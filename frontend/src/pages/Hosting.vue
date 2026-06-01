@@ -63,9 +63,7 @@
     </p>
   </div>
 
-</div>
-
- <div class="max-w-2xl mx-auto">
+  <div class="max-w-2xl mx-auto">
     <ul class="space-y-4 text-lg text-slate-200">
       <li>✔ {{ t('hosting.starter.feature1') }}</li>
       <li>✔ {{ t('hosting.starter.feature2') }}</li>
@@ -78,6 +76,10 @@
       </p>
     </div>
   </div>
+
+</div>
+
+ 
 
     </div>
   </section>
