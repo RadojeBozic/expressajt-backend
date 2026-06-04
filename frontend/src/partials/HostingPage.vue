@@ -45,16 +45,18 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
+
+        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
           <img
             src="../images/glow-bottom.svg"
             class="max-w-none"
-            width="146"
-            height="74"
+            width="346"
+            height="174"
             alt="Hero Illustration"
           />
         </div>
+      </div>
+      
 
       <!-- Starter package -->
       <div class="bg-gradient-to-r from-purple-600/20 to-slate-800/50 border border-purple-500/40 rounded-3xl p-8 mb-16">
@@ -101,8 +103,8 @@
           <img
             src="../images/glow-bottom.svg"
             class="max-w-none"
-            width="146"
-            height="74"
+            width="346"
+            height="174"
             alt="Hero Illustration"
           />
         </div>
