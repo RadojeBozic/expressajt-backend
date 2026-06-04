@@ -46,15 +46,7 @@
           </ul>
         </div>
 
-        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-          <img
-            src="../images/glow-bottom.svg"
-            class="max-w-none"
-            width="346"
-            height="174"
-            alt="Hero Illustration"
-          />
-        </div>
+        
       </div>
       
 
