@@ -13,14 +13,20 @@
   "description": "Unsere Technologie ist robust, skalierbar und auf moderne Bedrohungen zugeschnitten. Wir sind der Meinung, dass Sicherheit kein Luxus sein darf – sondern Standard sein muss.",
   "button": "Jetzt starten"
 },
-"hero": {
-  "label": "Jetzt auf Fiverr verfügbar – globales Angebot, lokaler Support.",
-  "title": "Express Web – Ihr erster Schritt zur digitalen Präsenz",
-  "descriptions": "Erstellen Sie eine moderne, schnelle und optimierte Website ohne Komplikationen. Ideal für kleine Unternehmen, Unternehmer und Vereine.",
-  "primary_button": "Express Mini-Website in 5 Minuten – kostenlos",
-  "secondary_button": "Komplette Websites ab 10 € pro Jahr",
-  "hosting_button": "Managed Hosting und Wartung ab 50 €/Jahr"
-},
+
+  "hero": {
+    "label": "Websites, Online-Shops und Geschäftsanwendungen",
+    "title": "Digitale Lösungen, die Ihr Unternehmen präsentieren, verkaufen und weiterentwickeln",
+    "description": "Wir entwickeln moderne und zuverlässige Websites, Online-Shops und Anwendungen, die auf Ihre Geschäftsziele zugeschnitten sind – von der ersten Idee bis zur Veröffentlichung, Wartung und Weiterentwicklung.",
+    "primary_button": "Kostenlose Einschätzung anfordern",
+    "secondary_button": "Unsere Projekte ansehen",
+    "benefits": [
+      "Für alle Geräte optimiert",
+      "SEO und Analyse von Anfang an",
+      "Hosting, Support und Wartung"
+    ],
+    "note": "Klare Vereinbarungen, transparente Kosten und eine Lösung, die mit Ihrem Unternehmen wachsen kann."
+  },
 "hosting": {
   "title": "Managed Hosting und Wartung für Ihre Unternehmenswebsite",
   "subtitle": "Schnelles, sicheres und professionell verwaltetes Hosting mit technischem Support durch das Express Web Team.",

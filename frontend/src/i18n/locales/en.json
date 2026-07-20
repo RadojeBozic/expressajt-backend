@@ -1,5 +1,5 @@
- {
-"welcome": "Welcome",
+{
+  "welcome": "Welcome",
   "tagline": "The sky is the limit. Welcome to the world of positive change.",
   "cta": {
     "label": "Featured Services",
@@ -13,70 +13,19 @@
     "description": "Our technology is robust, scalable, and tailored to modern threats. We believe that security should not be a luxury – it should be a standard.",
     "button": "Get Started"
   },
- "hero": {
-  "label": "Now available on Fiverr – global offer, local support.",
-  "title": "Express Web – your first step towards digital presence",
-  "descriptions": "Create a modern, fast, and optimized website without complications. Ideal for small businesses, entrepreneurs, and associations.",
-  "primary_button": "Express Mini site in 5 minutes – free",
-  "secondary_button": "Complete sites from €10 per year",
-  "hosting_button": "Managed hosting and maintenance from €50/year"
-},
-"hosting": {
-  "title": "Managed Hosting and Maintenance for Your Business Website",
-  "subtitle": "Fast, secure, and professionally maintained hosting with technical support from the Express Web team.",
-  "plans": {
-    "basic": {
-      "title": "Basic Hosting",
-      "price": "from €50/year",
-      "description": "Perfect for simple business presentation websites.",
-      "features": {
-        "1": "Cloud hosting",
-        "2": "SSL certificate",
-        "3": "Basic backups",
-        "4": "Technical support",
-        "5": "One website included"
-      }
-    },
-    "business": {
-      "title": "Business Hosting",
-      "price": "from €100/year",
-      "description": "Designed for companies that require stability and regular support.",
-      "features": {
-        "1": "Everything in Basic",
-        "2": "Priority support",
-        "3": "Website monitoring",
-        "4": "Basic SEO checks",
-        "5": "Up to 5 GB storage"
-      }
-    },
-    "premium": {
-      "title": "Premium Hosting",
-      "price": "from €200/year",
-      "description": "Ideal for demanding projects, online stores, and web applications.",
-      "features": {
-        "1": "Everything in Business",
-        "2": "Advanced backups",
-        "3": "24/7 monitoring",
-        "4": "Multiple domains",
-        "5": "Priority interventions"
-      }
-    }
+  "hero": {
+    "label": "Websites, online stores and business applications",
+    "title": "Digital solutions that present, sell and improve your business",
+    "description": "We build modern and reliable websites, online stores and applications tailored to your business goals — from the first idea to launch, maintenance and continued development.",
+    "primary_button": "Request a free assessment",
+    "secondary_button": "View our projects",
+    "benefits": [
+      "Optimised for every device",
+      "SEO and analytics from day one",
+      "Hosting, support and maintenance"
+    ],
+    "note": "Clear agreements, transparent costs and a solution designed to grow with your business."
   },
-  "starter": {
-  "title": "Starter Package",
-  "subtitle": "The fastest and most affordable way to establish your online presence.",
-  "feature1": "Simple website creation: €0",
-  "feature2": "Managed Hosting: from €50/year",
-  "feature3": "Maintenance: from €10/month",
-  "note": "Ideal for entrepreneurs, craftsmen, and small businesses."
-},
-  "cta": {
-    "title": "Looking for hassle-free hosting?",
-    "text": "Send us an inquiry and we will recommend the best hosting package based on your website, budget, and future growth plans.",
-    "button": "Request Hosting Offer"
-  }
-},
-
   "features_global": {
     "label": "What do we offer?",
     "title": "Development of advanced web solutions",
@@ -92,8 +41,8 @@
     "description": "Enhance your business with unique digital solutions. It’s important who you are – but also how others see and experience you.",
     "box1": {
       "title": "Demo – Online Store",
-      "text": "Agro-BiM Shop is much more than a typical online store – it’s a complete digital platform for selling agricultural products, with business modules and logic worthy of a serious company or eco-bio cooperative. It builds trust among producers, distributors, and buyers. Rich in features and adaptable to any product category.",
-      "button": "Visit Agro-BiM Shop"
+      "text": "Agro Shop is much more than a typical online store – it’s a complete digital platform for selling agricultural products, with business modules and logic worthy of a serious company or eco-bio cooperative. It builds trust among producers, distributors, and buyers. Rich in features and adaptable to any product category.",
+      "button": "Visit Agro Shop"
     },
     "box2": {
       "title": "Digital Control",
@@ -130,389 +79,389 @@
       }
     }
   },
-
   "features03": {
-  "title": "Responsiveness",
-  "description": "Our applications are 100% responsive and optimized for mobile phones, tablets, and desktops. We provide a seamless experience across all screen sizes."
-},
-"features04": {
-  "title": "Speed and Flexibility",
-  "description": "Different solutions come with different delivery times – from 10 minutes to a few weeks. Our platform allows rapid adaptation and implementation of new features, meaning your application evolves with your business.",
-  "groups": [
-    {
-      "title": "Fastest Solutions – from 10 minutes to 1 day",
-      "features": [
-        {
-          "title": "Express FREE Website",
-          "description": "Free website in 5–10 minutes – simple, fast, no coding. Suitable for personal projects, small business presentations, and more."
-        },
-        {
-          "title": "Express PRO Website (from €10/year)",
-          "description": "Advanced presentation with extra sections, PDF, map, and contact form."
-        },
-        {
-          "title": "Express W3 Website (from €199/year)",
-          "description": "Unique business presentation in one day – includes hosting and domain."
-        }
-      ]
-    },
-    {
-      "title": "Express Solutions – up to 7 days",
-      "features": [
-        {
-          "title": "Express CRUIP Website",
-          "description": "Modern presentations using Cruip UI design and effects. Delivery time: 4–5 days."
-        },
-        {
-          "title": "Express Original Website",
-          "description": "Fully custom website – built from scratch, unique and exclusive. Delivery: 5–7 days."
-        },
-        {
-          "title": "Express Basic Shop",
-          "description": "Online store with essential features – cart, checkout, SEO. Delivery: 5–7 days."
-        }
-      ]
-    },
-    {
-      "title": "Mega Solutions – up to 2 weeks",
-      "features": [
-        {
-          "title": "Express UNI Shop",
-          "description": "Multipurpose online store with filters, partners, dashboard. Delivery time: 10–14 days."
-        },
-        {
-          "title": "Domain & Hosting Service",
-          "description": "Assistance with choosing and purchasing domain/hosting – with support and commission. Setup time: 1–2 days."
-        },
-        {
-          "title": "Website Maintenance",
-          "description": "Assistance with edits, SEO, security, and backups. Available monthly or on-demand. Timeframe: by agreement."
-        }
-      ]
-    }
-  ]
-},
-"features05": {
-  "title": "What sets us apart?",
-  "description": "We use cutting-edge technologies and tools for app development. Our platform is based on Laravel, Livewire, and Bootstrap, enabling fast and efficient web solution creation.",
-  "description01": "Modern templates tailored to your business. We use Cruip design and adapt each project specifically to your needs.",
-  "description02": "Modular architecture – scale when you want. Add or remove features without needing a new system.",
-  "description03": "Fully localized solution. Support for Serbian language, dinar-based pricing, and local regulations.",
-  "description04": "Transparent pricing – no hidden costs. You pay only for what you use, with no surprises or limits.",
-  "description05": "Backend code access and integrations. Advanced users can connect their ERP, CRM, and other systems.",
-  "description06": "Expert support from Serbia. Our local team understands your market and your needs."
-},
-"pricing": {
-  "label": "Plans and Pricing",
-  "title": "Prices are indicative and may be adjusted.",
-  "description": "Our approach allows full customization for each client. Choose the plan that suits you and grow your business with our support.",
-  "toggle": {
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "pay yearly": "Pay yearly"
+    "title": "Responsiveness",
+    "description": "Our applications are 100% responsive and optimized for mobile phones, tablets, and desktops. We provide a seamless experience across all screen sizes."
   },
-  "plans": {
-    "pro": {
-      "title": "Plus",
-      "description": "Website presentations.",
-      "mo": "mo",
-      "label": "Website presentations.",
-      "get_started": "Get started",
-      "unlimited": "Unlimited"
-    },
-    "team": {
-      "title": "Pro",
-      "description": "Online store – basic.",
-      "mo": "mo",
-      "label": "Online store – basic.",
-      "get_started": "Get started",
-      "unlimited": "Unlimited"
-    },
-    "enterprise": {
-      "title": "Advanced",
-      "description": "Online store – advanced.",
-      "mo": "mo",
-      "label": "Online store – advanced.",
-      "get_started": "Get started",
-      "unlimited": "Unlimited"
-    },
-    "usage": "Usage",
-    "social": "HTML pages",
-    "custom": "CSS styles",
-    "unlimited": "Unlimited",
-    "limited": "Limited",
-    "use_role": "Bootstrap advanced styling",
-    "external": "JavaScript",
-    "features": "Advanced",
-    "customs": "React/Vue/Angular",
-    "advance": "Effects/Animations",
-    "extra": "Logo design",
-    "ad_roles": "Photo editing",
-    "deploy": "Responsiveness",
-    "enterprises": "Hosting & Domain",
-    "spec": "Available upon request",
-    "support": "Additional",
-    "premium_supp": "Maintenance"
-  }
-},
-"testimonials": {
-  "items": [
-    {
-      "quote": "At first, I was skeptical about this platform, but results came quickly. This system changed how I do business. Now I can focus on growth instead of administration.",
-      "name": "Miroslav Božić",
-      "role": "Founder of Agro-BiM"
-    },
-    {
-      "quote": "This system helped me organize my time and resources better. Now I can focus on what really matters. The Express web agency is professional and efficient.",
-      "name": "Bojana Popić",
-      "role": "Founder of Agro-BiM"
-    },
-    {
-      "quote": "Express web transformed our online presence. Their team is extremely professional and dedicated. All our requirements were met on time and with high quality.",
-      "name": "Zoran Stojanović",
-      "role": "Metox LLC"
-    }
-  ]
-},
-"footer": {
-  "cookiePolicy": "Cookie Policy",
-  "copyright": "All rights reserved.",
-  "products": "Products",
-  "company": "Company",
-  "resources": "Resources",
-  "legals": "Legal",
-  "legal": {
-    "name": "EXPRESS WEB Beograd-Palilula",
-    "mb": "Company ID: 68170168",
-    "pib": "VAT ID: 115191597",
-    "account": "Account:",
-    "reports": "Financial Reports"
+  "features04": {
+    "title": "Speed and Flexibility",
+    "description": "Different solutions come with different delivery times – from 10 minutes to a few weeks. Our platform allows rapid adaptation and implementation of new features, meaning your application evolves with your business.",
+    "groups": [
+      {
+        "title": "Fastest Solutions – from 10 minutes to 1 day",
+        "features": [
+          {
+            "title": "Express FREE Website",
+            "description": "Free website in 5–10 minutes – simple, fast, no coding. Suitable for personal projects, small business presentations, and more."
+          },
+          {
+            "title": "Express PRO Website (from €10/year)",
+            "description": "Advanced presentation with extra sections, PDF, map, and contact form."
+          },
+          {
+            "title": "Express W3 Website (from €199/year)",
+            "description": "Unique business presentation in one day – includes hosting and domain."
+          }
+        ]
+      },
+      {
+        "title": "Express Solutions – up to 7 days",
+        "features": [
+          {
+            "title": "Express CRUIP Website",
+            "description": "Modern presentations using Cruip UI design and effects. Delivery time: 4–5 days."
+          },
+          {
+            "title": "Express Original Website",
+            "description": "Fully custom website – built from scratch, unique and exclusive. Delivery: 5–7 days."
+          },
+          {
+            "title": "Express Basic Shop",
+            "description": "Online store with essential features – cart, checkout, SEO. Delivery: 5–7 days."
+          }
+        ]
+      },
+      {
+        "title": "Mega Solutions – up to 2 weeks",
+        "features": [
+          {
+            "title": "Express UNI Shop",
+            "description": "Multipurpose online store with filters, partners, dashboard. Delivery time: 10–14 days."
+          },
+          {
+            "title": "Domain & Hosting Service",
+            "description": "Assistance with choosing and purchasing domain/hosting – with support and commission. Setup time: 1–2 days."
+          },
+          {
+            "title": "Website Maintenance",
+            "description": "Assistance with edits, SEO, security, and backups. Available monthly or on-demand. Timeframe: by agreement."
+          }
+        ]
+      }
+    ]
   },
-  "links": {
-    "features": "Features",
-    "integrations": "Integrations",
-    "pricing": "Pricing & Plans",
-    "changelog": "Changelog",
-    "method": "Our Method",
-    "about": "About Us",
-    "diversity": "Diversity & Inclusion",
-    "blog": "Blog",
-    "careers": "Careers",
-    "finance": "Financial Reports",
-    "community": "Community",
-    "terms": "Terms of Service",
-    "vulnerability": "Report Vulnerability",
-    "refund": "Refund Policy",
-    "terms_conditions": "Terms of Use",
-    "privacy": "Privacy Policy",
-    "brandkit": "Brand Kit"
-  }
-},
-"header": {
-  "menu": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "faq": "FAQ",
-    "projects": "Projects",
-    "pricing": "Pricing",
-    "integrations": "Integrations",
-    "customers": "Customers",
-    "changelog": "Changelog",
-    "signin": "Sign in",
-    "signup": "Register",
-    "toggle": "Menu",
-    "account": "My account",
-    "admin": "Admin panel",
-    "logout": "Log out",
-    "language_sr": "Serbian",
-    "language_en": "English",
-    "cart": "Cart"
-  }
-}
-,
-"auth": {
-  "sign_in_title": "Sign in to your account",
-  "email": "Email address",
-  "password": "Password",
-  "forgot": "Forgot password?",
-  "sign_in_button": "Sign In",
-  "no_account": "Don't have an account?",
-  "sign_up": "Sign up",
-  "or": "or",
-  "continue_twitter": "Continue with Twitter",
-  "continue_github": "Continue with GitHub",
-  "error": "Invalid data!",
-  "success": "Successfully signed in!",
-  "invalid_credentials": "Invalid email or password.",
-  "validation_error": "Validation error occurred."
-},
-"register": {
-  "title_register": "Create a free account",
-  "company": "Company name",
-  "fullname": "Full name",
-  "email": "Email address",
-  "password": "Password",
-  "referrer": "How did you hear about us?",
-  "message": "Enter your message",
-  "message_placeholder": "My message is...",
-  "referrer_options": {
-    "google": "Google",
-    "medium": "Medium",
-    "github": "GitHub"
+  "features05": {
+    "title": "What sets us apart?",
+    "description": "We use cutting-edge technologies and tools for app development. Our platform is based on Laravel, Livewire, and Bootstrap, enabling fast and efficient web solution creation.",
+    "description01": "Modern templates tailored to your business. We use Cruip design and adapt each project specifically to your needs.",
+    "description02": "Modular architecture – scale when you want. Add or remove features without needing a new system.",
+    "description03": "Fully localized solution. Support for Serbian language, dinar-based pricing, and local regulations.",
+    "description04": "Transparent pricing – no hidden costs. You pay only for what you use, with no surprises or limits.",
+    "description05": "Backend code access and integrations. Advanced users can connect their ERP, CRM, and other systems.",
+    "description06": "Expert support from Serbia. Our local team understands your market and your needs."
   },
-  "title": "Sign Up",
-  "button": "Register",
-  "already": "Already have an account?",
-  "signin": "Sign In",
-  "or": "or",
-  "continue_twitter": "Continue with Twitter",
-  "continue_github": "Continue with GitHub",
-  "name_business": "GBS Platform LLC",
-  "name_manager": "Marko Marković",
-  "error": "Validation error.",
-  "success": "Successfully registered! Please sign in."
-},
-"reset": {
-  "title": "Reset Password",
-  "email": "Email address",
-  "email_placeholder": "Enter your email address",
-  "button": "Send Request",
-  "error": "Validation error."
-},
-"pricing_hero": {
-  "hero": {
-    "label": "Security-focused platform",
-    "title": "Simple packages for everyone",
-    "description": "Reduce operational costs and forget slow, hard-to-maintain applications. You get great tools designed for an excellent user experience."
-  }
-},
-"gbs_services": {
-  "section_label": "Coming soon",
-  "section_title": "GBS (Global Business Systems) and Express Web",
-  "section_description": "GBS (Global Business Systems) offers a modular platform tailored for small and medium businesses, aiming to digitalize, automate, and enhance your operations.",
-
-  "items": {
-    "title1": "One-click websites – upgraded Express Web",
-    "description1": "Fast creation of business websites using templates (Laravel + Livewire + Bootstrap). Includes contact forms, galleries, maps, and FAQs.",
-
-    "title2": "MyMaXico – free online store",
-    "description2": "Completely free for 20 to 100 products, no domain or hosting fees – everything is included! Ideal for small producers, artisans, artists, and local sellers.",
-
-    "title3": "Online shops & Multi-vendor platforms – upgraded Express Shop",
-    "description3": "Functional e-commerce systems with modules for suppliers, manufacturers, and partners. SEO optimization, Stripe, PayPal, and cash-on-delivery support.",
-
-    "title4": "Advanced Web Apps, ERP & CRM solutions",
-    "description4": "Our platform shows how modern web technologies can be used to build scalable and efficient SaaS solutions. Includes ERP, CRM, and other business applications.",
-
-    "title5": "AI as a service",
-    "description5": "Automated content creation, image generation, and email campaigns using artificial intelligence. Includes chatbots, SEO analysis, and content translation.",
-
-    "title6": "Education & Support",
-    "description6": "User training via video tutorials and PDF guides. Technical support and assistance with hosting and configuration.",
-
-    "learn_more": "Learn more"
-  }
-},
-"story": {
-  "title": "Our story (so far)",
-  "paragraph1": "It all started with one laptop and a big idea. A used laptop, an old keyboard, and a strong desire to create something valuable – that was our beginning. Investing in knowledge was the biggest risk, but also the best decision we ever made.",
-  "paragraph2": "We learned from every challenge. There were no easy steps, but each problem taught us how to better understand technology, the market, and – people. We believe the best solutions are born through process, not overnight.",
-  "paragraph3": "From concept to launch – everything is built in-house. All systems, design, and backend functionalities are developed under one roof. That way we retain quality control and can respond to client needs faster.",
-  "paragraph4": "We see the big picture, but we care about every detail. From UX design to system architecture, we approach every task with attention. We're focused on user experience, security, and sustainable solutions.",
-  "paragraph5": "Express Websites is not just a team – it's your growth partner. More than just a solution, we offer dedication. When you grow – we grow together. Our vision is clear: with every project, we build lasting trust."
-},
-"hero_about": {
-  "subtitle": "Advanced solutions for digital transformation",
-  "title": "Welcome to the world of positive change"
-},
-"support_cta": {
-  "heading": "Need additional help?",
-  "button": "Contact Support Center"
-},
-"support": {
-  "title": "Support Center",
-  "subtitle": "Have a question? We’re here for you — quickly search for answers or contact us.",
-  "description": "Our team is here to help. Whether you have a question about our services or need technical assistance, feel free to reach out.",
-  "faq_title": "Frequently Asked Questions",
-  "faq": [
-    { "q": "How do I register?", "a": "Click 'Sign Up' and fill in your basic details." },
-    { "q": "How can I update my company info?", "a": "Log in and click 'Edit' in your company profile." },
-    { "q": "How to contact support?", "a": "Use the contact form or reach us directly via email." }
-  ],
-  "cta_title": "Still have questions?",
-  "cta_subtitle": "Our support team is ready to assist.",
-  "cta_button": "Contact us"
-},
-"faqs": {
-  "label": "Frequently Asked Questions",
-  "title": "Everything you need to know",
-  "questions": {
-    "q1": {
-      "title": "What is the Express web platform?",
-      "text": "Express web is a modular business platform for creating websites, online stores, and advanced design solutions."
+  "pricing": {
+    "label": "Plans and Pricing",
+    "title": "Prices are indicative and may be adjusted.",
+    "description": "Our approach allows full customization for each client. Choose the plan that suits you and grow your business with our support.",
+    "toggle": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "pay yearly": "Pay yearly"
     },
-    "q2": {
-      "title": "What are the prices and usage plans?",
-      "text": "We offer flexible pricing packages, including free options for small businesses and entrepreneurs."
-    },
-    "q3": {
-      "title": "Can I remove Express branding from the website?",
-      "text": "Yes. In the premium plan, you can remove platform branding and add your own."
-    },
-    "q4": {
-      "title": "What user data can I collect?",
-      "text": "You can collect basic information such as name, email, orders, and analytics."
-    },
-    "q5": {
-      "title": "Is there a free version?",
-      "text": "Yes, the starter plan is free and includes basic functionality."
-    },
-    "q6": {
-      "title": "Is Express web accessible for small and medium businesses?",
-      "text": "That’s exactly our mission – making digitalization accessible to everyone."
+    "plans": {
+      "pro": {
+        "title": "Plus",
+        "description": "Website presentations.",
+        "mo": "mo",
+        "label": "Website presentations.",
+        "get_started": "Get started",
+        "unlimited": "Unlimited"
+      },
+      "team": {
+        "title": "Pro",
+        "description": "Online store – basic.",
+        "mo": "mo",
+        "label": "Online store – basic.",
+        "get_started": "Get started",
+        "unlimited": "Unlimited"
+      },
+      "enterprise": {
+        "title": "Advanced",
+        "description": "Online store – advanced.",
+        "mo": "mo",
+        "label": "Online store – advanced.",
+        "get_started": "Get started",
+        "unlimited": "Unlimited"
+      },
+      "usage": "Usage",
+      "social": "HTML pages",
+      "custom": "CSS styles",
+      "unlimited": "Unlimited",
+      "limited": "Limited",
+      "use_role": "Bootstrap advanced styling",
+      "external": "JavaScript",
+      "features": "Advanced",
+      "customs": "React/Vue/Angular",
+      "advance": "Effects/Animations",
+      "extra": "Logo design",
+      "ad_roles": "Photo editing",
+      "deploy": "Responsiveness",
+      "enterprises": "Hosting & Domain",
+      "spec": "Available upon request",
+      "support": "Additional",
+      "premium_supp": "Maintenance"
     }
-  }
-},
-"contact": {
-  "title": "Contact Us",
-  "description": "Have a question, suggestion, or want to collaborate? Send us a message using this form or reach out directly via the contact info below.",
-  "form": {
-    "name": "Your name",
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "At first, I was skeptical about this platform, but results came quickly. This system changed how I do business. Now I can focus on growth instead of administration.",
+        "name": "Miroslav Božić",
+        "role": "Founder of Agro-BiM"
+      },
+      {
+        "quote": "This system helped me organize my time and resources better. Now I can focus on what really matters. The Express web agency is professional and efficient.",
+        "name": "Bojana Popić",
+        "role": "Founder of Agro-BiM"
+      },
+      {
+        "quote": "Express web transformed our online presence. Their team is extremely professional and dedicated. All our requirements were met on time and with high quality.",
+        "name": "Zoran Stojanović",
+        "role": "Metox LLC"
+      }
+    ]
+  },
+  "footer": {
+    "cookiePolicy": "Cookie Policy",
+    "copyright": "All rights reserved.",
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "legals": "Legal",
+    "legal": {
+      "name": "EXPRESS WEB Beograd-Palilula",
+      "mb": "Company ID: 68170168",
+      "pib": "VAT ID: 115191597",
+      "account": "Account:",
+      "reports": "Financial Reports"
+    },
+    "links": {
+      "features": "Features",
+      "integrations": "Integrations",
+      "pricing": "Pricing & Plans",
+      "changelog": "Changelog",
+      "method": "Our Method",
+      "about": "About Us",
+      "diversity": "Diversity & Inclusion",
+      "blog": "Blog",
+      "careers": "Careers",
+      "finance": "Financial Reports",
+      "community": "Community",
+      "terms": "Terms of Service",
+      "vulnerability": "Report Vulnerability",
+      "refund": "Refund Policy",
+      "terms_conditions": "Terms of Use",
+      "privacy": "Privacy Policy",
+      "brandkit": "Brand Kit"
+    }
+  },
+  "header": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "projects": "Projects",
+      "pricing": "Pricing",
+      "integrations": "Integrations",
+      "customers": "Customers",
+      "changelog": "Changelog",
+      "signin": "Sign in",
+      "signup": "Register",
+      "toggle": "Menu",
+      "account": "My account",
+      "admin": "Admin panel",
+      "logout": "Log out",
+      "language_sr": "Serbian",
+      "language_en": "English",
+      "cart": "Cart"
+    }
+  },
+  "auth": {
+    "sign_in_title": "Sign in to your account",
     "email": "Email address",
-    "message": "Your message",
-    "submit": "Send message",
-    "newsletter": "Subscribe to our newsletter"
+    "password": "Password",
+    "forgot": "Forgot password?",
+    "sign_in_button": "Sign In",
+    "no_account": "Don't have an account?",
+    "sign_up": "Sign up",
+    "or": "or",
+    "continue_twitter": "Continue with Twitter",
+    "continue_github": "Continue with GitHub",
+    "error": "Invalid data!",
+    "success": "Successfully signed in!",
+    "invalid_credentials": "Invalid email or password.",
+    "validation_error": "Validation error occurred."
   },
-  "info": {
-    "address_title": "Our address",
-    "address_line1": "Radoje Božić en (Entrepreneur) Computer programming EXPRESS WEB Beograd-Palilula",
-    "address_line2": "VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Beograd",
-    "email_title": "Contact email",
-    "email_user": " office",
-    "email_domain": "express-web.express",
-    "phone_title": "Phone",
-    "phone_value": "+381 61 217 90 13"
+  "register": {
+    "title_register": "Create a free account",
+    "company": "Company name",
+    "fullname": "Full name",
+    "email": "Email address",
+    "password": "Password",
+    "referrer": "How did you hear about us?",
+    "message": "Enter your message",
+    "message_placeholder": "My message is...",
+    "referrer_options": {
+      "google": "Google",
+      "medium": "Medium",
+      "github": "GitHub"
+    },
+    "title": "Sign Up",
+    "button": "Register",
+    "already": "Already have an account?",
+    "signin": "Sign In",
+    "or": "or",
+    "continue_twitter": "Continue with Twitter",
+    "continue_github": "Continue with GitHub",
+    "name_business": "GBS Platform LLC",
+    "name_manager": "Marko Marković",
+    "error": "Validation error.",
+    "success": "Successfully registered! Please sign in."
   },
-  "social": {
-    "title": "Follow us",
-    "facebook": "Facebook page",
-    "instagram": "Instagram profile"
+  "reset": {
+    "title": "Reset Password",
+    "email": "Email address",
+    "email_placeholder": "Enter your email address",
+    "button": "Send Request",
+    "error": "Validation error."
   },
-  "links": {
-    "title": "Useful Links",
-    "regulations": "Legal regulations",
-    "advertising_law": "Advertising Law",
-    "ecommerce_law": "E-commerce Law",
-    "tax_policy": "Tax Policy",
-    "education": "Education",
-    "web_history": "History of the Web",
-    "ai_history": "History of Artificial Intelligence"
+  "pricing_hero": {
+    "hero": {
+      "label": "Security-focused platform",
+      "title": "Simple packages for everyone",
+      "description": "Reduce operational costs and forget slow, hard-to-maintain applications. You get great tools designed for an excellent user experience."
+    }
   },
-  "success": "Your message was successfully sent!",
-  "error": "Something went wrong. Please try again."
-},
-"about": {
+  "gbs_services": {
+    "section_label": "Coming soon",
+    "section_title": "GBS (Global Business Systems) and Express Web",
+    "section_description": "GBS (Global Business Systems) offers a modular platform tailored for small and medium businesses, aiming to digitalize, automate, and enhance your operations.",
+    "items": {
+      "title1": "One-click websites – upgraded Express Web",
+      "description1": "Fast creation of business websites using templates (Laravel + Livewire + Bootstrap). Includes contact forms, galleries, maps, and FAQs.",
+      "title2": "MyMaXico – free online store",
+      "description2": "Completely free for 20 to 100 products, no domain or hosting fees – everything is included! Ideal for small producers, artisans, artists, and local sellers.",
+      "title3": "Online shops & Multi-vendor platforms – upgraded Express Shop",
+      "description3": "Functional e-commerce systems with modules for suppliers, manufacturers, and partners. SEO optimization, Stripe, PayPal, and cash-on-delivery support.",
+      "title4": "Advanced Web Apps, ERP & CRM solutions",
+      "description4": "Our platform shows how modern web technologies can be used to build scalable and efficient SaaS solutions. Includes ERP, CRM, and other business applications.",
+      "title5": "AI as a service",
+      "description5": "Automated content creation, image generation, and email campaigns using artificial intelligence. Includes chatbots, SEO analysis, and content translation.",
+      "title6": "Education & Support",
+      "description6": "User training via video tutorials and PDF guides. Technical support and assistance with hosting and configuration.",
+      "learn_more": "Learn more"
+    }
+  },
+  "story": {
+    "title": "Our story (so far)",
+    "paragraph1": "It all started with one laptop and a big idea. A used laptop, an old keyboard, and a strong desire to create something valuable – that was our beginning. Investing in knowledge was the biggest risk, but also the best decision we ever made.",
+    "paragraph2": "We learned from every challenge. There were no easy steps, but each problem taught us how to better understand technology, the market, and – people. We believe the best solutions are born through process, not overnight.",
+    "paragraph3": "From concept to launch – everything is built in-house. All systems, design, and backend functionalities are developed under one roof. That way we retain quality control and can respond to client needs faster.",
+    "paragraph4": "We see the big picture, but we care about every detail. From UX design to system architecture, we approach every task with attention. We're focused on user experience, security, and sustainable solutions.",
+    "paragraph5": "Express Websites is not just a team – it's your growth partner. More than just a solution, we offer dedication. When you grow – we grow together. Our vision is clear: with every project, we build lasting trust."
+  },
+  "hero_about": {
+    "subtitle": "Advanced solutions for digital transformation",
+    "title": "Welcome to the world of positive change"
+  },
+  "support_cta": {
+    "heading": "Need additional help?",
+    "button": "Contact Support Center"
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "Have a question? We’re here for you — quickly search for answers or contact us.",
+    "description": "Our team is here to help. Whether you have a question about our services or need technical assistance, feel free to reach out.",
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+      {
+        "q": "How do I register?",
+        "a": "Click 'Sign Up' and fill in your basic details."
+      },
+      {
+        "q": "How can I update my company info?",
+        "a": "Log in and click 'Edit' in your company profile."
+      },
+      {
+        "q": "How to contact support?",
+        "a": "Use the contact form or reach us directly via email."
+      }
+    ],
+    "cta_title": "Still have questions?",
+    "cta_subtitle": "Our support team is ready to assist.",
+    "cta_button": "Contact us"
+  },
+  "faqs": {
+    "label": "Frequently Asked Questions",
+    "title": "Everything you need to know",
+    "questions": {
+      "q1": {
+        "title": "What is the Express web platform?",
+        "text": "Express web is a modular business platform for creating websites, online stores, and advanced design solutions."
+      },
+      "q2": {
+        "title": "What are the prices and usage plans?",
+        "text": "We offer flexible pricing packages, including free options for small businesses and entrepreneurs."
+      },
+      "q3": {
+        "title": "Can I remove Express branding from the website?",
+        "text": "Yes. In the premium plan, you can remove platform branding and add your own."
+      },
+      "q4": {
+        "title": "What user data can I collect?",
+        "text": "You can collect basic information such as name, email, orders, and analytics."
+      },
+      "q5": {
+        "title": "Is there a free version?",
+        "text": "Yes, the starter plan is free and includes basic functionality."
+      },
+      "q6": {
+        "title": "Is Express web accessible for small and medium businesses?",
+        "text": "That’s exactly our mission – making digitalization accessible to everyone."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have a question, suggestion, or want to collaborate? Send us a message using this form or reach out directly via the contact info below.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "message": "Your message",
+      "submit": "Send message",
+      "newsletter": "Subscribe to our newsletter"
+    },
+    "info": {
+      "address_title": "Our address",
+      "address_line1": "Radoje Božić en (Entrepreneur) Computer programming EXPRESS WEB Beograd-Palilula",
+      "address_line2": "VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Beograd",
+      "email_title": "Contact email",
+      "email_user": " office",
+      "email_domain": "express-web.express",
+      "phone_title": "Phone",
+      "phone_value": "+381 61 217 90 13"
+    },
+    "social": {
+      "title": "Follow us",
+      "facebook": "Facebook page",
+      "instagram": "Instagram profile"
+    },
+    "links": {
+      "title": "Useful Links",
+      "regulations": "Legal regulations",
+      "advertising_law": "Advertising Law",
+      "ecommerce_law": "E-commerce Law",
+      "tax_policy": "Tax Policy",
+      "education": "Education",
+      "web_history": "History of the Web",
+      "ai_history": "History of Artificial Intelligence"
+    },
+    "success": "Your message was successfully sent!",
+    "error": "Something went wrong. Please try again."
+  },
+  "about": {
     "title": "About Us",
     "intro": "Express web is an agency initiative within the GBS platform, dedicated to providing fast, modern, and affordable online presence for small and medium-sized businesses.",
     "p1": "GBS (Global Business System) is a technology platform that unifies multiple independent services and applications under a modular umbrella. Express web is designed as a starting point – a practical tool for quick website creation.",
@@ -551,7 +500,6 @@
     "title": "Careers at GBS Platform and Express Web Agency",
     "intro": "Join the team developing modern business solutions. The first 6 months are on a freelance contract basis, 100% remote (work from home).",
     "cta": "Send your application via the contact form",
-
     "p1": {
       "title": "Frontend Developer (Junior)",
       "text": "Basic knowledge of HTML, CSS, JavaScript, Bootstrap. Preferred: Vue or React. Team collaboration, working on existing components, and learning through practice.",
@@ -629,7 +577,7 @@
       "i3": "Introduced new user roles in the admin panel"
     }
   },
-   "features": {
+  "features": {
     "title": "Express Web – Offer and Capabilities",
     "intro": "Express Web is a modular platform for creating websites, presentations, and online stores, with additional options and services as needed.",
     "f1": {
@@ -782,7 +730,7 @@
       "text": "These terms take effect from the date of publication on our site. Last updated: July 2025."
     }
   },
-   "vuln": {
+  "vuln": {
     "title": "Report a Vulnerability",
     "intro": "If you've discovered a security issue on the Express Web platform, please report it using this form. You're helping us maintain a safe system for all users.",
     "name": "Full Name",
@@ -1047,15 +995,12 @@
       "facebook": "https://facebook.com/profile",
       "instagram": "https://instagram.com/profile",
       "logo": "Logo (optional)",
-
       "heroImage": "Main image (background)",
       "heroTitle": "Title (e.g. Quality from Tradition)",
       "heroSubtitle": "Short subtitle (max 250 characters)",
-
       "aboutImage": "Company or team photo",
       "aboutTitle": "Section title (e.g. Who We Are)",
       "aboutText": "Detailed description (up to 1000 characters)",
-
       "offerTitle": "Section title (e.g. Our Services)",
       "offerItemTitle": "e.g. Web Design",
       "addOffer": "➕ Add item",
@@ -1140,10 +1085,10 @@
     },
     "success": "✅ Presentation saved successfully. Redirecting...",
     "errors": {
-        "load": "⚠️ Error loading data.",
-        "save": "⚠️ Error saving data.",
-        "image": "⚠️ Image in item {{index}} is invalid or too large."
-  }
+      "load": "⚠️ Error loading data.",
+      "save": "⚠️ Error saving data.",
+      "image": "⚠️ Image in item {{index}} is invalid or too large."
+    }
   },
   "projects": {
     "title": "Our Express Projects",
@@ -1287,37 +1232,37 @@
       "ctaText": "Send us a description and get the first draft within 24 hours.",
       "ctaButton": "Send request"
     },
-    
-    "domain": {
-      "badge": "Domain & Hosting Services",
-      "title": "Domain and Hosting Assistance — Fast and Stress-Free",
-      "subtitle": "Not sure where to buy a domain? What hosting to choose? We’re here to help with top partners and honest recommendations.",
-      "cta": "Request domain/hosting recommendation →",
-      "points": {
-        "1": {
-          "title": "Domain selection help:",
-          "text": "We'll check the availability of .rs, .com, .net and other extensions — and suggest the best options."
-        },
-        "2": {
-          "title": "Domain registration via us:",
-          "text": "Our partners provide better prices and centralized domain management."
-        },
-        "3": {
-          "title": "Hosting recommendations:",
-          "text": "Shared, cloud, or VPS — depending on your project, we’ll suggest the best and handle setup."
-        },
-        "4": {
-          "title": "Partnership model:",
-          "text": "If you buy through us, we earn commission — but you get support, speed, and security."
-        },
-        "5": {
-          "title": "SSL certificate and security:",
-          "text": "We configure HTTPS and automatic backups — your site runs safely 24/7."
+    "service": {
+      "domain": {
+        "badge": "Domain & Hosting Services",
+        "title": "Domain and Hosting Assistance — Fast and Stress-Free",
+        "subtitle": "Not sure where to buy a domain? What hosting to choose? We’re here to help with top partners and honest recommendations.",
+        "cta": "Request domain/hosting recommendation →",
+        "points": {
+          "1": {
+            "title": "Domain selection help:",
+            "text": "We'll check the availability of .rs, .com, .net and other extensions — and suggest the best options."
+          },
+          "2": {
+            "title": "Domain registration via us:",
+            "text": "Our partners provide better prices and centralized domain management."
+          },
+          "3": {
+            "title": "Hosting recommendations:",
+            "text": "Shared, cloud, or VPS — depending on your project, we’ll suggest the best and handle setup."
+          },
+          "4": {
+            "title": "Partnership model:",
+            "text": "If you buy through us, we earn commission — but you get support, speed, and security."
+          },
+          "5": {
+            "title": "SSL certificate and security:",
+            "text": "We configure HTTPS and automatic backups — your site runs safely 24/7."
+          }
         }
       }
-    
-  },
-  "maintenance": {
+    },
+    "maintenance": {
       "badge": "Website Maintenance",
       "title": "Professional Support — Without Stress",
       "subtitle": "Content updates, security, performance and tech help — fast, reliable and always available.",
@@ -1488,72 +1433,71 @@
       }
     },
     "w3site": {
-    "badge": "🎨 W3Schools Express design",
-    "title": "Unique website in 2 - 3 days with W3Schools",
-    "sectionTitle": "Custom website delivered in just over 24 hours",
-    "points": {
-      "1": "⚡ Fast delivery and unique content based on your request.",
-      "2": "🎯 W3Schools templates customized – visually appealing, SEO friendly, responsive.",
-      "3": "🧩 Optional add-ons – contact forms, galleries, testimonials, Google Maps.",
-      "4": "💡 Great option for artisans, micro-entrepreneurs, and hobbyists.",
-      "5": "🛠 Fixed price, from €199 – all included. Payment after delivery."
-    },
-    "ctaTitle": "Ready for a unique website?",
-    "ctaText": "Send us your content and wishes – we’ll handle everything else. No delays, no hassle.",
-    "ctaButton": "Contact us now"
-  },
-  "seo": {
-      "badge": "\ud83d\udd0d Express SEO Optimization",
-      "title": "Google visibility in just a few days",
-      "sectionTitle": "Tailored SEO services \u2013 fast, accurate, and effective",
+      "badge": "🎨 W3Schools Express design",
+      "title": "Unique website in 2 - 3 days with W3Schools",
+      "sectionTitle": "Custom website delivered in just over 24 hours",
       "points": {
-        "1": "\ud83d\udcc8 Website optimization for higher ranking and better visibility.",
-        "2": "\ud83d\udd17 Link building and on-page SEO configuration.",
-        "3": "\ud83e\udde0 Competitor analysis and keyword selection.",
-        "4": "\ud83d\udee0 Technical SEO \u2013 speed, mobile readiness, indexing.",
-        "5": "\ud83d\udcca Progress tracking and reporting \u2013 monthly performance reports."
+        "1": "⚡ Fast delivery and unique content based on your request.",
+        "2": "🎯 W3Schools templates customized – visually appealing, SEO friendly, responsive.",
+        "3": "🧩 Optional add-ons – contact forms, galleries, testimonials, Google Maps.",
+        "4": "💡 Great option for artisans, micro-entrepreneurs, and hobbyists.",
+        "5": "🛠 Fixed price, from €199 – all included. Payment after delivery."
+      },
+      "ctaTitle": "Ready for a unique website?",
+      "ctaText": "Send us your content and wishes – we’ll handle everything else. No delays, no hassle.",
+      "ctaButton": "Contact us now"
+    },
+    "seo": {
+      "badge": "🔍 Express SEO Optimization",
+      "title": "Google visibility in just a few days",
+      "sectionTitle": "Tailored SEO services – fast, accurate, and effective",
+      "points": {
+        "1": "📈 Website optimization for higher ranking and better visibility.",
+        "2": "🔗 Link building and on-page SEO configuration.",
+        "3": "🧠 Competitor analysis and keyword selection.",
+        "4": "🛠 Technical SEO – speed, mobile readiness, indexing.",
+        "5": "📊 Progress tracking and reporting – monthly performance reports."
       },
       "ctaTitle": "Ready to rank higher on search engines?",
       "ctaText": "Contact us and discover how to reach the top of Google.",
       "ctaButton": "Request SEO quote"
     },
     "marketing": {
-      "badge": "\ud83d\udce2 Express Digital Marketing",
-      "title": "Promotion that delivers \u2013 fast and effective",
+      "badge": "📢 Express Digital Marketing",
+      "title": "Promotion that delivers – fast and effective",
       "sectionTitle": "Complete support for your online presence",
       "points": {
-        "1": "\ud83c\udfaf Targeting the right audience via Google and Facebook Ads.",
-        "2": "\ud83d\udcf1 Social media content creation and account management.",
-        "3": "\u270d\ufe0f Writing promotional and SEO-optimized blog posts.",
-        "4": "\ud83d\udcca Campaign analytics, conversions, and performance reports.",
-        "5": "\ud83d\udcbc Ideal for small businesses, startups, and local entrepreneurs."
+        "1": "🎯 Targeting the right audience via Google and Facebook Ads.",
+        "2": "📱 Social media content creation and account management.",
+        "3": "✍️ Writing promotional and SEO-optimized blog posts.",
+        "4": "📊 Campaign analytics, conversions, and performance reports.",
+        "5": "💼 Ideal for small businesses, startups, and local entrepreneurs."
       },
       "ctaTitle": "Ready to go digital?",
       "ctaText": "Contact us and discover how to boost your brand visibility.",
       "ctaButton": "Request marketing offer"
     },
     "translations": {
-      "badge": "\ud83d\udde3\ufe0f Express Translation Services",
+      "badge": "🗣️ Express Translation Services",
       "title": "Fast and reliable translations for every need",
       "sectionTitle": "Professional translations in 20+ languages",
       "points": {
-        "1": "\ud83c\udf0d Translation of documents, websites, and marketing materials.",
-        "2": "\ud83d\udc68\u200d\u2696\ufe0f Translation of business, technical, and promotional texts.",
-        "3": "\ud83d\udd04 Software and app localization, including technical manuals.",
-        "4": "\ud83e\uddfe Delivery in PDF/Word format upon request.",
-        "5": "\u23f1\ufe0f Turnaround time 24\u201372h, with urgent options available."
+        "1": "🌍 Translation of documents, websites, and marketing materials.",
+        "2": "👨‍⚖️ Translation of business, technical, and promotional texts.",
+        "3": "🔄 Software and app localization, including technical manuals.",
+        "4": "🧾 Delivery in PDF/Word format upon request.",
+        "5": "⏱️ Turnaround time 24–72h, with urgent options available."
       },
       "ctaTitle": "Need a professional translation?",
-      "ctaText": "Send us the document or link \u2013 we\u2019ll send you the translation quickly.",
+      "ctaText": "Send us the document or link – we’ll send you the translation quickly.",
       "ctaButton": "Request translation quote"
     }
-    },
-    "landing": {
+  },
+  "landing": {
     "freesite": {
       "badge": "Create your site completely free",
       "title": "One-click website — free online presentation",
       "subtitle": "Don’t know where to start? No worries — your site is ready in 5 minutes.",
-
       "points": {
         "1": {
           "title": "Quick launch.",
@@ -1576,7 +1520,6 @@
           "text": "Get your subdomain your-business.freesite.rs — easy to share."
         }
       },
-
       "faq": {
         "title": "All you need to know",
         "items": {
@@ -1606,7 +1549,6 @@
           }
         }
       },
-
       "cta": {
         "title": "No coding. No payment. No hassle.",
         "text": "Click below and start your free business or hobby site.",
@@ -1617,15 +1559,15 @@
   },
   "shop": {
     "hero": {
-      "badge": "\u2714\ufe0f We build both \u2013 tailored to your needs",
+      "badge": "✔️ We build both – tailored to your needs",
       "title": "Powerful online store or multi-vendor platform?"
     },
     "section": {
-      "title": "If you want to launch a marketplace like Amazon \u2013 we have the solution",
+      "title": "If you want to launch a marketplace like Amazon – we have the solution",
       "paragraphs": {
         "1": {
           "title": "Custom online store",
-          "text": "Launch your own e-commerce store without extra tools. Everything included \u2013 from products, cart, ordering, to email notifications."
+          "text": "Launch your own e-commerce store without extra tools. Everything included – from products, cart, ordering, to email notifications."
         },
         "2": {
           "title": "Multi-vendor platforms for larger markets",
@@ -1637,7 +1579,7 @@
         },
         "4": {
           "title": "Direct and secure payments",
-          "text": "Stripe and other payment systems allow secure direct payments \u2013 no commission."
+          "text": "Stripe and other payment systems allow secure direct payments – no commission."
         },
         "5": {
           "title": "Advanced analytics and control",
@@ -1650,65 +1592,65 @@
       }
     },
     "faq": {
-  "title": "Frequently Asked Questions",
-  "subtitle": "Everything you need to know",
-  "items": {
-    "1": {
-      "q": "Can I add products myself?",
-      "a": "Yes. You get your own panel to add, edit, and remove products, and track orders."
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know",
+      "items": {
+        "1": {
+          "q": "Can I add products myself?",
+          "a": "Yes. You get your own panel to add, edit, and remove products, and track orders."
+        },
+        "2": {
+          "q": "Do you support multiple vendors?",
+          "a": "Yes, the system allows unlimited vendors with separate access and permissions."
+        },
+        "3": {
+          "q": "How are payments processed?",
+          "a": "Payments go directly to vendors via Stripe or other connected methods."
+        },
+        "4": {
+          "q": "Can I use multiple languages and currencies?",
+          "a": "Of course. The platform supports multilingual content and currency conversion."
+        },
+        "5": {
+          "q": "How long does setup take?",
+          "a": "Single store: 10–15 days. Multi-vendor: up to 20 days including testing."
+        },
+        "6": {
+          "q": "Is the design customizable?",
+          "a": "Yes. Choose from templates or apply your own colors, fonts, and branding."
+        },
+        "7": {
+          "q": "Can I create discounts and promotions?",
+          "a": "Yes. Coupon codes, campaigns, featured products and seasonal offers are supported."
+        },
+        "8": {
+          "q": "Is there a mobile app?",
+          "a": "We can build a native Android/iOS app or provide a responsive PWA version."
+        },
+        "9": {
+          "q": "Who owns the data?",
+          "a": "You do. You have full access and can export your data anytime."
+        },
+        "10": {
+          "q": "Can I connect social media?",
+          "a": "Yes. Facebook Shop, Instagram catalog, product sharing, and more integrations available."
+        },
+        "11": {
+          "q": "Do you support B2B sales?",
+          "a": "Yes. Our platform can function as a wholesale system with advanced features."
+        },
+        "12": {
+          "q": "Can I migrate from Shopify/WooCommerce?",
+          "a": "Yes. We provide seamless migration without data loss."
+        }
+      }
     },
-    "2": {
-      "q": "Do you support multiple vendors?",
-      "a": "Yes, the system allows unlimited vendors with separate access and permissions."
-    },
-    "3": {
-      "q": "How are payments processed?",
-      "a": "Payments go directly to vendors via Stripe or other connected methods."
-    },
-    "4": {
-      "q": "Can I use multiple languages and currencies?",
-      "a": "Of course. The platform supports multilingual content and currency conversion."
-    },
-    "5": {
-      "q": "How long does setup take?",
-      "a": "Single store: 10–15 days. Multi-vendor: up to 20 days including testing."
-    },
-    "6": {
-      "q": "Is the design customizable?",
-      "a": "Yes. Choose from templates or apply your own colors, fonts, and branding."
-    },
-    "7": {
-      "q": "Can I create discounts and promotions?",
-      "a": "Yes. Coupon codes, campaigns, featured products and seasonal offers are supported."
-    },
-    "8": {
-      "q": "Is there a mobile app?",
-      "a": "We can build a native Android/iOS app or provide a responsive PWA version."
-    },
-    "9": {
-      "q": "Who owns the data?",
-      "a": "You do. You have full access and can export your data anytime."
-    },
-    "10": {
-      "q": "Can I connect social media?",
-      "a": "Yes. Facebook Shop, Instagram catalog, product sharing, and more integrations available."
-    },
-    "11": {
-      "q": "Do you support B2B sales?",
-      "a": "Yes. Our platform can function as a wholesale system with advanced features."
-    },
-    "12": {
-      "q": "Can I migrate from Shopify/WooCommerce?",
-      "a": "Yes. We provide seamless migration without data loss."
-    }
-  }
-},
     "cta": {
       "title": "Want to launch your online store?",
       "text": "Register and start the process for your store today!",
       "buttons": {
         "shop": "Classic store example",
-        "market": "Marketplace \u2013 wholesale and multi-vendor"
+        "market": "Marketplace – wholesale and multi-vendor"
       }
     }
   },
@@ -1716,102 +1658,102 @@
     "services": {
       "1": {
         "title": "Business Presentation (Starter)",
-        "price": "from 10\u20ac per year",
+        "price": "from 10€ per year",
         "description": "Ideal for a CV, portfolio, or a one-page site. Template-based, auto-generated. Editable via form."
       },
       "2": {
         "title": "Business Presentation (Basic)",
-        "price": "from 20 \u20ac per year",
-        "description": "Includes: contact form, Google map, PDF, links, extra sections. Subdomain, domain & hosting approx. 60 \u20ac per year."
+        "price": "from 20 € per year",
+        "description": "Includes: contact form, Google map, PDF, links, extra sections. Subdomain, domain & hosting approx. 60 € per year."
       },
       "3": {
         "title": "Business Presentation (Pro)",
-        "price": "from 30 \u20ac per year",
-        "description": "Includes all from Basic plus more features. Domain & hosting approx. 60 \u20ac per year."
+        "price": "from 30 € per year",
+        "description": "Includes all from Basic plus more features. Domain & hosting approx. 60 € per year."
       },
       "4": {
         "title": "Business Presentation (Premium)",
-        "price": "from 40 \u20ac per year",
+        "price": "from 40 € per year",
         "description": "Includes all from Pro with SEO support and advanced visual blocks. Hosting billed separately."
       },
       "5": {
         "title": "Business Presentation (Business)",
-        "price": "from 50 \u20ac per year",
+        "price": "from 50 € per year",
         "description": "Full-featured business website. Includes hosting, contact, map, and expansion options."
       },
       "6": {
         "title": "Business Presentation (W3C)",
-        "price": "from 190 \u20ac per year",
+        "price": "from 190 € per year",
         "description": "W3C-compliant site with W3Schools templates. Includes free domain & hosting for the first year."
       },
       "7": {
         "title": "Custom Business Presentation",
-        "price": "from 390 \u20ac per year",
+        "price": "from 390 € per year",
         "description": "Tailored business website. Includes contact, map, PDF, links, domain *.rs and SSL."
       },
       "8": {
         "title": "Blog",
-        "price": "from 390 \u20ac per month",
+        "price": "from 390 € per month",
         "description": "Create posts, categories, tags. Admin panel included. SEO-ready structure."
       },
       "9": {
         "title": "Simple Online Store (Shop)",
-        "price": "from 490 \u20ac per year",
+        "price": "from 490 € per year",
         "description": "Basic shop with product, order, and payment support. Expandable."
       },
       "10": {
         "title": "Online Store (Shop)",
-        "price": "from 590 \u20ac per year",
+        "price": "from 590 € per year",
         "description": "Advanced shop system with admin panel and full e-commerce support."
       },
       "11": {
         "title": "Web App (App)",
-        "price": "from 990 \u20ac per year",
+        "price": "from 990 € per year",
         "description": "Custom web application with full functionality and expansion options."
       },
       "12": {
         "title": "Web Platform",
-        "price": "from 1990 \u20ac per year",
+        "price": "from 1990 € per year",
         "description": "Multi-functional platform. Ideal for SaaS, management, or marketplaces."
       },
       "13": {
         "title": "Web Portal",
-        "price": "from 2990 \u20ac per year",
+        "price": "from 2990 € per year",
         "description": "Information portal with news, user accounts, categories. Flexible layout."
       },
       "14": {
         "title": "Multi-vendor Store (Shop)",
-        "price": "from 890 \u20ac per year",
+        "price": "from 890 € per year",
         "description": "Multi-seller e-commerce like Amazon. Vendor dashboards, payments, inventory. Ideal for large-scale sales."
       },
       "15": {
         "title": "Web Service - Basic API",
-        "price": "from 3990 \u20ac per year",
+        "price": "from 3990 € per year",
         "description": "REST API with docs, tokens, authentication. Expandable modules available."
       },
       "16": {
         "title": "Web System",
-        "price": "from 4990 \u20ac per year",
+        "price": "from 4990 € per year",
         "description": "Complex business system (ERP/CRM/etc.) with full backend structure."
       },
       "17": {
         "title": "Web Solution",
-        "price": "from 5990 \u20ac per year",
+        "price": "from 5990 € per year",
         "description": "Enterprise-grade solution for demanding projects. Fully extensible."
       },
       "18": {
         "title": "Professional Logo Design",
-        "price": "from 10 \u20ac",
+        "price": "from 10 €",
         "description": "Logo via AI + Canva with consultation. Final files: PNG, SVG, PDF."
       },
       "19": {
         "title": "Technical Support (monthly)",
-        "price": "from 10 \u20ac per month",
+        "price": "from 10 € per month",
         "description": "1 hour/month: content updates, SEO fixes, site speed, section tweaks."
       },
       "20": {
         "title": "Site Maintenance (per request)",
-        "price": "from 25 \u20ac/hour",
+        "price": "from 25 €/hour",
         "description": "One-time updates: uploads, SEO, content changes, backups."
       },
       "21": {
@@ -1821,72 +1763,72 @@
       },
       "22": {
         "title": "SEO Optimization",
-        "price": "from 50 \u20ac per month",
+        "price": "from 50 € per month",
         "description": "Search engine optimization, keyword research, reporting & insights."
       },
       "23": {
         "title": "Social Media Management",
-        "price": "from 40 \u20ac per month",
+        "price": "from 40 € per month",
         "description": "Account management, content creation, analytics on Facebook, Instagram, etc."
       }
     },
     "intro": "Transparent overview of all our services and pricing",
     "title": "Detailed Price List of Our Services",
     "note": "The price list reflects our current offer and applies to all new clients. Additional discounts may apply depending on the type and volume of ordered services.",
-    "more": "More details \u2304",
+    "more": "More details ⌄",
     "request": "Request offer"
   },
   "demoPreviews": {
-  "title": "🌍 Demo Sites – Real Presentations",
-  "subtitle": "Explore ready-made examples created through our system. Click and see what a professional website looks like – no technical knowledge needed!",
-  "goToDashboard": "🛠 Go to your account",
-  "registerAndCreate": "🚀 Register and create your site",
-  "note": "You don't need to register to test the form:",
-  "freeSiteButton": "📝 Create your FREE presentation",
-  "proSiteButton": "🚀 Create your PRO presentation",
-  "title_free": "FREE - free version",
+    "title": "🌍 Demo Sites – Real Presentations",
+    "subtitle": "Explore ready-made examples created through our system. Click and see what a professional website looks like – no technical knowledge needed!",
+    "goToDashboard": "🛠 Go to your account",
+    "registerAndCreate": "🚀 Register and create your site",
+    "note": "You don't need to register to test the form:",
+    "freeSiteButton": "📝 Create your FREE presentation",
+    "proSiteButton": "🚀 Create your PRO presentation",
+    "title_free": "FREE - free version",
     "title_pro": "PRO - paid version",
     "description_free": "Example of the free version. Optional logo design: 10 €",
     "description_pro": "Example of the PRO presentation with logo design. Price from 10 € to 50 € depending on the level of additional services. Domain purchase available at the best rates."
-},
-"demoBox": {
-  "demo_button": "View presentation"
-},
-"requestModal": {
-  "title": "📩 Request an Offer",
-  "subtitle": "Fill out the form to receive a personalized offer for the service:",
-  "name": "Full Name *",
-  "email": "Email *",
-  "message": "Message (optional)",
-  "send": "Send request",
-  "success": "✅ Message sent successfully!",
-  "error": "❌ Error sending the message. Please try again."
-},
-"businessPreview": {
-  "activityTitle": "📋 Business Activity",
-  "offerTitle": "Our Offer",
-  "followUs": "Follow us:",
-  "footerText": "Proud partner of",
-  "footerLink": "Express web platforms"
-},
-"businessPreviewPro": {
-  "nav": {
-    "about": "About Us",
-    "offer": "Offer",
-    "contact": "Contact"
   },
-  "activity": "📋 Business Activity",
-  "note": "This presentation is part of the PRO package and can be edited after payment (10 € / year).",
-  "video": "🎥 Video Presentation",
-  "pdf": "📄 Attached Document",
-  "contact": "📞 Contact",
-  "social": "Follow us:",
-  "backToTop": "Back to top ↑",
-  "downloadPdf": "Download PDF",
-  "openPdfInNewTab": "Open PDF in new tab"
-},
-"classicPreview": {
-    "activityTitle": "\ud83d\udccb Business Activity",
+  "demoBox": {
+    "demo_button": "View presentation"
+  },
+  "requestModal": {
+    "title": "📩 Request an Offer",
+    "subtitle": "Fill out the form to receive a personalized offer for the service:",
+    "name": "Full Name *",
+    "email": "Email *",
+    "message": "Message (optional)",
+    "send": "Send request",
+    "success": "✅ Message sent successfully!",
+    "error": "❌ Error sending the message. Please try again."
+  },
+  "businessPreview": {
+    "activityTitle": "📋 Business Activity",
+    "offerTitle": "Our Offer",
+    "followUs": "Follow us:",
+    "footerText": "Proud partner of",
+    "footerLink": "Express web platforms"
+  },
+  "businessPreviewPro": {
+    "nav": {
+      "about": "About Us",
+      "offer": "Offer",
+      "contact": "Contact"
+    },
+    "activity": "📋 Business Activity",
+    "note": "This presentation is part of the PRO package and can be edited after payment (10 € / year).",
+    "video": "🎥 Video Presentation",
+    "pdf": "📄 Attached Document",
+    "contact": "📞 Contact",
+    "social": "Follow us:",
+    "backToTop": "Back to top ↑",
+    "downloadPdf": "Download PDF",
+    "openPdfInNewTab": "Open PDF in new tab"
+  },
+  "classicPreview": {
+    "activityTitle": "📋 Business Activity",
     "followUs": "Follow us on social media:",
     "footerText": "Proud partner of",
     "footerLink": "Express web platform"
@@ -1908,7 +1850,7 @@
     "backToTop": "Back to top ↑"
   },
   "darkPreview": {
-    "activityTitle": "\ud83d\udccb Business Activity",
+    "activityTitle": "📋 Business Activity",
     "offerTitle": "Our Offer",
     "social": "Follow us:",
     "footerText": "Proud partner of",
@@ -1920,18 +1862,18 @@
       "offer": "Offer",
       "contact": "Contact"
     },
-    "activity": "\ud83d\udccb Business Activity",
-    "note": "This is a PRO presentation \u2013 further editing is available after payment (10 € / year).",
-    "video": "\ud83c\udfa5 Video Presentation",
-    "pdf": "\ud83d\udcc4 Attached Document",
-    "contact": "\ud83d\udcde Contact",
+    "activity": "📋 Business Activity",
+    "note": "This is a PRO presentation – further editing is available after payment (10 € / year).",
+    "video": "🎥 Video Presentation",
+    "pdf": "📄 Attached Document",
+    "contact": "📞 Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191",
+    "backToTop": "Back to top ↑",
     "downloadPdf": "Download PDF",
     "openPdfInNewTab": "Open PDF in new tab"
   },
   "galleryPreview": {
-    "activityTitle": "\ud83d\udccb Business Activity",
+    "activityTitle": "📋 Business Activity",
     "offerTitle": "Our Offer",
     "social": "Follow us:",
     "footerText": "Proud partner of",
@@ -1943,18 +1885,18 @@
       "offer": "Offer",
       "contact": "Contact"
     },
-    "activity": "\ud83d\udccb Business Activity",
-    "note": "This is a PRO presentation \u2013 further editing is available after payment (10 € / year).",
-    "video": "\ud83c\udfa5 Video Presentation",
-    "pdf": "\ud83d\udcc4 Attached Document",
-    "contact": "\ud83d\udcde Contact",
+    "activity": "📋 Business Activity",
+    "note": "This is a PRO presentation – further editing is available after payment (10 € / year).",
+    "video": "🎥 Video Presentation",
+    "pdf": "📄 Attached Document",
+    "contact": "📞 Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191",
+    "backToTop": "Back to top ↑",
     "downloadPdf": "Download PDF",
     "openPdfInNewTab": "Open PDF in new tab"
   },
   "modernPreview": {
-    "activityTitle": "\ud83d\udccb Business Activity",
+    "activityTitle": "📋 Business Activity",
     "offerTitle": "Our Offer",
     "social": "Follow us:",
     "footerText": "Proud partner of",
@@ -1966,13 +1908,13 @@
       "offer": "Offer",
       "contact": "Contact"
     },
-    "activity": "\ud83d\udccb Business Activity",
-    "note": "This is a PRO presentation \u2013 further editing is available after payment (10 € / year).",
-    "video": "\ud83c\udfa5 Video Presentation",
-    "pdf": "\ud83d\udcc4 Attached Document",
-    "contact": "\ud83d\udcde Contact",
+    "activity": "📋 Business Activity",
+    "note": "This is a PRO presentation – further editing is available after payment (10 € / year).",
+    "video": "🎥 Video Presentation",
+    "pdf": "📄 Attached Document",
+    "contact": "📞 Contact",
     "social": "Follow us:",
-    "backToTop": "Back to top \u2191",
+    "backToTop": "Back to top ↑",
     "downloadPdf": "Download PDF",
     "openPdfInNewTab": "Open PDF in new tab"
   },
@@ -1988,7 +1930,6 @@
     "action": "Action",
     "delete": "Delete"
   },
-  
   "proform": {
     "help": {
       "toggle": "Want help and clarification?",
@@ -2020,23 +1961,18 @@
       "facebook": "Facebook link",
       "instagram": "Instagram link",
       "logo": "Logo (optional)",
-
       "heroImage": "Main image (background) *",
       "heroTitle": "Title *",
       "heroSubtitle": "Subtitle *",
-
       "aboutImage": "Company/team image *",
       "aboutTitle": "Section title *",
       "aboutText": "Company description *",
-
       "offerTitle": "Section title *",
       "offerItemTitle": "Service/product name *",
       "addOffer": "➕ Add item",
       "remove": "✖ Remove",
-
       "pdfDocument": "PDF file (price list, offer)",
       "youtube": "YouTube link (optional)",
-
       "city": "City *",
       "street": "Street & number *",
       "map": "Google Maps link (optional)",
@@ -2053,19 +1989,19 @@
       "dark": "🌙 Dark mode"
     },
     "errors": {
-    "image": "⚠️ Image must be under 4MB and in valid format.",
-    "pdf": "⚠️ Only PDF files are allowed.",
-    "offerImage": "⚠️ Image in item {{index}} is invalid or too large.",
-    "general": "⚠️ Something went wrong. Please try again.",
-    "fetch": "⚠️ Unable to load data from template."
-  },
-  "plans": {
-    "starter": "Starter (€10/year)",
-    "basic": "Basic (€20/year)",
-    "pro": "Pro (€30/year)",
-    "premium": "Premium (€40/year)",
-    "business": "Business (€50/year)"
-  }
+      "image": "⚠️ Image must be under 4MB and in valid format.",
+      "pdf": "⚠️ Only PDF files are allowed.",
+      "offerImage": "⚠️ Image in item {{index}} is invalid or too large.",
+      "general": "⚠️ Something went wrong. Please try again.",
+      "fetch": "⚠️ Unable to load data from template."
+    },
+    "plans": {
+      "starter": "Starter (€10/year)",
+      "basic": "Basic (€20/year)",
+      "pro": "Pro (€30/year)",
+      "premium": "Premium (€40/year)",
+      "business": "Business (€50/year)"
+    }
   },
   "adminSites": {
     "title": "🌐 Submitted Presentations",
@@ -2111,33 +2047,33 @@
     "limit": "You’ve reached your daily limit. Try again tomorrow.",
     "pdfSuggestion": "Would you like me to generate a PDF document with the price list?",
     "close": "Close suggestion"
-},
-"chat": {
-  "title": "🤖 Express Web Assistant",
-  "inputPlaceholder": "Ask a question...",
-  "buttonSend": "➤",
-  "assistantLabel": "Bot",
-  "userLabel": "You",
-  "error": "⚠️ An error occurred. Please try again.",
-  "default": "Hello! How can I help you?",
-  "fallback": "Something went wrong.",
-  "tooltip": "Need help? Ask our AI assistant!"
-},
-"checkout": {
+  },
+  "chat": {
+    "title": "🤖 Express Web Assistant",
+    "inputPlaceholder": "Ask a question...",
+    "buttonSend": "➤",
+    "assistantLabel": "Bot",
+    "userLabel": "You",
+    "error": "⚠️ An error occurred. Please try again.",
+    "default": "Hello! How can I help you?",
+    "fallback": "Something went wrong.",
+    "tooltip": "Need help? Ask our AI assistant!"
+  },
+  "checkout": {
     "title": " Checkout",
-  "empty": "Your cart is empty.",
-  "remove": "Remove",
-  "total": "Total",
-  "payNow": "Proceed to Payment",
-  "proceed": "Proceed to Payment",
-  "chooseMethod": "Choose payment method:",
-  "payCard": "Card (Stripe)",
-  "invoice_request": "Proforma Invoice (RSD/EUR)",
-  "paypal": "PayPal (coming soon)",
-  "invoiceOptions": "Choose currency for proforma invoice",
-  "downloadInvoice": "Download proforma invoice"
-},
-"common": {
+    "empty": "Your cart is empty.",
+    "remove": "Remove",
+    "total": "Total",
+    "payNow": "Proceed to Payment",
+    "proceed": "Proceed to Payment",
+    "chooseMethod": "Choose payment method:",
+    "payCard": "Card (Stripe)",
+    "invoice_request": "Proforma Invoice (RSD/EUR)",
+    "paypal": "PayPal (coming soon)",
+    "invoiceOptions": "Choose currency for proforma invoice",
+    "downloadInvoice": "Download proforma invoice"
+  },
+  "common": {
     "cancel": "Cancel",
     "sending": "⏳ Sending..."
   },
@@ -2173,8 +2109,4 @@
       "account": "Bank account: 105000000331557669"
     }
   }
-    }
-
-
-
-  
+}

@@ -14,70 +14,18 @@
     "button": "Započnite"
   },
   "hero": {
-  "label": "Sada i na Fiverr – globalna ponuda, lokalna podrška",
-  "title": "Express Web — vaš prvi korak ka digitalnom prisustvu",
-  "descriptions": "Kreirajte moderan, brz i optimizovan sajt bez komplikacija. Idealno za male biznise, preduzetnike i udruženja.",
-  "primary_button": "Express Mini sajt – besplatno testiranje u 5 minuta",
-  "secondary_button": "Kompletni sajtovi već od 10 € godišnje",
-  "hosting_button": "Managed hosting i održavanje od 50 € godišnje"
-},
-
-"hosting": {
-  "title": "Managed hosting i održavanje za vaš poslovni sajt",
-  "subtitle": "Brz, bezbedan i održavan hosting uz tehničku podršku Express Web tima.",
-  "plans": {
-    "basic": {
-      "title": "Basic Hosting",
-      "price": "od 50 € godišnje",
-      "description": "Idealno za jednostavne prezentacione sajtove.",
-      "features": {
-        "1": "Cloud hosting",
-        "2": "SSL sertifikat",
-        "3": "Osnovni backup",
-        "4": "Tehnička podrška",
-        "5": "Jedan web sajt"
-      }
-    },
-    "business": {
-      "title": "Business Hosting",
-      "price": "od 100 € godišnje",
-      "description": "Za firme kojima je potrebna stabilnost i redovna podrška.",
-      "features": {
-        "1": "Sve iz Basic paketa",
-        "2": "Prioritetna podrška",
-        "3": "Praćenje rada sajta",
-        "4": "Osnovna SEO kontrola",
-        "5": "Do 5 GB prostora"
-      }
-    },
-    "premium": {
-      "title": "Premium Hosting",
-      "price": "od 200 € godišnje",
-      "description": "Za zahtevnije projekte, online prodavnice i aplikacije.",
-      "features": {
-        "1": "Sve iz Business paketa",
-        "2": "Napredni backup",
-        "3": "Monitoring",
-        "4": "Više domena",
-        "5": "Prioritetne intervencije"
-      }
-    }
+    "label": "Web sajtovi, online prodavnice i poslovne aplikacije",
+    "title": "Digitalna rešenja koja predstavljaju, prodaju i unapređuju vaše poslovanje",
+    "description": "Razvijamo moderne i pouzdane web sajtove, online prodavnice i aplikacije prilagođene vašim poslovnim ciljevima — od prve ideje do objavljivanja, održavanja i daljeg razvoja.",
+    "primary_button": "Zatražite besplatnu procenu",
+    "secondary_button": "Pogledajte naše projekte",
+    "benefits": [
+      "Prilagođeno svim uređajima",
+      "SEO i analitika od početka",
+      "Hosting, podrška i održavanje"
+    ],
+    "note": "Jasan dogovor, transparentni troškovi i rešenje koje može da raste zajedno sa vašim poslovanjem."
   },
-    "starter": {
-  "title": "Starter Paket",
-  "subtitle": "Najbrži i najpovoljniji način da pokrenete svoje prisustvo na internetu.",
-  "feature1": "Izrada jednostavnog sajta: 0 €",
-  "feature2": "Managed Hosting: od 50 € godišnje",
-  "feature3": "Održavanje: od 10 € mesečno",
-  "note": "Idealno za preduzetnike, zanatlije i mala preduzeća."
-},
-  "cta": {
-    "title": "Želite hosting bez tehničkih komplikacija?",
-    "text": "Pošaljite nam upit i predložićemo paket prema vašem sajtu, budžetu i planu razvoja.",
-    "button": "Zatraži hosting ponudu"
-  }
-},
-
   "features_global": {
     "label": "Šta Vam nudimo?",
     "title": "Izrada najnaprednijih web rešenja",
@@ -93,8 +41,8 @@
     "description": "Unapredite svoje poslovanje originalnim poslovnim rešenjima. Bitno je ko ste i kakvi ste, ali je još bitnije i kako Vas drugi vide i doživljavaju.",
     "box1": {
       "title": "Pokazni primer - online prodavnica",
-      "text": "Agro-BiM Shop je mnogo više od obične online prodavnice – To je kompletna digitalna platforma za plasman agro proizvoda, sa poslovnim modulima i logikom dostojnom ozbiljne firme ili eko-bio kooperative. Na ovome se gradi poverenje kod proizvođača, distributera i kupaca. Ova aplikacija je bogata funkcionalnostima i lako prilagodiva za bilo koju vrstu roba.",
-      "button": "Idi na Agro-BiM shop"
+      "text": "Agro Shop je mnogo više od obične online prodavnice – To je kompletna digitalna platforma za plasman agro proizvoda, sa poslovnim modulima i logikom dostojnom ozbiljne firme ili eko-bio kooperative. Na ovome se gradi poverenje kod proizvođača, distributera i kupaca. Ova aplikacija je bogata funkcionalnostima i lako prilagodiva za bilo koju vrstu roba.",
+      "button": "Idi na Agro shop"
     },
     "box2": {
       "title": "Digitalna kontrola",
@@ -130,70 +78,69 @@
         "text": "Razvijamo aplikaciju po meri klijenta, prilagođen specifičnim potrebama i zahtevima."
       }
     }
-
   },
   "features03": {
-  "title": "Responzivnost",
-  "description": "Naše aplikacije su 100% responzivne i optimizovane za mobilne telefone, tablete i desktop računare. Korisnicima pružamo besprekorno iskustvo bez obzira na veličinu ekrana."
-},
-"features04": {
-  "title": "Dinamika i fleksibilnost",
-  "description": "Za različita rešenja donosimo različitu dinamiku, od 10 min do par sedmica. Naša platforma omogućava brzo prilagođavanje i implementaciju novih funkcionalnosti, što znači da se vaša aplikacija može razvijati zajedno sa vašim poslovanjem.",
-  "groups": [
-    {
-      "title": "Najbrža rešenja - od 10 minuta do jednog dana",
-      "features": [
-        {
-          "title": "Express FREE sajt",
-          "description": "Besplatan sajt za 5–10 minuta – jednostavno, brzo, bez programiranja. Ovo su mini prezentacije koje se mogu koristiti za lične projekte, prezentacije malog biznisa i slično."
-        },
-        {
-          "title": "Express PRO sajt (od 10 € godišnje)",
-          "description": "Napredna prezentacija sa dodatnim sekcijama, PDF, mapom i kontakt formom."
-        },
-        {
-          "title": "Express W3 sajt (od 199 € godišnje)",
-          "description": "Unikatna poslovna prezentacija za jedan dan - hosting i domen uključeni."
-        }
-      ]
-    },
-    {
-      "title": "Express rešenja do sedam dana",
-      "features": [
-        {
-          "title": "Express CRUIP sajt",
-          "description": "Moderne prezentacije sa Cruip UI dizajnom i efektima. Vreme izrade: 4–5 dana."
-        },
-        {
-          "title": "Express Original sajt",
-          "description": "Sajt po posebnom zahtevu – kreiranje od nule, unikatno i ekskluzivno. Vreme izrade: 5–7 dana."
-        },
-        {
-          "title": "Express Basic Shop",
-          "description": "Online prodavnica sa osnovnim funkcijama – checkout, korpa, SEO. Vreme izrade: 5–7 dana."
-        }
-      ]
-    },
-    {
-      "title": "Mega rešenja - do dve sedmice",
-      "features": [
-        {
-          "title": "Express UNI Shop",
-          "description": "Višenamenska online prodavnica sa filterima, partnerima, dashboard-om. Vreme izrade: 10–14 dana."
-        },
-        {
-          "title": "Domen & hosting usluga",
-          "description": "Pomoć u izboru i kupovini hostinga/domena – sa podrškom i provizijom. Vreme implementacije: 1–2 dana."
-        },
-        {
-          "title": "Održavanje sajta",
-          "description": "Pomoć u izmenama, SEO, sigurnosti i backup-u. Mesečno ili po intervenciji. Vreme implementacije: dogovor."
-        }
-      ]
-    }
-  ]
-},
-"features05": {
+    "title": "Responzivnost",
+    "description": "Naše aplikacije su 100% responzivne i optimizovane za mobilne telefone, tablete i desktop računare. Korisnicima pružamo besprekorno iskustvo bez obzira na veličinu ekrana."
+  },
+  "features04": {
+    "title": "Dinamika i fleksibilnost",
+    "description": "Za različita rešenja donosimo različitu dinamiku, od 10 min do par sedmica. Naša platforma omogućava brzo prilagođavanje i implementaciju novih funkcionalnosti, što znači da se vaša aplikacija može razvijati zajedno sa vašim poslovanjem.",
+    "groups": [
+      {
+        "title": "Najbrža rešenja - od 10 minuta do jednog dana",
+        "features": [
+          {
+            "title": "Express FREE sajt",
+            "description": "Besplatan sajt za 5–10 minuta – jednostavno, brzo, bez programiranja. Ovo su mini prezentacije koje se mogu koristiti za lične projekte, prezentacije malog biznisa i slično."
+          },
+          {
+            "title": "Express PRO sajt (od 10 € godišnje)",
+            "description": "Napredna prezentacija sa dodatnim sekcijama, PDF, mapom i kontakt formom."
+          },
+          {
+            "title": "Express W3 sajt (od 199 € godišnje)",
+            "description": "Unikatna poslovna prezentacija za jedan dan - hosting i domen uključeni."
+          }
+        ]
+      },
+      {
+        "title": "Express rešenja do sedam dana",
+        "features": [
+          {
+            "title": "Express CRUIP sajt",
+            "description": "Moderne prezentacije sa Cruip UI dizajnom i efektima. Vreme izrade: 4–5 dana."
+          },
+          {
+            "title": "Express Original sajt",
+            "description": "Sajt po posebnom zahtevu – kreiranje od nule, unikatno i ekskluzivno. Vreme izrade: 5–7 dana."
+          },
+          {
+            "title": "Express Basic Shop",
+            "description": "Online prodavnica sa osnovnim funkcijama – checkout, korpa, SEO. Vreme izrade: 5–7 dana."
+          }
+        ]
+      },
+      {
+        "title": "Mega rešenja - do dve sedmice",
+        "features": [
+          {
+            "title": "Express UNI Shop",
+            "description": "Višenamenska online prodavnica sa filterima, partnerima, dashboard-om. Vreme izrade: 10–14 dana."
+          },
+          {
+            "title": "Domen & hosting usluga",
+            "description": "Pomoć u izboru i kupovini hostinga/domena – sa podrškom i provizijom. Vreme implementacije: 1–2 dana."
+          },
+          {
+            "title": "Održavanje sajta",
+            "description": "Pomoć u izmenama, SEO, sigurnosti i backup-u. Mesečno ili po intervenciji. Vreme implementacije: dogovor."
+          }
+        ]
+      }
+    ]
+  },
+  "features05": {
     "title": "Šta nas to razlikuje od konkurencije?",
     "description": "Koristimo najnovije tehnologije i alate za razvoj aplikacija. Naša platforma je bazirana na Laravelu, Livewire-u i Bootstrapu, što omogućava brzu i efikasnu izradu web rešenja.",
     "description01": " Moderni šabloni prilagođeni tvojoj delatnosti. Koristimo Cruip dizajn, ali svaki projekat dodatno prilagođavamo tvom biznisu.",
@@ -203,326 +150,318 @@
     "description05": "Pristup backend kodu i integracije. Korisnici koji koriste napredne pakete, mogu povezati sopstvene ERP, CRM i druge sisteme.",
     "description06": "Podrška stručnjaka iz Srbije. Na raspolaganju ti je lokalni tim koji razume tržište i tvoje potrebe."
   },
-
-
-"pricing": {
-  "label": "Paketi i cene",
-  "title": "Cene su okvirne i mogu se korigovati.",
-  "description": "Naš pristup omogućava prilagođavanje potrebama svakog klijenta. Birajte plan koji vam odgovara i razvijajte svoj biznis uz našu podršku.",
-  "toggle": {
-    "monthly": "Mesečno",
-    "yearly": "Godišnje",
-    "pay yearly": "God. pl."
-  }, 
-  "plans": {
-    "pro": {
-      "title": "Plus",
-      "description": "Web prezentacije.",
-      "mo": "msč",
-      "label": "Web prezentacije.",
-      "get_started": "Počni odmah",
-      "unlimited": "Neograničeno"
+  "pricing": {
+    "label": "Paketi i cene",
+    "title": "Cene su okvirne i mogu se korigovati.",
+    "description": "Naš pristup omogućava prilagođavanje potrebama svakog klijenta. Birajte plan koji vam odgovara i razvijajte svoj biznis uz našu podršku.",
+    "toggle": {
+      "monthly": "Mesečno",
+      "yearly": "Godišnje",
+      "pay yearly": "God. pl."
     },
-     "team": {
-          "title": "Pro",
-          "description": "Online prodavnica-osnovno.",
-      "mo": "msč",
-      "label": "Online prodavnica-osnovno.",
-      "get_started": "Počni odmah",
-      "unlimited": "Neograničeno"
-    },
-    "enterprise": {
-      "title": "Napredni",
-      "description": "Online prodavnica-napredno.",
-      "mo": "msč",
-      "label": "Online prodavnica-napredno.",
-      "get_started": "Počni odmah",
-      "unlimited": "Neograničeno"
-    },
-    "usage": "Korišćenje",
-    "social": "HTML stranice",
-    "custom": "CSS stilovi",
-    "unlimited": "Neograničeno",
-    "limited": "Ograničeno",
-    "use_role": "Bootstrap-napredna stilizacija",
-    "external": "JavaScript",
-    "features": "Napredno",
-    "customs": "React/Vue/Angular",
-    "advance": "Efekti/Animacije",
-    "extra": "Izrada logotipa",
-    "ad_roles": "Obrada fotografija",
-    "deploy": "Responzivnost",
-    "enterprises": "Hosting&Domen",
-    "spec": "Uz nadoknadu",
-    "support": "Dodatno",
-    "premium_supp": "Održavanje"
-    
-  }
-},
-"testimonials": {
-  "items": [
-    {
-      "quote": "U početnoj fazi rada ove platforme, bio sam skeptičan, ali rezultati su brzo došli. Ovaj sistem je promenio način na koji poslujem. Sada mogu da se fokusiram na rast, a ne na administraciju.",
-      "name": "Miroslav Božić",
-      "role": "Osnivač Agro-BiM"
-    },
-    {
-      "quote": "Ovaj sistem mi je pomogao da bolje organizujem svoje vreme i resurse. Sada mogu da se fokusiram na ono što je zaista važno. Agencija Express web je profesionalna i efikasna.",
-      "name": "Bojana Popić",
-      "role": "Osnivač Agro-BiM"
-    },
-    {
-      "quote": "Agencija Express web je transformisala naše online prisustvo. Njihov tim je izuzetno profesionalan i posvećen. Svi naši zahtevi su ispunjeni na vreme i sa visokim kvalitetom.",
-      "name": "Zoran Stojanović",
-      "role": "Metox DOO"
+    "plans": {
+      "pro": {
+        "title": "Plus",
+        "description": "Web prezentacije.",
+        "mo": "msč",
+        "label": "Web prezentacije.",
+        "get_started": "Počni odmah",
+        "unlimited": "Neograničeno"
+      },
+      "team": {
+        "title": "Pro",
+        "description": "Online prodavnica-osnovno.",
+        "mo": "msč",
+        "label": "Online prodavnica-osnovno.",
+        "get_started": "Počni odmah",
+        "unlimited": "Neograničeno"
+      },
+      "enterprise": {
+        "title": "Napredni",
+        "description": "Online prodavnica-napredno.",
+        "mo": "msč",
+        "label": "Online prodavnica-napredno.",
+        "get_started": "Počni odmah",
+        "unlimited": "Neograničeno"
+      },
+      "usage": "Korišćenje",
+      "social": "HTML stranice",
+      "custom": "CSS stilovi",
+      "unlimited": "Neograničeno",
+      "limited": "Ograničeno",
+      "use_role": "Bootstrap-napredna stilizacija",
+      "external": "JavaScript",
+      "features": "Napredno",
+      "customs": "React/Vue/Angular",
+      "advance": "Efekti/Animacije",
+      "extra": "Izrada logotipa",
+      "ad_roles": "Obrada fotografija",
+      "deploy": "Responzivnost",
+      "enterprises": "Hosting&Domen",
+      "spec": "Uz nadoknadu",
+      "support": "Dodatno",
+      "premium_supp": "Održavanje"
     }
-  ]
-},
-"footer": {
-  "cookiePolicy": "Politika kolačića",
-  "copyright": "Sva prava zadržana.",
-  "products": "Proizvodi",
-  "company": "Kompanija",
-  "resources": "Resursi",
-  "legals": "Pravna dokumenta",
-  "legal": {
-    "name": "EXPRESS WEB Beograd-Palilula",
-    "mb": "MB: 68170168",
-    "pib": "PIB: 115191597",
-    "account": "Račun:",
-    "reports": "Finansijski izveštaji"
   },
-  "links": {
-    "features": "Funkcionalnosti",
-    "integrations": "Integracije",
-    "pricing": "Cene i paketi",
-    "changelog": "Izmene",
-    "method": "Naš metod",
-    "about": "O nama",
-    "diversity": "Raznolikost i inkluzija",
-    "blog": "Blog",
-    "careers": "Karijere",
-    "finance": "Finansijski izveštaji",
-    "community": "Zajednica",
-    "terms": "Uslovi korišćenja",
-    "vulnerability": "Prijavi ranjivost",
-    "refund": "Politika refundacije",
-    "terms_conditions": "Uslovi korišćenja",
-    "privacy": "Politika privatnosti",
-    "brandkit": "Brend komplet"
-    
-  }
-},
-"header": {
-  "menu": {
-    "home": "Početna",
-    "about": "O nama",
-    "contact": "Kontakt",
-    "faq": "FAQ",
-    "projects": "Projekti",
-    "pricing": "Cene",
-    "integrations": "Integracije",
-    "customers": "Klijenti",
-    "changelog": "Izmene",
-    "signin": "Prijava",
-    "signup": "Registracija",
-    "toggle": "Meni",
-    "account": "Moj nalog",
-    "admin": "Admin panel",
-    "logout": "Odjavi se",
-    "language_sr": "Srpski",
-    "language_en": "Engleski",
-    "cart": "Korpa"
-  }
-},
-"auth": {
-  "sign_in_title": "Prijavite se na svoj nalog",
-  "email": "Email adresa",
-  "password": "Lozinka",
-  "forgot": "Zaboravljena lozinka?",
-  "sign_in_button": "Prijava",
-  "no_account": "Nemate nalog?",
-  "sign_up": "Registrujte se",
-  "or": "ili",
-  "continue_twitter": "Nastavi putem Twitter-a",
-  "continue_github": "Nastavi putem GitHub-a",
-  "error": "Neispravni podaci!",
-  "success": "Uspešno ste prijavljeni!",
-  "invalid_credentials": "Neispravna email adresa ili lozinka.",
-  "validation_error": "Greška u validaciji podataka."
-  
-},
-"register": {
-  "title_register": "Kreirajte besplatan nalog",
-  "company": "Naziv firme",
-  "fullname": "Ime i prezime",
-  "email": "Email adresa",
-  "password": "Lozinka",
-  "referrer": "Gde ste čuli za nas?",
-  "message": "Unesite tekst poruke",
-  "message_placeholder": "Moja poruka glasi...",
-  "referrer_options": {
-    "google": "Google",
-    "medium": "Medium",
-    "github": "GitHub"
+  "testimonials": {
+    "items": [
+      {
+        "quote": "U početnoj fazi rada ove platforme, bio sam skeptičan, ali rezultati su brzo došli. Ovaj sistem je promenio način na koji poslujem. Sada mogu da se fokusiram na rast, a ne na administraciju.",
+        "name": "Miroslav Božić",
+        "role": "Osnivač Agro-BiM"
+      },
+      {
+        "quote": "Ovaj sistem mi je pomogao da bolje organizujem svoje vreme i resurse. Sada mogu da se fokusiram na ono što je zaista važno. Agencija Express web je profesionalna i efikasna.",
+        "name": "Bojana Popić",
+        "role": "Osnivač Agro-BiM"
+      },
+      {
+        "quote": "Agencija Express web je transformisala naše online prisustvo. Njihov tim je izuzetno profesionalan i posvećen. Svi naši zahtevi su ispunjeni na vreme i sa visokim kvalitetom.",
+        "name": "Zoran Stojanović",
+        "role": "Metox DOO"
+      }
+    ]
   },
-  "title": "Registracija",
-  "button": "Registruj se",
-  "already": "Već imate nalog?",
-  "signin": "Prijavite se",
-  "or": "ili",
-  "continue_twitter": "Nastavi putem Twitter-a",
-  "continue_github": "Nastavi putem GitHub-a",
-  "name_business": "Express web DOO",
-  "name_manager": "Marko Marković",
-  "error": "Greška u validaciji podataka.",
-  "success": "Uspešno ste registrovani! Molimo vas da se prijavite."
-},
-"reset": {
-  "title": "Resetuj lozinku",
-  "email": "Email adresa",
-  "email_placeholder": "Unesite vašu email adresu",
-  "button": "Pošalji zahtev",
-   
-  "error": "Greška u validaciji podataka."
-},
-"pricing_hero": {
-  "hero": {
-    "label": "Platforma sa akcentom na bezbednost",
-    "title": "Jednostavni paketi za svakoga",
-    "description": "Smanjite operativne troškove i zaboravite na spore i aplikacije teške za održavanje. Dobijate odlične alate dizajnirane za izvrsno korisničko iskustvo."
-  }
-},
-"gbs_services": {
-  "section_label": "Uskoro u ponudi",
-  "section_title": "GBS (Global Business Systems) i Express web",
-  "section_description": "GBS (Global Business Systems) nudi modularnu platformu prilagođenu malim i srednjim biznisima, sa ciljem da digitalizuje, automatizuje i unapredi vaše poslovanje.",
-
-  "items": 
-    {
+  "footer": {
+    "cookiePolicy": "Politika kolačića",
+    "copyright": "Sva prava zadržana.",
+    "products": "Proizvodi",
+    "company": "Kompanija",
+    "resources": "Resursi",
+    "legals": "Pravna dokumenta",
+    "legal": {
+      "name": "EXPRESS WEB Beograd-Palilula",
+      "mb": "MB: 68170168",
+      "pib": "PIB: 115191597",
+      "account": "Račun:",
+      "reports": "Finansijski izveštaji"
+    },
+    "links": {
+      "features": "Funkcionalnosti",
+      "integrations": "Integracije",
+      "pricing": "Cene i paketi",
+      "changelog": "Izmene",
+      "method": "Naš metod",
+      "about": "O nama",
+      "diversity": "Raznolikost i inkluzija",
+      "blog": "Blog",
+      "careers": "Karijere",
+      "finance": "Finansijski izveštaji",
+      "community": "Zajednica",
+      "terms": "Uslovi korišćenja",
+      "vulnerability": "Prijavi ranjivost",
+      "refund": "Politika refundacije",
+      "terms_conditions": "Uslovi korišćenja",
+      "privacy": "Politika privatnosti",
+      "brandkit": "Brend komplet"
+    }
+  },
+  "header": {
+    "menu": {
+      "home": "Početna",
+      "about": "O nama",
+      "contact": "Kontakt",
+      "faq": "FAQ",
+      "projects": "Projekti",
+      "pricing": "Cene",
+      "integrations": "Integracije",
+      "customers": "Klijenti",
+      "changelog": "Izmene",
+      "signin": "Prijava",
+      "signup": "Registracija",
+      "toggle": "Meni",
+      "account": "Moj nalog",
+      "admin": "Admin panel",
+      "logout": "Odjavi se",
+      "language_sr": "Srpski",
+      "language_en": "Engleski",
+      "cart": "Korpa"
+    }
+  },
+  "auth": {
+    "sign_in_title": "Prijavite se na svoj nalog",
+    "email": "Email adresa",
+    "password": "Lozinka",
+    "forgot": "Zaboravljena lozinka?",
+    "sign_in_button": "Prijava",
+    "no_account": "Nemate nalog?",
+    "sign_up": "Registrujte se",
+    "or": "ili",
+    "continue_twitter": "Nastavi putem Twitter-a",
+    "continue_github": "Nastavi putem GitHub-a",
+    "error": "Neispravni podaci!",
+    "success": "Uspešno ste prijavljeni!",
+    "invalid_credentials": "Neispravna email adresa ili lozinka.",
+    "validation_error": "Greška u validaciji podataka."
+  },
+  "register": {
+    "title_register": "Kreirajte besplatan nalog",
+    "company": "Naziv firme",
+    "fullname": "Ime i prezime",
+    "email": "Email adresa",
+    "password": "Lozinka",
+    "referrer": "Gde ste čuli za nas?",
+    "message": "Unesite tekst poruke",
+    "message_placeholder": "Moja poruka glasi...",
+    "referrer_options": {
+      "google": "Google",
+      "medium": "Medium",
+      "github": "GitHub"
+    },
+    "title": "Registracija",
+    "button": "Registruj se",
+    "already": "Već imate nalog?",
+    "signin": "Prijavite se",
+    "or": "ili",
+    "continue_twitter": "Nastavi putem Twitter-a",
+    "continue_github": "Nastavi putem GitHub-a",
+    "name_business": "Express web DOO",
+    "name_manager": "Marko Marković",
+    "error": "Greška u validaciji podataka.",
+    "success": "Uspešno ste registrovani! Molimo vas da se prijavite."
+  },
+  "reset": {
+    "title": "Resetuj lozinku",
+    "email": "Email adresa",
+    "email_placeholder": "Unesite vašu email adresu",
+    "button": "Pošalji zahtev",
+    "error": "Greška u validaciji podataka."
+  },
+  "pricing_hero": {
+    "hero": {
+      "label": "Platforma sa akcentom na bezbednost",
+      "title": "Jednostavni paketi za svakoga",
+      "description": "Smanjite operativne troškove i zaboravite na spore i aplikacije teške za održavanje. Dobijate odlične alate dizajnirane za izvrsno korisničko iskustvo."
+    }
+  },
+  "gbs_services": {
+    "section_label": "Uskoro u ponudi",
+    "section_title": "GBS (Global Business Systems) i Express web",
+    "section_description": "GBS (Global Business Systems) nudi modularnu platformu prilagođenu malim i srednjim biznisima, sa ciljem da digitalizuje, automatizuje i unapredi vaše poslovanje.",
+    "items": {
       "title1": "Jednim klikom do sajta - unapređeni Express web",
       "description1": "Brzo kreiranje poslovnih sajtova koristeći šablone (Laravel + Livewire + Bootstrap). Uključuje kontakt forme, galerije, mape i često postavljana pitanja (FAQ).",
-    
       "title2": "MyMaXico – besplatna online prodavnica",
       "description2": "Potpuno besplatno za 20 do 100 proizvoda, ne plaćaš ni domen, ni hosting – sve je uključeno! Idealno za male proizvođače, zanatlije, umetnike i lokalne prodavce.",
-    
       "title3": "Online prodavnice & Multi-vendor platforme - unapređeni Express Shop",
       "description3": "Funkcionalni e-commerce sistemi sa modulima za dobavljače, proizvođače i partnere. SEO optimizacija, podrška za Stripe, PayPal i plaćanje pouzećem.",
-  
       "title4": "Napredne Web aplikacije, ERP i CRM rešenja",
       "description4": "Naša platforma je primer kako se moderne web tehnologije mogu koristiti za izgradnju skalabilnih i efikasnih SaaS rešenja. Uključuje ERP, CRM i druge poslovne aplikacije.",
-
       "title5": "AI kao servis",
       "description5": "Automatizovano kreiranje sadržaja, slika i email kampanja pomoću veštačke inteligencije. Uključuje i chatbotove, SEO analize i prevod sadržaja.",
-   
       "title6": "Edukacija i podrška",
       "description6": "Obuka korisnika kroz video tutorijale i PDF uputstva. Tehnička podrška i pomoć pri hostovanju i podešavanjima.",
-
       "learn_more": "Saznaj više"
     }
-},
-"story": {
-  "title": "Naša priča (do sada)",
-  "paragraph1": "Sve je krenulo sa jednim laptopom i velikom idejom. Jedan polovni laptop, stara tastatura i velika želja da se napravi nešto vredno – to je bio naš početak. Investicija u znanje bila je najveći rizik, ali i najbolja odluka koju smo mogli doneti.",
-  "paragraph2": "Učili smo iz svakog izazova. Nije bilo lakih koraka, ali svaki problem nas je naučio kako da bolje razumemo tehnologiju, tržište i – ljude. Verujemo da se najbolja rešenja rađaju kroz proces, ne preko noći.",
-  "paragraph3": "Od koncepta do realizacije – sve radimo in-house. Svi sistemi, dizajn i backend funkcionalnosti razvijaju se pod jednim krovom. Na taj način zadržavamo kontrolu nad kvalitetom i brže odgovaramo na potrebe klijenata.",
-  "paragraph4": "Gledamo širu sliku, ali brinemo o svakom detalju. Od UX dizajna do sistemske arhitekture, pristupamo svakom zadatku s pažnjom. Fokusirani smo na korisničko iskustvo, sigurnost i održivost rešenja.",
-  "paragraph5": "Agencija Express Sajtovi nije samo tim, već partner za rast. Više od rešenja, nudimo posvećenost. Ako rastete – rastemo zajedno. Naša vizija je jasna: da sa svakim projektom gradimo poverenje koje traje."
-},
-
-"hero_about": {
-  "subtitle": "Napredna rešenja za digitalizaciju",
-  "title": "Dobrodošli u svet pozitivnih promena"
-},
-"support_cta": {
-  "heading": "Potrebna vam je dodatna pomoć?",
-  "button": "Kontaktiraj centar za podršku"
-},
-"support": {
-  "title": "Centar za podršku",
-  "subtitle": "Imate pitanje? Tu smo za vas — brzo pretražite odgovore ili nas kontaktirajte.",
-  "description": "Naš tim je ovde da vam pomogne. Bilo da imate pitanje o našim uslugama ili vam je potrebna tehnička podrška, slobodno nas kontaktirajte.",
-  "faq_title": "Često postavljana pitanja",
-  "faq": [
-    { "q": "Kako da se registrujem?", "a": "Kliknite na 'Registracija' i popunite osnovne podatke." },
-    { "q": "Kako da izmenim podatke firme?", "a": "Ulogujte se i u profilu firme kliknite na 'Izmeni'." },
-    { "q": "Kako kontaktirati podršku?", "a": "Putem forme na stranici Kontakt ili direktno preko e-maila." }
-  ],
-  "cta_title": "Još uvek imate pitanja?",
-  "cta_subtitle": "Naš tim podrške vam stoji na raspolaganju.",
-  "cta_button": "Kontaktiraj nas"
-},
-"faqs": {
-  "label": "Najčešće postavljana pitanja",
-  "title": "Sve što treba da znate",
-  "questions": {
-    "q1": {
-      "title": "Šta je platforma Express web?",
-      "text": "Express web je modularna poslovna platforma koja omogućava izradu sajtova, online prodavnica i naprednih dizajnerskih rešenja."
-    },
-    "q2": {
-      "title": "Koje su cene i planovi korišćenja?",
-      "text": "Imamo fleksibilne pakete, uključujući i besplatne opcije za male firme i preduzetnike."
-    },
-    "q3": {
-      "title": "Da li mogu da uklonim Express Sajtovi brendiranje sa sajta?",
-      "text": "Da. U okviru premium paketa moguće je ukloniti oznake platforme i dodati svoj brend."
-    },
-    "q4": {
-      "title": "Koje podatke mogu da prikupljam od korisnika?",
-      "text": "Možete prikupljati osnovne informacije kao što su ime, email, porudžbine, analitiku itd."
-    },
-    "q5": {
-      "title": "Da li postoji besplatna verzija?",
-      "text": "Da, početni plan je besplatan i sadrži osnovne funkcionalnosti."
-    },
-    "q6": {
-      "title": "Da li je platforma Express web pristupačna za mala i srednja preduzeća?",
-      "text": "Upravo to nam je cilj – da digitalizacija bude dostupna svakome."
+  },
+  "story": {
+    "title": "Naša priča (do sada)",
+    "paragraph1": "Sve je krenulo sa jednim laptopom i velikom idejom. Jedan polovni laptop, stara tastatura i velika želja da se napravi nešto vredno – to je bio naš početak. Investicija u znanje bila je najveći rizik, ali i najbolja odluka koju smo mogli doneti.",
+    "paragraph2": "Učili smo iz svakog izazova. Nije bilo lakih koraka, ali svaki problem nas je naučio kako da bolje razumemo tehnologiju, tržište i – ljude. Verujemo da se najbolja rešenja rađaju kroz proces, ne preko noći.",
+    "paragraph3": "Od koncepta do realizacije – sve radimo in-house. Svi sistemi, dizajn i backend funkcionalnosti razvijaju se pod jednim krovom. Na taj način zadržavamo kontrolu nad kvalitetom i brže odgovaramo na potrebe klijenata.",
+    "paragraph4": "Gledamo širu sliku, ali brinemo o svakom detalju. Od UX dizajna do sistemske arhitekture, pristupamo svakom zadatku s pažnjom. Fokusirani smo na korisničko iskustvo, sigurnost i održivost rešenja.",
+    "paragraph5": "Agencija Express Sajtovi nije samo tim, već partner za rast. Više od rešenja, nudimo posvećenost. Ako rastete – rastemo zajedno. Naša vizija je jasna: da sa svakim projektom gradimo poverenje koje traje."
+  },
+  "hero_about": {
+    "subtitle": "Napredna rešenja za digitalizaciju",
+    "title": "Dobrodošli u svet pozitivnih promena"
+  },
+  "support_cta": {
+    "heading": "Potrebna vam je dodatna pomoć?",
+    "button": "Kontaktiraj centar za podršku"
+  },
+  "support": {
+    "title": "Centar za podršku",
+    "subtitle": "Imate pitanje? Tu smo za vas — brzo pretražite odgovore ili nas kontaktirajte.",
+    "description": "Naš tim je ovde da vam pomogne. Bilo da imate pitanje o našim uslugama ili vam je potrebna tehnička podrška, slobodno nas kontaktirajte.",
+    "faq_title": "Često postavljana pitanja",
+    "faq": [
+      {
+        "q": "Kako da se registrujem?",
+        "a": "Kliknite na 'Registracija' i popunite osnovne podatke."
+      },
+      {
+        "q": "Kako da izmenim podatke firme?",
+        "a": "Ulogujte se i u profilu firme kliknite na 'Izmeni'."
+      },
+      {
+        "q": "Kako kontaktirati podršku?",
+        "a": "Putem forme na stranici Kontakt ili direktno preko e-maila."
+      }
+    ],
+    "cta_title": "Još uvek imate pitanja?",
+    "cta_subtitle": "Naš tim podrške vam stoji na raspolaganju.",
+    "cta_button": "Kontaktiraj nas"
+  },
+  "faqs": {
+    "label": "Najčešće postavljana pitanja",
+    "title": "Sve što treba da znate",
+    "questions": {
+      "q1": {
+        "title": "Šta je platforma Express web?",
+        "text": "Express web je modularna poslovna platforma koja omogućava izradu sajtova, online prodavnica i naprednih dizajnerskih rešenja."
+      },
+      "q2": {
+        "title": "Koje su cene i planovi korišćenja?",
+        "text": "Imamo fleksibilne pakete, uključujući i besplatne opcije za male firme i preduzetnike."
+      },
+      "q3": {
+        "title": "Da li mogu da uklonim Express Sajtovi brendiranje sa sajta?",
+        "text": "Da. U okviru premium paketa moguće je ukloniti oznake platforme i dodati svoj brend."
+      },
+      "q4": {
+        "title": "Koje podatke mogu da prikupljam od korisnika?",
+        "text": "Možete prikupljati osnovne informacije kao što su ime, email, porudžbine, analitiku itd."
+      },
+      "q5": {
+        "title": "Da li postoji besplatna verzija?",
+        "text": "Da, početni plan je besplatan i sadrži osnovne funkcionalnosti."
+      },
+      "q6": {
+        "title": "Da li je platforma Express web pristupačna za mala i srednja preduzeća?",
+        "text": "Upravo to nam je cilj – da digitalizacija bude dostupna svakome."
+      }
     }
-  }
-},
-
-
-"contact": {
-  "title": "Kontaktirajte nas",
-  "description": "Imate pitanje, sugestiju ili želite saradnju? Pišite nam putem ove forme ili nas kontaktirajte direktno putem navedenih informacija.",
-  "form": {
-    "name": "Vaše ime",
-    "email": "Email adresa",
-    "message": "Vaša poruka",
-    "submit": "Pošalji poruku",
-    "newsletter": "Želim da se prijavim na newsletter"
   },
-  "info": {
-    "address_title": "Naša adresa",
-    "address_line1": "Radoje Božić pr Računarsko programiranje EXPRESS WEB Beograd-Palilula",
-    "address_line2": "VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Beograd",
-    "email_title": "Kontakt email",
-    "email_user": " office",
-    "email_domain": "express-web.express",
-    "phone_title": "Telefon",
-    "phone_value": "+381 61 217 90 13"
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "description": "Imate pitanje, sugestiju ili želite saradnju? Pišite nam putem ove forme ili nas kontaktirajte direktno putem navedenih informacija.",
+    "form": {
+      "name": "Vaše ime",
+      "email": "Email adresa",
+      "message": "Vaša poruka",
+      "submit": "Pošalji poruku",
+      "newsletter": "Želim da se prijavim na newsletter"
+    },
+    "info": {
+      "address_title": "Naša adresa",
+      "address_line1": "Radoje Božić pr Računarsko programiranje EXPRESS WEB Beograd-Palilula",
+      "address_line2": "VITEZOVA KARAĐORĐEVE ZVEZDE 50, 11050 Beograd",
+      "email_title": "Kontakt email",
+      "email_user": " office",
+      "email_domain": "express-web.express",
+      "phone_title": "Telefon",
+      "phone_value": "+381 61 217 90 13"
+    },
+    "social": {
+      "title": "Pratite nas",
+      "facebook": "Facebook stranica",
+      "instagram": "Instagram profil"
+    },
+    "links": {
+      "title": "Korisni linkovi",
+      "regulations": "Zakonska regulativa",
+      "advertising_law": "Zakon o oglašavanju",
+      "ecommerce_law": "Zakon o elektronskoj trgovini",
+      "tax_policy": "Poreska politika",
+      "education": "Edukacija",
+      "web_history": "Istorijat interneta",
+      "ai_history": "Razvoj veštačke inteligencije"
+    },
+    "success": "Vaša poruka je uspešno poslata!",
+    "error": "Došlo je do greške. Pokušajte ponovo."
   },
-  "social": {
-    "title": "Pratite nas",
-    "facebook": "Facebook stranica",
-    "instagram": "Instagram profil"
-  },
-  "links": {
-    "title": "Korisni linkovi",
-    "regulations": "Zakonska regulativa",
-    "advertising_law": "Zakon o oglašavanju",
-    "ecommerce_law": "Zakon o elektronskoj trgovini",
-    "tax_policy": "Poreska politika",
-    "education": "Edukacija",
-    "web_history": "Istorijat interneta",
-    "ai_history": "Razvoj veštačke inteligencije"
-  },
-  "success": "Vaša poruka je uspešno poslata!",
-  "error": "Došlo je do greške. Pokušajte ponovo."
-},
-"about": {
+  "about": {
     "title": "O nama",
     "intro": "Express web je agencijska inicijativa u okviru GBS platforme, posvećena brzom, modernom i dostupnom nastupu na internetu za male i srednje firme.",
     "p1": "GBS (Globalni Biznis Sistem) je tehnološka platforma koja objedinjuje više nezavisnih servisa i aplikacija pod jednim modularnim kišobranom. Agencija Express web je osmišljena kao početna tačka – praktičan alat za brzu izradu web prisustva.",
@@ -549,7 +488,7 @@
     },
     "notice": "Uskoro otvaramo CMS za korisničke priče, tutorijale i analize – pratite nas."
   },
-   "diversity": {
+  "diversity": {
     "title": "Raznolikost i inkluzija",
     "intro": "Mi, u Express web-u verujemo da različitost timova vodi ka boljim rešenjima. Naš pristup je otvoren, inkluzivan i orijentisan ka vrednostima.",
     "p1": "Ne pravimo razliku među ljudima po osnovu pola, rase, vere, invaliditeta, uzrasta ili bilo kog drugog ličnog svojstva. Cenimo različita mišljenja, perspektive i iskustva jer verujemo da nas upravo one čine jačima.",
@@ -561,7 +500,6 @@
     "title": "Karijere u GBS platformi i Express web agenciji",
     "intro": "Pozivamo te da se priključiš timu koji razvija savremena poslovna rešenja. Prvih 6 meseci angažman je kroz honorarnu saradnju (spoljni saradnici), 100% remote (rad od kuće).",
     "cta": "Pošalji prijavu putem kontakt forme",
-
     "p1": {
       "title": "Frontend Developer (Junior)",
       "text": "Osnovno znanje HTML, CSS, JavaScript, Bootstrap. Poželjno: Vue ili React. Rad u timu, rad na postojećim komponentama i učenje kroz praksu.",
@@ -615,7 +553,7 @@
       "description": "Izveštaj o početnim troškovima, testiranju i uspostavljanju timske strukture."
     }
   },
-   "changelog": {
+  "changelog": {
     "title": "Izmene i unapređenja (Changelog)",
     "intro": "Ovde se nalaze informacije o svim ključnim izmenama, poboljšanjima i novim funkcijama implementiranim na platformi.",
     "c1": {
@@ -1035,14 +973,13 @@
       }
     }
   },
-  
-   "freesite": {
+  "freesite": {
     "title": "Jednim klikom do sajta",
     "note": "Molimo vas da pažljivo popunite sva polja. Svaki unos je obavezan (osim logotipa), kako bismo mogli generisati kompletnu i profesionalnu prezentaciju. Format slika: JPG/PNG/WebP do 4MB. Ukoliko pokušate da otpremite veću sliku, biće odbijena.",
     "submit": "✅ Pošalji zahtev",
     "loading": "⏳ Slanje...",
     "success": "✅ Zahtev je uspešno poslat!",
-     "noticeAfterSubmit": "Prezentaciju ćete dobiti na e-mail adresu navedenu u formi, nakon odobrenja administratora, a najkasnije u roku od 24h.",
+    "noticeAfterSubmit": "Prezentaciju ćete dobiti na e-mail adresu navedenu u formi, nakon odobrenja administratora, a najkasnije u roku od 24h.",
     "sections": {
       "general": "Opšti podaci",
       "hero": "Hero sekcija",
@@ -1058,15 +995,12 @@
       "facebook": "https://facebook.com/profil",
       "instagram": "https://instagram.com/profil",
       "logo": "Logotip (opciono)",
-
       "heroImage": "Glavna slika (pozadina)",
       "heroTitle": "Naslov (npr. Kvalitet iz naše tradicije)",
       "heroSubtitle": "Kratak podnaslov (do 250 karaktera)",
-
       "aboutImage": "Fotografija firme ili tima",
       "aboutTitle": "Naslov sekcije (npr. Ko smo mi)",
       "aboutText": "Detaljniji opis (do 1000 karaktera)",
-
       "offerTitle": "Naslov sekcije (npr. Naše usluge)",
       "offerItemTitle": "Npr. Web dizajn",
       "addOffer": "➕ Dodaj stavku",
@@ -1154,7 +1088,7 @@
       "load": "⚠️ Greška pri učitavanju podataka.",
       "save": "⚠️ Greška pri čuvanju.",
       "image": "⚠️ Slika u stavci {{index}} nije validna ili je prevelika."
-  }
+    }
   },
   "projects": {
     "title": "Naši Express projekti",
@@ -1282,7 +1216,7 @@
         }
       }
     },
-     "design": {
+    "design": {
       "title": "Express Dizajn",
       "subtitle": "Dizajn logotipa, banera i društvenih mreža — brzo, kreativno i uz AI podršku.",
       "offerTitle": "Šta nudimo",
@@ -1423,7 +1357,7 @@
         }
       }
     },
-     "pro": {
+    "pro": {
       "badge": "🚀 Premium opcije za tvoj sajt",
       "title": "PRO verzija sajta – više mogućnosti, veći utisak",
       "featuresTitle": "Šta dobijate u PRO paketu?",
@@ -1497,21 +1431,21 @@
       }
     },
     "w3site": {
-    "badge": "🎨 W3Schools Express dizajn",
-    "title": "Unikatni sajt za 2 -3 dana uz W3Schools",
-    "sectionTitle": "Izrada sajta po tvojoj meri za nešto više od 24h",
-    "points": {
-      "1": "⚡ Brza isporuka i unikatna obrada sadržaja prema zahtevima.",
-      "2": "🎯 W3Schools šabloni prilagođeni potrebama korisnika – vizuelno dopadljivi, SEO friendly, responzivni.",
-      "3": "🧩 Mogućnost dodatnog proširenja – kontakt forme, galerije, reference, Google mapa.",
-      "4": "💡 Odlična opcija za zanatlije, mikro-preduzetnike i hobiste.",
-      "5": "🛠 Cena fiksna, rešenja od 199 € – sve uračunato u ponudu. Plaćanje nakon dostave sajta."
+      "badge": "🎨 W3Schools Express dizajn",
+      "title": "Unikatni sajt za 2 -3 dana uz W3Schools",
+      "sectionTitle": "Izrada sajta po tvojoj meri za nešto više od 24h",
+      "points": {
+        "1": "⚡ Brza isporuka i unikatna obrada sadržaja prema zahtevima.",
+        "2": "🎯 W3Schools šabloni prilagođeni potrebama korisnika – vizuelno dopadljivi, SEO friendly, responzivni.",
+        "3": "🧩 Mogućnost dodatnog proširenja – kontakt forme, galerije, reference, Google mapa.",
+        "4": "💡 Odlična opcija za zanatlije, mikro-preduzetnike i hobiste.",
+        "5": "🛠 Cena fiksna, rešenja od 199 € – sve uračunato u ponudu. Plaćanje nakon dostave sajta."
+      },
+      "ctaTitle": "Spreman si za unikatni sajt?",
+      "ctaText": "Pošalji nam sadržaj i želje – mi radimo sve ostalo. Bez čekanja, bez komplikacija.",
+      "ctaButton": "Kontaktiraj nas odmah"
     },
-    "ctaTitle": "Spreman si za unikatni sajt?",
-    "ctaText": "Pošalji nam sadržaj i želje – mi radimo sve ostalo. Bez čekanja, bez komplikacija.",
-    "ctaButton": "Kontaktiraj nas odmah"
-  },
-  "seo": {
+    "seo": {
       "badge": "🔍 Express SEO optimizacija",
       "title": "Vidljivost na Google-u za samo nekoliko dana",
       "sectionTitle": "SEO usluge po meri – brzo, precizno i efikasno",
@@ -1556,16 +1490,12 @@
       "ctaText": "Pošalji dokument ili link – mi šaljemo prevod u najkraćem roku.",
       "ctaButton": "Zatraži ponudu za prevod"
     }
-    
-    },
-    
- 
+  },
   "landing": {
     "freesite": {
       "badge": "Potpuno besplatno napravi svoj sajt",
       "title": "Jednim klikom do sajta – besplatna online prezentacija",
       "subtitle": "Ne znaš gde da počneš? Nema problema — tvoj sajt je spreman za 5 minuta.",
-
       "points": {
         "1": {
           "title": "Brzo pokretanje.",
@@ -1588,7 +1518,6 @@
           "text": "Dobijaš poddomen tvoj-biznis.freesite.rs — lako za deljenje."
         }
       },
-
       "faq": {
         "title": "Sve što treba da znate",
         "items": {
@@ -1618,7 +1547,6 @@
           }
         }
       },
-
       "cta": {
         "title": "Bez programera. Bez plaćanja. Bez problema.",
         "text": "Klikni ispod i započni besplatnu prezentaciju svog posla ili hobija.",
@@ -1662,60 +1590,59 @@
       }
     },
     "faq": {
-  "title": "Najčešća pitanja",
-  "subtitle": "Sve što treba da znate",
-  "items": {
-    "1": {
-      "q": "Da li mogu sam da dodajem proizvode?",
-      "a": "Da. Dobijaš svoj panel za unos, izmenu i brisanje proizvoda, kao i praćenje porudžbina."
+      "title": "Najčešća pitanja",
+      "subtitle": "Sve što treba da znate",
+      "items": {
+        "1": {
+          "q": "Da li mogu sam da dodajem proizvode?",
+          "a": "Da. Dobijaš svoj panel za unos, izmenu i brisanje proizvoda, kao i praćenje porudžbina."
+        },
+        "2": {
+          "q": "Podržavate više prodavaca?",
+          "a": "Da, sistem omogućava više nezavisnih prodavaca sa sopstvenim nalozima i pravima pristupa."
+        },
+        "3": {
+          "q": "Kako se vrši naplata?",
+          "a": "Putem integracije sa Stripe i drugim metodama, novac se uplaćuje direktno prodavcima."
+        },
+        "4": {
+          "q": "Mogu li koristiti više jezika i valuta?",
+          "a": "Naravno. Sistem podržava višejezičnost i automatsku konverziju valuta."
+        },
+        "5": {
+          "q": "Koliko traje implementacija?",
+          "a": "Samostalna prodavnica: 10–15 dana. Multi-vendor rešenje: do 20 dana sa testiranjem."
+        },
+        "6": {
+          "q": "Da li je dizajn fleksibilan?",
+          "a": "Da. Možete birati šablone, boje, fontove ili koristiti sopstveni dizajn."
+        },
+        "7": {
+          "q": "Mogu li praviti popuste i promocije?",
+          "a": "Sistem omogućava kupon kodove, sezonske akcije, istaknute proizvode i kampanje."
+        },
+        "8": {
+          "q": "Postoji li mobilna aplikacija?",
+          "a": "Možemo razviti aplikaciju za Android/iOS ili koristiti PWA verziju sajta."
+        },
+        "9": {
+          "q": "Ko je vlasnik podataka?",
+          "a": "Vi. Imate punu kontrolu i mogućnost izvoza podataka."
+        },
+        "10": {
+          "q": "Da li mogu povezati društvene mreže?",
+          "a": "Da. Facebook Shop, Instagram katalog, deljenje proizvoda i više."
+        },
+        "11": {
+          "q": "Podržavate B2B poslovanje?",
+          "a": "Da. Platforma može raditi kao veleprodajni sistem sa posebnim opcijama."
+        },
+        "12": {
+          "q": "Mogu li migrirati sa Shopify/WooCommerce?",
+          "a": "Da. Nudimo migraciju bez gubitka podataka."
+        }
+      }
     },
-    "2": {
-      "q": "Podržavate više prodavaca?",
-      "a": "Da, sistem omogućava više nezavisnih prodavaca sa sopstvenim nalozima i pravima pristupa."
-    },
-    "3": {
-      "q": "Kako se vrši naplata?",
-      "a": "Putem integracije sa Stripe i drugim metodama, novac se uplaćuje direktno prodavcima."
-    },
-    "4": {
-      "q": "Mogu li koristiti više jezika i valuta?",
-      "a": "Naravno. Sistem podržava višejezičnost i automatsku konverziju valuta."
-    },
-    "5": {
-      "q": "Koliko traje implementacija?",
-      "a": "Samostalna prodavnica: 10–15 dana. Multi-vendor rešenje: do 20 dana sa testiranjem."
-    },
-    "6": {
-      "q": "Da li je dizajn fleksibilan?",
-      "a": "Da. Možete birati šablone, boje, fontove ili koristiti sopstveni dizajn."
-    },
-    "7": {
-      "q": "Mogu li praviti popuste i promocije?",
-      "a": "Sistem omogućava kupon kodove, sezonske akcije, istaknute proizvode i kampanje."
-    },
-    "8": {
-      "q": "Postoji li mobilna aplikacija?",
-      "a": "Možemo razviti aplikaciju za Android/iOS ili koristiti PWA verziju sajta."
-    },
-    "9": {
-      "q": "Ko je vlasnik podataka?",
-      "a": "Vi. Imate punu kontrolu i mogućnost izvoza podataka."
-    },
-    "10": {
-      "q": "Da li mogu povezati društvene mreže?",
-      "a": "Da. Facebook Shop, Instagram katalog, deljenje proizvoda i više."
-    },
-    "11": {
-      "q": "Podržavate B2B poslovanje?",
-      "a": "Da. Platforma može raditi kao veleprodajni sistem sa posebnim opcijama."
-    },
-    "12": {
-      "q": "Mogu li migrirati sa Shopify/WooCommerce?",
-      "a": "Da. Nudimo migraciju bez gubitka podataka."
-    }
-  }
-},
-
     "cta": {
       "title": "Želiš da pokreneš svoju online prodavnicu?",
       "text": "Registruj se i pokreni postupak za svoju prodavnicu danas!",
@@ -1850,55 +1777,55 @@
     "request": "Zatraži ponudu"
   },
   "demoPreviews": {
-  "title": "🌍 Demo sajtovi – Realne prezentacije",
-  "subtitle": "Pogledajte gotove primere sajtova izrađenih kroz naš sistem. Kliknite i uverite se kako izgleda profesionalna online prezentacija – bez potrebe za tehničkim znanjem!",
-  "goToDashboard": "🛠 Idi na svoj nalog",
-  "registerAndCreate": "🚀 Registruj se i napravi svoj sajt",
-  "note": "Ne moraš da se registruješ da bi isprobao formu:",
-  "freeSiteButton": "📝 Kreiraj svoju BESPLATNU prezentaciju",
-  "proSiteButton": "🚀 Kreiraj svoju PRO prezentaciju",
-  "title_free": "FREE - besplatna varijanta",
-  "title_pro": "PRO - plaćena varijanta",
-  "description_free": "Primer besplatne verzije. Dodatna izrada logoa 990,00 din",
-  "description_pro": "Primer pro prezentacije, sa izradom logoa. Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga. Moguća kupovina domena po najpovoljnijim uslovima."
-},
-"demoBox": {
-  "demo_button": "Pogledajte prezentaciju"
-},
-"requestModal": {
-  "title": "📩 Zatraži ponudu",
-  "subtitle": "Popunite formular i dobićete personalizovanu ponudu za uslugu:",
-  "name": "Ime i prezime *",
-  "email": "Email *",
-  "message": "Napomena (opcionalno)",
-  "send": "Pošalji upit",
-  "success": "✅ Poruka uspešno poslata!",
-  "error": "❌ Greška pri slanju poruke. Pokušajte ponovo."
-},
-"businessPreview": {
-  "activityTitle": "📋 Opis delatnosti",
-  "offerTitle": "Naša ponuda",
-  "followUs": "Pratite nas:",
-  "footerText": "Ponosni partner",
-  "footerLink": "Express web platforme"
-},
-"businessPreviewPro": {
-  "nav": {
-    "about": "O nama",
-    "offer": "Ponuda",
-    "contact": "Kontakt"
+    "title": "🌍 Demo sajtovi – Realne prezentacije",
+    "subtitle": "Pogledajte gotove primere sajtova izrađenih kroz naš sistem. Kliknite i uverite se kako izgleda profesionalna online prezentacija – bez potrebe za tehničkim znanjem!",
+    "goToDashboard": "🛠 Idi na svoj nalog",
+    "registerAndCreate": "🚀 Registruj se i napravi svoj sajt",
+    "note": "Ne moraš da se registruješ da bi isprobao formu:",
+    "freeSiteButton": "📝 Kreiraj svoju BESPLATNU prezentaciju",
+    "proSiteButton": "🚀 Kreiraj svoju PRO prezentaciju",
+    "title_free": "FREE - besplatna varijanta",
+    "title_pro": "PRO - plaćena varijanta",
+    "description_free": "Primer besplatne verzije. Dodatna izrada logoa 990,00 din",
+    "description_pro": "Primer pro prezentacije, sa izradom logoa. Cena od 10 € do 50 € u zavisnosti od nivoa dodatnih usluga. Moguća kupovina domena po najpovoljnijim uslovima."
   },
-  "activity": "📋 Opis delatnosti",
-  "note": "Ova prezentacija je deo PRO paketa i može se dodatno uređivati nakon uplate (10 € / godišnje).",
-  "video": "🎥 Video prezentacija",
-  "pdf": "📄 Priloženi dokument",
-  "contact": "📞 Kontakt",
-  "social": "Pratite nas:",
-  "backToTop": "Nazad na vrh ↑",
-  "downloadPdf": "Preuzmi PDF",
-  "openPdfInNewTab": "Otvori PDF u novom tabu"
-},
-"classicPreview": {
+  "demoBox": {
+    "demo_button": "Pogledajte prezentaciju"
+  },
+  "requestModal": {
+    "title": "📩 Zatraži ponudu",
+    "subtitle": "Popunite formular i dobićete personalizovanu ponudu za uslugu:",
+    "name": "Ime i prezime *",
+    "email": "Email *",
+    "message": "Napomena (opcionalno)",
+    "send": "Pošalji upit",
+    "success": "✅ Poruka uspešno poslata!",
+    "error": "❌ Greška pri slanju poruke. Pokušajte ponovo."
+  },
+  "businessPreview": {
+    "activityTitle": "📋 Opis delatnosti",
+    "offerTitle": "Naša ponuda",
+    "followUs": "Pratite nas:",
+    "footerText": "Ponosni partner",
+    "footerLink": "Express web platforme"
+  },
+  "businessPreviewPro": {
+    "nav": {
+      "about": "O nama",
+      "offer": "Ponuda",
+      "contact": "Kontakt"
+    },
+    "activity": "📋 Opis delatnosti",
+    "note": "Ova prezentacija je deo PRO paketa i može se dodatno uređivati nakon uplate (10 € / godišnje).",
+    "video": "🎥 Video prezentacija",
+    "pdf": "📄 Priloženi dokument",
+    "contact": "📞 Kontakt",
+    "social": "Pratite nas:",
+    "backToTop": "Nazad na vrh ↑",
+    "downloadPdf": "Preuzmi PDF",
+    "openPdfInNewTab": "Otvori PDF u novom tabu"
+  },
+  "classicPreview": {
     "activityTitle": "📋 Opis delatnosti",
     "followUs": "Pratite nas na društvenim mrežama:",
     "footerText": "Ponosni partner",
@@ -1920,7 +1847,7 @@
     "social": "Pratite nas:",
     "backToTop": "Nazad na vrh ↑"
   },
-   "darkPreview": {
+  "darkPreview": {
     "activityTitle": "📋 Opis delatnosti",
     "offerTitle": "Naša ponuda",
     "social": "Pratite nas:",
@@ -2032,23 +1959,18 @@
       "facebook": "Facebook link",
       "instagram": "Instagram link",
       "logo": "Logotip (opciono)",
-
       "heroImage": "Glavna slika (pozadina) *",
       "heroTitle": "Naslov *",
       "heroSubtitle": "Podnaslov *",
-
       "aboutImage": "Slika firme/tima *",
       "aboutTitle": "Naslov sekcije *",
       "aboutText": "Opis firme *",
-
       "offerTitle": "Naslov sekcije *",
       "offerItemTitle": "Naziv usluge/proizvoda *",
       "addOffer": "➕ Dodaj stavku",
       "remove": "✖ Ukloni",
-
       "pdfDocument": "PDF dokument (cenovnik, ponuda)",
       "youtube": "YouTube link (opciono)",
-
       "city": "Mesto *",
       "street": "Ulica i broj *",
       "map": "Google Maps link (opciono)",
@@ -2065,19 +1987,19 @@
       "dark": "🌙 Dark mode"
     },
     "errors": {
-    "image": "⚠️ Slika mora biti manja od 4MB i validnog formata.",
-    "pdf": "⚠️ Dozvoljen je samo PDF dokument.",
-    "offerImage": "⚠️ Slika u stavci {{index}} nije validna ili je prevelika.",
-    "general": "⚠️ Nešto je pošlo po zlu. Pokušajte ponovo.",
-    "fetch": "⚠️ Nije moguće učitati podatke iz šablona."
-  },
-  "plans": {
-    "starter": "Starter (10 € godišnje)",
-    "basic": "Basic (20 € godišnje)",
-    "pro": "Pro (30 € godišnje)",
-    "premium": "Premium (40 € godišnje)",
-    "business": "Business (50 € godišnje)"
-  }
+      "image": "⚠️ Slika mora biti manja od 4MB i validnog formata.",
+      "pdf": "⚠️ Dozvoljen je samo PDF dokument.",
+      "offerImage": "⚠️ Slika u stavci {{index}} nije validna ili je prevelika.",
+      "general": "⚠️ Nešto je pošlo po zlu. Pokušajte ponovo.",
+      "fetch": "⚠️ Nije moguće učitati podatke iz šablona."
+    },
+    "plans": {
+      "starter": "Starter (10 € godišnje)",
+      "basic": "Basic (20 € godišnje)",
+      "pro": "Pro (30 € godišnje)",
+      "premium": "Premium (40 € godišnje)",
+      "business": "Business (50 € godišnje)"
+    }
   },
   "adminSites": {
     "title": "🌐 Poslate prezentacije",
@@ -2107,7 +2029,6 @@
       "pending": "Na čekanju",
       "active": "Aktivno",
       "rejected": "Odbijeno"
-
     },
     "empty": "Nema unetih prezentacija.",
     "confirmDelete": "Da li sigurno želite da obrišete ovu prezentaciju?",
@@ -2125,33 +2046,33 @@
     "limit": "Dnevni limit je dostignut. Pokušajte sutra ponovo.",
     "pdfSuggestion": "Želite li da generišem PDF dokument sa cenovnikom?",
     "close": "Zatvori predlog"
-},
-"chat": {
-  "title": "🤖 Express Web Pomoćnik",
-  "inputPlaceholder": "Postavi pitanje...",
-  "buttonSend": "➤",
-  "assistantLabel": "Bot",
-  "userLabel": "Vi",
-  "error": "⚠️ Došlo je do greške. Pokušajte ponovo.",
-  "default": "Zdravo! Kako mogu da Vam pomognem?",
-  "fallback": "Nešto je pošlo po zlu.",
-  "tooltip": "Treba pomoć? Pitaj našeg AI pomoćnika!"
-},
-"checkout": {
+  },
+  "chat": {
+    "title": "🤖 Express Web Pomoćnik",
+    "inputPlaceholder": "Postavi pitanje...",
+    "buttonSend": "➤",
+    "assistantLabel": "Bot",
+    "userLabel": "Vi",
+    "error": "⚠️ Došlo je do greške. Pokušajte ponovo.",
+    "default": "Zdravo! Kako mogu da Vam pomognem?",
+    "fallback": "Nešto je pošlo po zlu.",
+    "tooltip": "Treba pomoć? Pitaj našeg AI pomoćnika!"
+  },
+  "checkout": {
     "title": "Pregled narudžbine",
-  "empty": "Vaša korpa je prazna.",
-  "remove": "Ukloni",
-  "total": "Ukupno",
-  "payNow": "Nastavi na plaćanje",
-  "proceed": "Nastavi na plaćanje",
-  "chooseMethod": "Odaberite način plaćanja:",
-  "payCard": "Kartica (Stripe)",
-  "invoice_request": "Profaktura (RSD/EUR)",
-  "paypal": "PayPal (uskoro)",
-  "invoiceOptions": "Odaberite valutu za profakturu",
-  "downloadInvoice": "Preuzmi profakturu"
-},
-"common": {
+    "empty": "Vaša korpa je prazna.",
+    "remove": "Ukloni",
+    "total": "Ukupno",
+    "payNow": "Nastavi na plaćanje",
+    "proceed": "Nastavi na plaćanje",
+    "chooseMethod": "Odaberite način plaćanja:",
+    "payCard": "Kartica (Stripe)",
+    "invoice_request": "Profaktura (RSD/EUR)",
+    "paypal": "PayPal (uskoro)",
+    "invoiceOptions": "Odaberite valutu za profakturu",
+    "downloadInvoice": "Preuzmi profakturu"
+  },
+  "common": {
     "cancel": "Otkaži",
     "sending": "⏳ Slanje..."
   },
@@ -2188,14 +2109,3 @@
     }
   }
 }
-
-
-
-
-  
-  
-    
-  
-  
-  
-
