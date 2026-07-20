@@ -11,7 +11,7 @@
           <img
             src="../images/glow-bottom.svg"
             class="max-w-none"
-             width="1200"
+             width="600"
              height="130"
             alt=""
           />
