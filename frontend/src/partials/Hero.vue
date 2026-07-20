@@ -12,7 +12,7 @@
             src="../images/glow-bottom.svg"
             class="max-w-none"
              width="1200"
-             height="430"
+             height="230"
             alt=""
           />
         </div>
