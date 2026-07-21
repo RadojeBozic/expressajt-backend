@@ -361,7 +361,7 @@
     "paragraph2": "We learned from every challenge. There were no easy steps, but each problem taught us how to better understand technology, the market, and – people. We believe the best solutions are born through process, not overnight.",
     "paragraph3": "From concept to launch – everything is built in-house. All systems, design, and backend functionalities are developed under one roof. That way we retain quality control and can respond to client needs faster.",
     "paragraph4": "We see the big picture, but we care about every detail. From UX design to system architecture, we approach every task with attention. We're focused on user experience, security, and sustainable solutions.",
-    "paragraph5": "Express Websites is not just a team – it's your growth partner. More than just a solution, we offer dedication. When you grow – we grow together. Our vision is clear: with every project, we build lasting trust."
+    "paragraph5": "Express Web is not just a team – it's your growth partner. More than just a solution, we offer dedication. When you grow – we grow together. Our vision is clear: with every project, we build lasting trust."
   },
   "hero_about": {
     "subtitle": "Advanced solutions for digital transformation",
@@ -2111,127 +2111,127 @@
     }
   },
   "services_page": {
-  "label": "Naša ponuda",
-  "title": "Usluge prilagođene vašem poslovanju",
-  "intro": "Od jednostavnih poslovnih prezentacija do online prodavnica i naprednih aplikacija — biramo rešenje prema vašim ciljevima, budžetu i planu razvoja.",
-  "more": "Saznajte više",
-  "cta_text": "Niste sigurni koje rešenje odgovara vašem poslovanju?",
-  "cta_button": "Zatražite besplatnu konsultaciju",
+  "label": "Our services",
+  "title": "Services tailored to your business",
+  "intro": "From simple business websites to online stores and advanced applications, we choose the right solution based on your goals, budget and development plans.",
+  "more": "Learn more",
+  "cta_text": "Not sure which solution is right for your business?",
+  "cta_button": "Request a free consultation",
   "items": {
     "1": {
-      "title": "Web prezentacije",
-      "description": "Brzi, moderni i responzivni sajtovi za preduzetnike, udruženja i mala preduzeća."
+      "title": "Business websites",
+      "description": "Fast, modern and responsive websites for entrepreneurs, associations and small businesses."
     },
     "2": {
-      "title": "Poslovni sajtovi po meri",
-      "description": "Profesionalne web prezentacije prilagođene identitetu, sadržaju i ciljevima vaše firme."
+      "title": "Custom business websites",
+      "description": "Professional websites tailored to your company’s identity, content and business goals."
     },
     "3": {
-      "title": "Online prodavnice",
-      "description": "Kompletna e-commerce rešenja sa katalogom, korpom, porudžbinama i administratorskim panelom."
+      "title": "Online stores",
+      "description": "Complete e-commerce solutions with product catalogues, shopping carts, orders and an administration panel."
     },
     "4": {
-      "title": "Marketplace i B2B sistemi",
-      "description": "Napredne platforme sa više prodavaca, korisničkim ulogama i poslovnim modulima."
+      "title": "Marketplace and B2B systems",
+      "description": "Advanced platforms with multiple vendors, user roles and business management modules."
     },
     "5": {
-      "title": "Domen i managed hosting",
-      "description": "Registracija domena, SSL, hosting, backup i tehnička podrška na jednom mestu."
+      "title": "Domains and managed hosting",
+      "description": "Domain registration, SSL, hosting, backups and technical support in one place."
     },
     "6": {
-      "title": "Održavanje i podrška",
-      "description": "Redovno ažuriranje, sigurnosne kontrole, backup, izmene sadržaja i tehnička pomoć."
+      "title": "Maintenance and support",
+      "description": "Regular updates, security checks, backups, content changes and technical assistance."
     },
     "7": {
-      "title": "Dizajn i vizuelni sadržaj",
-      "description": "Logo, baneri, grafike za društvene mreže i promotivni materijali."
+      "title": "Design and visual content",
+      "description": "Logos, banners, social media graphics and promotional materials."
     },
     "8": {
-      "title": "SEO optimizacija",
-      "description": "Tehnička i sadržajna optimizacija za bolju vidljivost u rezultatima internet pretrage."
+      "title": "SEO optimisation",
+      "description": "Technical and content optimisation for better visibility in search engine results."
     },
     "9": {
-      "title": "Digitalni marketing",
-      "description": "Strategija, oglašavanje, sadržaj i praćenje rezultata digitalnih kampanja."
+      "title": "Digital marketing",
+      "description": "Strategy, advertising, content creation and performance tracking for digital campaigns."
     },
     "10": {
-      "title": "Integracije",
-      "description": "Povezivanje sajta sa analitikom, mapama, email servisima, naplatom i drugim platformama."
+      "title": "Integrations",
+      "description": "Connecting websites with analytics, maps, email services, payment systems and other platforms."
     },
     "11": {
-      "title": "Višejezični sadržaj",
-      "description": "Lokalizacija i prilagođavanje sadržaja za srpsko, englesko i nemačko govorno područje."
+      "title": "Multilingual content",
+      "description": "Localisation and content adaptation for Serbian, English and German-speaking audiences."
     },
     "12": {
-      "title": "AI i automatizacija",
-      "description": "Chatbotovi, automatizovani odgovori i AI alati prilagođeni vašim poslovnim procesima."
+      "title": "AI and automation",
+      "description": "Chatbots, automated responses and AI tools tailored to your business processes."
     }
   }
 },
 "portfolio": {
-  "label": "Izdvojeni radovi",
-  "title": "Projekti koji pokazuju šta možemo da izgradimo",
-  "intro": "Predstavljamo izbor poslovnih sajtova, online prodavnica i platformi koje smo razvili za klijente i sopstvene poslovne projekte.",
-  "visit_project": "Posetite projekat",
-  "similar_project": "Želim slično rešenje",
+  "label": "Selected work",
+  "title": "Projects that show what we can build",
+  "intro": "Explore a selection of business websites, online stores and platforms we have developed for clients and our own business projects.",
+  "visit_project": "Visit project",
+  "similar_project": "I want a similar solution",
   "items": {
     "1": {
       "title": "GVP Consult",
-      "category": "Poslovni web sajt",
-      "description": "Moderan prezentacioni sajt za konsultantske usluge u oblastima sanitarne hemije, regulatornih zahteva i bezbednosti proizvoda.",
-      "image_alt": "Prikaz web sajta GVP Consult",
+      "category": "Business website",
+      "description": "A modern presentation website for consulting services in sanitary chemistry, regulatory compliance and product safety.",
+      "image_alt": "GVP Consult website preview",
       "features": {
-        "1": "Vue 3, Vite i Tailwind CSS",
-        "2": "Responzivan dizajn za sve uređaje",
-        "3": "SEO osnova, sitemap i robots.txt",
-        "4": "Google Search Console i strukturirani podaci",
-        "5": "Hosting, SSL i tehnička podrška"
+        "1": "Vue 3, Vite and Tailwind CSS",
+        "2": "Responsive design for all devices",
+        "3": "SEO foundation, sitemap and robots.txt",
+        "4": "Google Search Console and structured data",
+        "5": "Hosting, SSL and technical support"
       }
     },
     "2": {
       "title": "Agro BiM Shop",
-      "category": "Online prodavnica",
-      "description": "E-commerce platforma za prodaju semena, opreme i poljoprivrednog repromaterijala, razvijena na Bagisto platformi.",
-      "image_alt": "Prikaz online prodavnice Agro BiM Shop",
+      "category": "Online store",
+      "description": "An e-commerce platform for selling seeds, equipment and agricultural supplies, developed on the Bagisto platform.",
+      "image_alt": "Agro BiM Shop online store preview",
       "features": {
-        "1": "Bagisto i Laravel e-commerce sistem",
-        "2": "Katalog, kategorije, korpa i poručivanje",
-        "3": "Administratorski panel",
-        "4": "Višejezična podrška i SEO",
-        "5": "Cloud hosting, SSL i migracija domena"
+        "1": "Bagisto and Laravel e-commerce system",
+        "2": "Catalogue, categories, shopping cart and ordering",
+        "3": "Administration panel",
+        "4": "Multilingual support and SEO",
+        "5": "Cloud hosting, SSL and domain migration"
       }
     },
     "3": {
-      "title": "ABC Marketplace",
-      "category": "Multivendor poslovna platforma",
-      "description": "Napredna marketplace platforma sa prodavcima, kupcima, agentima, menadžerima i sistemom za praćenje prodaje i provizija.",
-      "image_alt": "Prikaz ABC Marketplace platforme",
+      "title": "Agro BiM",
+      "category": "Business and consulting website",
+      "description": "A website for an agricultural consulting project, providing farms with information about subsidies, incentives, funding programmes and administrative support.",
+      "image_alt": "Agro BiM website preview",
       "features": {
-        "1": "Više prodavaca i administratorski paneli",
-        "2": "Mreža agenata, menadžera i supervizora",
-        "3": "CRM funkcije i atribucija prodaje",
-        "4": "Sistem provizija i izveštavanja",
-        "5": "Više jezika i tržišnih kanala"
+        "1": "Responsive business website optimised for mobile devices",
+        "2": "Presentation of services, team members and pricing",
+        "3": "Contact form and meeting appointment requests",
+        "4": "News, frequently asked questions and useful resources",
+        "5": "Interactive elements, animations and a dynamic hero gallery"
       }
     },
     "4": {
       "title": "Agro BiM Media",
-      "category": "Informativna i sadržajna platforma",
-      "description": "Digitalni medij namenjen vestima, edukaciji i stručnom sadržaju iz oblasti poljoprivrede i razvoja agro poslovanja.",
-      "image_alt": "Prikaz Agro BiM Media platforme",
+      "category": "News and content platform",
+      "description": "A digital media platform dedicated to news, education and expert content in agriculture and agricultural business development.",
+      "image_alt": "Agro BiM Media platform preview",
       "features": {
-        "1": "Vue frontend i Laravel API",
-        "2": "Filament administratorski panel",
-        "3": "Kategorije, članci i automatski slugovi",
-        "4": "Responzivan prikaz i SEO osnova",
-        "5": "Priprema za više autora i sadržajnih formata"
+        "1": "Vue frontend and Laravel API",
+        "2": "Filament administration panel",
+        "3": "Categories, articles and automatic slugs",
+        "4": "Responsive layout and SEO foundation",
+        "5": "Prepared for multiple authors and content formats"
       }
     }
   },
   "cta": {
-    "title": "Imate projekat koji želite da realizujete?",
-    "description": "Opišite nam svoju ideju, postojeći problem ili plan razvoja. Predložićemo realno rešenje, okvirni rok i način realizacije.",
-    "button": "Razgovarajmo o projektu"
+    "title": "Do you have a project you want to bring to life?",
+    "description": "Tell us about your idea, an existing problem or your development plans. We will propose a realistic solution, an estimated timeframe and an implementation approach.",
+    "button": "Let’s discuss your project"
   }
 }
 }

@@ -361,7 +361,7 @@
     "paragraph2": "Učili smo iz svakog izazova. Nije bilo lakih koraka, ali svaki problem nas je naučio kako da bolje razumemo tehnologiju, tržište i – ljude. Verujemo da se najbolja rešenja rađaju kroz proces, ne preko noći.",
     "paragraph3": "Od koncepta do realizacije – sve radimo in-house. Svi sistemi, dizajn i backend funkcionalnosti razvijaju se pod jednim krovom. Na taj način zadržavamo kontrolu nad kvalitetom i brže odgovaramo na potrebe klijenata.",
     "paragraph4": "Gledamo širu sliku, ali brinemo o svakom detalju. Od UX dizajna do sistemske arhitekture, pristupamo svakom zadatku s pažnjom. Fokusirani smo na korisničko iskustvo, sigurnost i održivost rešenja.",
-    "paragraph5": "Agencija Express Sajtovi nije samo tim, već partner za rast. Više od rešenja, nudimo posvećenost. Ako rastete – rastemo zajedno. Naša vizija je jasna: da sa svakim projektom gradimo poverenje koje traje."
+    "paragraph5": "Agencija Express web nije samo tim, već partner za rast. Više od rešenja, nudimo posvećenost. Ako rastete – rastemo zajedno. Naša vizija je jasna: da sa svakim projektom gradimo poverenje koje traje."
   },
   "hero_about": {
     "subtitle": "Napredna rešenja za digitalizaciju",
@@ -2201,18 +2201,18 @@
       }
     },
     "3": {
-      "title": "ABC Marketplace",
-      "category": "Multivendor poslovna platforma",
-      "description": "Napredna marketplace platforma sa prodavcima, kupcima, agentima, menadžerima i sistemom za praćenje prodaje i provizija.",
-      "image_alt": "Prikaz ABC Marketplace platforme",
-      "features": {
-        "1": "Više prodavaca i administratorski paneli",
-        "2": "Mreža agenata, menadžera i supervizora",
-        "3": "CRM funkcije i atribucija prodaje",
-        "4": "Sistem provizija i izveštavanja",
-        "5": "Više jezika i tržišnih kanala"
-      }
-    },
+    "title": "Agro BiM",
+    "category": "Poslovni i konsultantski web sajt",
+    "description": "Web prezentacija konsultantskog projekta namenjenog poljoprivrednim gazdinstvima, sa informacijama o subvencijama, podsticajima, konkursima i administrativnoj podršci.",
+    "image_alt": "Prikaz web sajta Agro BiM",
+    "features": {
+      "1": "Responzivan poslovni sajt prilagođen mobilnim uređajima",
+      "2": "Predstavljanje usluga, tima i cenovnika",
+      "3": "Kontakt forma i zakazivanje sastanka",
+      "4": "Stranice sa vestima, čestim pitanjima i korisnim linkovima",
+      "5": "Interaktivni elementi, animacije i dinamička hero galerija"
+    }
+  },
     "4": {
       "title": "Agro BiM Media",
       "category": "Informativna i sadržajna platforma",

@@ -425,7 +425,7 @@
   "paragraph2": "Wir haben aus jeder Herausforderung gelernt. Es gab keine einfachen Schritte, doch jedes Problem half uns, Technologie, Markt und vor allem – Menschen – besser zu verstehen. Wir sind überzeugt, dass die besten Lösungen durch kontinuierliche Prozesse entstehen, nicht über Nacht.",
   "paragraph3": "Von der Idee bis zum Launch – alles wird intern entwickelt. Sämtliche Systeme, das Design sowie die Backend-Funktionalitäten entstehen unter einem Dach. So behalten wir die volle Qualitätskontrolle und können schneller auf die Bedürfnisse unserer Kunden reagieren.",
   "paragraph4": "Wir behalten das große Ganze im Blick und achten gleichzeitig auf jedes Detail. Von UX-Design bis zur Systemarchitektur gehen wir jede Aufgabe mit höchster Sorgfalt an. Unser Fokus liegt auf Benutzererlebnis, Sicherheit und nachhaltigen Lösungen.",
-  "paragraph5": "Express Websites ist nicht nur ein Team – wir sind Ihr Wachstumspartner. Wir bieten mehr als nur Lösungen: Engagement und Verlässlichkeit. Wenn Sie wachsen, wachsen wir gemeinsam. Unsere Vision ist klar: Mit jedem Projekt schaffen wir langfristiges Vertrauen."
+  "paragraph5": "Express Web ist nicht nur ein Team – wir sind Ihr Wachstumspartner. Wir bieten mehr als nur Lösungen: Engagement und Verlässlichkeit. Wenn Sie wachsen, wachsen wir gemeinsam. Unsere Vision ist klar: Mit jedem Projekt schaffen wir langfristiges Vertrauen."
 },
 "hero_about": {
   "subtitle": "Fortschrittliche Lösungen für die digitale Transformation",
@@ -2180,127 +2180,127 @@
   }
 },
 "services_page": {
-  "label": "Naša ponuda",
-  "title": "Usluge prilagođene vašem poslovanju",
-  "intro": "Od jednostavnih poslovnih prezentacija do online prodavnica i naprednih aplikacija — biramo rešenje prema vašim ciljevima, budžetu i planu razvoja.",
-  "more": "Saznajte više",
-  "cta_text": "Niste sigurni koje rešenje odgovara vašem poslovanju?",
-  "cta_button": "Zatražite besplatnu konsultaciju",
+  "label": "Unser Angebot",
+  "title": "Dienstleistungen, die zu Ihrem Unternehmen passen",
+  "intro": "Von einfachen Unternehmenswebsites bis hin zu Onlineshops und fortschrittlichen Anwendungen wählen wir die passende Lösung entsprechend Ihren Zielen, Ihrem Budget und Ihren Entwicklungsplänen.",
+  "more": "Mehr erfahren",
+  "cta_text": "Sie sind nicht sicher, welche Lösung zu Ihrem Unternehmen passt?",
+  "cta_button": "Kostenlose Beratung anfragen",
   "items": {
     "1": {
-      "title": "Web prezentacije",
-      "description": "Brzi, moderni i responzivni sajtovi za preduzetnike, udruženja i mala preduzeća."
+      "title": "Unternehmenswebsites",
+      "description": "Schnelle, moderne und responsive Websites für Selbstständige, Vereine und kleine Unternehmen."
     },
     "2": {
-      "title": "Poslovni sajtovi po meri",
-      "description": "Profesionalne web prezentacije prilagođene identitetu, sadržaju i ciljevima vaše firme."
+      "title": "Individuelle Unternehmenswebsites",
+      "description": "Professionelle Websites, die an die Identität, die Inhalte und die Ziele Ihres Unternehmens angepasst sind."
     },
     "3": {
-      "title": "Online prodavnice",
-      "description": "Kompletna e-commerce rešenja sa katalogom, korpom, porudžbinama i administratorskim panelom."
+      "title": "Onlineshops",
+      "description": "Komplette E-Commerce-Lösungen mit Produktkatalog, Warenkorb, Bestellverwaltung und Administrationsbereich."
     },
     "4": {
-      "title": "Marketplace i B2B sistemi",
-      "description": "Napredne platforme sa više prodavaca, korisničkim ulogama i poslovnim modulima."
+      "title": "Marketplace- und B2B-Systeme",
+      "description": "Fortschrittliche Plattformen mit mehreren Anbietern, Benutzerrollen und Geschäftsmodulen."
     },
     "5": {
-      "title": "Domen i managed hosting",
-      "description": "Registracija domena, SSL, hosting, backup i tehnička podrška na jednom mestu."
+      "title": "Domains und Managed Hosting",
+      "description": "Domainregistrierung, SSL, Hosting, Backups und technischer Support aus einer Hand."
     },
     "6": {
-      "title": "Održavanje i podrška",
-      "description": "Redovno ažuriranje, sigurnosne kontrole, backup, izmene sadržaja i tehnička pomoć."
+      "title": "Wartung und Support",
+      "description": "Regelmäßige Updates, Sicherheitsprüfungen, Backups, Inhaltsänderungen und technische Unterstützung."
     },
     "7": {
-      "title": "Dizajn i vizuelni sadržaj",
-      "description": "Logo, baneri, grafike za društvene mreže i promotivni materijali."
+      "title": "Design und visuelle Inhalte",
+      "description": "Logos, Banner, Grafiken für soziale Netzwerke und Werbematerialien."
     },
     "8": {
-      "title": "SEO optimizacija",
-      "description": "Tehnička i sadržajna optimizacija za bolju vidljivost u rezultatima internet pretrage."
+      "title": "SEO-Optimierung",
+      "description": "Technische und inhaltliche Optimierung für eine bessere Sichtbarkeit in Suchmaschinen."
     },
     "9": {
-      "title": "Digitalni marketing",
-      "description": "Strategija, oglašavanje, sadržaj i praćenje rezultata digitalnih kampanja."
+      "title": "Digitales Marketing",
+      "description": "Strategie, Werbung, Inhaltserstellung und Erfolgskontrolle digitaler Kampagnen."
     },
     "10": {
-      "title": "Integracije",
-      "description": "Povezivanje sajta sa analitikom, mapama, email servisima, naplatom i drugim platformama."
+      "title": "Integrationen",
+      "description": "Anbindung von Websites an Analysewerkzeuge, Karten, E-Mail-Dienste, Zahlungssysteme und andere Plattformen."
     },
     "11": {
-      "title": "Višejezični sadržaj",
-      "description": "Lokalizacija i prilagođavanje sadržaja za srpsko, englesko i nemačko govorno područje."
+      "title": "Mehrsprachige Inhalte",
+      "description": "Lokalisierung und Anpassung von Inhalten für serbisch-, englisch- und deutschsprachige Zielgruppen."
     },
     "12": {
-      "title": "AI i automatizacija",
-      "description": "Chatbotovi, automatizovani odgovori i AI alati prilagođeni vašim poslovnim procesima."
+      "title": "KI und Automatisierung",
+      "description": "Chatbots, automatisierte Antworten und KI-Tools, die an Ihre Geschäftsprozesse angepasst sind."
     }
   }
 },
 "portfolio": {
-  "label": "Izdvojeni radovi",
-  "title": "Projekti koji pokazuju šta možemo da izgradimo",
-  "intro": "Predstavljamo izbor poslovnih sajtova, online prodavnica i platformi koje smo razvili za klijente i sopstvene poslovne projekte.",
-  "visit_project": "Posetite projekat",
-  "similar_project": "Želim slično rešenje",
+  "label": "Ausgewählte Projekte",
+  "title": "Projekte, die zeigen, was wir entwickeln können",
+  "intro": "Entdecken Sie eine Auswahl an Unternehmenswebsites, Onlineshops und Plattformen, die wir für Kunden und eigene Geschäftsprojekte entwickelt haben.",
+  "visit_project": "Projekt besuchen",
+  "similar_project": "Ich möchte eine ähnliche Lösung",
   "items": {
     "1": {
       "title": "GVP Consult",
-      "category": "Poslovni web sajt",
-      "description": "Moderan prezentacioni sajt za konsultantske usluge u oblastima sanitarne hemije, regulatornih zahteva i bezbednosti proizvoda.",
-      "image_alt": "Prikaz web sajta GVP Consult",
+      "category": "Unternehmenswebsite",
+      "description": "Eine moderne Präsentationswebsite für Beratungsleistungen in den Bereichen Sanitärchemie, regulatorische Anforderungen und Produktsicherheit.",
+      "image_alt": "Vorschau der GVP-Consult-Website",
       "features": {
-        "1": "Vue 3, Vite i Tailwind CSS",
-        "2": "Responzivan dizajn za sve uređaje",
-        "3": "SEO osnova, sitemap i robots.txt",
-        "4": "Google Search Console i strukturirani podaci",
-        "5": "Hosting, SSL i tehnička podrška"
+        "1": "Vue 3, Vite und Tailwind CSS",
+        "2": "Responsives Design für alle Geräte",
+        "3": "SEO-Grundlage, Sitemap und robots.txt",
+        "4": "Google Search Console und strukturierte Daten",
+        "5": "Hosting, SSL und technischer Support"
       }
     },
     "2": {
       "title": "Agro BiM Shop",
-      "category": "Online prodavnica",
-      "description": "E-commerce platforma za prodaju semena, opreme i poljoprivrednog repromaterijala, razvijena na Bagisto platformi.",
-      "image_alt": "Prikaz online prodavnice Agro BiM Shop",
+      "category": "Onlineshop",
+      "description": "Eine E-Commerce-Plattform für den Verkauf von Saatgut, Ausrüstung und landwirtschaftlichen Betriebsmitteln, entwickelt auf Basis von Bagisto.",
+      "image_alt": "Vorschau des Agro-BiM-Shop-Onlineshops",
       "features": {
-        "1": "Bagisto i Laravel e-commerce sistem",
-        "2": "Katalog, kategorije, korpa i poručivanje",
-        "3": "Administratorski panel",
-        "4": "Višejezična podrška i SEO",
-        "5": "Cloud hosting, SSL i migracija domena"
+        "1": "Bagisto- und Laravel-E-Commerce-System",
+        "2": "Katalog, Kategorien, Warenkorb und Bestellfunktion",
+        "3": "Administrationsbereich",
+        "4": "Mehrsprachige Unterstützung und SEO",
+        "5": "Cloud-Hosting, SSL und Domain-Migration"
       }
     },
     "3": {
-      "title": "ABC Marketplace",
-      "category": "Multivendor poslovna platforma",
-      "description": "Napredna marketplace platforma sa prodavcima, kupcima, agentima, menadžerima i sistemom za praćenje prodaje i provizija.",
-      "image_alt": "Prikaz ABC Marketplace platforme",
+      "title": "Agro BiM",
+      "category": "Unternehmens- und Beratungswebsite",
+      "description": "Eine Website für ein landwirtschaftliches Beratungsprojekt mit Informationen zu Subventionen, Fördermaßnahmen, Ausschreibungen und administrativer Unterstützung für landwirtschaftliche Betriebe.",
+      "image_alt": "Vorschau der Agro-BiM-Website",
       "features": {
-        "1": "Više prodavaca i administratorski paneli",
-        "2": "Mreža agenata, menadžera i supervizora",
-        "3": "CRM funkcije i atribucija prodaje",
-        "4": "Sistem provizija i izveštavanja",
-        "5": "Više jezika i tržišnih kanala"
+        "1": "Responsive Unternehmenswebsite für mobile Geräte",
+        "2": "Darstellung von Dienstleistungen, Team und Preisen",
+        "3": "Kontaktformular und Terminvereinbarung",
+        "4": "Nachrichten, häufig gestellte Fragen und nützliche Links",
+        "5": "Interaktive Elemente, Animationen und dynamische Hero-Galerie"
       }
     },
     "4": {
       "title": "Agro BiM Media",
-      "category": "Informativna i sadržajna platforma",
-      "description": "Digitalni medij namenjen vestima, edukaciji i stručnom sadržaju iz oblasti poljoprivrede i razvoja agro poslovanja.",
-      "image_alt": "Prikaz Agro BiM Media platforme",
+      "category": "Informations- und Content-Plattform",
+      "description": "Eine digitale Medienplattform für Nachrichten, Weiterbildung und Fachinhalte aus Landwirtschaft und Agrarwirtschaft.",
+      "image_alt": "Vorschau der Agro-BiM-Media-Plattform",
       "features": {
-        "1": "Vue frontend i Laravel API",
-        "2": "Filament administratorski panel",
-        "3": "Kategorije, članci i automatski slugovi",
-        "4": "Responzivan prikaz i SEO osnova",
-        "5": "Priprema za više autora i sadržajnih formata"
+        "1": "Vue-Frontend und Laravel-API",
+        "2": "Filament-Administrationsbereich",
+        "3": "Kategorien, Artikel und automatische Slugs",
+        "4": "Responsives Layout und SEO-Grundlage",
+        "5": "Vorbereitet für mehrere Autoren und Inhaltsformate"
       }
     }
   },
   "cta": {
-    "title": "Imate projekat koji želite da realizujete?",
-    "description": "Opišite nam svoju ideju, postojeći problem ili plan razvoja. Predložićemo realno rešenje, okvirni rok i način realizacije.",
-    "button": "Razgovarajmo o projektu"
+    "title": "Haben Sie ein Projekt, das Sie umsetzen möchten?",
+    "description": "Beschreiben Sie uns Ihre Idee, ein bestehendes Problem oder Ihre Entwicklungspläne. Wir schlagen eine realistische Lösung, einen ungefähren Zeitrahmen und einen passenden Umsetzungsweg vor.",
+    "button": "Lassen Sie uns über Ihr Projekt sprechen"
   }
 }
 }
