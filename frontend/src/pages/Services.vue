@@ -115,7 +115,7 @@ export default {
         { id: 7, icon: '🎨', to: '/services/design' },
         { id: 8, icon: '🔎', to: '/services/seo' },
         { id: 9, icon: '📣', to: '/services/marketing' },
-        { id: 10, icon: '🔗', to: '/integrations' },
+        { id: 10, icon: '🔗', to: '/services/integrations' },
         { id: 11, icon: '🌍', to: '/services/translation' },
         { id: 12, icon: '💬', to: '/contact' },
       ],

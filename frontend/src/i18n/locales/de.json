@@ -2302,5 +2302,162 @@
     "description": "Beschreiben Sie uns Ihre Idee, ein bestehendes Problem oder Ihre Entwicklungspläne. Wir schlagen eine realistische Lösung, einen ungefähren Zeitrahmen und einen passenden Umsetzungsweg vor.",
     "button": "Lassen Sie uns über Ihr Projekt sprechen"
   }
+},
+"service_integrations": {
+  "label": "Integracije i automatizacija",
+  "title": "Povežite svoj sajt sa alatima koji pokreću vaše poslovanje",
+  "description": "Povezujemo web sajtove, online prodavnice i aplikacije sa analitikom, oglašavanjem, mapama, komunikacionim servisima, sistemima naplate i AI alatima.",
+  "primary_button": "Zatražite procenu integracije",
+  "secondary_button": "Pogledajte dostupne integracije",
+  "purpose_label": "Namena:",
+  "benefits": {
+    "1": {
+      "title": "Manje ručnog rada",
+      "description": "Automatizujte ponavljajuće zadatke, razmenu podataka i obaveštenja između različitih sistema."
+    },
+    "2": {
+      "title": "Kvalitetnije odluke",
+      "description": "Povežite analitiku i poslovne podatke kako biste jasnije pratili posete, prodaju i rezultate kampanja."
+    },
+    "3": {
+      "title": "Sistem koji može da raste",
+      "description": "Dodajte nove servise i funkcionalnosti bez potrebe da iznova gradite čitavu aplikaciju."
+    }
+  },
+  "catalog": {
+    "label": "Dostupni servisi",
+    "title": "Integracije prema potrebama vašeg projekta",
+    "description": "Izbor integracije zavisi od vrste sajta, poslovnog procesa, tržišta i tehničkih mogućnosti servisa koji povezujemo."
+  },
+  "categories": {
+    "all": "Sve integracije",
+    "analytics": "Analitika",
+    "marketing": "Marketing",
+    "communication": "Komunikacija",
+    "payments": "Naplata",
+    "automation": "Automatizacija i AI",
+    "security": "Bezbednost i infrastruktura"
+  },
+  "statuses": {
+    "standard": "Standardno",
+    "optional": "Po izboru",
+    "custom": "Po proceni"
+  },
+  "integrations": {
+    "1": {
+      "title": "Google Analytics 4",
+      "description": "Praćenje poseta, izvora saobraćaja, ponašanja korisnika i ključnih konverzija.",
+      "purpose": "Analiza učinka sajta i marketinških kampanja."
+    },
+    "2": {
+      "title": "Google Tag Manager",
+      "description": "Centralizovano upravljanje analitičkim, marketinškim i drugim oznakama bez čestih izmena koda.",
+      "purpose": "Jednostavnije upravljanje merenjem i događajima."
+    },
+    "3": {
+      "title": "Google Search Console",
+      "description": "Praćenje indeksiranja, ključnih reči, tehničkih problema i vidljivosti sajta u Google pretrazi.",
+      "purpose": "SEO kontrola i praćenje organske vidljivosti."
+    },
+    "4": {
+      "title": "Microsoft Clarity",
+      "description": "Snimci korisničkih sesija, heatmap prikazi, dubina skrolovanja i analiza problematičnih klikova.",
+      "purpose": "Razumevanje ponašanja posetilaca na sajtu."
+    },
+    "5": {
+      "title": "Meta Pixel",
+      "description": "Merenje rezultata Facebook i Instagram kampanja i kreiranje publike za remarketing.",
+      "purpose": "Optimizacija Meta oglasa i praćenje konverzija."
+    },
+    "6": {
+      "title": "Mailchimp i Brevo",
+      "description": "Povezivanje kontakt formi, newsletter prijava, automatizovanih poruka i email kampanja.",
+      "purpose": "Email marketing i negovanje odnosa sa korisnicima."
+    },
+    "7": {
+      "title": "Tidio i live chat",
+      "description": "Chat podrška, automatizovani odgovori i komunikacija sa posetiocima u realnom vremenu.",
+      "purpose": "Brža korisnička podrška i prikupljanje upita."
+    },
+    "8": {
+      "title": "WhatsApp i Viber kontakt",
+      "description": "Direktno pokretanje razgovora iz sajta i povezivanje sa poslovnim komunikacionim kanalima.",
+      "purpose": "Jednostavniji kontakt sa potencijalnim klijentima."
+    },
+    "9": {
+      "title": "Online plaćanje karticama",
+      "description": "Integracija sistema naplate prema dostupnosti servisa, tržištu i poslovnom modelu klijenta.",
+      "purpose": "Sigurna naplata proizvoda, usluga ili pretplata."
+    },
+    "10": {
+      "title": "Lokalne platne institucije",
+      "description": "Povezivanje sa bankama i lokalno dostupnim procesorima plaćanja prema tehničkoj dokumentaciji.",
+      "purpose": "Prilagođena online naplata za domaće tržište."
+    },
+    "11": {
+      "title": "OpenAI i AI asistenti",
+      "description": "AI pomoćnici za odgovore, obradu sadržaja, preporuke i automatizaciju poslovnih zadataka.",
+      "purpose": "Naprednija podrška korisnicima i automatizacija procesa."
+    },
+    "12": {
+      "title": "Zapier i webhooks",
+      "description": "Automatska razmena podataka između formulara, CRM sistema, email servisa i drugih aplikacija.",
+      "purpose": "Povezivanje procesa bez nepotrebnog ručnog unosa."
+    },
+    "13": {
+      "title": "Google Maps",
+      "description": "Prikaz poslovne lokacije, smernica za dolazak i geografskih podataka na sajtu.",
+      "purpose": "Lakše pronalaženje firme ili poslovnice."
+    },
+    "14": {
+      "title": "reCAPTCHA i zaštita formi",
+      "description": "Zaštita kontakt i registracionih formi od automatskih prijava, spama i zloupotreba.",
+      "purpose": "Bezbedniji obrasci i manje neželjenih poruka."
+    },
+    "15": {
+      "title": "Cloudflare i CDN",
+      "description": "Dodatna zaštita, keširanje sadržaja, DNS upravljanje i poboljšanje brzine isporuke sajta.",
+      "purpose": "Bolje performanse, stabilnost i sigurnost."
+    }
+  },
+  "process": {
+    "label": "Način rada",
+    "title": "Kako realizujemo integraciju",
+    "description": "Integracija nije samo unošenje API ključa. Proveravamo poslovni cilj, bezbednost, ograničenja servisa i način održavanja.",
+    "steps": {
+      "1": {
+        "title": "Analiza potrebe",
+        "description": "Definišemo šta treba povezati, koje podatke razmenjujemo i koji rezultat očekujemo."
+      },
+      "2": {
+        "title": "Tehnička provera",
+        "description": "Proveravamo API dokumentaciju, uslove korišćenja, dostupnost servisa i bezbednosne zahteve."
+      },
+      "3": {
+        "title": "Implementacija i test",
+        "description": "Povezujemo sisteme, testiramo tokove podataka i ponašanje u realnim scenarijima."
+      },
+      "4": {
+        "title": "Praćenje i podrška",
+        "description": "Pratimo rad integracije i po potrebi prilagođavamo je promenama servisa ili poslovanja."
+      }
+    }
+  },
+  "security": {
+    "label": "Bezbednost podataka",
+    "title": "Integracije moraju biti pouzdane, ne samo funkcionalne",
+    "description": "Pristupne podatke, dozvole i tokove informacija organizujemo prema potrebama projekta i mogućnostima povezanog servisa.",
+    "items": {
+      "1": "API ključevi i pristupni podaci ne prikazuju se u javnom frontend kodu",
+      "2": "Koristimo HTTPS, odgovarajuće dozvole i validaciju podataka",
+      "3": "Vodimo računa o privatnosti, saglasnostima i pravilima povezanih platformi",
+      "4": "Planiramo rezervni način rada kada spoljni servis nije dostupan"
+    }
+  },
+  "cta": {
+    "title": "Želite da povežete sajt sa postojećim poslovnim alatima?",
+    "description": "Napišite nam koji servis koristite i šta želite da automatizujete. Proverićemo tehničke mogućnosti i predložiti odgovarajuće rešenje.",
+    "button": "Pošaljite zahtev za integraciju"
+  }
 }
 }

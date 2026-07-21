@@ -39,6 +39,7 @@ import ServiceDesign from './services/ServiceDesign.vue'
 import ServiceSeo from './services/ServiceSeo.vue'
 import ServiceMarketing from './services/ServiceMarketing.vue'
 import ServiceTranslations from './services/ServiceTranslations.vue'
+import ServiceIntegrations from './services/ServiceIntegrations.vue'
 
 // Forme i pregledi
 import FreeSiteForm from './pages/FreeSiteForm.vue'
@@ -98,7 +99,8 @@ const router = createRouter({
     { path: '/services/seo', name: 'ServiceSeo', component: ServiceSeo, props: { slug: 'seo' } },
     { path: '/services/marketing', name: 'ServiceMarketing', component: ServiceMarketing, props: { slug: 'marketing' } },
     { path: '/services/translation', name: 'ServiceTranslations', component: ServiceTranslations, props: { slug: 'translations' } },
-
+    { path: '/services/integrations', name: 'ServiceIntegrations', component: ServiceIntegrations, props: { slug: 'integrations' } },
+    
     // 📄 Javne prezentacije
     { path: '/print/:slug', name: 'PublicPresentationPrint', component: PublicPresentation, props: true },
     { path: '/preview/:slug', name: 'PublicPresentationPreview', component: () => import('./pages/PublicPresentation.vue'), props: true },
