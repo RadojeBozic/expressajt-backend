@@ -14,6 +14,7 @@ import Projects from './pages/Projects.vue'
 import Pricing from './pages/Pricing.vue'
 import SelectTemplate from './pages/SelectTemplate.vue'
 import Hosting from './pages/Hosting.vue'
+import Services from './pages/Services.vue'
 
 // Auth
 import SignIn from './pages/SignIn.vue'
@@ -60,6 +61,8 @@ const router = createRouter({
     { path: '/changelog', name: 'Changelog', component: Changelog },
     { path: '/pricing', name: 'Pricing', component: Pricing },
     { path: '/hosting', name: 'Hosting', component: Hosting },
+    { path: '/services', name: 'Services', component: Services },
+    { path: '/projects', name: 'Projects', component: Projects },
 
     // 🧩 Integracije
     { path: '/integrations', name: 'Integrations', component: () => import('./pages/Integrations.vue') },
@@ -70,7 +73,6 @@ const router = createRouter({
     { path: '/customer', name: 'Customer', component: Customer, meta: { requiresAuth: true } },
 
     // 🧾 Projekti i dashboard
-    { path: '/projects', name: 'Projects', component: Projects, meta: { requiresAuth: true } },
     { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: { requiresAuth: true } },
 
     // 🔐 Autentifikacija

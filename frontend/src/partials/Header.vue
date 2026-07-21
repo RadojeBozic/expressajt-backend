@@ -138,9 +138,9 @@ export default {
 
       navLinks: [
         { to: '/', label: 'header.menu.home' },
-        { to: '/about', label: 'header.menu.about' },
+        { to: '/services', label: 'header.menu.services' },
         { to: '/projects', label: 'header.menu.projects' },
-        { to: '/pricing', label: 'header.menu.pricing' },
+        { to: '/about', label: 'header.menu.about' },
         { to: '/contact', label: 'header.menu.contact' },
       ],
     }
