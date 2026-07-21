@@ -2459,5 +2459,126 @@
     "description": "Napišite nam koji servis koristite i šta želite da automatizujete. Proverićemo tehničke mogućnosti i predložiti odgovarajuće rešenje.",
     "button": "Pošaljite zahtev za integraciju"
   }
+},
+"service_ai_automation": {
+  "label": "AI i automatizacija",
+  "title": "Pametniji poslovni procesi uz veštačku inteligenciju",
+  "description": "Pomažemo firmama da uvedu AI tamo gde može da skrati rutinski rad, ubrza odgovore korisnicima i pretvori postojeće podatke u korisne informacije.",
+  "primary_button": "Zatražite AI procenu",
+  "secondary_button": "Pogledajte moguća rešenja",
+  "result_label": "Rezultat:",
+  "benefits": {
+    "1": {
+      "title": "Manje rutinskog rada",
+      "description": "Automatizujte ponavljajuće zadatke, obradu upita, pripremu odgovora i razmenu podataka."
+    },
+    "2": {
+      "title": "Brži odgovori korisnicima",
+      "description": "Omogućite posetiocima i klijentima da brže dobiju informacije, preporuke i osnovnu podršku."
+    },
+    "3": {
+      "title": "Bolje korišćenje podataka",
+      "description": "Sažmite informacije, prepoznajte obrasce i pripremite izveštaje koji olakšavaju poslovne odluke."
+    }
+  },
+  "solutions": {
+    "label": "Moguća rešenja",
+    "title": "AI alati prilagođeni konkretnom poslovnom problemu",
+    "description": "Ne uvodimo AI samo zato što je popularan. Prvo definišemo zadatak, podatke i očekivani rezultat, a zatim biramo odgovarajuće rešenje.",
+    "items": {
+      "1": {
+        "title": "AI chatbot i korisnička podrška",
+        "description": "Chatbot koji odgovara na česta pitanja, usmerava korisnike i prikuplja osnovne informacije pre uključivanja zaposlenog.",
+        "result": "Brži odgovori i manje ponavljajućih upita."
+      },
+      "2": {
+        "title": "Automatska obrada upita",
+        "description": "Razvrstavanje poruka, kontakt formi i zahteva prema temi, prioritetu ili vrsti korisnika.",
+        "result": "Bolja organizacija i kraće vreme odgovora."
+      },
+      "3": {
+        "title": "Poslovni AI asistent",
+        "description": "Interni pomoćnik koji zaposlenima pomaže da pronađu procedure, dokumente, odgovore i informacije iz poslovne baze znanja.",
+        "result": "Brži pristup znanju i ujednačeniji rad tima."
+      },
+      "4": {
+        "title": "Preporuke proizvoda i usluga",
+        "description": "Pomoć kupcima pri izboru proizvoda, poređenju opcija i pronalaženju odgovarajućeg rešenja.",
+        "result": "Jednostavnija kupovina i kvalitetniji prodajni upiti."
+      },
+      "5": {
+        "title": "AI pretraga sadržaja",
+        "description": "Napredna pretraga dokumenata, članaka, proizvoda ili internih podataka korišćenjem prirodnog jezika.",
+        "result": "Korisnik brže dolazi do relevantne informacije."
+      },
+      "6": {
+        "title": "Sažeci i izveštaji",
+        "description": "Automatska priprema sažetaka, pregleda aktivnosti, prodajnih izveštaja i najvažnijih podataka.",
+        "result": "Manje vremena za pripremu i lakše donošenje odluka."
+      }
+    }
+  },
+  "use_cases": {
+    "label": "Primeri primene",
+    "title": "Gde AI može da donese konkretnu korist",
+    "description": "Rešenje se prilagođava delatnosti, dostupnim podacima i načinu na koji firma već posluje.",
+    "items": {
+      "1": {
+        "title": "Uslužne firme",
+        "description": "Odgovori na česta pitanja, kvalifikovanje upita, priprema ponuda i zakazivanje razgovora."
+      },
+      "2": {
+        "title": "Online prodavnice",
+        "description": "Preporuke proizvoda, pomoć pri pretrazi, odgovori o isporuci i podrška nakon kupovine."
+      },
+      "3": {
+        "title": "Poljoprivreda i savetovanje",
+        "description": "Pretraga konkursa, usmeravanje korisnika, baze znanja i pomoć pri izboru relevantnih usluga."
+      },
+      "4": {
+        "title": "Administracija i poslovni sistemi",
+        "description": "Obrada dokumenata, kategorizacija zahteva, sažeci i automatizovano prosleđivanje zadataka."
+      }
+    }
+  },
+  "process": {
+    "label": "Način rada",
+    "title": "Kako uvodimo AI u poslovni proces",
+    "description": "Kvalitetno AI rešenje počinje analizom procesa, a ne izborom alata.",
+    "steps": {
+      "1": {
+        "title": "Analiza procesa",
+        "description": "Utvrđujemo gde nastaje najviše ponavljajućeg rada, čekanja ili nepotrebnog ručnog unosa."
+      },
+      "2": {
+        "title": "Procena podataka i rizika",
+        "description": "Proveravamo koje podatke sistem koristi, kako se čuvaju i gde je neophodna kontrola zaposlenog."
+      },
+      "3": {
+        "title": "Pilot rešenje",
+        "description": "Pravimo ograničenu verziju, testiramo odgovore i proveravamo da li donosi merljivu korist."
+      },
+      "4": {
+        "title": "Uvođenje i unapređivanje",
+        "description": "Postepeno širimo funkcionalnosti, pratimo rezultate i prilagođavamo sistem realnom radu."
+      }
+    }
+  },
+  "control": {
+    "label": "Odgovorna primena",
+    "title": "AI pomaže zaposlenima — ne ukida ljudsku kontrolu",
+    "description": "Važne poslovne, finansijske, pravne i stručne odluke ne treba prepustiti sistemu bez provere. Zato jasno definišemo šta AI može da uradi samostalno, a kada uključuje odgovornu osobu.",
+    "items": {
+      "1": "Korisnik treba da zna kada komunicira sa AI sistemom",
+      "2": "Osetljivi podaci se koriste samo kada za to postoji opravdana potreba",
+      "3": "Kritični odgovori i odluke zahtevaju proveru odgovorne osobe",
+      "4": "Sistem se prati, testira i unapređuje na osnovu stvarnih rezultata"
+    }
+  },
+  "cta": {
+    "title": "Imate proces koji oduzima previše vremena?",
+    "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
+    "button": "Pošaljite zahtev za AI procenu"
+  }
 }
 }
