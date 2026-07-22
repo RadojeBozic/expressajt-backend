@@ -318,6 +318,7 @@
     "services": "Dienstleistungen",
     "home": "Startseite",
     "about": "Über uns",
+    "blog": "Blog",
     "contact": "Kontakt",
     "faq": "FAQ",
     "projects": "Projekte",
@@ -334,8 +335,14 @@
     "language_sr": "Serbisch",
     "language_en": "Englisch",
     "cart": "Warenkorb"
-  }
-},
+  },
+  "logoAria": "Express Web Startseite",
+    "navigationAria": "Hauptnavigation",
+    "mobileNavigationAria": "Mobile Navigation",
+    "languageAria": "Sprache auswählen",
+    "openMenuAria": "Navigationsmenü öffnen",
+    "closeMenuAria": "Navigationsmenü schließen"
+    },
 "auth": {
   "sign_in_title": "Anmeldung zu Ihrem Konto",
   "email": "E-Mail-Adresse",
@@ -529,20 +536,268 @@
 },
 "blog": {
   "title": "Express Blog",
-  "intro": "Tipps, Inspirationen und Best Practices aus der Welt der Websites, der Digitalisierung und des Kleinunternehmertums in Serbien.",
-  "post1": {
-    "title": "Wie erhält man eine Website in 10 Minuten – ganz ohne Entwickler?",
-    "text": "Wir erklären Schritt für Schritt, wie die Express-FREE-Website funktioniert – und was ein Kleinunternehmer komplett kostenlos erhält."
+  "intro": "Tipps, Inspirationen und praktische Einblicke aus der Welt der Website-Entwicklung, Digitalisierung und kleiner Unternehmen in Serbien.",
+
+  "hero": {
+    "eyebrow": "Express Web Blog",
+    "title": "Wissen für ein intelligenteres digitales Geschäft",
+    "description": "Praxisnahe Leitfäden, Erfahrungen aus der Projektentwicklung sowie Tipps zu Websites, Online-Verkauf, Geschäftsanwendungen, Marketing und künstlicher Intelligenz."
   },
-  "post2": {
-    "title": "PRO-Paket – lohnt sich die Investition?",
-    "text": "Vergleich zwischen der FREE- und der PRO-Version einer Website. Kosten, Leistungsumfang und ob sich diese Investition für Ihr Unternehmen lohnt."
+
+  "list": {
+    "eyebrow": "Artikel und Leitfäden",
+    "title": "Neu im Blog",
+    "description": "Inhalte, die Unternehmern und Unternehmen helfen, Technologie besser zu verstehen und fundiertere Geschäftsentscheidungen zu treffen."
   },
-  "post3": {
-    "title": "Wie sieht die Zusammenarbeit mit dem Express-Team aus?",
-    "text": "Vom ersten Klick bis zur fertigen Website. Was Sie im Prozess erwartet, wie lange es dauert und wer Sie dabei unterstützt."
+
+  "filters": {
+    "ariaLabel": "Artikel nach Kategorie filtern",
+    "all": "Alle Kategorien"
   },
-  "notice": "Demnächst verfügbar: CMS für Nutzerberichte, Tutorials und Fachbeiträge – bleiben Sie dran."
+
+  "authors": {
+  "radojeBozic": {
+    "role": "Gründer und Full-Stack-Entwickler",
+    "bio": "Entwicklung von Webanwendungen, digitalen Plattformen und Geschäftslösungen."
+  }
+},
+
+  "empty": {
+    "title": "In dieser Kategorie gibt es noch keine Artikel",
+    "description": "Neue Inhalte sind in Vorbereitung. Entdecken Sie die anderen Kategorien.",
+    "button": "Alle Artikel anzeigen"
+  },
+
+  "card": {
+    "readingTime": "{minutes} Min. Lesezeit",
+    "readMore": "Mehr lesen",
+    "readArticleAria": "Artikel lesen: {title}"
+  },
+
+  "categories": {
+    "web-sajtovi": {
+      "name": "Websites",
+      "description": "Tipps zur Planung, Erstellung und Verbesserung von Unternehmenswebsites."
+    },
+    "online-prodaja": {
+      "name": "Online-Verkauf",
+      "description": "Onlineshops, Marktplatzplattformen und digitaler Vertrieb."
+    },
+    "digitalni-marketing": {
+      "name": "Digitales Marketing",
+      "description": "SEO, Werbung, Inhalte und die Online-Präsenz von Unternehmen."
+    },
+    "vestacka-inteligencija": {
+      "name": "Künstliche Intelligenz",
+      "description": "Praktische Anwendungen von KI-Werkzeugen und Geschäftsautomatisierung."
+    },
+    "poslovne-aplikacije": {
+      "name": "Geschäftsanwendungen",
+      "description": "CRM, ERP, Integrationen und betriebliche Informationssysteme."
+    },
+    "projekti-i-studije-slucaja": {
+      "name": "Projekte und Fallstudien",
+      "description": "Erfahrungen aus konkreten Express-Web-Entwicklungsprojekten."
+    }
+  },
+
+  "articles": {
+    "businessWebsite": {
+      "lead": {
+        "first": "Eine Unternehmenswebsite ist nicht nur eine digitale Visitenkarte. Sie ist häufig der erste Ort, an dem ein potenzieller Kunde Ihr Unternehmen kennenlernt, prüft, ob Sie vertrauenswürdig wirken, und entscheidet, ob er Kontakt aufnehmen möchte.",
+        "second": "Deshalb sollte die Auswahl einer Website nicht mit der Frage beginnen, welche Farbe Ihnen gefällt oder welche Vorlage am schönsten aussieht. Zunächst sollten das Geschäftsziel, die Bedürfnisse der Nutzer und die Rolle der Website bei der Entwicklung des Unternehmens verstanden werden."
+      },
+
+      "meta": {
+        "title": "Wie Sie eine Unternehmenswebsite wählen, die wirklich Ergebnisse erzielt",
+        "excerpt": "Eine Unternehmenswebsite ist mehr als eine digitale Visitenkarte. Eine gut konzipierte Website präsentiert das Unternehmen, schafft Vertrauen und hilft dabei, Besucher in Kunden zu verwandeln.",
+        "seoTitle": "Die richtige Unternehmenswebsite wählen | Express Web",
+        "seoDescription": "Erfahren Sie, was eine hochwertige Unternehmenswebsite enthalten sollte und wie Sie eine Lösung wählen, die die Entwicklung Ihres Unternehmens unterstützt."
+      },
+
+      "goal": {
+        "title": "Beginnen Sie mit dem Geschäftsziel",
+        "first": "Bevor Sie über Design und Technologie sprechen, definieren Sie, was ein Besucher tun soll, wenn er Ihre Website aufruft.",
+        "second": "Unterschiedliche Geschäftsziele erfordern unterschiedliche Website-Strukturen, Inhalte und Handlungsaufforderungen."
+      },
+
+      "goals": {
+        "inquiries": {
+          "title": "Anfragen erhalten",
+          "description": "Die Website sollte Ihre Leistungen klar darstellen und Besuchern ermöglichen, schnell eine Anfrage zu senden oder ein Gespräch zu vereinbaren."
+        },
+        "sales": {
+          "title": "Produkte verkaufen",
+          "description": "Erforderlich sind ein übersichtlicher Katalog, ein einfacher Kaufprozess und zuverlässige Informationen zu Zahlung und Lieferung."
+        },
+        "trust": {
+          "title": "Vertrauen aufbauen",
+          "description": "Referenzen, Projekte, Bewertungen und Unternehmensinformationen helfen Nutzern, eine sicherere Entscheidung zu treffen."
+        },
+        "information": {
+          "title": "Nutzer informieren",
+          "description": "Die Website kann als Wissenszentrum mit Leitfäden, häufig gestellten Fragen und fachlichen Inhalten dienen."
+        }
+      },
+
+      "warning": {
+        "title": "Ein häufiger Fehler",
+        "text": "Viele Unternehmen wählen zuerst das Design und denken erst später über Inhalte und Ziele nach. Das Ergebnis kann eine optisch ansprechende Website sein, die das Angebot nicht klar erklärt und keine konkreten Geschäftsergebnisse erzielt."
+      },
+
+      "audience": {
+        "title": "Denken Sie aus der Perspektive Ihrer Kunden",
+        "first": "Ein Unternehmer kennt seine Produkte und Dienstleistungen gut, doch ein Website-Besucher hört möglicherweise zum ersten Mal von dem Unternehmen. Er verfügt nicht über dasselbe Wissen, dieselbe Geduld oder denselben Kontext.",
+        "second": "Deshalb sollten die Inhalte klar und verständlich sein. Besucher müssen schnell erkennen, was Sie anbieten, wem Sie helfen und was der nächste Schritt ist.",
+        "third": "Eine gute Website spricht nicht nur über das Unternehmen. Sie beantwortet Fragen der Nutzer, beseitigt Unsicherheiten und führt sie zu einer Entscheidung."
+      },
+
+      "essentials": {
+        "title": "Was eine moderne Unternehmenswebsite enthalten sollte",
+        "intro": "Unabhängig von der Branche bilden mehrere Elemente die Grundlage einer hochwertigen Unternehmenswebsite.",
+
+        "message": {
+          "title": "Eine klare Hauptbotschaft",
+          "description": "Bereits im ersten Bereich der Seite sollten Besucher verstehen, was Sie anbieten und für wen das Angebot bestimmt ist."
+        },
+        "mobile": {
+          "title": "Mobile Optimierung",
+          "description": "Die Website muss auf Smartphones, Tablets und Computern übersichtlich und einfach zu bedienen sein."
+        },
+        "speed": {
+          "title": "Schnelle Ladezeiten",
+          "description": "Langsame Seiten erhöhen die Wahrscheinlichkeit, dass Besucher die Website verlassen, bevor sie Ihr Angebot kennenlernen."
+        },
+        "contact": {
+          "title": "Einfache Kontaktaufnahme",
+          "description": "Telefonnummer, E-Mail-Adresse, Kontaktformular und eine klare Handlungsaufforderung sollten leicht zugänglich sein."
+        },
+        "seo": {
+          "title": "SEO-Grundlage",
+          "description": "Titel, Beschreibungen, Inhaltsstruktur und technische Einstellungen helfen Suchmaschinen, die Website zu verstehen."
+        },
+        "security": {
+          "title": "Sicherheit und Wartung",
+          "description": "Ein SSL-Zertifikat, regelmäßige Aktualisierungen und Sicherungskopien schützen die Website und die Daten der Nutzer."
+        }
+      },
+
+      "callout": {
+        "title": "Die Website sollte einen klaren nächsten Schritt zeigen",
+        "text": "Auf jeder wichtigen Seite sollte dem Nutzer gezeigt werden, was er als Nächstes tun kann: eine Anfrage senden, anrufen, ein Gespräch vereinbaren, Projekte ansehen oder ein Produkt kaufen."
+      },
+
+      "design": {
+        "title": "Das Design sollte die Inhalte unterstützen",
+        "first": "Professionelles Design ist wichtig, weil es den ersten Eindruck und das Vertrauen beeinflusst. Seine Aufgabe besteht jedoch nicht darin, Informationen zu überdecken, sondern sie übersichtlicher zu gestalten.",
+        "second": "Zu viele Animationen, kleiner Text, komplizierte Navigation und dekorative Elemente können die Nutzung der Website erschweren.",
+        "third": "Das beste Design folgt der Identität des Unternehmens, hebt die wichtigsten Informationen klar hervor und ermöglicht den Nutzern, sich einfach durch die Inhalte zu bewegen."
+      },
+
+      "price": {
+        "title": "Wählen Sie eine Website nicht nur nach dem niedrigsten Preis",
+        "first": "Der Preis ist wichtig, besonders für ein kleines Unternehmen oder ein neues Geschäft. Die günstigste Lösung ist jedoch langfristig nicht immer die wirtschaftlichste.",
+        "second": "Prüfen Sie, was das Angebot umfasst: Vorbereitung der Inhalte, mobile Version, Domain, Hosting, Sicherheit, SEO-Einstellungen, Support und die Möglichkeit späterer Erweiterungen.",
+        "third": "Eine gut geplante Website kann gemeinsam mit dem Unternehmen wachsen. Eine schlecht aufgebaute Grundlage führt häufig zu zusätzlichen Kosten und einem vollständigen Redesign."
+      },
+
+      "steps": {
+        "title": "Fünf Schritte bei der Auswahl einer Unternehmenswebsite",
+        "intro": "Ein einfacher Prozess kann Ihnen helfen, eine falsche Investition zu vermeiden und eine Lösung zu erhalten, die Ihren tatsächlichen Bedürfnissen entspricht.",
+
+        "goal": {
+          "title": "Definieren Sie das Ziel",
+          "description": "Bestimmen Sie, ob Sie mehr Anfragen, Verkäufe, Buchungen, die Präsentation Ihrer Leistungen oder eine Kombination mehrerer Ziele wünschen."
+        },
+        "content": {
+          "title": "Bereiten Sie die wichtigsten Informationen vor",
+          "description": "Sammeln Sie Informationen über das Unternehmen, Leistungen, Produkte, Kontaktdaten, Referenzen und häufig gestellte Fragen."
+        },
+        "scope": {
+          "title": "Legen Sie den anfänglichen Umfang fest",
+          "description": "Es ist nicht erforderlich, sofort alles umzusetzen. Wichtig ist, dass die erste Version hochwertig und für spätere Erweiterungen vorbereitet ist."
+        },
+        "partner": {
+          "title": "Wählen Sie einen zuverlässigen Partner",
+          "description": "Achten Sie auf klare Kommunikation, einen realistischen Plan, ein transparentes Angebot und Unterstützung nach der Veröffentlichung der Website."
+        },
+        "growth": {
+          "title": "Planen Sie die Weiterentwicklung",
+          "description": "Denken Sie über einen zukünftigen Blog, Online-Verkauf, Mehrsprachigkeit, Integrationen und weitere Funktionen nach."
+        }
+      },
+
+      "recommendation": {
+        "title": "Empfehlung von Express Web",
+        "text": "Beginnen Sie mit einer Lösung, die den heutigen Anforderungen entspricht, bauen Sie sie jedoch auf einer Grundlage auf, die zukünftiges Wachstum ermöglicht. Sie benötigen nicht sofort ein großes System, sollten aber eine Architektur vermeiden, die Sie später einschränkt."
+      },
+
+      "conclusion": {
+        "title": "Eine gute Unternehmenswebsite beginnt mit einer guten Entscheidung",
+        "first": "Eine hochwertige Website verbindet Geschäftsziele, Nutzerbedürfnisse, Inhalte, Design und Technologie zu einer funktionalen Einheit.",
+        "second": "Wenn sie gut geplant ist, dient eine Website nicht nur der Präsentation eines Unternehmens. Sie schafft Vertrauen, unterstützt den Verkauf, erleichtert die Kommunikation und wird zu einem wichtigen Bestandteil der Geschäftsentwicklung."
+      },
+
+      "cta": {
+        "title": "Planen Sie eine neue Unternehmenswebsite?",
+        "description": "Lassen Sie uns über Ihre Ziele sprechen und eine Lösung finden, die Ihren heutigen Anforderungen entspricht und gleichzeitig Raum für zukünftige Entwicklungen lässt.",
+        "primary": "Anfrage senden",
+        "secondary": "Unsere Projekte ansehen"
+      },
+
+      "images": {
+        "hero": {
+          "alt": "Planung einer modernen Unternehmenswebsite",
+          "caption": "Eine hochwertige Unternehmenswebsite beginnt mit einem klaren Ziel, guten Inhalten und einem Entwicklungsplan."
+        },
+        "goals": {
+          "alt": "Definition der Ziele einer Unternehmenswebsite",
+          "caption": "Die Struktur der Website sollte an konkrete Geschäftsziele angepasst sein."
+        },
+        "checklist": {
+          "alt": "Wichtige Elemente einer hochwertigen Unternehmenswebsite",
+          "caption": "Eine klare Botschaft, mobile Optimierung, Geschwindigkeit, SEO, einfache Kontaktmöglichkeiten und Sicherheit bilden die Grundlage einer modernen Website."
+        }
+      }
+    }
+  },
+
+  "post": {
+    "backToBlog": "Zurück zum Blog",
+    "readingTime": "{minutes} Min. Lesezeit",
+    "readMore": "Mehr lesen",
+    "updatedAt": "Zuletzt aktualisiert: {date}",
+    "contentUnavailable": {
+      "title": "Der Artikelinhalt ist derzeit nicht verfügbar",
+      "description": "Der Artikel wurde gefunden, aber sein Inhalt wurde noch nicht geladen."
+    },
+    "related": {
+      "eyebrow": "Weiterlesen",
+      "title": "Ähnliche Artikel"
+    },
+    "notFound": {
+      "metaTitle": "Artikel nicht gefunden | Express Web",
+      "title": "Artikel nicht gefunden",
+      "description": "Der gesuchte Artikel existiert nicht, wurde noch nicht veröffentlicht oder seine Adresse wurde geändert.",
+      "button": "Alle Artikel anzeigen"
+    }
+  },
+
+  "legacyPosts": {
+    "post1": {
+      "title": "Wie erhält man in 10 Minuten eine Website ohne Programmierer?",
+      "text": "Wir erklären Schritt für Schritt, wie die Express-FREE-Website funktioniert und was ein Kleinunternehmer völlig kostenlos erhält."
+    },
+    "post2": {
+      "title": "Das PRO-Paket – lohnt sich die Investition?",
+      "text": "Ein Vergleich der kostenlosen und der PRO-Version der Website. Wie viel kostet sie, was ist enthalten und ist sie die richtige Investition für Ihr Unternehmen?"
+    },
+    "post3": {
+      "title": "Wie läuft die Zusammenarbeit mit dem Express-Team ab?",
+      "text": "Vom ersten Klick bis zur fertigen Website. Was Sie während der Entwicklung erwarten können, wie lange es dauert und wer Sie unterstützt."
+    },
+    "notice": "In Kürze starten wir ein CMS für Kundengeschichten, Tutorials und Analysen – folgen Sie uns."
+  }
 },
 "diversity": {
   "title": "Vielfalt und Inklusion",
@@ -2579,53 +2834,6 @@
     "title": "Imate proces koji oduzima previše vremena?",
     "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
     "button": "Pošaljite zahtev za AI procenu"
-  }
-},
-"blog": {
-  "hero": {
-    "eyebrow": "Express Web Blog",
-    "title": "Wissen für ein intelligenteres digitales Geschäft",
-    "description": "Praxisnahe Leitfäden, Erfahrungen aus der Projektentwicklung sowie Tipps zu Websites, Online-Verkauf, Geschäftsanwendungen, Marketing und künstlicher Intelligenz."
-  },
-  "list": {
-    "eyebrow": "Artikel und Leitfäden",
-    "title": "Neu im Blog",
-    "description": "Inhalte, die Unternehmern und Unternehmen helfen, Technologie besser zu verstehen und fundiertere Geschäftsentscheidungen zu treffen."
-  },
-  "filters": {
-    "ariaLabel": "Artikel nach Kategorie filtern",
-    "all": "Alle Kategorien"
-  },
-  "empty": {
-    "title": "In dieser Kategorie gibt es noch keine Artikel",
-    "description": "Neue Inhalte sind in Vorbereitung. Entdecken Sie die anderen Kategorien.",
-    "button": "Alle Artikel anzeigen"
-  },
-  "categories": {
-    "web-sajtovi": {
-      "name": "Websites",
-      "description": "Tipps zur Planung, Erstellung und Verbesserung von Unternehmenswebsites."
-    },
-    "online-prodaja": {
-      "name": "Online-Verkauf",
-      "description": "Onlineshops, Marktplatzplattformen und digitaler Vertrieb."
-    },
-    "digitalni-marketing": {
-      "name": "Digitales Marketing",
-      "description": "SEO, Werbung, Inhalte und die Online-Präsenz von Unternehmen."
-    },
-    "vestacka-inteligencija": {
-      "name": "Künstliche Intelligenz",
-      "description": "Praktische Anwendungen von KI-Werkzeugen und Geschäftsautomatisierung."
-    },
-    "poslovne-aplikacije": {
-      "name": "Geschäftsanwendungen",
-      "description": "CRM, ERP, Integrationen und betriebliche Informationssysteme."
-    },
-    "projekti-i-studije-slucaja": {
-      "name": "Projekte und Fallstudien",
-      "description": "Erfahrungen aus konkreten Express-Web-Entwicklungsprojekten."
-    }
   }
 }
 }

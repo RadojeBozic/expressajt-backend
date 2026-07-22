@@ -1,118 +1,428 @@
 <template>
-  <header class="absolute w-full z-30">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-16 md:h-20">
-        
-        <!-- Logo -->
-        <router-link to="/" aria-label="Logo" class="inline-flex">
-          <img src="../images/logo_express02.png" width="138" height="138" alt="Logo" />
+  <header class="absolute inset-x-0 top-0 z-30 w-full">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div
+        class="flex h-16 items-center justify-between gap-4 md:h-20"
+      >
+        <!-- ================================================= -->
+        <!-- LOGO                                              -->
+        <!-- ================================================= -->
+
+        <router-link
+          to="/"
+          class="inline-flex shrink-0 items-center"
+          :aria-label="$t('header.logoAria')"
+        >
+          <img
+            src="../images/logo_express02.png"
+            width="138"
+            height="138"
+            alt="Express Web"
+            class="h-auto w-[110px] md:w-[138px]"
+          />
         </router-link>
 
-        <!-- Navigacija desktop -->
-        <nav class="hidden md:flex flex-grow justify-center">
-          <ul class="flex gap-4 items-center">
-            <li v-for="link in navLinks" :key="link.to">
-              <router-link :to="link.to" class="font-medium text-sm text-slate-300 hover:text-white">
+        <!-- ================================================= -->
+        <!-- DESKTOP NAVIGACIJA                                -->
+        <!-- ================================================= -->
+
+        <nav
+          class="hidden grow justify-center md:flex"
+          :aria-label="$t('header.navigationAria')"
+        >
+          <ul class="flex items-center gap-1 lg:gap-2">
+            <li
+              v-for="link in navLinks"
+              :key="link.to"
+            >
+              <router-link
+                :to="link.to"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                active-class="bg-white/5 text-white"
+                :exact-active-class="
+                  link.to === '/'
+                    ? 'bg-white/5 text-white'
+                    : ''
+                "
+              >
                 {{ $t(link.label) }}
               </router-link>
             </li>
           </ul>
         </nav>
 
-        <!-- Desni meni -->
-        <div class="flex items-center gap-3">
+        <!-- ================================================= -->
+        <!-- DESNI MENI                                        -->
+        <!-- ================================================= -->
+
+        <div class="flex shrink-0 items-center gap-2 lg:gap-3">
           <!-- Korpa -->
-           <router-link to="/checkout" class="relative text-sm text-white hover:text-purple-300">
-            🛒 {{ $t('header.menu.cart') }}
-            <span v-if="cartCount" class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+
+          <router-link
+            to="/checkout"
+            class="relative hidden items-center gap-1 rounded-lg px-2 py-2 text-sm text-white transition hover:bg-white/5 hover:text-purple-300 sm:inline-flex"
+            :aria-label="$t('header.menu.cart')"
+          >
+            <span aria-hidden="true">🛒</span>
+
+            <span class="hidden lg:inline">
+              {{ $t('header.menu.cart') }}
+            </span>
+
+            <span
+              v-if="cartCount"
+              class="absolute -right-1 -top-1 flex min-h-5 min-w-5 items-center justify-center rounded-full bg-purple-600 px-1.5 text-xs font-bold text-white"
+            >
               {{ cartCount }}
             </span>
           </router-link>
 
-          <!-- Login/Logout -->
+          <!-- Neprijavljen korisnik -->
+
           <template v-if="!user">
-            <router-link to="/signin" class="text-sm text-slate-300 hover:text-white">
+            <router-link
+              to="/signin"
+              class="hidden rounded-lg px-2 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white lg:inline-flex"
+            >
               {{ $t('header.menu.signin') }}
             </router-link>
-            <router-link to="/signup" class="ml-2 text-sm bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded">
+
+            <router-link
+              to="/signup"
+              class="hidden rounded-lg bg-purple-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-purple-500 lg:inline-flex"
+            >
               {{ $t('header.menu.signup') }}
             </router-link>
           </template>
 
+          <!-- Prijavljen korisnik -->
+
           <template v-else>
-            <span class="text-sm text-white bg-slate-700 px-2 py-1 rounded font-medium">
-              👋 {{ user.name }}
+            <span
+              class="hidden max-w-36 truncate rounded-lg bg-slate-700 px-2 py-1 text-sm font-medium text-white xl:inline"
+            >
+              <span aria-hidden="true">👋</span>
+              {{ user.name }}
             </span>
-            <router-link to="/dashboard" class="text-sm text-slate-300 hover:text-white">
-              {{ $t('header.menu.account') }} →
+
+            <router-link
+              to="/dashboard"
+              class="hidden rounded-lg px-2 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white lg:inline-flex"
+            >
+              {{ $t('header.menu.account') }}
+              <span class="ml-1" aria-hidden="true">→</span>
             </router-link>
-            <button @click="logout" class="text-sm px-3 py-1 bg-slate-700 hover:bg-slate-600 text-white rounded">
+
+            <button
+              type="button"
+              class="hidden rounded-lg bg-slate-700 px-3 py-2 text-sm text-white transition hover:bg-slate-600 xl:inline-flex"
+              @click="logout"
+            >
               {{ $t('header.menu.logout') }}
             </button>
           </template>
 
           <!-- Admin -->
+
           <router-link
             v-if="isAdmin"
             to="/admin/dashboard"
-            class="text-sm border border-purple-400 text-purple-400 px-3 py-1 rounded hover:bg-purple-800"
+            class="hidden rounded-lg border border-purple-400 px-3 py-2 text-sm text-purple-300 transition hover:bg-purple-800/50 hover:text-white xl:inline-flex"
           >
-            {{ $t('header.menu.admin') }} →
+            {{ $t('header.menu.admin') }}
+            <span class="ml-1" aria-hidden="true">→</span>
           </router-link>
 
-          <!-- Jezik -->
+          <!-- ================================================= -->
+          <!-- IZBOR JEZIKA                                      -->
+          <!-- ================================================= -->
+
           <div class="relative">
-            <button @click="toggleLangDropdown" class="flex items-center gap-1 text-sm text-slate-300 hover:text-white border border-slate-600 px-2 py-1 rounded">
-              <img :src="currentFlag" class="w-4 h-4" />
-              <span>{{ currentLabel }}</span>
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.585l3.71-4.355a.75.75 0 111.14.976l-4.25 5a.75.75 0 01-1.14 0l-4.25-5a.75.75 0 01.02-1.06z"/></svg>
+            <button
+              type="button"
+              class="flex items-center gap-1.5 rounded-lg border border-slate-600 px-2 py-1.5 text-sm text-slate-300 transition hover:border-slate-500 hover:bg-white/5 hover:text-white"
+              :aria-expanded="showLang"
+              aria-haspopup="true"
+              :aria-label="$t('header.languageAria')"
+              @click.stop="toggleLangDropdown"
+            >
+              <img
+                :src="currentFlag"
+                :alt="currentLabel"
+                class="h-4 w-4 rounded-sm object-cover"
+              />
+
+              <span>
+                {{ currentLabel }}
+              </span>
+
+              <svg
+                class="h-3 w-3 transition"
+                :class="{ 'rotate-180': showLang }"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.585l3.71-4.355a.75.75 0 1 1 1.14.976l-4.25 5a.75.75 0 0 1-1.14 0l-4.25-5a.75.75 0 0 1 .02-1.06Z"
+                />
+              </svg>
             </button>
-            <div v-if="showLang" class="absolute right-0 mt-1 w-32 bg-slate-800 border border-slate-600 rounded shadow-lg z-50">
-              <button @click="setLanguage('sr')" class="flex items-center w-full px-3 py-2 text-sm text-slate-300 hover:bg-slate-700">
-                <img src="../images/flag-rs.png" class="w-4 h-4 mr-2" /> SR
+
+            <div
+              v-if="showLang"
+              class="absolute right-0 z-50 mt-2 w-32 overflow-hidden rounded-lg border border-slate-700 bg-slate-900 shadow-xl"
+            >
+              <button
+                type="button"
+                class="flex w-full items-center px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                @click="setLanguage('sr')"
+              >
+                <img
+                  src="../images/flag-rs.png"
+                  alt="Srpski"
+                  class="mr-2 h-4 w-4 rounded-sm object-cover"
+                />
+
+                SR
               </button>
-              <button @click="setLanguage('en')" class="flex items-center w-full px-3 py-2 text-sm text-slate-300 hover:bg-slate-700">
-                <img src="../images/flag-uk.png" class="w-4 h-4 mr-2" /> EN
+
+              <button
+                type="button"
+                class="flex w-full items-center px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                @click="setLanguage('en')"
+              >
+                <img
+                  src="../images/flag-uk.png"
+                  alt="English"
+                  class="mr-2 h-4 w-4 rounded-sm object-cover"
+                />
+
+                EN
               </button>
-              <button @click="setLanguage('de')" class="flex items-center w-full px-3 py-2 text-sm text-slate-300 hover:bg-slate-700">
-                <img src="../images/flag-de.png" class="w-4 h-4 mr-2" /> DE
+
+              <button
+                type="button"
+                class="flex w-full items-center px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                @click="setLanguage('de')"
+              >
+                <img
+                  src="../images/flag-de.png"
+                  alt="Deutsch"
+                  class="mr-2 h-4 w-4 rounded-sm object-cover"
+                />
+
+                DE
               </button>
             </div>
           </div>
 
-          <!-- Hamburger za mobile -->
-          <button class="md:hidden text-slate-300 hover:text-white" @click="mobileNavOpen = !mobileNavOpen">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
+          <!-- ================================================= -->
+          <!-- MOBILE MENU DUGME                                 -->
+          <!-- ================================================= -->
+
+          <button
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 transition hover:bg-white/5 hover:text-white md:hidden"
+            :aria-expanded="mobileNavOpen"
+            aria-controls="mobile-navigation"
+            :aria-label="
+              mobileNavOpen
+                ? $t('header.closeMenuAria')
+                : $t('header.openMenuAria')
+            "
+            @click="toggleMobile"
+          >
+            <!-- Close ikonica -->
+
+            <svg
+              v-if="mobileNavOpen"
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+
+            <!-- Hamburger ikonica -->
+
+            <svg
+              v-else
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile navigacija -->
+      <!-- ================================================= -->
+      <!-- MOBILE NAVIGACIJA                                 -->
+      <!-- ================================================= -->
+
       <nav
         v-if="mobileNavOpen"
-        class="md:hidden mt-2 border rounded bg-slate-900 px-4 py-3 transition-all"
+        id="mobile-navigation"
+        class="mt-2 overflow-hidden rounded-xl border border-slate-700 bg-slate-950/95 px-4 py-4 shadow-2xl backdrop-blur md:hidden"
+        :aria-label="$t('header.mobileNavigationAria')"
       >
-        <ul>
-          <li v-for="link in navLinks" :key="link.to" class="py-1">
-            <router-link :to="link.to" class="block text-slate-300 hover:text-white">
+        <ul class="space-y-1">
+          <li
+            v-for="link in navLinks"
+            :key="link.to"
+          >
+            <router-link
+              :to="link.to"
+              class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white"
+              active-class="bg-slate-800 text-white"
+              @click="mobileNavOpen = false"
+            >
               {{ $t(link.label) }}
             </router-link>
           </li>
-          <li class="py-1 flex gap-2">
-            <button @click="setLanguage('sr')" class="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
-              <img src="../images/flag-rs.png" class="w-4 h-4" /> SR
-            </button>
-            <button @click="setLanguage('en')" class="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
-              <img src="../images/flag-uk.png" class="w-4 h-4" /> EN
-            </button>
-            <button @click="setLanguage('de')" class="flex items-center gap-2 text-sm text-slate-300 hover:text-white">
-              <img src="../images/flag-de.png" class="w-4 h-4" /> DE
-            </button>
-          </li>
         </ul>
+
+        <!-- Mobile korisničke akcije -->
+
+        <div
+          class="mt-4 border-t border-slate-800 pt-4"
+        >
+          <router-link
+            to="/checkout"
+            class="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            @click="mobileNavOpen = false"
+          >
+            <span>
+              <span aria-hidden="true">🛒</span>
+              {{ $t('header.menu.cart') }}
+            </span>
+
+            <span
+              v-if="cartCount"
+              class="rounded-full bg-purple-600 px-2 py-0.5 text-xs font-bold text-white"
+            >
+              {{ cartCount }}
+            </span>
+          </router-link>
+
+          <template v-if="!user">
+            <router-link
+              to="/signin"
+              class="mt-1 block rounded-lg px-3 py-2.5 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+              @click="mobileNavOpen = false"
+            >
+              {{ $t('header.menu.signin') }}
+            </router-link>
+
+            <router-link
+              to="/signup"
+              class="mt-2 block rounded-lg bg-purple-600 px-3 py-2.5 text-center text-sm font-medium text-white transition hover:bg-purple-500"
+              @click="mobileNavOpen = false"
+            >
+              {{ $t('header.menu.signup') }}
+            </router-link>
+          </template>
+
+          <template v-else>
+            <div
+              class="mt-2 rounded-lg bg-slate-800 px-3 py-2.5 text-sm text-white"
+            >
+              <span aria-hidden="true">👋</span>
+              {{ user.name }}
+            </div>
+
+            <router-link
+              to="/dashboard"
+              class="mt-1 block rounded-lg px-3 py-2.5 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+              @click="mobileNavOpen = false"
+            >
+              {{ $t('header.menu.account') }}
+              <span aria-hidden="true">→</span>
+            </router-link>
+
+            <router-link
+              v-if="isAdmin"
+              to="/admin/dashboard"
+              class="mt-1 block rounded-lg px-3 py-2.5 text-sm text-purple-300 transition hover:bg-slate-800 hover:text-white"
+              @click="mobileNavOpen = false"
+            >
+              {{ $t('header.menu.admin') }}
+              <span aria-hidden="true">→</span>
+            </router-link>
+
+            <button
+              type="button"
+              class="mt-2 w-full rounded-lg bg-slate-800 px-3 py-2.5 text-left text-sm text-white transition hover:bg-slate-700"
+              @click="logout"
+            >
+              {{ $t('header.menu.logout') }}
+            </button>
+          </template>
+        </div>
+
+        <!-- Mobile izbor jezika -->
+
+        <div
+          class="mt-4 flex items-center gap-2 border-t border-slate-800 pt-4"
+        >
+          <button
+            type="button"
+            class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            @click="setLanguage('sr')"
+          >
+            <img
+              src="../images/flag-rs.png"
+              alt="Srpski"
+              class="h-4 w-4 rounded-sm object-cover"
+            />
+
+            SR
+          </button>
+
+          <button
+            type="button"
+            class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            @click="setLanguage('en')"
+          >
+            <img
+              src="../images/flag-uk.png"
+              alt="English"
+              class="h-4 w-4 rounded-sm object-cover"
+            />
+
+            EN
+          </button>
+
+          <button
+            type="button"
+            class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            @click="setLanguage('de')"
+          >
+            <img
+              src="../images/flag-de.png"
+              alt="Deutsch"
+              class="h-4 w-4 rounded-sm object-cover"
+            />
+
+            DE
+          </button>
+        </div>
       </nav>
     </div>
   </header>
@@ -140,6 +450,7 @@ export default {
         { to: '/', label: 'header.menu.home' },
         { to: '/services', label: 'header.menu.services' },
         { to: '/projects', label: 'header.menu.projects' },
+        { to: '/blog', label: 'header.menu.blog' },
         { to: '/about', label: 'header.menu.about' },
         { to: '/contact', label: 'header.menu.contact' },
       ],

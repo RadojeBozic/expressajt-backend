@@ -1,46 +1,41 @@
 export const posts = [
   {
     id: 1,
-
     slug: 'kako-izabrati-poslovni-sajt',
 
-    title: 'Kako izabrati poslovni sajt koji zaista donosi rezultate',
+    titleKey:
+      'blog.articles.businessWebsite.meta.title',
 
-    excerpt:
-      'Poslovni sajt nije samo digitalna vizitkarta. Dobro osmišljen sajt predstavlja kompaniju, gradi poverenje i pomaže da posetioci postanu klijenti.',
+    excerptKey:
+      'blog.articles.businessWebsite.meta.excerpt',
 
     category: 'web-sajtovi',
-
     author: 'radoje-bozic',
 
     publishedAt: '2026-07-22',
-
     updatedAt: '2026-07-22',
 
-    image: '/images/blog/kako-izabrati-poslovni-sajt.jpg',
+    image:
+      '/images/blog/business-website/hero.jpg',
 
-    imageAlt: 'Planiranje modernog poslovnog sajta',
+    imageAltKey:
+      'blog.articles.businessWebsite.images.hero.alt',
 
     featured: true,
-
     published: true,
-
     readingTime: 6,
 
-    component: () => import('../posts/KakoIzabratiPoslovniSajt.vue'),
+    component: () =>
+      import(
+        '../posts/KakoIzabratiPoslovniSajt.vue'
+      ),
 
     seo: {
-      title: 'Kako izabrati poslovni sajt | Express Web',
+      titleKey:
+        'blog.articles.businessWebsite.meta.seoTitle',
 
-      description:
-        'Saznajte šta jedan kvalitetan poslovni sajt treba da sadrži i kako da izaberete rešenje koje podržava razvoj vašeg poslovanja.',
-
-      keywords: [
-        'poslovni sajt',
-        'izrada sajta',
-        'web prezentacija',
-        'digitalno poslovanje',
-      ],
+      descriptionKey:
+        'blog.articles.businessWebsite.meta.seoDescription',
     },
   },
 ]

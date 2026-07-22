@@ -261,6 +261,7 @@
       "services": "Usluge",
       "home": "Početna",
       "about": "O nama",
+      "blog": "Blog",
       "contact": "Kontakt",
       "faq": "FAQ",
       "projects": "Projekti",
@@ -277,7 +278,13 @@
       "language_sr": "Srpski",
       "language_en": "Engleski",
       "cart": "Korpa"
-    }
+    },
+    "logoAria": "Express Web početna stranica",
+    "navigationAria": "Glavna navigacija",
+    "mobileNavigationAria": "Mobilna navigacija",
+    "languageAria": "Izaberite jezik",
+    "openMenuAria": "Otvorite navigacioni meni",
+    "closeMenuAria": "Zatvorite navigacioni meni"
   },
   "auth": {
     "sign_in_title": "Prijavite se na svoj nalog",
@@ -473,8 +480,256 @@
     "p6": "Naš cilj je da digitalna transformacija ne bude skupa, komplikovana i rezervisana za velike igrače – već dostupna svakome, odmah i po meri."
   },
   "blog": {
-    "title": "Express Blog",
-    "intro": "Saveti, inspiracija i prakse iz sveta izrade sajtova, digitalizacije i malih biznisa u Srbiji.",
+  "title": "Express Blog",
+  "intro": "Saveti, inspiracija i prakse iz sveta izrade sajtova, digitalizacije i malih biznisa u Srbiji.",
+
+  "hero": {
+    "eyebrow": "Express Web blog",
+    "title": "Znanje za pametnije digitalno poslovanje",
+    "description": "Praktični vodiči, iskustva iz razvoja projekata i saveti o web sajtovima, online prodaji, poslovnim aplikacijama, marketingu i veštačkoj inteligenciji."
+  },
+
+  "list": {
+    "eyebrow": "Članci i vodiči",
+    "title": "Najnovije sa bloga",
+    "description": "Sadržaj koji pomaže preduzetnicima i kompanijama da bolje razumeju tehnologiju i donesu sigurnije poslovne odluke."
+  },
+
+  "filters": {
+    "ariaLabel": "Filtriranje članaka po kategoriji",
+    "all": "Sve kategorije"
+  },
+
+  "authors": {
+  "radojeBozic": {
+    "role": "Osnivač i full-stack developer",
+    "bio": "Razvoj web aplikacija, digitalnih platformi i poslovnih rešenja."
+  }
+},
+  
+
+  "empty": {
+    "title": "U ovoj kategoriji još nema članaka",
+    "description": "Novi sadržaj je u pripremi. Pogledajte ostale kategorije.",
+    "button": "Prikaži sve članke"
+  },
+
+  "card": {
+    "readingTime": "{minutes} min čitanja",
+    "readMore": "Pročitaj više",
+    "readArticleAria": "Pročitaj članak: {title}"
+  },
+
+  "categories": {
+    "web-sajtovi": {
+      "name": "Web sajtovi",
+      "description": "Saveti o planiranju, izradi i unapređenju poslovnih web sajtova."
+    },
+    "online-prodaja": {
+      "name": "Online prodaja",
+      "description": "Internet prodavnice, marketplace platforme i digitalna prodaja."
+    },
+    "digitalni-marketing": {
+      "name": "Digitalni marketing",
+      "description": "SEO, oglašavanje, sadržaj i prisustvo kompanije na internetu."
+    },
+    "vestacka-inteligencija": {
+      "name": "Veštačka inteligencija",
+      "description": "Praktična primena AI alata i automatizacije u poslovanju."
+    },
+    "poslovne-aplikacije": {
+      "name": "Poslovne aplikacije",
+      "description": "CRM, ERP, integracije i razvoj poslovnih informacionih sistema."
+    },
+    "projekti-i-studije-slucaja": {
+      "name": "Projekti i studije slučaja",
+      "description": "Iskustva iz razvoja konkretnih Express Web projekata."
+    }
+  },
+
+  "articles": {
+    "businessWebsite": {
+      "lead": {
+        "first": "Poslovni sajt nije samo digitalna vizitkarta. On je često prvo mesto na kojem potencijalni klijent upoznaje vašu kompaniju, proverava da li delujete pouzdano i odlučuje da li želi da vas kontaktira.",
+        "second": "Zbog toga izbor sajta ne treba da počne pitanjem koja vam se boja dopada ili koji je šablon najlepši. Potrebno je najpre razumeti poslovni cilj, potrebe korisnika i način na koji će sajt podržavati razvoj kompanije."
+      },
+
+      "meta": {
+        "title": "Kako izabrati poslovni sajt koji zaista donosi rezultate",
+        "excerpt": "Poslovni sajt nije samo digitalna vizitkarta. Dobro osmišljen sajt predstavlja kompaniju, gradi poverenje i pomaže da posetioci postanu klijenti.",
+        "seoTitle": "Kako izabrati poslovni sajt | Express Web",
+        "seoDescription": "Saznajte šta kvalitetan poslovni sajt treba da sadrži i kako da izaberete rešenje koje podržava razvoj vašeg poslovanja."
+      },
+
+      "goal": {
+        "title": "Počnite od poslovnog cilja",
+        "first": "Pre razgovora o dizajnu i tehnologiji definišite šta očekujete da posetilac uradi kada dođe na vaš sajt.",
+        "second": "Različiti poslovni ciljevi zahtevaju različitu strukturu sajta, sadržaj i pozive na akciju."
+      },
+
+      "goals": {
+        "inquiries": {
+          "title": "Slanje upita",
+          "description": "Sajt treba jasno da predstavi usluge i omogući posetiocu da brzo pošalje upit ili zakaže razgovor."
+        },
+        "sales": {
+          "title": "Prodaja proizvoda",
+          "description": "Potrebni su pregledan katalog, jednostavan proces kupovine i pouzdane informacije o plaćanju i isporuci."
+        },
+        "trust": {
+          "title": "Izgradnja poverenja",
+          "description": "Reference, projekti, recenzije i podaci o kompaniji pomažu korisnicima da donesu sigurniju odluku."
+        },
+        "information": {
+          "title": "Informisanje korisnika",
+          "description": "Sajt može služiti kao centar znanja sa vodičima, odgovorima na česta pitanja i stručnim sadržajem."
+        }
+      },
+
+      "warning": {
+        "title": "Česta greška",
+        "text": "Mnoge firme prvo izaberu dizajn, a tek kasnije razmišljaju o sadržaju i ciljevima. Rezultat može biti vizuelno lep sajt koji ne objašnjava jasno ponudu i ne donosi konkretne poslovne rezultate."
+      },
+
+      "audience": {
+        "title": "Razmišljajte iz ugla svog klijenta",
+        "first": "Vlasnik firme dobro poznaje svoje proizvode i usluge, ali posetilac sajta često prvi put čuje za kompaniju. On neće imati isto znanje, strpljenje ni kontekst.",
+        "second": "Zato sadržaj treba da bude jasan i razumljiv. Posetilac mora brzo da shvati čime se bavite, kome pomažete i koji je sledeći korak.",
+        "third": "Dobar sajt ne govori samo o kompaniji. On odgovara na pitanja korisnika, rešava njihove nedoumice i vodi ih ka odluci."
+      },
+
+      "essentials": {
+        "title": "Šta moderan poslovni sajt treba da sadrži",
+        "intro": "Bez obzira na delatnost, nekoliko elemenata predstavlja osnovu kvalitetnog poslovnog sajta.",
+
+        "message": {
+          "title": "Jasna glavna poruka",
+          "description": "Već u prvom delu stranice posetilac treba da razume šta nudite i kome je ponuda namenjena."
+        },
+        "mobile": {
+          "title": "Prilagođenost mobilnim uređajima",
+          "description": "Sajt mora biti pregledan i jednostavan za korišćenje na telefonu, tabletu i računaru."
+        },
+        "speed": {
+          "title": "Brzo učitavanje",
+          "description": "Spore stranice povećavaju verovatnoću da posetilac napusti sajt pre nego što upozna ponudu."
+        },
+        "contact": {
+          "title": "Jednostavan kontakt",
+          "description": "Telefon, email, kontakt forma i jasan poziv na akciju treba da budu lako dostupni."
+        },
+        "seo": {
+          "title": "SEO osnova",
+          "description": "Naslovi, opisi, struktura sadržaja i tehnička podešavanja pomažu pretraživačima da razumeju sajt."
+        },
+        "security": {
+          "title": "Sigurnost i održavanje",
+          "description": "SSL sertifikat, redovno ažuriranje i sigurnosne kopije štite sajt i podatke korisnika."
+        }
+      },
+
+      "callout": {
+        "title": "Sajt treba da ima jasan sledeći korak",
+        "text": "Na svakoj važnoj stranici korisniku treba pokazati šta može da uradi dalje: da pošalje upit, pozove, zakaže razgovor, pogleda projekte ili kupi proizvod."
+      },
+
+      "design": {
+        "title": "Dizajn treba da podržava sadržaj",
+        "first": "Profesionalan dizajn je važan jer utiče na prvi utisak i poverenje. Ipak, njegov zadatak nije da zaseni informacije, već da ih učini preglednijim.",
+        "second": "Previše animacija, sitan tekst, komplikovana navigacija i dekorativni elementi mogu otežati korišćenje sajta.",
+        "third": "Najbolji dizajn je onaj koji prati identitet kompanije, jasno ističe najvažnije informacije i omogućava korisniku da se lako kreće kroz sadržaj."
+      },
+
+      "price": {
+        "title": "Ne birajte sajt samo prema najnižoj ceni",
+        "first": "Cena je važna, posebno za malu firmu ili novi biznis. Međutim, najjeftinije rešenje nije uvek i najpovoljnije na duži rok.",
+        "second": "Potrebno je proveriti šta ponuda obuhvata: pripremu sadržaja, mobilnu verziju, domen, hosting, sigurnost, SEO podešavanja, podršku i mogućnost kasnije nadogradnje.",
+        "third": "Dobro planiran sajt može da raste zajedno sa kompanijom. Loše postavljena osnova često dovodi do dodatnih troškova i potpunog redizajna."
+      },
+
+      "steps": {
+        "title": "Pet koraka pri izboru poslovnog sajta",
+        "intro": "Jednostavan proces može pomoći da izbegnete pogrešnu investiciju i dobijete rešenje koje odgovara stvarnim potrebama.",
+
+        "goal": {
+          "title": "Definišite cilj",
+          "description": "Odredite da li želite više upita, prodaju, rezervacije, predstavljanje usluga ili kombinaciju više ciljeva."
+        },
+        "content": {
+          "title": "Pripremite ključne informacije",
+          "description": "Prikupite podatke o kompaniji, uslugama, proizvodima, kontaktima, referencama i najčešćim pitanjima."
+        },
+        "scope": {
+          "title": "Odredite početni obim",
+          "description": "Nije potrebno sve napraviti odmah. Važno je da prva verzija bude kvalitetna i spremna za kasnije proširenje."
+        },
+        "partner": {
+          "title": "Izaberite pouzdanog partnera",
+          "description": "Tražite jasnu komunikaciju, realan plan, transparentnu ponudu i podršku nakon objavljivanja sajta."
+        },
+        "growth": {
+          "title": "Planirajte razvoj",
+          "description": "Razmislite o budućem blogu, online prodaji, višejezičnosti, integracijama i drugim funkcionalnostima."
+        }
+      },
+
+      "recommendation": {
+        "title": "Preporuka Express Web-a",
+        "text": "Počnite sa rešenjem koje odgovara današnjim potrebama, ali ga gradite na osnovi koja omogućava budući razvoj. Nije neophodno odmah imati veliki sistem, ali je važno izbeći arhitekturu koja će vas kasnije ograničavati."
+      },
+
+      "conclusion": {
+        "title": "Dobar poslovni sajt počinje dobrom odlukom",
+        "first": "Kvalitetan sajt povezuje poslovne ciljeve, potrebe korisnika, sadržaj, dizajn i tehnologiju u jednu funkcionalnu celinu.",
+        "second": "Kada je dobro planiran, sajt ne služi samo za predstavljanje kompanije. On gradi poverenje, podržava prodaju, olakšava komunikaciju i postaje važan deo razvoja poslovanja."
+      },
+
+      "cta": {
+        "title": "Planirate novi poslovni sajt?",
+        "description": "Razgovarajmo o vašim ciljevima i pronađimo rešenje koje odgovara sadašnjim potrebama, ali ostavlja prostor za dalji razvoj.",
+        "primary": "Pošaljite nam upit",
+        "secondary": "Pogledajte naše projekte"
+      },
+
+      "images": {
+        "hero": {
+          "alt": "Planiranje modernog poslovnog sajta",
+          "caption": "Kvalitetan poslovni sajt počinje jasnim ciljem, sadržajem i planom razvoja."
+        },
+        "goals": {
+          "alt": "Definisanje poslovnih ciljeva web sajta",
+          "caption": "Struktura sajta treba da bude prilagođena konkretnim poslovnim ciljevima."
+        },
+        "checklist": {
+          "alt": "Najvažniji elementi kvalitetnog poslovnog sajta",
+          "caption": "Jasna poruka, mobilna prilagođenost, brzina, SEO, kontakt i sigurnost čine osnovu modernog sajta."
+        }
+      }
+    }
+  },
+
+  "post": {
+    "backToBlog": "Nazad na blog",
+    "readingTime": "{minutes} min čitanja",
+    "readMore": "Pročitaj više",
+    "updatedAt": "Poslednje ažuriranje: {date}",
+    "contentUnavailable": {
+      "title": "Sadržaj članka trenutno nije dostupan",
+      "description": "Članak je pronađen, ali njegov sadržaj još nije učitan."
+    },
+    "related": {
+      "eyebrow": "Nastavite sa čitanjem",
+      "title": "Povezani članci"
+    },
+    "notFound": {
+      "metaTitle": "Članak nije pronađen | Express Web",
+      "title": "Članak nije pronađen",
+      "description": "Članak koji tražite ne postoji, nije objavljen ili je njegova adresa promenjena.",
+      "button": "Pogledajte sve članke"
+    }
+  },
+
+  "legacyPosts": {
     "post1": {
       "title": "Kako do sajta za 10 minuta bez programera?",
       "text": "Objašnjavamo kako funkcioniše Express FREE sajt – korak po korak. I šta mali preduzetnik dobija potpuno besplatno."
@@ -488,7 +743,8 @@
       "text": "Od prvog klika do gotovog sajta. Šta sve možete da očekujete u toku izrade, koliko to traje i ko vam pomaže?"
     },
     "notice": "Uskoro otvaramo CMS za korisničke priče, tutorijale i analize – pratite nas."
-  },
+  }
+},
   "diversity": {
     "title": "Raznolikost i inkluzija",
     "intro": "Mi, u Express web-u verujemo da različitost timova vodi ka boljim rešenjima. Naš pristup je otvoren, inkluzivan i orijentisan ka vrednostima.",
@@ -2510,52 +2766,6 @@
     "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
     "button": "Pošaljite zahtev za AI procenu"
   }
-},
-"blog": {
-  "hero": {
-    "eyebrow": "Express Web blog",
-    "title": "Znanje za pametnije digitalno poslovanje",
-    "description": "Praktični vodiči, iskustva iz razvoja projekata i saveti o web sajtovima, online prodaji, poslovnim aplikacijama, marketingu i veštačkoj inteligenciji."
-  },
-  "list": {
-    "eyebrow": "Članci i vodiči",
-    "title": "Najnovije sa bloga",
-    "description": "Sadržaj koji pomaže preduzetnicima i kompanijama da bolje razumeju tehnologiju i donesu sigurnije poslovne odluke."
-  },
-  "filters": {
-    "ariaLabel": "Filtriranje članaka po kategoriji",
-    "all": "Sve kategorije"
-  },
-  "empty": {
-    "title": "U ovoj kategoriji još nema članaka",
-    "description": "Novi sadržaj je u pripremi. Pogledajte ostale kategorije.",
-    "button": "Prikaži sve članke"
-  },
-  "categories": {
-    "web-sajtovi": {
-      "name": "Web sajtovi",
-      "description": "Saveti o planiranju, izradi i unapređenju poslovnih web sajtova."
-    },
-    "online-prodaja": {
-      "name": "Online prodaja",
-      "description": "Internet prodavnice, marketplace platforme i digitalna prodaja."
-    },
-    "digitalni-marketing": {
-      "name": "Digitalni marketing",
-      "description": "SEO, oglašavanje, sadržaj i prisustvo kompanije na internetu."
-    },
-    "vestacka-inteligencija": {
-      "name": "Veštačka inteligencija",
-      "description": "Praktična primena AI alata i automatizacije u poslovanju."
-    },
-    "poslovne-aplikacije": {
-      "name": "Poslovne aplikacije",
-      "description": "CRM, ERP, integracije i razvoj poslovnih informacionih sistema."
-    },
-    "projekti-i-studije-slucaja": {
-      "name": "Projekti i studije slučaja",
-      "description": "Iskustva iz razvoja konkretnih Express Web projekata."
-    }
-  }
 }
+
 }
