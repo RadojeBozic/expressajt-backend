@@ -2511,5 +2511,52 @@
     "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
     "button": "Pošaljite zahtev za AI procenu"
   }
+},
+"blog": {
+  "hero": {
+    "eyebrow": "Express Web blog",
+    "title": "Knowledge for smarter digital business",
+    "description": "Practical guides, project development insights and advice on websites, online sales, business applications, marketing and artificial intelligence."
+  },
+  "list": {
+    "eyebrow": "Articles and guides",
+    "title": "Latest from the blog",
+    "description": "Content that helps entrepreneurs and companies understand technology better and make more confident business decisions."
+  },
+  "filters": {
+    "ariaLabel": "Filter articles by category",
+    "all": "All categories"
+  },
+  "empty": {
+    "title": "There are no articles in this category yet",
+    "description": "New content is being prepared. Explore the other categories.",
+    "button": "Show all articles"
+  },
+  "categories": {
+    "web-sajtovi": {
+      "name": "Websites",
+      "description": "Advice on planning, building and improving business websites."
+    },
+    "online-prodaja": {
+      "name": "Online sales",
+      "description": "Online stores, marketplace platforms and digital sales."
+    },
+    "digitalni-marketing": {
+      "name": "Digital marketing",
+      "description": "SEO, advertising, content and online business presence."
+    },
+    "vestacka-inteligencija": {
+      "name": "Artificial intelligence",
+      "description": "Practical applications of AI tools and business automation."
+    },
+    "poslovne-aplikacije": {
+      "name": "Business applications",
+      "description": "CRM, ERP, integrations and business information systems."
+    },
+    "projekti-i-studije-slucaja": {
+      "name": "Projects and case studies",
+      "description": "Insights from real Express Web development projects."
+    }
+  }
 }
 }

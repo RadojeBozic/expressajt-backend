@@ -2580,5 +2580,52 @@
     "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
     "button": "Pošaljite zahtev za AI procenu"
   }
+},
+"blog": {
+  "hero": {
+    "eyebrow": "Express Web Blog",
+    "title": "Wissen für ein intelligenteres digitales Geschäft",
+    "description": "Praxisnahe Leitfäden, Erfahrungen aus der Projektentwicklung sowie Tipps zu Websites, Online-Verkauf, Geschäftsanwendungen, Marketing und künstlicher Intelligenz."
+  },
+  "list": {
+    "eyebrow": "Artikel und Leitfäden",
+    "title": "Neu im Blog",
+    "description": "Inhalte, die Unternehmern und Unternehmen helfen, Technologie besser zu verstehen und fundiertere Geschäftsentscheidungen zu treffen."
+  },
+  "filters": {
+    "ariaLabel": "Artikel nach Kategorie filtern",
+    "all": "Alle Kategorien"
+  },
+  "empty": {
+    "title": "In dieser Kategorie gibt es noch keine Artikel",
+    "description": "Neue Inhalte sind in Vorbereitung. Entdecken Sie die anderen Kategorien.",
+    "button": "Alle Artikel anzeigen"
+  },
+  "categories": {
+    "web-sajtovi": {
+      "name": "Websites",
+      "description": "Tipps zur Planung, Erstellung und Verbesserung von Unternehmenswebsites."
+    },
+    "online-prodaja": {
+      "name": "Online-Verkauf",
+      "description": "Onlineshops, Marktplatzplattformen und digitaler Vertrieb."
+    },
+    "digitalni-marketing": {
+      "name": "Digitales Marketing",
+      "description": "SEO, Werbung, Inhalte und die Online-Präsenz von Unternehmen."
+    },
+    "vestacka-inteligencija": {
+      "name": "Künstliche Intelligenz",
+      "description": "Praktische Anwendungen von KI-Werkzeugen und Geschäftsautomatisierung."
+    },
+    "poslovne-aplikacije": {
+      "name": "Geschäftsanwendungen",
+      "description": "CRM, ERP, Integrationen und betriebliche Informationssysteme."
+    },
+    "projekti-i-studije-slucaja": {
+      "name": "Projekte und Fallstudien",
+      "description": "Erfahrungen aus konkreten Express-Web-Entwicklungsprojekten."
+    }
+  }
 }
 }

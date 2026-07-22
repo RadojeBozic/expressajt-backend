@@ -2510,5 +2510,52 @@
     "description": "Opišite nam kako trenutno radite, gde nastaju zastoji i šta biste želeli da ubrzate. Procenićemo da li AI i automatizacija mogu da donesu stvarnu korist.",
     "button": "Pošaljite zahtev za AI procenu"
   }
+},
+"blog": {
+  "hero": {
+    "eyebrow": "Express Web blog",
+    "title": "Znanje za pametnije digitalno poslovanje",
+    "description": "Praktični vodiči, iskustva iz razvoja projekata i saveti o web sajtovima, online prodaji, poslovnim aplikacijama, marketingu i veštačkoj inteligenciji."
+  },
+  "list": {
+    "eyebrow": "Članci i vodiči",
+    "title": "Najnovije sa bloga",
+    "description": "Sadržaj koji pomaže preduzetnicima i kompanijama da bolje razumeju tehnologiju i donesu sigurnije poslovne odluke."
+  },
+  "filters": {
+    "ariaLabel": "Filtriranje članaka po kategoriji",
+    "all": "Sve kategorije"
+  },
+  "empty": {
+    "title": "U ovoj kategoriji još nema članaka",
+    "description": "Novi sadržaj je u pripremi. Pogledajte ostale kategorije.",
+    "button": "Prikaži sve članke"
+  },
+  "categories": {
+    "web-sajtovi": {
+      "name": "Web sajtovi",
+      "description": "Saveti o planiranju, izradi i unapređenju poslovnih web sajtova."
+    },
+    "online-prodaja": {
+      "name": "Online prodaja",
+      "description": "Internet prodavnice, marketplace platforme i digitalna prodaja."
+    },
+    "digitalni-marketing": {
+      "name": "Digitalni marketing",
+      "description": "SEO, oglašavanje, sadržaj i prisustvo kompanije na internetu."
+    },
+    "vestacka-inteligencija": {
+      "name": "Veštačka inteligencija",
+      "description": "Praktična primena AI alata i automatizacije u poslovanju."
+    },
+    "poslovne-aplikacije": {
+      "name": "Poslovne aplikacije",
+      "description": "CRM, ERP, integracije i razvoj poslovnih informacionih sistema."
+    },
+    "projekti-i-studije-slucaja": {
+      "name": "Projekti i studije slučaja",
+      "description": "Iskustva iz razvoja konkretnih Express Web projekata."
+    }
+  }
 }
 }
