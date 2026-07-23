@@ -1186,7 +1186,189 @@
               "caption": "AI is most useful as an assistant that suggests and processes information while people verify and decide."
             }
           }
+        },
+
+        "businessApplication": {
+        "meta": {
+          "title": "When does a small business need a business application?",
+          "excerpt": "Learn when spreadsheets, messages and manual tracking are no longer sufficient and how a business application can bring data, processes and reporting together.",
+          "seoTitle": "When does a business need an application? | Express Web",
+          "seoDescription": "Recognise the signs that your company needs a business application and learn how to digitalise customers, sales, documents and reporting."
+        },
+
+        "lead": {
+          "first": "Many small companies operate successfully for years using spreadsheets, emails, paper documents and several disconnected programs. This approach may be entirely sufficient while the workload and number of employees remain limited.",
+          "second": "Problems begin when information is repeatedly entered, lost or delayed, while the owner finds it increasingly difficult to obtain a reliable overview of customers, sales, inventory, tasks and results."
+        },
+
+        "website": {
+          "title": "A business website and a business application have different roles",
+          "first": "A business website primarily presents a company, its products, services, references and contact information. Its purpose is to inform visitors, build trust and encourage an enquiry or purchase.",
+          "second": "A business application supports employees, associates, sales representatives, agents or customers who perform specific activities through the system. It is used to enter and process data, track workflows, assign tasks and prepare reports.",
+          "third": "A website may serve as the entry point into the business, while an application organises what happens after a customer submits an enquiry, places an order or begins a working relationship."
+        },
+
+        "definition": {
+          "title": "A business application should follow the company's real workflow",
+          "text": "A good application does not force a company to introduce unnecessary steps. It connects existing processes, removes duplication and allows responsible users to see the information they need at any moment."
+        },
+
+        "excel": {
+          "title": "Excel is useful, but it is not always sufficient",
+          "first": "Excel is an excellent tool for calculations, smaller records, analysis and quickly organising data. For many small companies, it represents a practical and economical starting point.",
+          "second": "Difficulties begin when several versions of the same spreadsheet exist, multiple employees change the data or customers, products, documents, statuses and responsible people need to be connected.",
+          "third": "In such an environment, the risk of errors increases, while producing a single report may require manually collecting information from multiple files and messages."
+        },
+
+        "signs": {
+          "title": "Seven signs that a company needs a business application",
+          "intro": "The decisive factor is not the size of the company, but the complexity of its processes and the amount of information that must be tracked reliably.",
+
+          "duplicateEntry": {
+            "title": "The same data is entered multiple times",
+            "description": "Customer, product or order data is copied from an email into a spreadsheet, from the spreadsheet into a document and then into another program."
+          },
+          "scatteredData": {
+            "title": "Information is scattered across different locations",
+            "description": "Important data is stored in spreadsheets, messages, paper records, employee phones and different cloud services."
+          },
+          "manualTracking": {
+            "title": "Statuses are tracked manually",
+            "description": "Employees must ask one another whether a proposal was sent, an order processed, goods delivered or an invoice paid."
+          },
+          "noOverview": {
+            "title": "There is no unified business overview",
+            "description": "The owner or manager cannot easily see what is complete, what is delayed, who is responsible and which customers need attention."
+          },
+          "errors": {
+            "title": "Errors and duplicated work become frequent",
+            "description": "Two people complete the same task, information differs between documents or important obligations are forgotten."
+          },
+          "reporting": {
+            "title": "Reporting requires too much time",
+            "description": "Reviewing sales, costs or performance requires manually combining data from several spreadsheets and systems."
+          },
+          "growth": {
+            "title": "Business growth makes work more complicated",
+            "description": "Every new customer, employee, location or sales channel increases the number of manual steps and opportunities for errors."
+          }
+        },
+
+        "solution": {
+          "title": "Ready-made software or a custom business application?",
+          "first": "Ready-made solutions are often the best choice when a company has standard requirements, such as invoicing, customer records, project management or basic inventory operations.",
+          "second": "A custom application makes sense when the company has a specific workflow, multiple user roles, special calculation rules or a need to connect several existing systems.",
+          "third": "The best solution is sometimes not to build everything from the beginning, but to combine existing software, a custom module and integrations that remove manual data transfer."
+        },
+
+        "warning": {
+          "title": "Do not digitalise a poor process before analysing it",
+          "text": "If a business process is unclear, unnecessarily complicated or lacks defined responsibilities, an application may only make it faster, not better. Before development begins, the problem should be understood and the workflow simplified."
+        },
+
+        "modules": {
+          "title": "What a business application can bring together",
+          "intro": "An application can be developed modularly, according to the company's real needs and priorities.",
+
+          "customers": {
+            "title": "Customers and business contacts",
+            "description": "A unified record of contacts, communication, proposals, contracts, activities and cooperation history."
+          },
+          "sales": {
+            "title": "Sales and orders",
+            "description": "Tracking enquiries, proposals, orders, fulfilment status, payments and sales team activities."
+          },
+          "inventory": {
+            "title": "Products and inventory",
+            "description": "Information about products, prices, availability, suppliers, incoming stock, outgoing stock and purchasing requirements."
+          },
+          "documents": {
+            "title": "Documents",
+            "description": "Proposals, invoices, contracts, delivery notes, attachments and other records connected with a customer or business process."
+          },
+          "tasks": {
+            "title": "Tasks and responsibilities",
+            "description": "Task assignment, deadlines, priorities, statuses, notifications and an overview of employee activities."
+          },
+          "reports": {
+            "title": "Reports and indicators",
+            "description": "An overview of sales, performance, costs, delays, key customers and other information needed for decision-making."
+          }
+        },
+
+        "automation": {
+          "title": "The greatest value comes from connecting processes",
+          "first": "A business application should not merely be a digital replacement for a paper form. Its value increases when one action automatically initiates the next step.",
+          "second": "For example, an accepted proposal can create an order, open a task for the responsible person, prepare a document and send a notification to the customer.",
+          "third": "This reduces manual work, accelerates processing and creates a clear record of who completed each action and when."
+        },
+
+        "steps": {
+          "title": "How to begin development with limited risk",
+          "intro": "The safest approach is gradual development with clear priorities and the involvement of people who will use the system every day.",
+
+          "problem": {
+            "title": "Define a specific problem",
+            "description": "Do not begin with a list of technologies. Describe where time is lost, where errors occur and which information is missing."
+          },
+          "process": {
+            "title": "Map the existing process",
+            "description": "Record who starts the activity, which information is used, what happens next and who is responsible for the following step."
+          },
+          "priority": {
+            "title": "Choose the most important module",
+            "description": "The first version should solve one significant problem rather than immediately attempting to replace every program in the company."
+          },
+          "prototype": {
+            "title": "Create a simple prototype",
+            "description": "Before full development, verify screen layouts, required data, user roles and workflow logic."
+          },
+          "testing": {
+            "title": "Test with real users",
+            "description": "Employees who perform the work can quickly identify unnecessary steps, missing information and impractical functions."
+          },
+          "development": {
+            "title": "Develop the application in phases",
+            "description": "Add new modules, automations and integrations only after the core process works reliably and delivers measurable value."
+          }
+        },
+
+        "recommendation": {
+          "title": "Express Web recommendation",
+          "text": "Do not begin a project by requesting a CRM, ERP or large business platform. Begin with the specific problem you want to solve. Only after analysis should you decide whether an existing solution, a new integration or a custom application is required."
+        },
+
+        "conclusion": {
+          "title": "The right application creates clarity, not additional complexity",
+          "first": "A business application becomes justified when existing tools no longer support reliable tracking of information, responsibilities and results.",
+          "second": "A well-designed solution should reduce manual work, connect information and allow a company to grow without a proportional increase in administration and errors."
+        },
+
+        "cta": {
+          "title": "Are your business processes becoming too complex?",
+          "description": "We can analyse how your company works, identify bottlenecks and assess whether you need an existing solution, an integration or a custom business application.",
+          "primary": "Request an assessment",
+          "secondary": "View our projects"
+        },
+
+        "images": {
+          "card": {
+            "alt": "A small business owner uses a business application to track customers, sales and tasks"
+          },
+          "hero": {
+            "alt": "A centralised business application connects customers, sales, documents and reports",
+            "caption": "A good business application brings information together and allows every user to see the data they need."
+          },
+          "excelVsApplication": {
+            "alt": "A comparison between working in multiple Excel spreadsheets and using a centralised business application",
+            "caption": "Excel remains a useful tool, but more complex processes require controlled access, connected data and clear user roles."
+          },
+          "businessProcess": {
+            "alt": "A digital business workflow from customer enquiry to fulfilment and reporting",
+            "caption": "By connecting steps, an application reduces duplication, accelerates processing and preserves a history of activities."
+          }
         }
+      }
   },
 
   "post": {

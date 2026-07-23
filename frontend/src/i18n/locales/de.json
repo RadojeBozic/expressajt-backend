@@ -1241,6 +1241,188 @@
             "caption": "KI ist als Assistent am nützlichsten, der Informationen vorschlägt und verarbeitet, während der Mensch prüft und entscheidet."
           }
         }
+      },
+
+      "businessApplication": {
+        "meta": {
+          "title": "Wann benötigt ein kleines Unternehmen eine Geschäftsanwendung?",
+          "excerpt": "Erfahren Sie, wann Tabellen, Nachrichten und manuelle Nachverfolgung nicht mehr ausreichen und wie eine Geschäftsanwendung Daten, Prozesse und Berichte verbinden kann.",
+          "seoTitle": "Wann wird eine Geschäftsanwendung benötigt? | Express Web",
+          "seoDescription": "Erkennen Sie die Anzeichen dafür, dass Ihr Unternehmen eine Geschäftsanwendung benötigt, und erfahren Sie, wie Kunden, Verkauf, Dokumente und Berichte digitalisiert werden können."
+        },
+
+        "lead": {
+          "first": "Viele kleine Unternehmen arbeiten jahrelang erfolgreich mit Excel-Tabellen, E-Mails, Papierdokumenten und mehreren nicht verbundenen Programmen. Solange Arbeitsumfang und Mitarbeiterzahl gering sind, kann diese Arbeitsweise vollkommen ausreichend sein.",
+          "second": "Probleme entstehen, wenn Informationen mehrfach eingegeben werden, verloren gehen oder verspätet eintreffen und der Eigentümer immer schwerer einen zuverlässigen Überblick über Kunden, Verkauf, Lagerbestände, Aufgaben und Ergebnisse erhält."
+        },
+
+        "website": {
+          "title": "Eine Unternehmenswebsite und eine Geschäftsanwendung haben unterschiedliche Aufgaben",
+          "first": "Eine Unternehmenswebsite präsentiert in erster Linie das Unternehmen, seine Produkte, Dienstleistungen, Referenzen und Kontaktdaten. Sie soll Besucher informieren, Vertrauen schaffen und zu einer Anfrage oder einem Kauf führen.",
+          "second": "Eine Geschäftsanwendung unterstützt Mitarbeiter, Partner, Verkäufer, Agenten oder Kunden bei konkreten Aktivitäten. In ihr werden Daten eingegeben und verarbeitet, Abläufe verfolgt, Aufgaben zugewiesen und Berichte erstellt.",
+          "third": "Die Website kann der Einstiegspunkt in das Unternehmen sein, während die Anwendung organisiert, was nach einer Anfrage, Bestellung oder dem Beginn einer Zusammenarbeit geschieht."
+        },
+
+        "definition": {
+          "title": "Eine Geschäftsanwendung sollte dem tatsächlichen Arbeitsablauf folgen",
+          "text": "Eine gute Anwendung zwingt das Unternehmen nicht zu unnötigen Schritten. Sie verbindet bestehende Prozesse, verhindert doppelte Arbeit und ermöglicht verantwortlichen Personen jederzeit den Zugriff auf die benötigten Informationen."
+        },
+
+        "excel": {
+          "title": "Excel ist nützlich, aber nicht immer ausreichend",
+          "first": "Excel ist ein ausgezeichnetes Werkzeug für Berechnungen, kleinere Verzeichnisse, Analysen und die schnelle Organisation von Daten. Für viele kleine Unternehmen ist es ein sinnvoller und wirtschaftlicher Ausgangspunkt.",
+          "second": "Schwierigkeiten entstehen, wenn mehrere Versionen derselben Tabelle vorhanden sind, mehrere Mitarbeiter Daten bearbeiten oder Kunden, Produkte, Dokumente, Status und verantwortliche Personen miteinander verbunden werden müssen.",
+          "third": "In einer solchen Umgebung steigt das Fehlerrisiko, während die Erstellung eines einzigen Berichts häufig das manuelle Zusammentragen von Daten aus mehreren Dateien und Nachrichten erfordert."
+        },
+
+        "signs": {
+          "title": "Sieben Anzeichen dafür, dass ein Unternehmen eine Geschäftsanwendung benötigt",
+          "intro": "Entscheidend ist nicht die Größe des Unternehmens, sondern die Komplexität der Prozesse und die Menge der Informationen, die zuverlässig verfolgt werden müssen.",
+
+          "duplicateEntry": {
+            "title": "Dieselben Daten werden mehrfach eingegeben",
+            "description": "Kunden-, Produkt- oder Bestelldaten werden aus einer E-Mail in eine Tabelle, aus der Tabelle in ein Dokument und anschließend in ein weiteres Programm übertragen."
+          },
+          "scatteredData": {
+            "title": "Informationen sind auf viele Orte verteilt",
+            "description": "Wichtige Daten befinden sich in Excel-Dateien, Nachrichten, Papierunterlagen, Mitarbeitertelefonen und verschiedenen Cloud-Diensten."
+          },
+          "manualTracking": {
+            "title": "Status werden manuell verfolgt",
+            "description": "Mitarbeiter müssen einander fragen, ob ein Angebot versendet, eine Bestellung bearbeitet, Ware geliefert oder eine Rechnung bezahlt wurde."
+          },
+          "noOverview": {
+            "title": "Es gibt keinen einheitlichen Geschäftsüberblick",
+            "description": "Eigentümer oder Manager können nur schwer erkennen, was erledigt ist, was sich verspätet, wer verantwortlich ist und welche Kunden Aufmerksamkeit benötigen."
+          },
+          "errors": {
+            "title": "Fehler und doppelte Arbeit treten häufig auf",
+            "description": "Zwei Personen erledigen dieselbe Aufgabe, Angaben unterscheiden sich zwischen Dokumenten oder wichtige Verpflichtungen werden vergessen."
+          },
+          "reporting": {
+            "title": "Berichte benötigen zu viel Zeit",
+            "description": "Für einen Überblick über Verkauf, Kosten oder Leistung müssen Daten aus mehreren Tabellen und Systemen manuell zusammengeführt werden."
+          },
+          "growth": {
+            "title": "Das Unternehmenswachstum erschwert die Arbeit zusätzlich",
+            "description": "Jeder neue Kunde, Mitarbeiter, Standort oder Vertriebskanal erhöht die Zahl manueller Schritte und die Wahrscheinlichkeit von Fehlern."
+          }
+        },
+
+        "solution": {
+          "title": "Standardsoftware oder eine individuell angepasste Anwendung?",
+          "first": "Standardlösungen sind häufig die beste Wahl, wenn ein Unternehmen übliche Anforderungen hat, etwa Rechnungsstellung, Kundenverwaltung, Projektmanagement oder grundlegende Lagerverwaltung.",
+          "second": "Eine individuelle Anwendung ist sinnvoll, wenn das Unternehmen einen spezifischen Ablauf, mehrere Benutzerrollen, besondere Berechnungsregeln oder die Notwendigkeit besitzt, mehrere bestehende Systeme zu verbinden.",
+          "third": "Die beste Lösung besteht manchmal nicht darin, alles neu zu entwickeln, sondern vorhandene Software, ein individuelles Modul und Integrationen zu kombinieren, die den manuellen Datentransfer beseitigen."
+        },
+
+        "warning": {
+          "title": "Ein schlechter Prozess sollte nicht ohne vorherige Analyse digitalisiert werden",
+          "text": "Wenn ein Geschäftsprozess unklar, unnötig kompliziert oder ohne definierte Verantwortlichkeiten ist, kann eine Anwendung ihn lediglich schneller, aber nicht besser machen. Vor der Entwicklung muss das Problem verstanden und der Ablauf vereinfacht werden."
+        },
+
+        "modules": {
+          "title": "Was eine Geschäftsanwendung zusammenführen kann",
+          "intro": "Eine Anwendung kann modular entwickelt werden, entsprechend den tatsächlichen Bedürfnissen und Prioritäten des Unternehmens.",
+
+          "customers": {
+            "title": "Kunden und Geschäftskontakte",
+            "description": "Eine einheitliche Übersicht über Kontakte, Kommunikation, Angebote, Verträge, Aktivitäten und die bisherige Zusammenarbeit."
+          },
+          "sales": {
+            "title": "Verkauf und Bestellungen",
+            "description": "Verfolgung von Anfragen, Angeboten, Bestellungen, Bearbeitungsstatus, Zahlungen und Aktivitäten des Verkaufsteams."
+          },
+          "inventory": {
+            "title": "Produkte und Lagerbestände",
+            "description": "Informationen über Artikel, Preise, Verfügbarkeit, Lieferanten, Wareneingänge, Warenausgänge und Beschaffungsbedarf."
+          },
+          "documents": {
+            "title": "Dokumente",
+            "description": "Angebote, Rechnungen, Verträge, Lieferscheine, Anhänge und weitere Unterlagen, die mit einem Kunden oder Geschäftsprozess verbunden sind."
+          },
+          "tasks": {
+            "title": "Aufgaben und Verantwortlichkeiten",
+            "description": "Aufgabenzuweisung, Fristen, Prioritäten, Status, Benachrichtigungen und eine Übersicht über Mitarbeiteraktivitäten."
+          },
+          "reports": {
+            "title": "Berichte und Kennzahlen",
+            "description": "Überblick über Verkauf, Leistung, Kosten, Verzögerungen, wichtige Kunden und weitere Informationen für Geschäftsentscheidungen."
+          }
+        },
+
+        "automation": {
+          "title": "Der größte Nutzen entsteht durch die Verbindung von Prozessen",
+          "first": "Eine Geschäftsanwendung sollte nicht nur ein digitaler Ersatz für ein Papierformular sein. Ihr Nutzen steigt, wenn eine Eingabe automatisch den nächsten Schritt auslöst.",
+          "second": "Ein angenommenes Angebot kann beispielsweise eine Bestellung erstellen, einer verantwortlichen Person eine Aufgabe zuweisen, ein Dokument vorbereiten und eine Nachricht an den Kunden senden.",
+          "third": "Dadurch werden manuelle Tätigkeiten reduziert, die Bearbeitung beschleunigt und es bleibt nachvollziehbar, wer welche Aktivität zu welchem Zeitpunkt ausgeführt hat."
+        },
+
+        "steps": {
+          "title": "So beginnen Sie die Entwicklung mit begrenztem Risiko",
+          "intro": "Der sicherste Ansatz ist eine schrittweise Entwicklung mit klaren Prioritäten und der Einbeziehung der Personen, die das System täglich verwenden werden.",
+
+          "problem": {
+            "title": "Definieren Sie ein konkretes Problem",
+            "description": "Beginnen Sie nicht mit einer Liste von Technologien. Beschreiben Sie, wo Zeit verloren geht, wo Fehler entstehen und welche Informationen fehlen."
+          },
+          "process": {
+            "title": "Stellen Sie den bestehenden Prozess dar",
+            "description": "Dokumentieren Sie, wer eine Aktivität beginnt, welche Daten verwendet werden, was anschließend geschieht und wer für den nächsten Schritt verantwortlich ist."
+          },
+          "priority": {
+            "title": "Bestimmen Sie das wichtigste Modul",
+            "description": "Die erste Version sollte ein bedeutendes Problem lösen und nicht sofort versuchen, alle Programme im Unternehmen zu ersetzen."
+          },
+          "prototype": {
+            "title": "Erstellen Sie einen einfachen Prototyp",
+            "description": "Prüfen Sie vor der vollständigen Entwicklung die Bildschirmstruktur, benötigten Daten, Benutzerrollen und Prozesslogik."
+          },
+          "testing": {
+            "title": "Testen Sie mit tatsächlichen Benutzern",
+            "description": "Mitarbeiter, die die Arbeit ausführen, erkennen unnötige Schritte, fehlende Daten und unpraktische Funktionen besonders schnell."
+          },
+          "development": {
+            "title": "Entwickeln Sie die Anwendung in Phasen",
+            "description": "Fügen Sie neue Module, Automatisierungen und Integrationen erst hinzu, wenn der grundlegende Prozess zuverlässig funktioniert und einen messbaren Nutzen bringt."
+          }
+        },
+
+        "recommendation": {
+          "title": "Empfehlung von Express Web",
+          "text": "Beginnen Sie ein Projekt nicht mit der Forderung nach einem CRM, ERP oder einer großen Geschäftsplattform. Beginnen Sie mit dem konkreten Problem, das Sie lösen möchten. Erst nach einer Analyse sollte entschieden werden, ob eine vorhandene Lösung, eine neue Integration oder eine individuelle Anwendung erforderlich ist."
+        },
+
+        "conclusion": {
+          "title": "Die richtige Anwendung schafft Übersicht statt zusätzlicher Komplexität",
+          "first": "Eine Geschäftsanwendung ist gerechtfertigt, wenn vorhandene Werkzeuge keine zuverlässige Verfolgung von Daten, Verantwortlichkeiten und Ergebnissen mehr ermöglichen.",
+          "second": "Eine gut konzipierte Lösung sollte manuelle Arbeit reduzieren, Informationen verbinden und dem Unternehmen Wachstum ermöglichen, ohne dass Verwaltung und Fehler im gleichen Verhältnis zunehmen."
+        },
+
+        "cta": {
+          "title": "Werden Ihre Geschäftsprozesse zu komplex?",
+          "description": "Wir können gemeinsam die Arbeitsweise Ihres Unternehmens analysieren, Engpässe erkennen und beurteilen, ob Sie eine bestehende Lösung, eine Integration oder eine individuell entwickelte Geschäftsanwendung benötigen.",
+          "primary": "Bewertung anfordern",
+          "secondary": "Unsere Projekte ansehen"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Ein Kleinunternehmer verwendet eine Geschäftsanwendung zur Verwaltung von Kunden, Verkauf und Aufgaben"
+          },
+          "hero": {
+            "alt": "Eine zentrale Geschäftsanwendung verbindet Kunden, Verkauf, Dokumente und Berichte",
+            "caption": "Eine gute Geschäftsanwendung führt Informationen zusammen und ermöglicht jedem Benutzer den Zugriff auf die für ihn relevanten Daten."
+          },
+          "excelVsApplication": {
+            "alt": "Vergleich zwischen der Arbeit mit mehreren Excel-Tabellen und einer zentralen Geschäftsanwendung",
+            "caption": "Excel bleibt ein nützliches Werkzeug, doch komplexere Prozesse benötigen kontrollierten Zugriff, verbundene Daten und klare Benutzerrollen."
+          },
+          "businessProcess": {
+            "alt": "Ein digitaler Geschäftsprozess von der Kundenanfrage bis zur Ausführung und Berichterstattung",
+            "caption": "Durch die Verbindung einzelner Schritte reduziert eine Anwendung Wiederholungen, beschleunigt die Bearbeitung und speichert die Aktivitätshistorie."
+          }
+        }
       }
   },
 

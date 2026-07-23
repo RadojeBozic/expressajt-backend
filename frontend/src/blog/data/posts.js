@@ -171,4 +171,49 @@ export const posts = [
       'blog.articles.aiBusiness.meta.seoDescription',
   },
 },
+
+{
+  id: 5,
+
+  slug: 'kada-je-malom-preduzecu-potrebna-poslovna-aplikacija',
+
+  titleKey:
+    'blog.articles.businessApplication.meta.title',
+
+  excerptKey:
+    'blog.articles.businessApplication.meta.excerpt',
+
+  category: 'business-applications',
+
+  author: 'radoje-bozic',
+
+  publishedAt: '2026-07-23',
+
+  updatedAt: '2026-07-23',
+
+  image:
+    '/images/blog/business-application/card.jpg',
+
+  imageAltKey:
+    'blog.articles.businessApplication.images.card.alt',
+
+  featured: true,
+
+  published: true,
+
+  readingTime: 9,
+
+  component: () =>
+    import(
+      '../posts/KadaJePotrebnaPoslovnaAplikacija.vue'
+    ),
+
+  seo: {
+    titleKey:
+      'blog.articles.businessApplication.meta.seoTitle',
+
+    descriptionKey:
+      'blog.articles.businessApplication.meta.seoDescription',
+  },
+},
 ]

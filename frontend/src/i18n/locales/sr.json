@@ -1186,7 +1186,189 @@
               "caption": "AI je najkorisniji kao pomoćnik koji predlaže i obrađuje informacije, dok čovek proverava i odlučuje."
             }
           }
+        },
+
+        "businessApplication": {
+        "meta": {
+          "title": "Kada je malom preduzeću potrebna poslovna aplikacija?",
+          "excerpt": "Saznajte kada Excel tabele, poruke i ručno praćenje više nisu dovoljni i kako poslovna aplikacija može objediniti podatke, procese i izveštaje.",
+          "seoTitle": "Kada je potrebna poslovna aplikacija | Express Web",
+          "seoDescription": "Prepoznajte znakove da je vašem preduzeću potrebna poslovna aplikacija i saznajte kako digitalizovati klijente, prodaju, dokumente i izveštaje."
+        },
+
+        "lead": {
+          "first": "Mnoge male firme godinama uspešno posluju koristeći Excel tabele, email poruke, papirnu dokumentaciju i nekoliko nepovezanih programa. Takav način rada može biti sasvim dovoljan dok su obim posla i broj zaposlenih mali.",
+          "second": "Problem nastaje kada informacije počnu da se ponavljaju, gube ili kasne, a vlasnik sve teže dobija pouzdan pregled klijenata, prodaje, zaliha, zadataka i rezultata."
+        },
+
+        "website": {
+          "title": "Poslovni sajt i poslovna aplikacija nemaju istu ulogu",
+          "first": "Poslovni sajt prvenstveno predstavlja firmu, njene proizvode, usluge, reference i kontakt podatke. Njegov zadatak je da informiše posetioce, izgradi poverenje i podstakne upit ili kupovinu.",
+          "second": "Poslovna aplikacija služi zaposlenima, saradnicima, prodavcima, agentima ili klijentima koji kroz nju obavljaju konkretne aktivnosti. U njoj se unose i obrađuju podaci, prate procesi, dodeljuju zadaci i pripremaju izveštaji.",
+          "third": "Sajt može biti ulazna tačka poslovanja, dok aplikacija organizuje ono što se događa nakon što klijent pošalje upit, napravi porudžbinu ili započne saradnju."
+        },
+
+        "definition": {
+          "title": "Poslovna aplikacija treba da prati stvarni način rada firme",
+          "text": "Dobra aplikacija ne primorava preduzeće da uvodi nepotrebne korake. Ona povezuje postojeće procese, uklanja ponavljanje i omogućava da odgovorne osobe u svakom trenutku vide ono što im je potrebno."
+        },
+
+        "excel": {
+          "title": "Excel je koristan alat, ali nije uvek dovoljan",
+          "first": "Excel je odličan za proračune, manje evidencije, analize i brzo organizovanje podataka. Za mnoge male firme on predstavlja razuman i ekonomičan početak.",
+          "second": "Teškoće počinju kada postoji više verzija iste tabele, kada više zaposlenih menja podatke ili kada je potrebno povezati klijente, proizvode, dokumente, statuse i odgovorne osobe.",
+          "third": "U takvom okruženju raste mogućnost greške, a priprema jednog izveštaja često zahteva ručno prikupljanje podataka iz više fajlova i poruka."
+        },
+
+        "signs": {
+          "title": "Sedam znakova da je firmi potrebna poslovna aplikacija",
+          "intro": "Nije presudna veličina firme, već složenost procesa i količina informacija koje treba pouzdano pratiti.",
+
+          "duplicateEntry": {
+            "title": "Isti podaci se unose više puta",
+            "description": "Podaci o klijentu, proizvodu ili porudžbini prepisuju se iz emaila u tabelu, iz tabele u dokument, a zatim u još jedan program."
+          },
+          "scatteredData": {
+            "title": "Informacije su rasute na više mesta",
+            "description": "Važni podaci nalaze se u Excel fajlovima, porukama, papirnoj dokumentaciji, telefonima zaposlenih i različitim cloud servisima."
+          },
+          "manualTracking": {
+            "title": "Statusi se prate ručno",
+            "description": "Zaposleni moraju da pitaju jedni druge da li je ponuda poslata, porudžbina obrađena, roba isporučena ili račun plaćen."
+          },
+          "noOverview": {
+            "title": "Ne postoji jedinstven pregled poslovanja",
+            "description": "Vlasnik ili menadžer teško može da vidi šta je završeno, šta kasni, ko je odgovoran i koji klijenti zahtevaju pažnju."
+          },
+          "errors": {
+            "title": "Greške i duplirani poslovi postaju česti",
+            "description": "Isti zadatak obavljaju dve osobe, podaci se razlikuju između dokumenata ili se važne obaveze zaboravljaju."
+          },
+          "reporting": {
+            "title": "Izveštaji zahtevaju mnogo vremena",
+            "description": "Za pregled prodaje, troškova ili učinka potrebno je ručno spajati podatke iz više tabela i sistema."
+          },
+          "growth": {
+            "title": "Rast firme dodatno komplikuje rad",
+            "description": "Svaki novi klijent, zaposleni, lokacija ili prodajni kanal povećava broj ručnih koraka i mogućnost nastanka greške."
+          }
+        },
+
+        "solution": {
+          "title": "Gotov softver ili aplikacija prilagođena poslovanju?",
+          "first": "Gotova rešenja su često najbolji izbor kada firma ima standardne potrebe, poput fakturisanja, evidencije klijenata, upravljanja projektima ili osnovnog magacinskog poslovanja.",
+          "second": "Prilagođena aplikacija ima smisla kada preduzeće poseduje specifičan proces, više korisničkih uloga, posebna pravila obračuna ili potrebu da poveže nekoliko postojećih sistema.",
+          "third": "Najbolje rešenje ponekad nije razvoj svega od početka, već kombinacija postojećeg softvera, prilagođenog modula i integracija koje uklanjaju ručni prenos podataka."
+        },
+
+        "warning": {
+          "title": "Ne treba digitalizovati loš proces bez prethodne analize",
+          "text": "Ako je poslovni proces nejasan, nepotrebno komplikovan ili bez definisanih odgovornosti, aplikacija ga može učiniti samo bržim, ali ne i boljim. Pre razvoja potrebno je prvo razumeti problem i pojednostaviti tok rada."
+        },
+
+        "modules": {
+          "title": "Šta jedna poslovna aplikacija može da objedini",
+          "intro": "Aplikacija se može razvijati modularno, prema stvarnim potrebama i prioritetima preduzeća.",
+
+          "customers": {
+            "title": "Klijente i poslovne kontakte",
+            "description": "Jedinstvena evidencija kontakata, komunikacije, ponuda, ugovora, aktivnosti i istorije saradnje."
+          },
+          "sales": {
+            "title": "Prodaju i porudžbine",
+            "description": "Praćenje upita, ponuda, porudžbina, statusa realizacije, plaćanja i aktivnosti prodajnog tima."
+          },
+          "inventory": {
+            "title": "Proizvode i zalihe",
+            "description": "Podaci o artiklima, cenama, dostupnosti, dobavljačima, ulazu, izlazu i potrebama za nabavkom."
+          },
+          "documents": {
+            "title": "Dokumente",
+            "description": "Ponude, računi, ugovori, otpremnice, prilozi i druga dokumentacija povezana sa klijentom ili poslovnim procesom."
+          },
+          "tasks": {
+            "title": "Zadatke i odgovornosti",
+            "description": "Dodeljivanje zadataka, rokovi, prioriteti, statusi, obaveštenja i pregled aktivnosti zaposlenih."
+          },
+          "reports": {
+            "title": "Izveštaje i pokazatelje",
+            "description": "Pregled prodaje, učinka, troškova, kašnjenja, najvažnijih klijenata i drugih podataka potrebnih za odlučivanje."
+          }
+        },
+
+        "automation": {
+          "title": "Najveća vrednost nastaje povezivanjem procesa",
+          "first": "Poslovna aplikacija ne treba da bude samo digitalna zamena za papirni formular. Njena vrednost raste kada jedan unos automatski pokreće sledeći korak.",
+          "second": "Na primer, prihvaćena ponuda može formirati porudžbinu, otvoriti zadatak odgovornoj osobi, pripremiti dokument i poslati obaveštenje klijentu.",
+          "third": "Na taj način se smanjuje broj ručnih radnji, ubrzava obrada i ostaje jasan trag o tome ko je šta uradio i kada."
+        },
+
+        "steps": {
+          "title": "Kako započeti razvoj bez velikog rizika",
+          "intro": "Najsigurniji pristup je postepen razvoj, sa jasnim prioritetima i uključivanjem ljudi koji će sistem svakodnevno koristiti.",
+
+          "problem": {
+            "title": "Definišite konkretan problem",
+            "description": "Ne počinjite od liste tehnologija. Opišite gde se gubi vreme, gde nastaju greške i koje informacije nedostaju."
+          },
+          "process": {
+            "title": "Nacrtajte postojeći proces",
+            "description": "Zabeležite ko započinje aktivnost, koje podatke koristi, šta se zatim događa i ko je odgovoran za sledeći korak."
+          },
+          "priority": {
+            "title": "Odredite najvažniji modul",
+            "description": "Prva verzija treba da rešava jedan značajan problem, a ne da odmah pokušava da zameni sve programe u firmi."
+          },
+          "prototype": {
+            "title": "Napravite jednostavan prototip",
+            "description": "Pre punog razvoja proverite raspored ekrana, podatke, korisničke uloge i logiku procesa."
+          },
+          "testing": {
+            "title": "Testirajte sa stvarnim korisnicima",
+            "description": "Zaposleni koji obavljaju posao mogu najbrže prepoznati nepotrebne korake, nedostajuće podatke i nepraktične funkcije."
+          },
+          "development": {
+            "title": "Razvijajte aplikaciju po fazama",
+            "description": "Nove module, automatizacije i integracije dodajte tek kada osnovni proces stabilno radi i donosi merljivu korist."
+          }
+        },
+
+        "recommendation": {
+          "title": "Preporuka Express Web-a",
+          "text": "Ne počinjite projekat zahtevom da vam je potreban CRM, ERP ili velika poslovna platforma. Počnite od konkretnog problema koji želite da rešite. Tek nakon analize treba odlučiti da li je dovoljno postojeće rešenje, nova integracija ili prilagođena aplikacija."
+        },
+
+        "conclusion": {
+          "title": "Prava aplikacija donosi preglednost, a ne novu komplikaciju",
+          "first": "Poslovna aplikacija postaje opravdana kada postojeći alati više ne omogućavaju pouzdano praćenje podataka, odgovornosti i rezultata.",
+          "second": "Dobro osmišljeno rešenje treba da smanji ručni rad, poveže informacije i omogući firmi da raste bez proporcionalnog povećanja administracije i grešaka."
+        },
+
+        "cta": {
+          "title": "Da li vaši poslovni procesi postaju previše složeni?",
+          "description": "Možemo zajedno analizirati način rada firme, prepoznati uska grla i proceniti da li vam je potrebno postojeće rešenje, integracija ili prilagođena poslovna aplikacija.",
+          "primary": "Zatražite procenu",
+          "secondary": "Pogledajte naše projekte"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Vlasnik malog preduzeća koristi poslovnu aplikaciju za praćenje klijenata, prodaje i zadataka"
+          },
+          "hero": {
+            "alt": "Centralizovana poslovna aplikacija povezuje klijente, prodaju, dokumente i izveštaje",
+            "caption": "Dobra poslovna aplikacija objedinjuje informacije i omogućava da svaki korisnik vidi podatke koji su mu potrebni."
+          },
+          "excelVsApplication": {
+            "alt": "Poređenje rada u više Excel tabela sa centralizovanom poslovnom aplikacijom",
+            "caption": "Excel ostaje koristan alat, ali složeniji procesi zahtevaju kontrolisan pristup, povezane podatke i jasne korisničke uloge."
+          },
+          "businessProcess": {
+            "alt": "Digitalni tok poslovnog procesa od upita klijenta do realizacije i izveštavanja",
+            "caption": "Povezivanjem koraka aplikacija smanjuje ponavljanje, ubrzava obradu i čuva istoriju aktivnosti."
+          }
         }
+      }
   },
 
   "post": {
