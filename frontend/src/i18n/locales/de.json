@@ -781,24 +781,9 @@
       "description": "Der gesuchte Artikel existiert nicht, wurde noch nicht veröffentlicht oder seine Adresse wurde geändert.",
       "button": "Alle Artikel anzeigen"
     }
-  },
-
-  "legacyPosts": {
-    "post1": {
-      "title": "Wie erhält man in 10 Minuten eine Website ohne Programmierer?",
-      "text": "Wir erklären Schritt für Schritt, wie die Express-FREE-Website funktioniert und was ein Kleinunternehmer völlig kostenlos erhält."
-    },
-    "post2": {
-      "title": "Das PRO-Paket – lohnt sich die Investition?",
-      "text": "Ein Vergleich der kostenlosen und der PRO-Version der Website. Wie viel kostet sie, was ist enthalten und ist sie die richtige Investition für Ihr Unternehmen?"
-    },
-    "post3": {
-      "title": "Wie läuft die Zusammenarbeit mit dem Express-Team ab?",
-      "text": "Vom ersten Klick bis zur fertigen Website. Was Sie während der Entwicklung erwarten können, wie lange es dauert und wer Sie unterstützt."
-    },
-    "notice": "In Kürze starten wir ein CMS für Kundengeschichten, Tutorials und Analysen – folgen Sie uns."
   }
 },
+
 "diversity": {
   "title": "Vielfalt und Inklusion",
   "intro": "Bei Express Web sind wir überzeugt, dass vielfältige Teams zu besseren Lösungen führen. Unser Ansatz ist offen, inklusiv und werteorientiert.",

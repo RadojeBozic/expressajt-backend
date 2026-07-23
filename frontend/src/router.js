@@ -519,11 +519,9 @@ const routes = [
   // Stara footer blog stranica ostaje dostupna,
   // ali koristi drugo ime rute.
   {
-    path: '/footer/company/blog',
-    name: 'FooterBlogPage',
-    component: () =>
-      import('./pages/footer/company/Blog.vue'),
-  },
+  path: '/footer/company/blog',
+  redirect: '/blog',
+},
 
   {
     path: '/footer/company/careers',

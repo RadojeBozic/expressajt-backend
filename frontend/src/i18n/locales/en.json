@@ -726,24 +726,9 @@
       "description": "The article you are looking for does not exist, has not been published or its address has changed.",
       "button": "View all articles"
     }
-  },
-
-  "legacyPosts": {
-    "post1": {
-      "title": "How to get a website in 10 minutes without a developer?",
-      "text": "We explain how the Express FREE website works, step by step, and what a small business owner receives completely free of charge."
-    },
-    "post2": {
-      "title": "The PRO package – is it worth the investment?",
-      "text": "A comparison of the free and PRO versions of the website. How much does it cost, what is included and is it the right investment for your business?"
-    },
-    "post3": {
-      "title": "What does working with the Express team look like?",
-      "text": "From the first click to the completed website. What you can expect during development, how long it takes and who will support you."
-    },
-    "notice": "We will soon launch a CMS for customer stories, tutorials and analyses – follow us."
   }
 },
+
   "diversity": {
     "title": "Diversity and Inclusion",
     "intro": "At Express web, we believe that diverse teams lead to better solutions. Our approach is open, inclusive, and value-driven.",

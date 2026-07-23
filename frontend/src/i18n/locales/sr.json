@@ -506,7 +506,6 @@
     "bio": "Razvoj web aplikacija, digitalnih platformi i poslovnih rešenja."
   }
 },
-  
 
   "empty": {
     "title": "U ovoj kategoriji još nema članaka",
@@ -727,24 +726,9 @@
       "description": "Članak koji tražite ne postoji, nije objavljen ili je njegova adresa promenjena.",
       "button": "Pogledajte sve članke"
     }
-  },
-
-  "legacyPosts": {
-    "post1": {
-      "title": "Kako do sajta za 10 minuta bez programera?",
-      "text": "Objašnjavamo kako funkcioniše Express FREE sajt – korak po korak. I šta mali preduzetnik dobija potpuno besplatno."
-    },
-    "post2": {
-      "title": "PRO paket – da li vredi uložiti?",
-      "text": "Poređenje besplatne i PRO verzije sajta. Koliko košta, šta se sve dobija, i da li je to prava investicija za vaš biznis?"
-    },
-    "post3": {
-      "title": "Kako izgleda saradnja sa Express timom?",
-      "text": "Od prvog klika do gotovog sajta. Šta sve možete da očekujete u toku izrade, koliko to traje i ko vam pomaže?"
-    },
-    "notice": "Uskoro otvaramo CMS za korisničke priče, tutorijale i analize – pratite nas."
   }
 },
+
   "diversity": {
     "title": "Raznolikost i inkluzija",
     "intro": "Mi, u Express web-u verujemo da različitost timova vodi ka boljim rešenjima. Naš pristup je otvoren, inkluzivan i orijentisan ka vrednostima.",
