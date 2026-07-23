@@ -868,7 +868,166 @@
           "caption": "Klasična prodavnica i marketplace imaju različite uloge, procese i nivoe složenosti."
         }
       }
-    }
+    },
+
+    "googleBusiness": {
+        "meta": {
+          "title": "Zašto Google Business profil nije dovoljan za ozbiljno poslovanje?",
+          "excerpt": "Google Business profil je odličan alat za lokalnu vidljivost, ali ne može u potpunosti da zameni poslovni sajt, kvalitetan sadržaj i dugoročnu SEO strategiju.",
+          "seoTitle": "Zašto Google Business profil nije dovoljan | Express Web",
+          "seoDescription": "Saznajte šta Google Business profil može da uradi za vašu firmu, koja su njegova ograničenja i zašto najbolje rezultate donosi zajedno sa poslovnim sajtom."
+        },
+
+        "lead": {
+          "first": "Google Business profil je jedan od najkorisnijih besplatnih alata za lokalne firme. Omogućava da se kompanija pojavi u Google pretrazi i na mapama, prikaže kontakt podatke, radno vreme, fotografije i recenzije.",
+          "second": "Međutim, problem nastaje kada firma Google profil počne da posmatra kao potpunu zamenu za poslovni sajt. Profil može biti važna ulazna tačka, ali ne pruža dovoljnu kontrolu, prostor za sadržaj ni mogućnosti razvoja koje ozbiljno digitalno prisustvo zahteva."
+        },
+
+        "profile": {
+          "title": "Šta je Google Business profil?",
+          "first": "Google Business Profile je besplatan Google alat namenjen kompanijama koje žele da upravljaju načinom na koji se prikazuju u lokalnoj pretrazi i na Google mapama.",
+          "second": "Profil može sadržati naziv firme, adresu, broj telefona, radno vreme, kategoriju poslovanja, fotografije, objave, proizvode, usluge i recenzije korisnika.",
+          "third": "Za lokalne firme, ordinacije, prodavnice, restorane, servise i konsultante, dobro uređen profil može biti jedan od najbržih načina da postanu vidljiviji potencijalnim klijentima."
+        },
+
+        "benefits": {
+          "title": "Šta Google Business profil radi veoma dobro",
+          "intro": "Kada je pravilno podešen i redovno ažuriran, profil može značajno unaprediti lokalnu vidljivost firme.",
+
+          "maps": {
+            "title": "Prikaz na Google mapama",
+            "description": "Korisnici mogu brzo da pronađu lokaciju firme, dobiju uputstva i provere udaljenost."
+          },
+          "contact": {
+            "title": "Brz pristup kontaktima",
+            "description": "Telefon, adresa, radno vreme i link ka sajtu dostupni su direktno iz rezultata pretrage."
+          },
+          "reviews": {
+            "title": "Recenzije korisnika",
+            "description": "Pozitivna iskustva postojećih klijenata mogu pomoći novim korisnicima da steknu poverenje."
+          },
+          "updates": {
+            "title": "Objave i novosti",
+            "description": "Firma može objavljivati ponude, novosti, događaje i druge kratke informacije."
+          },
+          "insights": {
+            "title": "Osnovni podaci o interesovanju",
+            "description": "Profil prikazuje kako su korisnici pronašli firmu i koje su akcije preduzeli."
+          }
+        },
+
+        "warning": {
+          "title": "Česta zabluda",
+          "text": "Dobar Google Business profil može povećati vidljivost, ali ne znači da firma ima potpuno digitalno prisustvo. Profil pripada Google platformi, koristi unapred definisanu strukturu i ne može da zameni sajt koji je izgrađen prema specifičnim poslovnim ciljevima."
+        },
+
+        "limitations": {
+          "title": "Šta Google Business profil ne može da zameni",
+          "intro": "Profil ima jasnu svrhu, ali i ograničenja koja postaju vidljiva kada firma želi ozbiljnije da razvija nastup na internetu.",
+
+          "control": {
+            "title": "Potpunu kontrolu nad sadržajem",
+            "description": "Google određuje izgled, strukturu i pravila prikaza, dok na sopstvenom sajtu firma upravlja celim korisničkim iskustvom."
+          },
+          "content": {
+            "title": "Detaljne stranice i stručni sadržaj",
+            "description": "Profil nije pogodan za opširno predstavljanje usluga, projekata, vodiča, studija slučaja i odgovora na složena pitanja."
+          },
+          "brand": {
+            "title": "Originalan identitet brenda",
+            "description": "Boje, tipografija, raspored, poruke i vizuelni identitet na profilu su ograničeni standardnim Google prikazom."
+          },
+          "sales": {
+            "title": "Napredne prodajne funkcionalnosti",
+            "description": "Kontakt forme, rezervacije, kalkulatori, online prodaja, integracije i automatizacije zahtevaju sopstveni sistem."
+          },
+          "dependency": {
+            "title": "Nezavisnost od tuđe platforme",
+            "description": "Pravila, mogućnosti i način prikaza mogu se promeniti, dok je poslovni sajt digitalna imovina pod kontrolom kompanije."
+          }
+        },
+
+        "comparison": {
+          "title": "Google Business profil ili poslovni sajt?",
+          "first": "Ovo pitanje ne treba postavljati kao izbor između dva rešenja. Google Business profil i poslovni sajt imaju različite uloge i najbolje rade zajedno.",
+          "second": "Profil pomaže korisniku da firmu pronađe u lokalnoj pretrazi, brzo proveri osnovne informacije i pročita recenzije.",
+          "third": "Sajt zatim pruža prostor za detaljno predstavljanje ponude, izgradnju brenda, objavljivanje sadržaja, prikupljanje upita i razvoj novih funkcionalnosti."
+        },
+
+        "strategy": {
+          "title": "Kako izgleda dobra kombinovana strategija",
+          "intro": "Najbolji rezultat dolazi kada se profil, sajt i sadržaj povežu u jedan dosledan sistem.",
+
+          "profile": {
+            "title": "Uredite Google Business profil",
+            "description": "Unesite tačne podatke, izaberite odgovarajuće kategorije, dodajte fotografije i redovno objavljujte novosti."
+          },
+          "website": {
+            "title": "Povežite profil sa kvalitetnim sajtom",
+            "description": "Link treba da vodi na stranicu koja jasno predstavlja firmu, usluge i sledeći korak za korisnika."
+          },
+          "content": {
+            "title": "Objavljujte koristan sadržaj",
+            "description": "Vodiči, studije slučaja i odgovori na česta pitanja grade autoritet i povećavaju organsku vidljivost."
+          },
+          "analytics": {
+            "title": "Pratite rezultate",
+            "description": "Koristite Search Console i analitiku da razumete koje pretrage, stranice i sadržaji donose posete i upite."
+          },
+          "reputation": {
+            "title": "Razvijajte reputaciju",
+            "description": "Tražite autentične recenzije, odgovarajte korisnicima i dosledno održavajte kvalitet komunikacije."
+          }
+        },
+
+        "callout": {
+          "title": "Google treba da vodi korisnika ka vašem digitalnom prostoru",
+          "text": "Google Business profil je najkorisniji kada korisnika ne zadržava samo na listi osnovnih podataka, već ga usmerava ka sajtu na kojem može detaljnije da upozna kompaniju i donese odluku."
+        },
+
+        "reviews": {
+          "title": "Recenzije su važne, ali nisu dovoljne",
+          "first": "Recenzije mogu snažno uticati na poverenje korisnika, posebno kada prvi put upoznaje firmu.",
+          "second": "Ipak, broj zvezdica ne objašnjava uvek šta kompanija konkretno radi, kako izgleda proces saradnje i po čemu se njena ponuda razlikuje od konkurencije.",
+          "third": "Najbolji efekat nastaje kada recenzije sa Google profila podržavaju kvalitetan sadržaj, reference, portfolio i jasne informacije na poslovnom sajtu."
+        },
+
+        "recommendation": {
+          "title": "Preporuka Express Web-a",
+          "text": "Koristite Google Business profil kao važan kanal lokalne vidljivosti, ali gradite poslovni sajt kao centralno mesto svog digitalnog prisustva. Profil dovodi korisnike, a sajt treba da ih informiše, uveri i podstakne na sledeći korak."
+        },
+
+        "conclusion": {
+          "title": "Google profil je ulaz, a sajt je vaš digitalni dom",
+          "first": "Google Business profil može pomoći da firma bude pronađena, dobije više poziva, poseta i recenzija.",
+          "second": "Za dugoročno građenje autoriteta, brenda, sadržaja i prodajnih procesa potreban je sopstveni sajt koji radi zajedno sa Google profilom, a ne umesto njega."
+        },
+
+        "cta": {
+          "title": "Želite bolju vidljivost na Google-u?",
+          "description": "Možemo pomoći da povežete poslovni sajt, SEO osnovu, kvalitetan sadržaj i Google Business profil u jedan dosledan digitalni nastup.",
+          "primary": "Razgovarajmo o vašem nastupu",
+          "secondary": "Pogledajte SEO usluge"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Google Business profil na telefonu i poslovni sajt na laptopu kao deo jedinstvenog digitalnog nastupa"
+          },
+          "hero": {
+            "alt": "Google Business profil na telefonu povezan sa poslovnim sajtom na laptopu",
+            "caption": "Google Business profil i poslovni sajt imaju različite uloge, ali najbolje rezultate postižu zajedno."
+          },
+          "businessProfile": {
+            "alt": "Uređen Google Business profil sa lokacijom, kontaktima, fotografijama i recenzijama",
+            "caption": "Potpuni i ažurni podaci pomažu korisnicima da lakše pronađu firmu i uspostave prvi kontakt."
+          },
+          "comparison": {
+            "alt": "Poređenje mogućnosti Google Business profila i poslovnog sajta",
+            "caption": "Profil obezbeđuje lokalnu vidljivost, dok sajt pruža kontrolu, sadržaj, brend i napredne funkcionalnosti."
+          }
+        }
+      }
   },
 
   "post": {

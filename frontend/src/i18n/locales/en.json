@@ -868,7 +868,166 @@
           "caption": "A traditional store and a marketplace have different roles, processes and levels of complexity."
         }
       }
-    }
+    },
+
+    "googleBusiness": {
+        "meta": {
+          "title": "Why is a Google Business Profile not enough for a serious business?",
+          "excerpt": "A Google Business Profile is an excellent tool for local visibility, but it cannot fully replace a business website, quality content and a long-term SEO strategy.",
+          "seoTitle": "Why a Google Business Profile is not enough | Express Web",
+          "seoDescription": "Learn what a Google Business Profile can do for your company, where its limitations are and why it works best together with a business website."
+        },
+
+        "lead": {
+          "first": "A Google Business Profile is one of the most useful free tools available to local businesses. It allows a company to appear in Google Search and Maps, display contact information, opening hours, photos and reviews.",
+          "second": "The problem begins when a company treats its Google profile as a complete replacement for a business website. The profile can be an important entry point, but it does not provide the control, content space or development options required for a serious digital presence."
+        },
+
+        "profile": {
+          "title": "What is a Google Business Profile?",
+          "first": "Google Business Profile is a free Google tool designed for companies that want to manage how they appear in local search results and on Google Maps.",
+          "second": "A profile can include the company name, address, phone number, opening hours, business category, photos, posts, products, services and customer reviews.",
+          "third": "For local businesses, practices, stores, restaurants, service providers and consultants, a well-maintained profile can be one of the fastest ways to become more visible to potential customers."
+        },
+
+        "benefits": {
+          "title": "What a Google Business Profile does very well",
+          "intro": "When properly configured and regularly updated, the profile can significantly improve a company's local visibility.",
+
+          "maps": {
+            "title": "Visibility on Google Maps",
+            "description": "Users can quickly find the business location, obtain directions and check the distance."
+          },
+          "contact": {
+            "title": "Fast access to contact details",
+            "description": "The phone number, address, opening hours and website link are available directly from search results."
+          },
+          "reviews": {
+            "title": "Customer reviews",
+            "description": "Positive experiences from existing customers can help new users develop trust."
+          },
+          "updates": {
+            "title": "Posts and updates",
+            "description": "The company can publish offers, news, events and other short updates."
+          },
+          "insights": {
+            "title": "Basic customer insights",
+            "description": "The profile shows how users found the company and which actions they took."
+          }
+        },
+
+        "warning": {
+          "title": "A common misconception",
+          "text": "A strong Google Business Profile can improve visibility, but it does not mean that a company has a complete digital presence. The profile belongs to Google's platform, follows a predefined structure and cannot replace a website built around specific business objectives."
+        },
+
+        "limitations": {
+          "title": "What a Google Business Profile cannot replace",
+          "intro": "The profile has a clear purpose, but its limitations become apparent when a company wants to develop a more serious online presence.",
+
+          "control": {
+            "title": "Full control over content",
+            "description": "Google determines the appearance, structure and display rules, while a company controls the entire user experience on its own website."
+          },
+          "content": {
+            "title": "Detailed pages and expert content",
+            "description": "A profile is not suitable for presenting services, projects, guides, case studies and answers to complex questions in depth."
+          },
+          "brand": {
+            "title": "A distinctive brand identity",
+            "description": "Colours, typography, layout, messaging and visual identity are limited by Google's standard presentation."
+          },
+          "sales": {
+            "title": "Advanced sales functionality",
+            "description": "Contact forms, bookings, calculators, online sales, integrations and automation require a dedicated system."
+          },
+          "dependency": {
+            "title": "Independence from a third-party platform",
+            "description": "Rules, features and display methods can change, while a business website is a digital asset controlled by the company."
+          }
+        },
+
+        "comparison": {
+          "title": "Google Business Profile or business website?",
+          "first": "This should not be treated as a choice between two competing solutions. A Google Business Profile and a business website serve different purposes and work best together.",
+          "second": "The profile helps users discover the company in local search, quickly verify basic information and read reviews.",
+          "third": "The website then provides space to explain the offer in detail, build the brand, publish content, collect enquiries and introduce new functionality."
+        },
+
+        "strategy": {
+          "title": "What a strong combined strategy looks like",
+          "intro": "The best results come when the profile, website and content are connected into one consistent system.",
+
+          "profile": {
+            "title": "Optimise the Google Business Profile",
+            "description": "Enter accurate information, select relevant categories, add photos and regularly publish updates."
+          },
+          "website": {
+            "title": "Connect the profile to a quality website",
+            "description": "The link should lead to a page that clearly presents the company, its services and the next step for the user."
+          },
+          "content": {
+            "title": "Publish useful content",
+            "description": "Guides, case studies and answers to common questions build authority and improve organic visibility."
+          },
+          "analytics": {
+            "title": "Measure the results",
+            "description": "Use Search Console and analytics to understand which searches, pages and content generate visits and enquiries."
+          },
+          "reputation": {
+            "title": "Develop your reputation",
+            "description": "Request genuine reviews, respond to users and consistently maintain high communication standards."
+          }
+        },
+
+        "callout": {
+          "title": "Google should guide users towards your own digital space",
+          "text": "A Google Business Profile is most useful when it does not keep users on a list of basic details, but directs them to a website where they can learn more about the company and make a decision."
+        },
+
+        "reviews": {
+          "title": "Reviews are important, but they are not enough",
+          "first": "Reviews can strongly influence trust, especially when a user encounters a company for the first time.",
+          "second": "However, a star rating does not always explain what the company actually does, what the cooperation process looks like or how its offer differs from competitors.",
+          "third": "The strongest effect is created when Google reviews support quality content, references, a portfolio and clear information on the business website."
+        },
+
+        "recommendation": {
+          "title": "Express Web recommendation",
+          "text": "Use the Google Business Profile as an important local visibility channel, but build the business website as the central point of your digital presence. The profile attracts users, while the website should inform, persuade and guide them towards the next step."
+        },
+
+        "conclusion": {
+          "title": "The Google profile is the entrance, while the website is your digital home",
+          "first": "A Google Business Profile can help a company get discovered, receive more calls, visits and reviews.",
+          "second": "Long-term authority, brand development, content and sales processes require a dedicated website that works together with the Google profile rather than being replaced by it."
+        },
+
+        "cta": {
+          "title": "Would you like better visibility on Google?",
+          "description": "We can help you connect a business website, SEO foundation, quality content and a Google Business Profile into one consistent digital presence.",
+          "primary": "Discuss your online presence",
+          "secondary": "View SEO services"
+        },
+
+        "images": {
+          "card": {
+            "alt": "A Google Business Profile on a phone and a business website on a laptop as part of one connected digital presence"
+          },
+          "hero": {
+            "alt": "A Google Business Profile on a phone connected to a business website on a laptop",
+            "caption": "A Google Business Profile and a business website serve different purposes, but achieve the best results together."
+          },
+          "businessProfile": {
+            "alt": "An optimised Google Business Profile with location, contact details, photos and reviews",
+            "caption": "Complete and current information helps users find the company and make initial contact."
+          },
+          "comparison": {
+            "alt": "Comparison of the capabilities of a Google Business Profile and a business website",
+            "caption": "The profile provides local visibility, while the website offers control, content, branding and advanced functionality."
+          }
+        }
+      }
   },
 
   "post": {

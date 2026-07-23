@@ -81,4 +81,49 @@ export const posts = [
       'blog.articles.onlineStore.meta.seoDescription',
   },
 },
+
+{
+  id: 3,
+
+  slug: 'zasto-google-business-profil-nije-dovoljan',
+
+  titleKey:
+    'blog.articles.googleBusiness.meta.title',
+
+  excerptKey:
+    'blog.articles.googleBusiness.meta.excerpt',
+
+  category: 'digitalni-marketing',
+
+  author: 'radoje-bozic',
+
+  publishedAt: '2026-07-23',
+
+  updatedAt: '2026-07-23',
+
+  image:
+    '/images/blog/google-business/card.jpg',
+
+  imageAltKey:
+  'blog.articles.googleBusiness.images.card.alt',
+
+  featured: true,
+
+  published: true,
+
+  readingTime: 6,
+
+  component: () =>
+    import(
+      '../posts/ZastoGoogleBusinessProfilNijeDovoljan.vue'
+    ),
+
+  seo: {
+    titleKey:
+      'blog.articles.googleBusiness.meta.seoTitle',
+
+    descriptionKey:
+      'blog.articles.googleBusiness.meta.seoDescription',
+  },
+},
 ]

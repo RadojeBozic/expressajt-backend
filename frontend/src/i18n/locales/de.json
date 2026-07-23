@@ -923,7 +923,166 @@
           "caption": "Ein klassischer Shop und ein Marktplatz unterscheiden sich in Rollen, Prozessen und Komplexität."
         }
       }
-    }
+    },
+
+    "googleBusiness": {
+        "meta": {
+          "title": "Warum reicht ein Google-Unternehmensprofil für ein seriöses Geschäft nicht aus?",
+          "excerpt": "Ein Google-Unternehmensprofil ist ein hervorragendes Werkzeug für lokale Sichtbarkeit, kann jedoch eine Unternehmenswebsite, hochwertige Inhalte und eine langfristige SEO-Strategie nicht vollständig ersetzen.",
+          "seoTitle": "Warum ein Google-Unternehmensprofil nicht ausreicht | Express Web",
+          "seoDescription": "Erfahren Sie, was ein Google-Unternehmensprofil für Ihr Unternehmen leisten kann, welche Grenzen es hat und warum es gemeinsam mit einer Unternehmenswebsite am besten funktioniert."
+        },
+
+        "lead": {
+          "first": "Ein Google-Unternehmensprofil gehört zu den nützlichsten kostenlosen Werkzeugen für lokale Unternehmen. Es ermöglicht einem Unternehmen, in der Google-Suche und auf Google Maps zu erscheinen sowie Kontaktdaten, Öffnungszeiten, Fotos und Bewertungen anzuzeigen.",
+          "second": "Problematisch wird es, wenn ein Unternehmen das Google-Profil als vollständigen Ersatz für eine Unternehmenswebsite betrachtet. Das Profil kann ein wichtiger Einstiegspunkt sein, bietet jedoch nicht die Kontrolle, den Raum für Inhalte oder die Entwicklungsmöglichkeiten, die für eine seriöse digitale Präsenz erforderlich sind."
+        },
+
+        "profile": {
+          "title": "Was ist ein Google-Unternehmensprofil?",
+          "first": "Google Business Profile ist ein kostenloses Google-Werkzeug für Unternehmen, die steuern möchten, wie sie in lokalen Suchergebnissen und auf Google Maps erscheinen.",
+          "second": "Ein Profil kann Unternehmensname, Adresse, Telefonnummer, Öffnungszeiten, Geschäftskategorie, Fotos, Beiträge, Produkte, Dienstleistungen und Kundenbewertungen enthalten.",
+          "third": "Für lokale Unternehmen, Praxen, Geschäfte, Restaurants, Dienstleister und Berater kann ein gut gepflegtes Profil eine der schnellsten Möglichkeiten sein, für potenzielle Kunden sichtbarer zu werden."
+        },
+
+        "benefits": {
+          "title": "Was ein Google-Unternehmensprofil besonders gut leistet",
+          "intro": "Wenn es korrekt eingerichtet und regelmäßig aktualisiert wird, kann das Profil die lokale Sichtbarkeit eines Unternehmens deutlich verbessern.",
+
+          "maps": {
+            "title": "Darstellung auf Google Maps",
+            "description": "Nutzer können den Unternehmensstandort schnell finden, eine Wegbeschreibung erhalten und die Entfernung prüfen."
+          },
+          "contact": {
+            "title": "Schneller Zugriff auf Kontaktdaten",
+            "description": "Telefonnummer, Adresse, Öffnungszeiten und Website-Link sind direkt in den Suchergebnissen verfügbar."
+          },
+          "reviews": {
+            "title": "Kundenbewertungen",
+            "description": "Positive Erfahrungen bestehender Kunden können neuen Nutzern helfen, Vertrauen aufzubauen."
+          },
+          "updates": {
+            "title": "Beiträge und Neuigkeiten",
+            "description": "Das Unternehmen kann Angebote, Neuigkeiten, Veranstaltungen und andere kurze Informationen veröffentlichen."
+          },
+          "insights": {
+            "title": "Grundlegende Nutzerdaten",
+            "description": "Das Profil zeigt, wie Nutzer das Unternehmen gefunden und welche Aktionen sie durchgeführt haben."
+          }
+        },
+
+        "warning": {
+          "title": "Ein häufiges Missverständnis",
+          "text": "Ein gutes Google-Unternehmensprofil kann die Sichtbarkeit erhöhen, bedeutet jedoch nicht, dass ein Unternehmen über eine vollständige digitale Präsenz verfügt. Das Profil gehört zur Google-Plattform, verwendet eine vorgegebene Struktur und kann keine Website ersetzen, die auf konkrete Geschäftsziele ausgerichtet ist."
+        },
+
+        "limitations": {
+          "title": "Was ein Google-Unternehmensprofil nicht ersetzen kann",
+          "intro": "Das Profil hat einen klaren Zweck, aber auch Grenzen, die sichtbar werden, sobald ein Unternehmen seinen Online-Auftritt professioneller entwickeln möchte.",
+
+          "control": {
+            "title": "Vollständige Kontrolle über Inhalte",
+            "description": "Google bestimmt Erscheinungsbild, Struktur und Darstellungsregeln, während ein Unternehmen auf seiner eigenen Website das gesamte Nutzererlebnis kontrolliert."
+          },
+          "content": {
+            "title": "Detaillierte Seiten und Fachinhalte",
+            "description": "Ein Profil eignet sich nicht für die ausführliche Darstellung von Leistungen, Projekten, Leitfäden, Fallstudien und Antworten auf komplexe Fragen."
+          },
+          "brand": {
+            "title": "Eine eigenständige Markenidentität",
+            "description": "Farben, Typografie, Layout, Botschaften und visuelle Identität sind durch die standardisierte Google-Darstellung eingeschränkt."
+          },
+          "sales": {
+            "title": "Erweiterte Verkaufsfunktionen",
+            "description": "Kontaktformulare, Buchungen, Rechner, Online-Verkauf, Integrationen und Automatisierungen benötigen ein eigenes System."
+          },
+          "dependency": {
+            "title": "Unabhängigkeit von einer fremden Plattform",
+            "description": "Regeln, Funktionen und Darstellungsweisen können sich ändern, während eine Unternehmenswebsite ein digitales Eigentum unter Kontrolle des Unternehmens ist."
+          }
+        },
+
+        "comparison": {
+          "title": "Google-Unternehmensprofil oder Unternehmenswebsite?",
+          "first": "Diese Frage sollte nicht als Entscheidung zwischen zwei konkurrierenden Lösungen betrachtet werden. Ein Google-Unternehmensprofil und eine Unternehmenswebsite erfüllen unterschiedliche Aufgaben und funktionieren gemeinsam am besten.",
+          "second": "Das Profil hilft Nutzern, das Unternehmen in der lokalen Suche zu finden, grundlegende Informationen schnell zu prüfen und Bewertungen zu lesen.",
+          "third": "Die Website bietet anschließend Raum, das Angebot ausführlich zu präsentieren, die Marke aufzubauen, Inhalte zu veröffentlichen, Anfragen zu erfassen und neue Funktionen zu entwickeln."
+        },
+
+        "strategy": {
+          "title": "So sieht eine gute kombinierte Strategie aus",
+          "intro": "Die besten Ergebnisse entstehen, wenn Profil, Website und Inhalte zu einem einheitlichen System verbunden werden.",
+
+          "profile": {
+            "title": "Optimieren Sie das Google-Unternehmensprofil",
+            "description": "Tragen Sie korrekte Informationen ein, wählen Sie passende Kategorien, fügen Sie Fotos hinzu und veröffentlichen Sie regelmäßig Neuigkeiten."
+          },
+          "website": {
+            "title": "Verbinden Sie das Profil mit einer hochwertigen Website",
+            "description": "Der Link sollte zu einer Seite führen, die das Unternehmen, seine Leistungen und den nächsten Schritt für den Nutzer klar darstellt."
+          },
+          "content": {
+            "title": "Veröffentlichen Sie nützliche Inhalte",
+            "description": "Leitfäden, Fallstudien und Antworten auf häufige Fragen stärken die Autorität und erhöhen die organische Sichtbarkeit."
+          },
+          "analytics": {
+            "title": "Messen Sie die Ergebnisse",
+            "description": "Nutzen Sie Search Console und Analysen, um zu verstehen, welche Suchanfragen, Seiten und Inhalte Besuche und Anfragen erzeugen."
+          },
+          "reputation": {
+            "title": "Bauen Sie Ihre Reputation aus",
+            "description": "Bitten Sie um authentische Bewertungen, antworten Sie Nutzern und halten Sie die Qualität der Kommunikation dauerhaft hoch."
+          }
+        },
+
+        "callout": {
+          "title": "Google sollte Nutzer zu Ihrem eigenen digitalen Raum führen",
+          "text": "Ein Google-Unternehmensprofil ist besonders nützlich, wenn es Nutzer nicht nur bei einer Liste grundlegender Informationen hält, sondern sie zu einer Website weiterleitet, auf der sie das Unternehmen besser kennenlernen und eine Entscheidung treffen können."
+        },
+
+        "reviews": {
+          "title": "Bewertungen sind wichtig, aber nicht ausreichend",
+          "first": "Bewertungen können das Vertrauen stark beeinflussen, besonders wenn ein Nutzer ein Unternehmen zum ersten Mal kennenlernt.",
+          "second": "Eine Sternebewertung erklärt jedoch nicht immer, was das Unternehmen konkret tut, wie die Zusammenarbeit abläuft und wodurch sich das Angebot von der Konkurrenz unterscheidet.",
+          "third": "Die beste Wirkung entsteht, wenn Google-Bewertungen hochwertige Inhalte, Referenzen, ein Portfolio und klare Informationen auf der Unternehmenswebsite unterstützen."
+        },
+
+        "recommendation": {
+          "title": "Empfehlung von Express Web",
+          "text": "Nutzen Sie das Google-Unternehmensprofil als wichtigen Kanal für lokale Sichtbarkeit, bauen Sie jedoch die Unternehmenswebsite als zentrales Element Ihrer digitalen Präsenz auf. Das Profil bringt Nutzer, während die Website informieren, überzeugen und zum nächsten Schritt führen sollte."
+        },
+
+        "conclusion": {
+          "title": "Das Google-Profil ist der Eingang, die Website Ihr digitales Zuhause",
+          "first": "Ein Google-Unternehmensprofil kann dazu beitragen, dass ein Unternehmen gefunden wird und mehr Anrufe, Besuche und Bewertungen erhält.",
+          "second": "Für den langfristigen Aufbau von Autorität, Marke, Inhalten und Verkaufsprozessen ist eine eigene Website erforderlich, die gemeinsam mit dem Google-Profil arbeitet und nicht durch dieses ersetzt wird."
+        },
+
+        "cta": {
+          "title": "Möchten Sie bei Google besser sichtbar werden?",
+          "description": "Wir helfen Ihnen, Unternehmenswebsite, SEO-Grundlage, hochwertige Inhalte und Google-Unternehmensprofil zu einem einheitlichen digitalen Auftritt zu verbinden.",
+          "primary": "Über Ihren Online-Auftritt sprechen",
+          "secondary": "SEO-Dienstleistungen ansehen"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Ein Google-Unternehmensprofil auf einem Smartphone und eine Unternehmenswebsite auf einem Laptop als Teil eines einheitlichen digitalen Auftritts"
+          },
+          "hero": {
+            "alt": "Ein Google-Unternehmensprofil auf einem Smartphone, verbunden mit einer Unternehmenswebsite auf einem Laptop",
+            "caption": "Ein Google-Unternehmensprofil und eine Unternehmenswebsite erfüllen unterschiedliche Aufgaben, erzielen aber gemeinsam die besten Ergebnisse."
+          },
+          "businessProfile": {
+            "alt": "Ein optimiertes Google-Unternehmensprofil mit Standort, Kontaktdaten, Fotos und Bewertungen",
+            "caption": "Vollständige und aktuelle Informationen helfen Nutzern, das Unternehmen leichter zu finden und den ersten Kontakt herzustellen."
+          },
+          "comparison": {
+            "alt": "Vergleich der Möglichkeiten eines Google-Unternehmensprofils und einer Unternehmenswebsite",
+            "caption": "Das Profil sorgt für lokale Sichtbarkeit, während die Website Kontrolle, Inhalte, Marke und erweiterte Funktionen bietet."
+          }
+        }
+      }
   },
 
   "post": {
