@@ -704,6 +704,170 @@
           "caption": "Jasna poruka, mobilna prilagođenost, brzina, SEO, kontakt i sigurnost čine osnovu modernog sajta."
         }
       }
+    },
+
+    "onlineStore": {
+      "meta": {
+        "title": "Kada je pravo vreme za pokretanje internet prodavnice?",
+        "excerpt": "Mnogi preduzetnici žele internet prodavnicu što pre, ali pravo pitanje nije kada možete da je napravite, već kada će ona zaista doprineti razvoju vašeg poslovanja.",
+        "seoTitle": "Kada pokrenuti internet prodavnicu | Express Web",
+        "seoDescription": "Saznajte kako da procenite da li je vaše poslovanje spremno za internet prodavnicu i šta treba pripremiti pre početka online prodaje."
+      },
+
+      "lead": {
+        "first": "Internet prodavnica više nije rezervisana samo za velike kompanije. Danas i mala preduzeća, porodične firme i poljoprivredna gazdinstva mogu uspešno prodavati proizvode putem interneta.",
+        "second": "Međutim, sama činjenica da je moguće otvoriti internet prodavnicu ne znači da je to uvek pravi sledeći korak. U mnogim slučajevima kvalitetan prezentacioni sajt ili katalog proizvoda mogu doneti bolje rezultate od loše pripremljene online prodavnice."
+      },
+
+      "need": {
+        "title": "Da li vam je internet prodavnica zaista potrebna?",
+        "first": "Ne prodaje svaki biznis na isti način. Nekim kompanijama je dovoljan prezentacioni sajt, drugima katalog proizvoda, dok je trećima potreban kompletan sistem online prodaje.",
+        "second": "Ako kupci pre kupovine moraju da razgovaraju sa stručnim licem, dobiju individualnu ponudu ili precizno definišu svoje potrebe, klasična internet prodavnica možda nije najbolji prvi korak.",
+        "third": "Internet prodavnica ima najviše smisla kada proizvodi mogu jasno da se predstave, kada su cene poznate i kada je proces poručivanja, plaćanja i isporuke moguće standardizovati."
+      },
+
+      "readiness": {
+        "title": "Kako da znate da ste spremni za online prodaju",
+        "intro": "Pre razvoja prodavnice proverite da li postoje osnovni poslovni i organizacioni uslovi.",
+
+        "products": {
+          "title": "Imate proizvode spremne za prodaju",
+          "description": "Ponuda je definisana, proizvodi su dostupni, a zalihe je moguće redovno pratiti i ažurirati."
+        },
+        "catalog": {
+          "title": "Možete održavati katalog",
+          "description": "Postoji osoba koja može dodavati proizvode, menjati cene, ažurirati dostupnost i kontrolisati informacije."
+        },
+        "delivery": {
+          "title": "Organizovali ste isporuku",
+          "description": "Znate ko dostavlja robu, koliki su troškovi, koje teritorije pokrivate i koliko isporuka traje."
+        },
+        "support": {
+          "title": "Možete odgovoriti kupcima",
+          "description": "Neko je zadužen za pitanja, porudžbine, reklamacije, zamene i druge oblike korisničke podrške."
+        },
+        "marketing": {
+          "title": "Spremni ste za promociju",
+          "description": "Postoji plan kako će kupci saznati za prodavnicu kroz Google, društvene mreže, sadržaj ili druge kanale."
+        }
+      },
+
+      "warning": {
+        "title": "Najčešća greška",
+        "text": "Sama internet prodavnica ne povećava prodaju automatski. Ona je samo jedan deo sistema koji mora da poveže proizvode, sadržaj, marketing, logistiku, naplatu i korisničku podršku."
+      },
+
+      "preparation": {
+        "title": "Šta treba pripremiti pre početka",
+        "intro": "Što je priprema kvalitetnija, to će razvoj prodavnice biti brži, a kasnije upravljanje jednostavnije.",
+
+        "photos": {
+          "title": "Kvalitetne fotografije",
+          "description": "Kupac ne može fizički da vidi proizvod, pa fotografije moraju jasno da prikažu izgled, detalje i način upotrebe."
+        },
+        "descriptions": {
+          "title": "Jasni opisi proizvoda",
+          "description": "Opis treba da odgovori na najvažnija pitanja i pomogne kupcu da proceni da li proizvod odgovara njegovim potrebama."
+        },
+        "prices": {
+          "title": "Cene i dostupnost",
+          "description": "Cene moraju biti tačne, a podaci o zalihama i dostupnosti redovno ažurirani."
+        },
+        "payment": {
+          "title": "Načini plaćanja",
+          "description": "Definišite da li nudite plaćanje karticom, pouzećem, uplatom na račun ili kombinacijom više metoda."
+        },
+        "shipping": {
+          "title": "Dostava i troškovi",
+          "description": "Kupcu moraju biti jasni cena dostave, očekivani rok i uslovi besplatne ili lokalne isporuke."
+        },
+        "returns": {
+          "title": "Reklamacije i povraćaj",
+          "description": "Potrebno je jasno objasniti postupak reklamacije, zamene proizvoda i povraćaja sredstava."
+        },
+        "legal": {
+          "title": "Pravne informacije",
+          "description": "Uslovi korišćenja, politika privatnosti i podaci o prodavcu treba da budu dostupni i usklađeni sa poslovnim modelom."
+        }
+      },
+
+      "technology": {
+        "title": "Tehnologija nije najveći izazov",
+        "first": "Danas postoje kvalitetne platforme pomoću kojih se internet prodavnica može razviti relativno brzo.",
+        "second": "Mnogo veći izazov predstavlja organizacija svakodnevnog rada: obrada porudžbina, ažuriranje zaliha, pakovanje, slanje, komunikacija sa kupcima i rešavanje reklamacija.",
+        "third": "Zato izbor tehnologije treba uskladiti sa realnim poslovnim procesima, brojem proizvoda, očekivanim prometom i planovima za budući razvoj."
+      },
+
+      "marketing": {
+        "title": "Kako će kupci pronaći vašu prodavnicu?",
+        "text": "Bez poseta nema ni prodaje. Razvoj internet prodavnice zato treba povezati sa SEO optimizacijom, Google Business profilom, plaćenim kampanjama, društvenim mrežama, email marketingom i kvalitetnim sadržajem."
+      },
+
+      "marketplace": {
+        "title": "Internet prodavnica ili marketplace?",
+        "first": "Ako prodajete sopstvene proizvode, klasična internet prodavnica je najčešće dovoljno i jednostavnije rešenje.",
+        "second": "Ako želite da više nezavisnih prodavaca nudi proizvode na istoj platformi, tada govorimo o marketplace sistemu koji zahteva upravljanje prodavcima, provizijama, porudžbinama i pravilima platforme.",
+        "third": "To su dva različita poslovna modela. Marketplace nije samo veća prodavnica, već znatno složeniji poslovni i tehnološki sistem."
+      },
+
+      "steps": {
+        "title": "Pet koraka do promišljene odluke",
+        "intro": "Pre početka razvoja prođite kroz jednostavan proces procene.",
+
+        "assessment": {
+          "title": "Procenite potrebe kupaca",
+          "description": "Utvrđujete kako kupci danas pronalaze proizvode, šta im nedostaje i da li žele da poručuju putem interneta."
+        },
+        "scope": {
+          "title": "Definišite početnu ponudu",
+          "description": "Ne morate odmah objaviti ceo asortiman. Počnite od proizvoda koji su najtraženiji i najlakši za isporuku."
+        },
+        "operations": {
+          "title": "Organizujte procese",
+          "description": "Odredite ko prima porudžbine, ažurira zalihe, pakuje proizvode, komunicira sa kupcima i rešava reklamacije."
+        },
+        "platform": {
+          "title": "Izaberite odgovarajuću platformu",
+          "description": "Rešenje treba da odgovara obimu poslovanja, budžetu, integracijama i planovima za dalji razvoj."
+        },
+        "promotion": {
+          "title": "Pripremite plan promocije",
+          "description": "Odredite kanale, sadržaj, budžet i način merenja rezultata pre nego što prodavnica bude objavljena."
+        }
+      },
+
+      "recommendation": {
+        "title": "Preporuka Express Web-a",
+        "text": "Nemojte pokretati internet prodavnicu samo zato što je ima konkurencija. Pokrenite je kada može da pojednostavi prodaju, poboljša iskustvo kupaca i donese merljive poslovne rezultate."
+      },
+
+      "conclusion": {
+        "title": "Internet prodavnica je alat, a ne cilj",
+        "first": "Kada je dobro planirana, internet prodavnica može proširiti tržište, povećati prodaju i omogućiti kupcima da poručuju u trenutku koji im odgovara.",
+        "second": "Kada poslovni procesi nisu spremni, ona postaje dodatni trošak i izvor problema. Zato je najbolji trenutak za pokretanje onda kada su ponuda, logistika, podrška i promocija dovoljno dobro organizovani."
+      },
+
+      "cta": {
+        "title": "Razmišljate o pokretanju internet prodavnice?",
+        "description": "Pomoći ćemo vam da procenite potrebe i izaberete rešenje — od kataloga proizvoda do kompletne internet prodavnice ili marketplace platforme.",
+        "primary": "Razgovarajmo o projektu",
+        "secondary": "Pogledajte rešenja za online prodaju"
+      },
+
+      "images": {
+        "hero": {
+          "alt": "Moderna internet prodavnica prikazana na laptopu i mobilnim uređajima",
+          "caption": "Uspešna internet prodavnica povezuje tehnologiju, proizvode, logistiku, marketing i korisničku podršku."
+        },
+        "preparation": {
+          "alt": "Planiranje proizvoda, plaćanja i dostave za internet prodavnicu",
+          "caption": "Dobra priprema kataloga i poslovnih procesa smanjuje probleme nakon pokretanja online prodaje."
+        },
+        "marketplace": {
+          "alt": "Poređenje klasične internet prodavnice i marketplace platforme",
+          "caption": "Klasična prodavnica i marketplace imaju različite uloge, procese i nivoe složenosti."
+        }
+      }
     }
   },
 

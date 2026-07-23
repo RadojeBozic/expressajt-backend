@@ -704,6 +704,170 @@
           "caption": "A clear message, mobile responsiveness, speed, SEO, easy contact and security form the foundation of a modern website."
         }
       }
+    },
+
+    "onlineStore": {
+      "meta": {
+        "title": "When is the right time to launch an online store?",
+        "excerpt": "Many entrepreneurs want an online store as soon as possible, but the real question is not when you can build one, but when it will genuinely contribute to the growth of your business.",
+        "seoTitle": "When to launch an online store | Express Web",
+        "seoDescription": "Learn how to assess whether your business is ready for an online store and what you need to prepare before starting online sales."
+      },
+
+      "lead": {
+        "first": "Online stores are no longer reserved for large companies. Small businesses, family-run companies and agricultural holdings can also successfully sell products online.",
+        "second": "However, the fact that it is possible to launch an online store does not mean that it is always the right next step. In many cases, a quality presentation website or product catalogue can deliver better results than a poorly prepared online store."
+      },
+
+      "need": {
+        "title": "Do you really need an online store?",
+        "first": "Not every business sells in the same way. Some companies only need a presentation website, others need a product catalogue, while some require a complete online sales system.",
+        "second": "If customers need to speak with an expert, receive an individual offer or define their requirements precisely before purchasing, a traditional online store may not be the best first step.",
+        "third": "An online store makes the most sense when products can be presented clearly, prices are known and the ordering, payment and delivery process can be standardised."
+      },
+
+      "readiness": {
+        "title": "How to know whether you are ready for online sales",
+        "intro": "Before developing a store, check whether the basic business and organisational conditions are in place.",
+
+        "products": {
+          "title": "Your products are ready for sale",
+          "description": "The offer is defined, products are available and stock levels can be monitored and updated regularly."
+        },
+        "catalog": {
+          "title": "You can maintain the catalogue",
+          "description": "Someone is available to add products, change prices, update availability and verify information."
+        },
+        "delivery": {
+          "title": "Delivery is organised",
+          "description": "You know who delivers the goods, what the costs are, which areas you cover and how long delivery takes."
+        },
+        "support": {
+          "title": "You can support customers",
+          "description": "Someone is responsible for questions, orders, complaints, exchanges and other forms of customer support."
+        },
+        "marketing": {
+          "title": "You are ready to promote the store",
+          "description": "There is a plan for how customers will discover the store through Google, social media, content or other channels."
+        }
+      },
+
+      "warning": {
+        "title": "The most common mistake",
+        "text": "An online store does not automatically increase sales. It is only one part of a system that must connect products, content, marketing, logistics, payments and customer support."
+      },
+
+      "preparation": {
+        "title": "What to prepare before you begin",
+        "intro": "The better the preparation, the faster the development process and the easier the store will be to manage later.",
+
+        "photos": {
+          "title": "Quality product photos",
+          "description": "Customers cannot physically inspect the product, so the images should clearly present its appearance, details and intended use."
+        },
+        "descriptions": {
+          "title": "Clear product descriptions",
+          "description": "Descriptions should answer the most important questions and help customers determine whether the product meets their needs."
+        },
+        "prices": {
+          "title": "Prices and availability",
+          "description": "Prices must be accurate, while stock and availability information should be updated regularly."
+        },
+        "payment": {
+          "title": "Payment methods",
+          "description": "Define whether you will offer card payments, cash on delivery, bank transfers or a combination of methods."
+        },
+        "shipping": {
+          "title": "Shipping and costs",
+          "description": "Customers should clearly understand the shipping price, expected delivery time and any free or local delivery conditions."
+        },
+        "returns": {
+          "title": "Complaints and returns",
+          "description": "Clearly explain the procedure for complaints, product exchanges and refunds."
+        },
+        "legal": {
+          "title": "Legal information",
+          "description": "Terms of use, privacy policy and seller details should be available and aligned with your business model."
+        }
+      },
+
+      "technology": {
+        "title": "Technology is not the greatest challenge",
+        "first": "Today, quality platforms allow an online store to be developed relatively quickly.",
+        "second": "The greater challenge is organising everyday operations: processing orders, updating stock, packing, shipping, communicating with customers and resolving complaints.",
+        "third": "The technology should therefore match real business processes, the number of products, expected sales volume and future growth plans."
+      },
+
+      "marketing": {
+        "title": "How will customers find your store?",
+        "text": "Without traffic, there are no sales. The development of an online store should therefore be connected with SEO, a Google Business Profile, paid campaigns, social media, email marketing and quality content."
+      },
+
+      "marketplace": {
+        "title": "Online store or marketplace?",
+        "first": "If you sell your own products, a traditional online store is usually the simpler and more suitable solution.",
+        "second": "If you want multiple independent sellers to offer products on the same platform, you need a marketplace system with seller management, commissions, orders and platform rules.",
+        "third": "These are two different business models. A marketplace is not merely a larger online store, but a significantly more complex business and technological system."
+      },
+
+      "steps": {
+        "title": "Five steps towards a considered decision",
+        "intro": "Before development begins, go through a simple assessment process.",
+
+        "assessment": {
+          "title": "Assess customer needs",
+          "description": "Determine how customers currently find products, what is missing and whether they want to order online."
+        },
+        "scope": {
+          "title": "Define the initial offer",
+          "description": "You do not need to publish the entire assortment immediately. Start with the products that are most popular and easiest to deliver."
+        },
+        "operations": {
+          "title": "Organise the processes",
+          "description": "Decide who receives orders, updates stock, packs products, communicates with customers and handles complaints."
+        },
+        "platform": {
+          "title": "Choose the right platform",
+          "description": "The solution should match the scale of the business, the budget, required integrations and future development plans."
+        },
+        "promotion": {
+          "title": "Prepare a promotional plan",
+          "description": "Define the channels, content, budget and performance measurement before the store is launched."
+        }
+      },
+
+      "recommendation": {
+        "title": "Express Web recommendation",
+        "text": "Do not launch an online store simply because your competitors have one. Launch it when it can simplify sales, improve the customer experience and deliver measurable business results."
+      },
+
+      "conclusion": {
+        "title": "An online store is a tool, not the goal",
+        "first": "When properly planned, an online store can expand the market, increase sales and allow customers to order whenever it suits them.",
+        "second": "When business processes are not ready, it becomes an additional cost and a source of problems. The best time to launch is therefore when the offer, logistics, support and promotion are sufficiently well organised."
+      },
+
+      "cta": {
+        "title": "Are you considering launching an online store?",
+        "description": "We will help you assess your needs and choose the right solution — from a product catalogue to a complete online store or marketplace platform.",
+        "primary": "Discuss your project with us",
+        "secondary": "View online sales solutions"
+      },
+
+      "images": {
+        "hero": {
+          "alt": "A modern online store displayed on a laptop and mobile devices",
+          "caption": "A successful online store connects technology, products, logistics, marketing and customer support."
+        },
+        "preparation": {
+          "alt": "Planning products, payments and delivery for an online store",
+          "caption": "Good preparation of the catalogue and business processes reduces problems after online sales begin."
+        },
+        "marketplace": {
+          "alt": "Comparison of a traditional online store and a marketplace platform",
+          "caption": "A traditional store and a marketplace have different roles, processes and levels of complexity."
+        }
+      }
     }
   },
 

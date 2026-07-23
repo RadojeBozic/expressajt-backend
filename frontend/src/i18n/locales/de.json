@@ -759,6 +759,170 @@
           "caption": "Eine klare Botschaft, mobile Optimierung, Geschwindigkeit, SEO, einfache Kontaktmöglichkeiten und Sicherheit bilden die Grundlage einer modernen Website."
         }
       }
+    },
+
+    "onlineStore": {
+      "meta": {
+        "title": "Wann ist der richtige Zeitpunkt für einen Onlineshop?",
+        "excerpt": "Viele Unternehmer möchten möglichst schnell einen Onlineshop starten. Die entscheidende Frage ist jedoch nicht, wann er technisch erstellt werden kann, sondern wann er tatsächlich zur Entwicklung des Unternehmens beiträgt.",
+        "seoTitle": "Wann einen Onlineshop starten | Express Web",
+        "seoDescription": "Erfahren Sie, wie Sie beurteilen können, ob Ihr Unternehmen für einen Onlineshop bereit ist und was vor dem Start des Online-Verkaufs vorbereitet werden sollte."
+      },
+
+      "lead": {
+        "first": "Onlineshops sind längst nicht mehr nur großen Unternehmen vorbehalten. Auch kleine Betriebe, Familienunternehmen und landwirtschaftliche Betriebe können Produkte erfolgreich über das Internet verkaufen.",
+        "second": "Die Tatsache, dass ein Onlineshop technisch möglich ist, bedeutet jedoch nicht, dass er immer der richtige nächste Schritt ist. In vielen Fällen können eine hochwertige Unternehmenswebsite oder ein Produktkatalog bessere Ergebnisse erzielen als ein schlecht vorbereiteter Onlineshop."
+      },
+
+      "need": {
+        "title": "Benötigen Sie wirklich einen Onlineshop?",
+        "first": "Nicht jedes Unternehmen verkauft auf dieselbe Weise. Für manche Unternehmen reicht eine Präsentationswebsite, andere benötigen einen Produktkatalog, während wiederum andere ein vollständiges Online-Verkaufssystem brauchen.",
+        "second": "Wenn Kunden vor dem Kauf mit einer Fachperson sprechen, ein individuelles Angebot erhalten oder ihre Anforderungen genau definieren müssen, ist ein klassischer Onlineshop möglicherweise nicht der beste erste Schritt.",
+        "third": "Ein Onlineshop ist besonders sinnvoll, wenn Produkte klar präsentiert werden können, die Preise bekannt sind und Bestellung, Zahlung und Lieferung standardisiert werden können."
+      },
+
+      "readiness": {
+        "title": "Woran Sie erkennen, dass Sie für den Online-Verkauf bereit sind",
+        "intro": "Prüfen Sie vor der Entwicklung des Shops, ob die grundlegenden geschäftlichen und organisatorischen Voraussetzungen vorhanden sind.",
+
+        "products": {
+          "title": "Die Produkte sind verkaufsbereit",
+          "description": "Das Angebot ist definiert, die Produkte sind verfügbar und die Bestände können regelmäßig überwacht und aktualisiert werden."
+        },
+        "catalog": {
+          "title": "Der Katalog kann gepflegt werden",
+          "description": "Eine verantwortliche Person kann Produkte hinzufügen, Preise ändern, Verfügbarkeiten aktualisieren und Informationen kontrollieren."
+        },
+        "delivery": {
+          "title": "Die Lieferung ist organisiert",
+          "description": "Sie wissen, wer die Ware liefert, welche Kosten entstehen, welche Gebiete abgedeckt werden und wie lange die Lieferung dauert."
+        },
+        "support": {
+          "title": "Kunden können betreut werden",
+          "description": "Eine Person ist für Fragen, Bestellungen, Reklamationen, Umtausch und weitere Formen des Kundensupports zuständig."
+        },
+        "marketing": {
+          "title": "Sie sind zur Vermarktung bereit",
+          "description": "Es gibt einen Plan, wie Kunden den Shop über Google, soziale Netzwerke, Inhalte oder andere Kanäle finden werden."
+        }
+      },
+
+      "warning": {
+        "title": "Der häufigste Fehler",
+        "text": "Ein Onlineshop erhöht den Umsatz nicht automatisch. Er ist nur ein Teil eines Systems, das Produkte, Inhalte, Marketing, Logistik, Zahlung und Kundensupport miteinander verbinden muss."
+      },
+
+      "preparation": {
+        "title": "Was vor dem Start vorbereitet werden sollte",
+        "intro": "Je besser die Vorbereitung, desto schneller die Entwicklung und desto einfacher die spätere Verwaltung des Shops.",
+
+        "photos": {
+          "title": "Hochwertige Produktfotos",
+          "description": "Kunden können das Produkt nicht physisch betrachten. Deshalb sollten die Bilder Aussehen, Details und Verwendung klar zeigen."
+        },
+        "descriptions": {
+          "title": "Klare Produktbeschreibungen",
+          "description": "Die Beschreibung sollte die wichtigsten Fragen beantworten und Kunden bei der Beurteilung unterstützen, ob das Produkt ihren Bedürfnissen entspricht."
+        },
+        "prices": {
+          "title": "Preise und Verfügbarkeit",
+          "description": "Die Preise müssen korrekt sein, während Bestände und Verfügbarkeiten regelmäßig aktualisiert werden sollten."
+        },
+        "payment": {
+          "title": "Zahlungsmethoden",
+          "description": "Legen Sie fest, ob Kartenzahlung, Nachnahme, Banküberweisung oder eine Kombination mehrerer Methoden angeboten wird."
+        },
+        "shipping": {
+          "title": "Versand und Kosten",
+          "description": "Für Kunden sollten Versandpreis, voraussichtliche Lieferzeit sowie Bedingungen für kostenlose oder lokale Lieferung klar verständlich sein."
+        },
+        "returns": {
+          "title": "Reklamationen und Rückgabe",
+          "description": "Erklären Sie den Ablauf für Reklamationen, Produktaustausch und Rückerstattung klar und verständlich."
+        },
+        "legal": {
+          "title": "Rechtliche Informationen",
+          "description": "Nutzungsbedingungen, Datenschutzerklärung und Angaben zum Verkäufer sollten verfügbar und auf das Geschäftsmodell abgestimmt sein."
+        }
+      },
+
+      "technology": {
+        "title": "Die Technologie ist nicht die größte Herausforderung",
+        "first": "Heute ermöglichen hochwertige Plattformen die relativ schnelle Entwicklung eines Onlineshops.",
+        "second": "Die größere Herausforderung liegt in der Organisation des täglichen Betriebs: Bestellungen bearbeiten, Bestände aktualisieren, Produkte verpacken, versenden, Kunden betreuen und Reklamationen lösen.",
+        "third": "Die Technologie sollte deshalb zu den realen Geschäftsprozessen, der Anzahl der Produkte, dem erwarteten Umsatz und den zukünftigen Entwicklungsplänen passen."
+      },
+
+      "marketing": {
+        "title": "Wie werden Kunden Ihren Shop finden?",
+        "text": "Ohne Besucher gibt es keine Verkäufe. Die Entwicklung eines Onlineshops sollte deshalb mit SEO, einem Google-Unternehmensprofil, bezahlten Kampagnen, sozialen Netzwerken, E-Mail-Marketing und hochwertigen Inhalten verbunden werden."
+      },
+
+      "marketplace": {
+        "title": "Onlineshop oder Marktplatz?",
+        "first": "Wenn Sie eigene Produkte verkaufen, ist ein klassischer Onlineshop in der Regel die einfachere und geeignetere Lösung.",
+        "second": "Wenn mehrere unabhängige Verkäufer Produkte auf derselben Plattform anbieten sollen, benötigen Sie ein Marktplatzsystem mit Verkäuferverwaltung, Provisionen, Bestellungen und Plattformregeln.",
+        "third": "Dabei handelt es sich um zwei unterschiedliche Geschäftsmodelle. Ein Marktplatz ist nicht nur ein größerer Onlineshop, sondern ein wesentlich komplexeres geschäftliches und technologisches System."
+      },
+
+      "steps": {
+        "title": "Fünf Schritte zu einer durchdachten Entscheidung",
+        "intro": "Durchlaufen Sie vor Beginn der Entwicklung einen einfachen Bewertungsprozess.",
+
+        "assessment": {
+          "title": "Analysieren Sie die Bedürfnisse der Kunden",
+          "description": "Ermitteln Sie, wie Kunden heute Produkte finden, was ihnen fehlt und ob sie online bestellen möchten."
+        },
+        "scope": {
+          "title": "Definieren Sie das anfängliche Angebot",
+          "description": "Sie müssen nicht sofort das gesamte Sortiment veröffentlichen. Beginnen Sie mit den gefragtesten und am einfachsten zu liefernden Produkten."
+        },
+        "operations": {
+          "title": "Organisieren Sie die Prozesse",
+          "description": "Legen Sie fest, wer Bestellungen bearbeitet, Bestände aktualisiert, Produkte verpackt, mit Kunden kommuniziert und Reklamationen löst."
+        },
+        "platform": {
+          "title": "Wählen Sie die passende Plattform",
+          "description": "Die Lösung sollte zur Größe des Unternehmens, zum Budget, zu erforderlichen Integrationen und zu den Entwicklungsplänen passen."
+        },
+        "promotion": {
+          "title": "Bereiten Sie einen Marketingplan vor",
+          "description": "Definieren Sie Kanäle, Inhalte, Budget und Erfolgsmessung, bevor der Shop veröffentlicht wird."
+        }
+      },
+
+      "recommendation": {
+        "title": "Empfehlung von Express Web",
+        "text": "Starten Sie keinen Onlineshop nur deshalb, weil Ihre Konkurrenz einen besitzt. Starten Sie ihn dann, wenn er den Verkauf vereinfacht, das Kundenerlebnis verbessert und messbare Geschäftsergebnisse erzielt."
+      },
+
+      "conclusion": {
+        "title": "Ein Onlineshop ist ein Werkzeug, nicht das Ziel",
+        "first": "Ein gut geplanter Onlineshop kann den Markt erweitern, den Umsatz steigern und Kunden ermöglichen, zu einem passenden Zeitpunkt zu bestellen.",
+        "second": "Wenn die Geschäftsprozesse nicht vorbereitet sind, wird er zu zusätzlichen Kosten und einer Problemquelle. Der beste Zeitpunkt für den Start ist deshalb gekommen, wenn Angebot, Logistik, Support und Vermarktung ausreichend gut organisiert sind."
+      },
+
+      "cta": {
+        "title": "Denken Sie über einen Onlineshop nach?",
+        "description": "Wir helfen Ihnen, Ihre Bedürfnisse zu bewerten und die passende Lösung zu wählen — vom Produktkatalog bis zum vollständigen Onlineshop oder einer Marktplatzplattform.",
+        "primary": "Projekt mit uns besprechen",
+        "secondary": "Lösungen für Online-Verkauf ansehen"
+      },
+
+      "images": {
+        "hero": {
+          "alt": "Ein moderner Onlineshop auf einem Laptop und mobilen Geräten",
+          "caption": "Ein erfolgreicher Onlineshop verbindet Technologie, Produkte, Logistik, Marketing und Kundensupport."
+        },
+        "preparation": {
+          "alt": "Planung von Produkten, Zahlungen und Lieferung für einen Onlineshop",
+          "caption": "Eine gute Vorbereitung des Katalogs und der Geschäftsprozesse reduziert Probleme nach dem Start des Online-Verkaufs."
+        },
+        "marketplace": {
+          "alt": "Vergleich zwischen einem klassischen Onlineshop und einer Marktplatzplattform",
+          "caption": "Ein klassischer Shop und ein Marktplatz unterscheiden sich in Rollen, Prozessen und Komplexität."
+        }
+      }
     }
   },
 
