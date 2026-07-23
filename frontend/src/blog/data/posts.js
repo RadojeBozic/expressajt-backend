@@ -183,7 +183,7 @@ export const posts = [
   excerptKey:
     'blog.articles.businessApplication.meta.excerpt',
 
-  category: 'business-applications',
+  category: 'poslovne-aplikacije',
 
   author: 'radoje-bozic',
 
@@ -214,6 +214,51 @@ export const posts = [
 
     descriptionKey:
       'blog.articles.businessApplication.meta.seoDescription',
+  },
+},
+
+{
+  id: 6,
+
+  slug: 'kako-nastaje-uspesna-web-prezentacija-gvp-consult',
+
+  titleKey:
+    'blog.articles.gvpCaseStudy.meta.title',
+
+  excerptKey:
+    'blog.articles.gvpCaseStudy.meta.excerpt',
+
+  category: 'projekti-i-studije-slucaja',
+
+  author: 'radoje-bozic',
+
+  publishedAt: '2026-07-23',
+
+  updatedAt: '2026-07-23',
+
+  image:
+    '/images/blog/gvp-case-study/card.jpg',
+
+  imageAltKey:
+    'blog.articles.gvpCaseStudy.images.card.alt',
+
+  featured: true,
+
+  published: true,
+
+  readingTime: 10,
+
+  component: () =>
+    import(
+      '../posts/KakoNastajeUspesnaWebPrezentacija.vue'
+    ),
+
+  seo: {
+    titleKey:
+      'blog.articles.gvpCaseStudy.meta.seoTitle',
+
+    descriptionKey:
+      'blog.articles.gvpCaseStudy.meta.seoDescription',
   },
 },
 ]

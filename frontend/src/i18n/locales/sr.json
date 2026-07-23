@@ -1368,6 +1368,216 @@
             "caption": "Povezivanjem koraka aplikacija smanjuje ponavljanje, ubrzava obradu i čuva istoriju aktivnosti."
           }
         }
+      },
+
+      "gvpCaseStudy": {
+        "meta": {
+          "title": "Kako nastaje uspešna web prezentacija – studija slučaja GVP Consult",
+          "excerpt": "Studija slučaja pokazuje kako analiza delatnosti, planiranje sadržaja, dizajn, SEO i rad nakon objavljivanja zajedno stvaraju kvalitetno digitalno prisustvo.",
+          "seoTitle": "Kako nastaje uspešna web prezentacija | GVP Consult",
+          "seoDescription": "Pogledajte kako je razvijena web prezentacija GVP Consult, od analize i strukture sadržaja do SEO optimizacije, Search Console-a i daljeg razvoja."
+        },
+
+        "lead": {
+          "first": "Izrada kvalitetne web prezentacije ne počinje izborom boje, fotografije ili šablona. Počinje razumevanjem stručnjaka, njegovih usluga, ciljne publike i razloga zbog kojih bi posetilac trebalo da mu ukaže poverenje.",
+          "second": "Projekat GVP Consult pokazuje koliko planiranja, sadržaja i tehničkog rada stoji iza sajta koji na prvi pogled može delovati jednostavno."
+        },
+
+        "context": {
+          "title": "Polazna situacija: stručno znanje bez potpunog digitalnog predstavljanja",
+          "first": "GVP Consult predstavlja konsultantsku delatnost zasnovanu na dugogodišnjem stručnom iskustvu u oblasti sanitarne hemije, bezbednosti proizvoda i predmeta koji dolaze u kontakt sa hranom, kožom i sluzokožom.",
+          "second": "Cilj nije bio samo objaviti osnovne kontakt podatke, već jasno predstaviti kompleksne usluge različitim grupama klijenata, uključujući proizvođače, uvoznike, distributere, laboratorije i druge poslovne subjekte.",
+          "third": "Sajt je zato morao istovremeno da deluje stručno, razumljivo, pouzdano i dovoljno pristupačno ljudima koji možda prvi put istražuju ovu oblast."
+        },
+
+        "analysis": {
+          "title": "Pre dizajna bilo je potrebno razumeti poslovanje",
+          "intro": "Prva faza nije bila crtanje ekrana, već organizovanje informacija i donošenje odluka o tome šta posetilac treba da sazna.",
+
+          "expertise": {
+            "title": "Definisanje stručnog profila",
+            "description": "Bilo je važno jasno objasniti iskustvo, specijalizaciju i oblast odgovornosti, bez pretvaranja sajta u dugačku biografiju."
+          },
+          "audience": {
+            "title": "Razumevanje ciljnih korisnika",
+            "description": "Sadržaj je trebalo prilagoditi firmama koje imaju konkretna pitanja u vezi sa propisima, dokumentacijom, laboratorijskim ispitivanjem i usklađenošću proizvoda."
+          },
+          "trust": {
+            "title": "Izgradnja poverenja",
+            "description": "U konsultantskim delatnostima posetilac ne kupuje samo uslugu, već procenjuje znanje, odgovornost i profesionalni kredibilitet stručnjaka."
+          },
+          "content": {
+            "title": "Planiranje korisnog sadržaja",
+            "description": "Pored predstavljanja usluga, sajt je trebalo da omogući objavljivanje stručnih tema, aktuelnih propisa, događaja i praktičnih objašnjenja."
+          }
+        },
+
+        "principle": {
+          "title": "Jednostavan izgled ne znači jednostavan projekat",
+          "text": "Kada je struktura dobro osmišljena, posetilac lako pronalazi informacije i ne primećuje složenost procesa koji stoji iza sajta. Upravo je ta prividna jednostavnost rezultat pažljive analize."
+        },
+
+        "structure": {
+          "title": "Svaka sekcija dobila je jasnu poslovnu ulogu",
+          "intro": "Stranica nije organizovana prema tome šta je tehnički najlakše napraviti, već prema pitanjima koja potencijalni klijent prirodno postavlja.",
+
+          "hero": {
+            "title": "Hero sekcija",
+            "description": "Odmah objašnjava ko je stručnjak, u kojoj oblasti pomaže i kome su usluge namenjene."
+          },
+          "about": {
+            "title": "Predstavljanje stručnjaka",
+            "description": "Povezuje profesionalno iskustvo, odgovornost i lični pristup bez suvišnog samohvalisanja."
+          },
+          "services": {
+            "title": "Pregled usluga",
+            "description": "Kompleksne oblasti rada organizovane su u razumljive celine kako bi posetilac brzo prepoznao svoj problem."
+          },
+          "content": {
+            "title": "Vesti, događaji i stručne teme",
+            "description": "Sajt dobija prostor za stalno dopunjavanje sadržaja i izgradnju stručnog autoriteta."
+          },
+          "faq": {
+            "title": "Česta pitanja",
+            "description": "Odgovori smanjuju nejasnoće i pomažu posetiocu da pre kontakta bolje razume uslugu."
+          },
+          "contact": {
+            "title": "Kontakt i poziv na akciju",
+            "description": "Put od informacije do slanja upita ostaje jednostavan, vidljiv i dostupan na različitim uređajima."
+          }
+        },
+
+        "design": {
+          "title": "Dizajn je morao da podrži stručnost, a ne da je zaseni",
+          "first": "Vizuelni identitet zasnovan je na profesionalnom i mirnom izgledu, jasnoj tipografiji, dovoljno praznog prostora i fotografijama koje podržavaju lični kredibilitet konsultanta.",
+          "second": "Posebna pažnja posvećena je čitljivosti dužih stručnih tekstova, jasnoj hijerarhiji naslova i prilagođavanju mobilnim uređajima.",
+          "third": "Animacije i dekorativni elementi korišćeni su umereno, tako da sadržaj ostane glavni nosilac poruke."
+        },
+
+        "seo": {
+          "title": "SEO nije dodat nakon završetka sajta",
+          "intro": "Tehnička osnova za pretraživače planirana je paralelno sa sadržajem i razvojem.",
+
+          "metadata": {
+            "title": "Naslovi i meta opisi",
+            "description": "Definisani su jasni naslov stranice i opis koji objašnjavaju delatnost i pomažu pretraživačima da razumeju sadržaj."
+          },
+          "social": {
+            "title": "Open Graph podaci",
+            "description": "Podešeni su naslov, opis i slika za pravilno prikazivanje linka na društvenim mrežama i komunikacionim aplikacijama."
+          },
+          "structuredData": {
+            "title": "Strukturirani podaci",
+            "description": "JSON-LD oznake pružaju pretraživačima dodatne informacije o poslovanju, kontaktima i profesionalnom profilu."
+          },
+          "indexing": {
+            "title": "Sitemap, robots i canonical",
+            "description": "Kreirani su tehnički fajlovi i oznake koji pomažu pravilnom otkrivanju, indeksiranju i razumevanju stranice."
+          },
+          "technical": {
+            "title": "HTTPS, responsive prikaz i performanse",
+            "description": "Bezbedna veza, mobilna prilagođenost i uredno učitavanje predstavljaju osnovu korisničkog iskustva i tehničkog SEO-a."
+          }
+        },
+
+        "searchConsole": {
+          "title": "Google Search Console povezuje objavljivanje sa stvarnim podacima",
+          "first": "Nakon povezivanja domena i objavljivanja sajta izvršena je verifikacija vlasništva kroz Google Search Console.",
+          "second": "Sitemap je prijavljen, a indeksacija stranica može se pratiti umesto da se pretpostavlja da je Google automatski pronašao i pravilno razumeo sadržaj.",
+          "third": "Search Console vremenom pokazuje za koje upite se stranica prikazuje, koliko ostvaruje impresija i klikova i gde postoji prostor za unapređenje."
+        },
+
+        "launch": {
+          "title": "Objavljivanje sajta nije kraj projekta",
+          "text": "Deploy znači da je digitalni proizvod postao dostupan korisnicima. Tek tada počinje period praćenja, učenja iz podataka, dopunjavanja sadržaja i postepenog unapređenja."
+        },
+
+        "development": {
+          "title": "Web prezentacija mora da se razvija zajedno sa poslovanjem",
+          "intro": "Sajt koji se godinama ne menja vremenom gubi deo svoje vrednosti, čak i kada je tehnički ispravan.",
+
+          "content": {
+            "title": "Objavljivanje novih stručnih sadržaja",
+            "description": "Aktuelne teme, objašnjenja propisa, stručni događaji i odgovori na pitanja proširuju vrednost sajta."
+          },
+          "analytics": {
+            "title": "Praćenje ponašanja posetilaca",
+            "description": "Analitika pokazuje koje stranice privlače pažnju, odakle korisnici dolaze i gde napuštaju sadržaj."
+          },
+          "seo": {
+            "title": "SEO unapređenja na osnovu podataka",
+            "description": "Naslovi, tekstovi, interne veze i nove teme mogu se prilagođavati stvarnim upitima korisnika."
+          },
+          "maintenance": {
+            "title": "Tehničko održavanje i bezbednost",
+            "description": "Provera formulara, linkova, SSL sertifikata, performansi i zavisnosti čuva pouzdanost digitalnog proizvoda."
+          }
+        },
+
+        "results": {
+          "title": "Rezultat je temelj za dugoročno digitalno prisustvo",
+          "intro": "U ovoj fazi rezultat ne merimo izmišljenim obećanjima, već konkretnim i proverljivim elementima koji su realizovani.",
+
+          "identity": {
+            "title": "Jasno profesionalno predstavljanje",
+            "description": "Delatnost, stručni profil i usluge organizovani su u celinu koja posetiocu pomaže da razume kome se obraća."
+          },
+          "responsive": {
+            "title": "Potpuno responzivan prikaz",
+            "description": "Sadržaj je prilagođen desktop, tablet i mobilnim uređajima bez gubitka funkcionalnosti i čitljivosti."
+          },
+          "search": {
+            "title": "Povezana Google infrastruktura",
+            "description": "Domen, Search Console, sitemap, indeksacija i tehnički SEO povezani su u kontrolisan proces."
+          },
+          "foundation": {
+            "title": "Osnova za dalje širenje",
+            "description": "Sajt omogućava dodavanje novih tema, događaja, korisnih resursa i drugih sadržaja bez promene osnovne strategije."
+          }
+        },
+
+        "lessons": {
+          "title": "Šta ovaj projekat pokazuje",
+          "first": "Najveći deo kvaliteta web prezentacije ne nastaje u samom pisanju koda, već u odlukama koje prethode razvoju: razumevanju poslovanja, prioriteta, publike i sadržaja.",
+          "second": "Tehnički ispravan sajt može ostati neprimećen ako nema jasan sadržaj, SEO osnovu, praćenje rezultata i plan daljeg razvoja.",
+          "third": "Najbolji rezultat nastaje kada klijent i razvojni tim zajedno grade digitalno prisustvo koje se prilagođava stvarnim potrebama poslovanja."
+        },
+
+        "recommendation": {
+          "title": "Preporuka Express Web-a",
+          "text": "Ne posmatrajte web prezentaciju kao trošak koji se završava objavljivanjem. Posmatrajte je kao poslovni alat koji treba redovno dopunjavati, meriti i unapređivati."
+        },
+
+        "conclusion": {
+          "title": "Uspešna web prezentacija je spoj strategije, sadržaja i tehnologije",
+          "first": "GVP Consult pokazuje da i jednostranični sajt može biti ozbiljan digitalni proizvod kada su njegova struktura, sadržaj, SEO i tehnička osnova pažljivo planirani.",
+          "second": "Njegova dugoročna vrednost zavisi od toga da li će nastaviti da prati razvoj stručne delatnosti, pitanja klijenata i rezultate koji dolaze iz pretrage i analitike."
+        },
+
+        "cta": {
+          "title": "Da li vašem poslovanju treba više od lepog sajta?",
+          "description": "Možemo pomoći da definišete sadržaj, strukturu, SEO osnovu i plan razvoja web prezentacije koja podržava stvarne poslovne ciljeve.",
+          "primary": "Razgovarajmo o projektu",
+          "secondary": "Pogledajte naše projekte"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Studija slučaja razvoja profesionalne web prezentacije GVP Consult"
+          },
+          "hero": {
+            "alt": "Profesionalna web prezentacija GVP Consult prikazana na desktop i mobilnom uređaju",
+            "caption": "Uspešna web prezentacija počinje razumevanjem stručnjaka, publike i poslovnog cilja."
+          },
+          "seo": {
+            "alt": "SEO elementi web prezentacije uključuju meta podatke, strukturirane podatke, sitemap i mobilnu optimizaciju",
+            "caption": "SEO nije poslednji korak projekta, već deo sadržaja, dizajna i tehničke arhitekture od samog početka."
+          },
+          "searchConsole": {
+            "alt": "Praćenje indeksacije i učinka sajta pomoću Google Search Console-a",
+            "caption": "Search Console omogućava da se vidljivost na Google-u prati kroz stvarne podatke, a ne pretpostavke."
+          }
+        }
       }
   },
 

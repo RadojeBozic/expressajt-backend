@@ -1368,6 +1368,216 @@
             "caption": "By connecting steps, an application reduces duplication, accelerates processing and preserves a history of activities."
           }
         }
+      },
+
+      "gvpCaseStudy": {
+        "meta": {
+          "title": "How a successful business website is created – GVP Consult case study",
+          "excerpt": "This case study shows how business analysis, content planning, design, SEO and ongoing development work together to create a strong digital presence.",
+          "seoTitle": "How a successful business website is created | GVP Consult",
+          "seoDescription": "See how the GVP Consult website was developed, from analysis and content structure to SEO, Search Console and continued improvement."
+        },
+
+        "lead": {
+          "first": "Building a high-quality business website does not begin with choosing colours, photographs or a template. It begins with understanding the professional, their services, target audience and the reasons a visitor should trust them.",
+          "second": "The GVP Consult project demonstrates how much planning, content work and technical implementation can stand behind a website that appears simple at first glance."
+        },
+
+        "context": {
+          "title": "Starting point: professional expertise without a complete digital presentation",
+          "first": "GVP Consult is a consultancy based on extensive professional experience in sanitary chemistry, product safety and materials that come into contact with food, skin and mucous membranes.",
+          "second": "The objective was not merely to publish basic contact details, but to clearly present complex services to manufacturers, importers, distributors, laboratories and other business clients.",
+          "third": "The website therefore needed to appear professional, understandable, trustworthy and accessible to people who may be researching this field for the first time."
+        },
+
+        "analysis": {
+          "title": "Understanding the business came before designing the website",
+          "intro": "The first stage was not drawing screens, but organising information and deciding what a visitor needed to understand.",
+
+          "expertise": {
+            "title": "Defining the professional profile",
+            "description": "It was important to explain experience, specialisation and areas of responsibility without turning the website into an excessively long biography."
+          },
+          "audience": {
+            "title": "Understanding the target audience",
+            "description": "The content needed to address companies with specific questions about regulations, documentation, laboratory testing and product compliance."
+          },
+          "trust": {
+            "title": "Building trust",
+            "description": "In consulting, visitors do not evaluate only a service. They assess the professional's knowledge, responsibility and credibility."
+          },
+          "content": {
+            "title": "Planning useful content",
+            "description": "In addition to presenting services, the website needed space for professional topics, regulatory updates, events and practical explanations."
+          }
+        },
+
+        "principle": {
+          "title": "A simple appearance does not mean a simple project",
+          "text": "When the structure is well designed, visitors find information easily and do not notice the complexity behind the website. That apparent simplicity is the result of careful analysis."
+        },
+
+        "structure": {
+          "title": "Every section received a clear business purpose",
+          "intro": "The page was not organised according to what was easiest to build, but according to the questions a potential client naturally asks.",
+
+          "hero": {
+            "title": "Hero section",
+            "description": "It immediately explains who the professional is, which field she works in and who the services are intended for."
+          },
+          "about": {
+            "title": "Professional introduction",
+            "description": "It connects experience, responsibility and a personal approach without unnecessary self-promotion."
+          },
+          "services": {
+            "title": "Service overview",
+            "description": "Complex areas of work are organised into understandable groups so visitors can quickly identify their problem."
+          },
+          "content": {
+            "title": "News, events and professional topics",
+            "description": "The website provides space for continuous publishing and the development of professional authority."
+          },
+          "faq": {
+            "title": "Frequently asked questions",
+            "description": "Answers reduce uncertainty and help visitors understand the service before making contact."
+          },
+          "contact": {
+            "title": "Contact and call to action",
+            "description": "The path from information to enquiry remains simple, visible and accessible across devices."
+          }
+        },
+
+        "design": {
+          "title": "The design needed to support expertise rather than overshadow it",
+          "first": "The visual identity is based on a calm professional appearance, clear typography, sufficient white space and photography that supports the consultant's personal credibility.",
+          "second": "Special attention was given to the readability of longer professional texts, a clear heading hierarchy and responsive behaviour on mobile devices.",
+          "third": "Animations and decorative elements were used selectively so that the content remained the main carrier of the message."
+        },
+
+        "seo": {
+          "title": "SEO was not added after the website was completed",
+          "intro": "The technical foundation for search engines was planned alongside content and development.",
+
+          "metadata": {
+            "title": "Page titles and meta descriptions",
+            "description": "Clear page titles and descriptions were defined to explain the business and help search engines understand the content."
+          },
+          "social": {
+            "title": "Open Graph data",
+            "description": "A title, description and image were configured for correct link previews on social networks and messaging applications."
+          },
+          "structuredData": {
+            "title": "Structured data",
+            "description": "JSON-LD markup provides search engines with additional information about the business, contact details and professional profile."
+          },
+          "indexing": {
+            "title": "Sitemap, robots and canonical settings",
+            "description": "Technical files and tags help search engines discover, index and interpret the website correctly."
+          },
+          "technical": {
+            "title": "HTTPS, responsive design and performance",
+            "description": "A secure connection, mobile compatibility and reliable loading form the basis of user experience and technical SEO."
+          }
+        },
+
+        "searchConsole": {
+          "title": "Google Search Console connects publishing with real data",
+          "first": "After the domain was connected and the website published, ownership was verified through Google Search Console.",
+          "second": "The sitemap was submitted and indexing can now be monitored instead of assuming that Google has automatically discovered and correctly understood every page.",
+          "third": "Over time, Search Console shows which searches trigger impressions, how many clicks the website receives and where further improvement is possible."
+        },
+
+        "launch": {
+          "title": "Publishing the website is not the end of the project",
+          "text": "Deployment means that the digital product has become available to users. Only then does the period of monitoring, learning from data, publishing content and gradual improvement begin."
+        },
+
+        "development": {
+          "title": "A business website must develop alongside the business",
+          "intro": "A website that remains unchanged for years gradually loses part of its value, even when it continues to function technically.",
+
+          "content": {
+            "title": "Publishing new professional content",
+            "description": "Current topics, regulatory explanations, professional events and answers to common questions expand the value of the website."
+          },
+          "analytics": {
+            "title": "Monitoring visitor behaviour",
+            "description": "Analytics shows which pages attract attention, where visitors come from and where they leave the website."
+          },
+          "seo": {
+            "title": "SEO improvements based on data",
+            "description": "Titles, texts, internal links and new topics can be adjusted according to actual user search queries."
+          },
+          "maintenance": {
+            "title": "Technical maintenance and security",
+            "description": "Checking forms, links, SSL certificates, performance and dependencies preserves the reliability of the digital product."
+          }
+        },
+
+        "results": {
+          "title": "The result is a foundation for long-term digital presence",
+          "intro": "At this stage, results are measured through concrete and verifiable elements rather than invented promises.",
+
+          "identity": {
+            "title": "Clear professional presentation",
+            "description": "The business, professional profile and services are organised into a coherent presentation that helps visitors understand who they are contacting."
+          },
+          "responsive": {
+            "title": "Fully responsive experience",
+            "description": "The content is adapted to desktop, tablet and mobile devices without losing functionality or readability."
+          },
+          "search": {
+            "title": "Connected Google infrastructure",
+            "description": "The domain, Search Console, sitemap, indexing and technical SEO are connected through a controlled process."
+          },
+          "foundation": {
+            "title": "A foundation for further expansion",
+            "description": "The website supports new topics, events, useful resources and other content without changing the underlying strategy."
+          }
+        },
+
+        "lessons": {
+          "title": "What this project demonstrates",
+          "first": "Much of a business website's quality is created before coding begins, through decisions about the business, priorities, audience and content.",
+          "second": "A technically correct website may remain invisible if it lacks clear content, SEO foundations, performance monitoring and a plan for continued development.",
+          "third": "The strongest result is created when the client and development team work together on a digital presence that adapts to real business needs."
+        },
+
+        "recommendation": {
+          "title": "Express Web recommendation",
+          "text": "Do not treat a business website as an expense that ends when it is published. Treat it as a business tool that should be regularly expanded, measured and improved."
+        },
+
+        "conclusion": {
+          "title": "A successful business website combines strategy, content and technology",
+          "first": "GVP Consult demonstrates that even a single-page website can be a serious digital product when its structure, content, SEO and technical foundation are carefully planned.",
+          "second": "Its long-term value depends on whether it continues to reflect the development of the professional practice, client questions and data from search and analytics."
+        },
+
+        "cta": {
+          "title": "Does your business need more than an attractive website?",
+          "description": "We can help define the content, structure, SEO foundation and development plan for a website that supports real business objectives.",
+          "primary": "Discuss your project",
+          "secondary": "View our projects"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Case study of developing the professional GVP Consult business website"
+          },
+          "hero": {
+            "alt": "The GVP Consult professional website displayed on desktop and mobile devices",
+            "caption": "A successful business website begins with understanding the professional, the audience and the business objective."
+          },
+          "seo": {
+            "alt": "Website SEO elements including metadata, structured data, sitemap and mobile optimisation",
+            "caption": "SEO is not the final project step, but part of the content, design and technical architecture from the beginning."
+          },
+          "searchConsole": {
+            "alt": "Monitoring website indexing and performance through Google Search Console",
+            "caption": "Search Console makes it possible to monitor Google visibility using real data rather than assumptions."
+          }
+        }
       }
   },
 

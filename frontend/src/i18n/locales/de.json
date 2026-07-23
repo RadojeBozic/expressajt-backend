@@ -1423,6 +1423,216 @@
             "caption": "Durch die Verbindung einzelner Schritte reduziert eine Anwendung Wiederholungen, beschleunigt die Bearbeitung und speichert die Aktivitätshistorie."
           }
         }
+      },
+
+      "gvpCaseStudy": {
+        "meta": {
+          "title": "Wie eine erfolgreiche Unternehmenswebsite entsteht – Fallstudie GVP Consult",
+          "excerpt": "Diese Fallstudie zeigt, wie Geschäftsanalyse, Inhaltsplanung, Design, SEO und kontinuierliche Weiterentwicklung gemeinsam eine starke digitale Präsenz schaffen.",
+          "seoTitle": "Wie eine erfolgreiche Unternehmenswebsite entsteht | GVP Consult",
+          "seoDescription": "Sehen Sie, wie die Website von GVP Consult entwickelt wurde – von Analyse und Inhaltsstruktur bis zu SEO, Search Console und kontinuierlicher Verbesserung."
+        },
+
+        "lead": {
+          "first": "Die Entwicklung einer hochwertigen Unternehmenswebsite beginnt nicht mit der Auswahl von Farben, Bildern oder einer Vorlage. Sie beginnt mit dem Verständnis des Experten, seiner Leistungen, seiner Zielgruppe und der Gründe, warum ein Besucher ihm vertrauen sollte.",
+          "second": "Das Projekt GVP Consult zeigt, wie viel Planung, Inhaltsarbeit und technische Umsetzung hinter einer Website stehen kann, die auf den ersten Blick einfach erscheint."
+        },
+
+        "context": {
+          "title": "Ausgangssituation: Fachwissen ohne vollständige digitale Darstellung",
+          "first": "GVP Consult ist eine Beratungstätigkeit, die auf langjähriger fachlicher Erfahrung in den Bereichen Sanitärchemie, Produktsicherheit und Materialien basiert, die mit Lebensmitteln, Haut und Schleimhäuten in Kontakt kommen.",
+          "second": "Das Ziel bestand nicht nur darin, grundlegende Kontaktdaten zu veröffentlichen, sondern komplexe Leistungen für Hersteller, Importeure, Händler, Labore und weitere Geschäftskunden verständlich darzustellen.",
+          "third": "Die Website musste daher gleichzeitig professionell, verständlich, vertrauenswürdig und auch für Personen zugänglich sein, die sich erstmals mit diesem Fachgebiet beschäftigen."
+        },
+
+        "analysis": {
+          "title": "Vor dem Design musste zunächst das Geschäft verstanden werden",
+          "intro": "Die erste Phase bestand nicht darin, Bildschirme zu gestalten, sondern Informationen zu ordnen und zu entscheiden, was ein Besucher verstehen sollte.",
+
+          "expertise": {
+            "title": "Definition des fachlichen Profils",
+            "description": "Erfahrung, Spezialisierung und Verantwortungsbereiche sollten klar erklärt werden, ohne die Website in eine zu lange Biografie zu verwandeln."
+          },
+          "audience": {
+            "title": "Verständnis der Zielgruppe",
+            "description": "Die Inhalte mussten Unternehmen mit konkreten Fragen zu Vorschriften, Dokumentation, Laborprüfungen und Produktkonformität ansprechen."
+          },
+          "trust": {
+            "title": "Aufbau von Vertrauen",
+            "description": "Bei Beratungsleistungen bewertet der Besucher nicht nur eine Leistung, sondern auch Wissen, Verantwortung und fachliche Glaubwürdigkeit."
+          },
+          "content": {
+            "title": "Planung nützlicher Inhalte",
+            "description": "Neben der Präsentation der Leistungen sollte die Website Raum für Fachthemen, aktuelle Vorschriften, Veranstaltungen und praktische Erläuterungen bieten."
+          }
+        },
+
+        "principle": {
+          "title": "Ein einfacher Eindruck bedeutet kein einfaches Projekt",
+          "text": "Wenn die Struktur gut geplant ist, finden Besucher Informationen leicht und bemerken die Komplexität hinter der Website nicht. Diese scheinbare Einfachheit ist das Ergebnis sorgfältiger Analyse."
+        },
+
+        "structure": {
+          "title": "Jeder Abschnitt erhielt eine klare geschäftliche Aufgabe",
+          "intro": "Die Seite wurde nicht danach organisiert, was technisch am einfachsten umzusetzen war, sondern nach den Fragen, die potenzielle Kunden natürlicherweise stellen.",
+
+          "hero": {
+            "title": "Hero-Bereich",
+            "description": "Er erklärt sofort, wer die Expertin ist, in welchem Bereich sie tätig ist und für wen die Leistungen bestimmt sind."
+          },
+          "about": {
+            "title": "Vorstellung der Expertin",
+            "description": "Berufserfahrung, Verantwortung und persönlicher Ansatz werden verbunden, ohne unnötige Selbstdarstellung."
+          },
+          "services": {
+            "title": "Leistungsübersicht",
+            "description": "Komplexe Arbeitsbereiche wurden in verständliche Gruppen gegliedert, damit Besucher ihr Problem schnell erkennen."
+          },
+          "content": {
+            "title": "Nachrichten, Veranstaltungen und Fachthemen",
+            "description": "Die Website bietet Raum für regelmäßige Veröffentlichungen und den Aufbau fachlicher Autorität."
+          },
+          "faq": {
+            "title": "Häufig gestellte Fragen",
+            "description": "Antworten reduzieren Unsicherheit und helfen Besuchern, die Leistung vor der Kontaktaufnahme besser zu verstehen."
+          },
+          "contact": {
+            "title": "Kontakt und Handlungsaufforderung",
+            "description": "Der Weg von der Information bis zur Anfrage bleibt einfach, sichtbar und auf verschiedenen Geräten zugänglich."
+          }
+        },
+
+        "design": {
+          "title": "Das Design sollte die Fachkompetenz unterstützen und nicht überdecken",
+          "first": "Die visuelle Identität basiert auf einem ruhigen professionellen Erscheinungsbild, klarer Typografie, ausreichend Freiraum und Bildern, die die persönliche Glaubwürdigkeit der Beraterin unterstützen.",
+          "second": "Besondere Aufmerksamkeit galt der Lesbarkeit längerer Fachtexte, einer klaren Überschriftenhierarchie und der Darstellung auf mobilen Geräten.",
+          "third": "Animationen und dekorative Elemente wurden zurückhaltend eingesetzt, damit der Inhalt der wichtigste Träger der Botschaft bleibt."
+        },
+
+        "seo": {
+          "title": "SEO wurde nicht erst nach Fertigstellung der Website ergänzt",
+          "intro": "Die technische Grundlage für Suchmaschinen wurde parallel zu Inhalt und Entwicklung geplant.",
+
+          "metadata": {
+            "title": "Seitentitel und Meta-Beschreibungen",
+            "description": "Klare Seitentitel und Beschreibungen erklären die Tätigkeit und helfen Suchmaschinen, den Inhalt einzuordnen."
+          },
+          "social": {
+            "title": "Open-Graph-Daten",
+            "description": "Titel, Beschreibung und Bild wurden für eine korrekte Linkdarstellung in sozialen Netzwerken und Kommunikationsanwendungen eingerichtet."
+          },
+          "structuredData": {
+            "title": "Strukturierte Daten",
+            "description": "JSON-LD-Markierungen liefern Suchmaschinen zusätzliche Informationen über das Unternehmen, Kontaktdaten und das berufliche Profil."
+          },
+          "indexing": {
+            "title": "Sitemap, robots und Canonical",
+            "description": "Technische Dateien und Kennzeichnungen unterstützen das korrekte Auffinden, Indexieren und Interpretieren der Website."
+          },
+          "technical": {
+            "title": "HTTPS, responsive Darstellung und Leistung",
+            "description": "Eine sichere Verbindung, mobile Anpassung und zuverlässiges Laden bilden die Grundlage für Benutzererfahrung und technisches SEO."
+          }
+        },
+
+        "searchConsole": {
+          "title": "Google Search Console verbindet die Veröffentlichung mit echten Daten",
+          "first": "Nach der Verbindung der Domain und Veröffentlichung der Website wurde die Inhaberschaft über Google Search Console bestätigt.",
+          "second": "Die Sitemap wurde eingereicht, und die Indexierung kann überwacht werden, statt lediglich anzunehmen, dass Google alle Inhalte automatisch gefunden und richtig verstanden hat.",
+          "third": "Im Laufe der Zeit zeigt Search Console, bei welchen Suchanfragen die Website erscheint, wie viele Impressionen und Klicks entstehen und wo Verbesserungsmöglichkeiten bestehen."
+        },
+
+        "launch": {
+          "title": "Die Veröffentlichung der Website ist nicht das Ende des Projekts",
+          "text": "Das Deployment bedeutet, dass das digitale Produkt für Benutzer verfügbar geworden ist. Erst dann beginnt die Phase der Beobachtung, der Auswertung von Daten, der Veröffentlichung neuer Inhalte und der schrittweisen Verbesserung."
+        },
+
+        "development": {
+          "title": "Eine Unternehmenswebsite muss sich gemeinsam mit dem Geschäft weiterentwickeln",
+          "intro": "Eine Website, die jahrelang unverändert bleibt, verliert mit der Zeit einen Teil ihres Wertes, selbst wenn sie technisch weiterhin funktioniert.",
+
+          "content": {
+            "title": "Veröffentlichung neuer Fachinhalte",
+            "description": "Aktuelle Themen, Erläuterungen zu Vorschriften, Fachveranstaltungen und Antworten auf Fragen erweitern den Nutzen der Website."
+          },
+          "analytics": {
+            "title": "Analyse des Besucherverhaltens",
+            "description": "Analysen zeigen, welche Seiten Aufmerksamkeit erhalten, woher Besucher kommen und an welchen Stellen sie die Website verlassen."
+          },
+          "seo": {
+            "title": "SEO-Verbesserungen auf Grundlage von Daten",
+            "description": "Titel, Texte, interne Links und neue Themen können an tatsächliche Suchanfragen der Benutzer angepasst werden."
+          },
+          "maintenance": {
+            "title": "Technische Wartung und Sicherheit",
+            "description": "Die Prüfung von Formularen, Links, SSL-Zertifikaten, Leistung und Abhängigkeiten erhält die Zuverlässigkeit des digitalen Produkts."
+          }
+        },
+
+        "results": {
+          "title": "Das Ergebnis ist eine Grundlage für langfristige digitale Präsenz",
+          "intro": "In dieser Phase werden Ergebnisse nicht durch erfundene Versprechen, sondern anhand konkreter und überprüfbarer Elemente bewertet.",
+
+          "identity": {
+            "title": "Klare professionelle Darstellung",
+            "description": "Tätigkeit, fachliches Profil und Leistungen sind zu einer verständlichen Einheit organisiert, die Besuchern zeigt, an wen sie sich wenden."
+          },
+          "responsive": {
+            "title": "Vollständig responsive Darstellung",
+            "description": "Die Inhalte sind für Desktop-, Tablet- und Mobilgeräte angepasst, ohne Funktionalität oder Lesbarkeit zu verlieren."
+          },
+          "search": {
+            "title": "Verbundene Google-Infrastruktur",
+            "description": "Domain, Search Console, Sitemap, Indexierung und technisches SEO sind in einen kontrollierten Prozess eingebunden."
+          },
+          "foundation": {
+            "title": "Grundlage für weitere Erweiterungen",
+            "description": "Die Website ermöglicht neue Themen, Veranstaltungen, nützliche Ressourcen und weitere Inhalte, ohne die grundlegende Strategie zu verändern."
+          }
+        },
+
+        "lessons": {
+          "title": "Was dieses Projekt zeigt",
+          "first": "Ein großer Teil der Qualität einer Unternehmenswebsite entsteht vor dem eigentlichen Programmieren, durch Entscheidungen über Geschäft, Prioritäten, Zielgruppe und Inhalte.",
+          "second": "Eine technisch einwandfreie Website kann unsichtbar bleiben, wenn klare Inhalte, SEO-Grundlagen, Erfolgsmessung und ein Plan für die Weiterentwicklung fehlen.",
+          "third": "Das beste Ergebnis entsteht, wenn Kunde und Entwicklungsteam gemeinsam eine digitale Präsenz aufbauen, die sich an tatsächliche geschäftliche Bedürfnisse anpasst."
+        },
+
+        "recommendation": {
+          "title": "Empfehlung von Express Web",
+          "text": "Betrachten Sie eine Unternehmenswebsite nicht als Ausgabe, die mit der Veröffentlichung endet. Betrachten Sie sie als Geschäftsinstrument, das regelmäßig erweitert, gemessen und verbessert werden sollte."
+        },
+
+        "conclusion": {
+          "title": "Eine erfolgreiche Unternehmenswebsite verbindet Strategie, Inhalt und Technologie",
+          "first": "GVP Consult zeigt, dass auch eine One-Page-Website ein ernsthaftes digitales Produkt sein kann, wenn Struktur, Inhalte, SEO und technische Grundlage sorgfältig geplant wurden.",
+          "second": "Ihr langfristiger Wert hängt davon ab, ob sie weiterhin die Entwicklung der fachlichen Tätigkeit, Fragen der Kunden sowie Daten aus Suche und Analyse berücksichtigt."
+        },
+
+        "cta": {
+          "title": "Benötigt Ihr Unternehmen mehr als nur eine attraktive Website?",
+          "description": "Wir helfen Ihnen, Inhalte, Struktur, SEO-Grundlage und einen Entwicklungsplan für eine Website zu definieren, die reale Geschäftsziele unterstützt.",
+          "primary": "Über das Projekt sprechen",
+          "secondary": "Unsere Projekte ansehen"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Fallstudie zur Entwicklung der professionellen Website von GVP Consult"
+          },
+          "hero": {
+            "alt": "Die professionelle Website von GVP Consult auf Desktop- und Mobilgeräten",
+            "caption": "Eine erfolgreiche Unternehmenswebsite beginnt mit dem Verständnis des Experten, der Zielgruppe und des geschäftlichen Ziels."
+          },
+          "seo": {
+            "alt": "SEO-Elemente einer Website einschließlich Metadaten, strukturierter Daten, Sitemap und mobiler Optimierung",
+            "caption": "SEO ist nicht der letzte Projektschritt, sondern von Anfang an Teil von Inhalt, Design und technischer Architektur."
+          },
+          "searchConsole": {
+            "alt": "Überwachung von Indexierung und Website-Leistung mit Google Search Console",
+            "caption": "Search Console ermöglicht die Beobachtung der Google-Sichtbarkeit auf Grundlage echter Daten statt Vermutungen."
+          }
+        }
       }
   },
 
