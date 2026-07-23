@@ -57,7 +57,7 @@ export const posts = [
 
   updatedAt: '2026-07-23',
 
-  image: '/images/blog/online-store/hero.jpg',
+  image: '/images/blog/online-store/card.jpg',
 
   imageAltKey:
     'blog.articles.onlineStore.images.hero.alt',
