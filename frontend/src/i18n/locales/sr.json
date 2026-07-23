@@ -1027,7 +1027,166 @@
             "caption": "Profil obezbeđuje lokalnu vidljivost, dok sajt pruža kontrolu, sadržaj, brend i napredne funkcionalnosti."
           }
         }
-      }
+      },
+
+      "aiBusiness": {
+          "meta": {
+            "title": "Kako AI može pomoći malom preduzeću već danas?",
+            "excerpt": "Veštačka inteligencija nije rezervisana samo za velike kompanije. Mala preduzeća već danas mogu da je koriste za marketing, prodaju, administraciju, analizu podataka i svakodnevnu organizaciju rada.",
+            "seoTitle": "Kako AI može pomoći malom preduzeću | Express Web",
+            "seoDescription": "Saznajte kako malo preduzeće može praktično koristiti veštačku inteligenciju za marketing, prodaju, administraciju, analitiku i uštedu vremena."
+          },
+
+          "lead": {
+            "first": "Veštačka inteligencija se često predstavlja kao tehnologija koja će potpuno promeniti poslovanje, zameniti ljude ili rešiti gotovo svaki problem. Takve tvrdnje stvaraju podjednako mnogo oduševljenja i straha.",
+            "second": "Za malo preduzeće korisnije je postaviti jednostavnije pitanje: koje svakodnevne zadatke AI može da ubrza, pojednostavi ili unapredi već danas?"
+          },
+
+          "definition": {
+            "title": "AI je poslovni pomoćnik, a ne čarobno rešenje",
+            "first": "Savremeni AI alati mogu da analiziraju tekst, pripreme nacrte sadržaja, sumiraju dokumente, predlože ideje, pomognu u obradi podataka i automatizuju deo ponavljajućih poslova.",
+            "second": "Njihova najveća vrednost nije u tome da samostalno vode firmu, već da zaposlenima i vlasnicima omoguće da neke zadatke završe brže i da više vremena posvete odlukama koje zahtevaju iskustvo i odgovornost.",
+            "third": "Kvalitet rezultata zavisi od jasnih instrukcija, dobrih ulaznih podataka i stručne provere osobe koja alat koristi."
+          },
+
+          "warning": {
+            "title": "Najveća zabluda o veštačkoj inteligenciji",
+            "text": "AI neće automatski rešiti loše organizovane procese niti će zameniti poslovnu strategiju. Ako firma nema jasne ciljeve, odgovornosti i kvalitetne podatke, AI može samo brže proizvesti pogrešne ili neupotrebljive rezultate."
+          },
+
+          "uses": {
+            "title": "Pet oblasti u kojima AI može pomoći već danas",
+            "intro": "Mala firma ne mora odmah da uvodi složene sisteme. Korist može početi od nekoliko praktičnih zadataka koji se redovno ponavljaju.",
+
+            "marketing": {
+              "title": "Marketing i sadržaj",
+              "description": "AI može pomoći u pripremi nacrta objava, naslova, opisa proizvoda, email poruka, blog tekstova i ideja za kampanje."
+            },
+            "sales": {
+              "title": "Prodaja i komunikacija sa kupcima",
+              "description": "Može pripremiti odgovore na česta pitanja, nacrte ponuda, sažetke razgovora i predloge za nastavak komunikacije."
+            },
+            "administration": {
+              "title": "Administracija",
+              "description": "AI može sumirati duže dokumente, sastaviti zapisnik, pripremiti poslovni email, organizovati beleške i pomoći u prevodu."
+            },
+            "analytics": {
+              "title": "Analiza podataka",
+              "description": "Može pomoći u razumevanju tabela, prodajnih rezultata, troškova, trendova i odstupanja koja zahtevaju dodatnu pažnju."
+            },
+            "education": {
+              "title": "Učenje i istraživanje",
+              "description": "AI može objasniti pojmove, pomoći u istraživanju tržišta, pripremi prezentacije i bržem upoznavanju nove oblasti."
+            }
+          },
+
+          "dailyWork": {
+            "title": "Kako izgleda praktična primena u maloj firmi",
+            "first": "Vlasnik prodavnice može koristiti AI za pripremu opisa proizvoda, ideja za objave i odgovora na česta pitanja kupaca.",
+            "second": "Konsultant može sumirati beleške sa sastanka, pripremiti nacrt ponude i organizovati teme za stručni članak.",
+            "third": "Mali proizvođač može analizirati prodajne podatke, pripremiti plan promocije i izraditi višejezične verzije osnovnog sadržaja, uz obaveznu stručnu proveru."
+          },
+
+          "callout": {
+            "title": "Najbolji rezultat nastaje kroz saradnju čoveka i AI alata",
+            "text": "Čovek određuje cilj, daje kontekst, proverava činjenice i donosi odluke. AI ubrzava pripremu, predlaže opcije i pomaže u obradi velikog broja informacija."
+          },
+
+          "limitations": {
+            "title": "Šta AI ne može i ne treba da zameni",
+            "intro": "Odgovorna primena počinje razumevanjem ograničenja.",
+
+            "context": {
+              "title": "Duboko poznavanje konkretnog poslovanja",
+              "description": "AI ne poznaje automatski vaše klijente, interne procese, odnose sa dobavljačima i specifičnosti tržišta."
+            },
+            "responsibility": {
+              "title": "Poslovnu i pravnu odgovornost",
+              "description": "Odluke, ugovori, finansijski podaci i stručna mišljenja moraju ostati pod kontrolom odgovorne osobe."
+            },
+            "experience": {
+              "title": "Iskustvo i profesionalni sud",
+              "description": "Alat može predložiti opcije, ali ne poseduje stvarno iskustvo stečeno radom sa ljudima i konkretnim problemima."
+            },
+            "accuracy": {
+              "title": "Proveru tačnosti",
+              "description": "AI može pogrešiti, izostaviti važan detalj ili predstaviti netačnu informaciju kao pouzdanu."
+            },
+            "relationships": {
+              "title": "Ljudski odnos i poverenje",
+              "description": "Empatija, pregovaranje, odgovornost i dugoročni odnosi sa klijentima ne mogu se svesti na automatski odgovor."
+            }
+          },
+
+          "steps": {
+            "title": "Kako početi sa AI alatima bez velikog rizika",
+            "intro": "Najbolje je krenuti malim koracima i meriti stvarnu korist.",
+
+            "task": {
+              "title": "Izaberite jedan konkretan zadatak",
+              "description": "Počnite od posla koji se često ponavlja i oduzima vreme, kao što je priprema email poruka ili sažimanje beležaka."
+            },
+            "tool": {
+              "title": "Izaberite odgovarajući alat",
+              "description": "Ne pokušavajte jednim alatom da rešite sve. Birajte ga prema zadatku, bezbednosti i načinu korišćenja podataka."
+            },
+            "instructions": {
+              "title": "Dajte jasan kontekst i instrukcije",
+              "description": "Objasnite cilj, ciljnu publiku, ton, ograničenja i format rezultata koji očekujete."
+            },
+            "review": {
+              "title": "Proverite i doradite rezultat",
+              "description": "AI izlaz tretirajte kao nacrt koji treba proveriti, prilagoditi i odobriti pre upotrebe."
+            },
+            "measure": {
+              "title": "Merite uštedu vremena i kvalitet",
+              "description": "Procenu zasnivajte na tome da li je zadatak brže završen i da li je konačan rezultat zaista bolji."
+            }
+          },
+
+          "security": {
+            "title": "Vodite računa o podacima i privatnosti",
+            "first": "U javne AI alate ne treba unositi poverljive ugovore, lozinke, podatke o klijentima, poslovne tajne ili druge informacije koje firma ne želi da deli.",
+            "second": "Pre uvođenja alata potrebno je proveriti njegove uslove korišćenja, način čuvanja podataka, korisničke dozvole i mogućnosti administrativne kontrole.",
+            "third": "Za ozbiljnije procese često je bolje koristiti poslovne naloge, kontrolisane integracije i jasno definisana interna pravila."
+          },
+
+          "recommendation": {
+            "title": "Preporuka Express Web-a",
+            "text": "Ne uvodite AI zato što je trenutno popularan. Uvedite ga tamo gde postoji konkretan problem, merljiva korist i osoba koja će kontrolisati rezultat. Počnite jednostavno, učite kroz praksu i tek zatim automatizujte složenije procese."
+          },
+
+          "conclusion": {
+            "title": "AI najbolje radi kada podržava ljude koji već znaju svoj posao",
+            "first": "Veštačka inteligencija može pomoći malom preduzeću da brže pripremi sadržaj, kvalitetnije organizuje informacije, unapredi komunikaciju i smanji vreme potrošeno na rutinske zadatke.",
+            "second": "Njena prava vrednost ne nastaje kada pokušamo da uklonimo čoveka iz procesa, već kada mu omogućimo da donosi bolje odluke i više vremena posveti klijentima, razvoju i poslovnoj strategiji."
+          },
+
+          "cta": {
+            "title": "Razmišljate kako da primenite AI u svom poslovanju?",
+            "description": "Možemo pomoći da pronađete praktične zadatke za automatizaciju i povežete AI alate sa sajtom, prodajom, podrškom i poslovnim procesima.",
+            "primary": "Razgovarajmo o mogućnostima",
+            "secondary": "Pogledajte AI automatizacije"
+          },
+
+          "images": {
+            "card": {
+              "alt": "Vlasnik malog preduzeća koristi AI alate za marketing, komunikaciju i organizaciju poslovanja"
+            },
+            "hero": {
+              "alt": "AI poslovni asistent pomaže malom preduzeću u svakodnevnom radu",
+              "caption": "AI donosi najveću vrednost kada ubrzava konkretne zadatke i ostavlja čoveku kontrolu nad odlukama."
+            },
+            "marketing": {
+              "alt": "Primena veštačke inteligencije u marketingu, sadržaju i komunikaciji sa kupcima",
+              "caption": "Od nacrta objave do analize kampanje, AI može ubrzati više faza marketinškog rada."
+            },
+            "assistant": {
+              "alt": "Saradnja vlasnika firme i AI digitalnog asistenta",
+              "caption": "AI je najkorisniji kao pomoćnik koji predlaže i obrađuje informacije, dok čovek proverava i odlučuje."
+            }
+          }
+        }
   },
 
   "post": {

@@ -126,4 +126,49 @@ export const posts = [
       'blog.articles.googleBusiness.meta.seoDescription',
   },
 },
+
+{
+  id: 4,
+
+  slug: 'kako-ai-moze-pomoci-malom-preduzecu',
+
+  titleKey:
+    'blog.articles.aiBusiness.meta.title',
+
+  excerptKey:
+    'blog.articles.aiBusiness.meta.excerpt',
+
+  category: 'vestacka-inteligencija',
+
+  author: 'radoje-bozic',
+
+  publishedAt: '2026-07-23',
+
+  updatedAt: '2026-07-23',
+
+  image:
+    '/images/blog/ai-small-business/card.jpg',
+
+  imageAltKey:
+    'blog.articles.aiBusiness.images.card.alt',
+
+  featured: true,
+
+  published: true,
+
+  readingTime: 7,
+
+  component: () =>
+    import(
+      '../posts/KakoAiMozePomociMalomPreduzecu.vue'
+    ),
+
+  seo: {
+    titleKey:
+      'blog.articles.aiBusiness.meta.seoTitle',
+
+    descriptionKey:
+      'blog.articles.aiBusiness.meta.seoDescription',
+  },
+},
 ]

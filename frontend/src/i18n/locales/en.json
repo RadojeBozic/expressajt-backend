@@ -1027,7 +1027,166 @@
             "caption": "The profile provides local visibility, while the website offers control, content, branding and advanced functionality."
           }
         }
-      }
+      },
+
+      "aiBusiness": {
+          "meta": {
+            "title": "How can AI help a small business today?",
+            "excerpt": "Artificial intelligence is not reserved for large companies. Small businesses can already use it for marketing, sales, administration, data analysis and everyday organisation.",
+            "seoTitle": "How AI can help a small business | Express Web",
+            "seoDescription": "Learn how a small business can practically use artificial intelligence for marketing, sales, administration, analytics and saving time."
+          },
+
+          "lead": {
+            "first": "Artificial intelligence is often presented as a technology that will completely transform business, replace people or solve almost every problem. Such claims create equal amounts of excitement and fear.",
+            "second": "For a small business, it is more useful to ask a simpler question: which everyday tasks can AI make faster, easier or better today?"
+          },
+
+          "definition": {
+            "title": "AI is a business assistant, not a magical solution",
+            "first": "Modern AI tools can analyse text, prepare content drafts, summarise documents, suggest ideas, assist with data processing and automate some repetitive tasks.",
+            "second": "Their greatest value is not in independently running a company, but in helping owners and employees complete certain tasks faster and spend more time on decisions that require experience and responsibility.",
+            "third": "The quality of the result depends on clear instructions, good input data and professional review by the person using the tool."
+          },
+
+          "warning": {
+            "title": "The biggest misconception about artificial intelligence",
+            "text": "AI will not automatically repair poorly organised processes or replace business strategy. If a company lacks clear objectives, responsibilities and quality data, AI may simply produce incorrect or unusable results more quickly."
+          },
+
+          "uses": {
+            "title": "Five areas where AI can help today",
+            "intro": "A small company does not need to introduce complex systems immediately. The benefit can begin with several practical tasks that are regularly repeated.",
+
+            "marketing": {
+              "title": "Marketing and content",
+              "description": "AI can help prepare drafts for posts, headlines, product descriptions, emails, blog articles and campaign ideas."
+            },
+            "sales": {
+              "title": "Sales and customer communication",
+              "description": "It can prepare answers to common questions, proposal drafts, conversation summaries and suggestions for follow-up communication."
+            },
+            "administration": {
+              "title": "Administration",
+              "description": "AI can summarise long documents, prepare meeting notes, draft business emails, organise notes and assist with translation."
+            },
+            "analytics": {
+              "title": "Data analysis",
+              "description": "It can help interpret spreadsheets, sales results, costs, trends and unusual changes that require further attention."
+            },
+            "education": {
+              "title": "Learning and research",
+              "description": "AI can explain concepts, support market research, help prepare presentations and accelerate learning in a new field."
+            }
+          },
+
+          "dailyWork": {
+            "title": "What practical use looks like in a small company",
+            "first": "A store owner can use AI to prepare product descriptions, social media ideas and responses to frequently asked customer questions.",
+            "second": "A consultant can summarise meeting notes, prepare a proposal draft and organise topics for a professional article.",
+            "third": "A small manufacturer can analyse sales data, prepare a promotional plan and create multilingual versions of basic content, with mandatory professional review."
+          },
+
+          "callout": {
+            "title": "The best result comes from cooperation between people and AI tools",
+            "text": "People define the goal, provide context, verify facts and make decisions. AI accelerates preparation, suggests options and assists with processing large amounts of information."
+          },
+
+          "limitations": {
+            "title": "What AI cannot and should not replace",
+            "intro": "Responsible use begins with understanding its limitations.",
+
+            "context": {
+              "title": "Deep knowledge of a specific business",
+              "description": "AI does not automatically understand your customers, internal processes, supplier relationships or market specifics."
+            },
+            "responsibility": {
+              "title": "Business and legal responsibility",
+              "description": "Decisions, contracts, financial data and professional opinions must remain under the control of a responsible person."
+            },
+            "experience": {
+              "title": "Experience and professional judgement",
+              "description": "A tool can suggest options, but it does not possess real experience gained by working with people and practical problems."
+            },
+            "accuracy": {
+              "title": "Accuracy verification",
+              "description": "AI can make mistakes, omit important details or present incorrect information as if it were reliable."
+            },
+            "relationships": {
+              "title": "Human relationships and trust",
+              "description": "Empathy, negotiation, responsibility and long-term client relationships cannot be reduced to an automated response."
+            }
+          },
+
+          "steps": {
+            "title": "How to start using AI tools with limited risk",
+            "intro": "The best approach is to start small and measure the actual benefit.",
+
+            "task": {
+              "title": "Choose one specific task",
+              "description": "Start with a repetitive task that consumes time, such as drafting emails or summarising notes."
+            },
+            "tool": {
+              "title": "Choose the right tool",
+              "description": "Do not try to solve everything with one platform. Choose according to the task, security requirements and data handling."
+            },
+            "instructions": {
+              "title": "Provide clear context and instructions",
+              "description": "Explain the objective, target audience, tone, limitations and output format you expect."
+            },
+            "review": {
+              "title": "Review and improve the result",
+              "description": "Treat AI output as a draft that must be checked, adapted and approved before use."
+            },
+            "measure": {
+              "title": "Measure time saved and quality",
+              "description": "Evaluate whether the task was completed faster and whether the final result is genuinely better."
+            }
+          },
+
+          "security": {
+            "title": "Protect data and privacy",
+            "first": "Confidential contracts, passwords, customer data, trade secrets and other sensitive information should not be entered into public AI tools.",
+            "second": "Before introducing a tool, review its terms of use, data retention practices, user permissions and administrative controls.",
+            "third": "For more serious processes, business accounts, controlled integrations and clearly defined internal rules are often the better choice."
+          },
+
+          "recommendation": {
+            "title": "Express Web recommendation",
+            "text": "Do not introduce AI simply because it is popular. Use it where there is a specific problem, a measurable benefit and a person responsible for controlling the result. Start simply, learn through practice and only then automate more complex processes."
+          },
+
+          "conclusion": {
+            "title": "AI works best when it supports people who already understand their work",
+            "first": "Artificial intelligence can help a small business prepare content faster, organise information more effectively, improve communication and reduce time spent on routine tasks.",
+            "second": "Its real value does not come from removing people from the process, but from enabling them to make better decisions and devote more time to customers, development and business strategy."
+          },
+
+          "cta": {
+            "title": "Are you considering how to apply AI in your business?",
+            "description": "We can help you identify practical tasks for automation and connect AI tools with your website, sales, support and business processes.",
+            "primary": "Discuss the possibilities",
+            "secondary": "View AI automation services"
+          },
+
+          "images": {
+            "card": {
+              "alt": "A small business owner uses AI tools for marketing, communication and business organisation"
+            },
+            "hero": {
+              "alt": "An AI business assistant helps a small company with everyday work",
+              "caption": "AI creates the greatest value when it accelerates specific tasks while leaving people in control of decisions."
+            },
+            "marketing": {
+              "alt": "Using artificial intelligence in marketing, content creation and customer communication",
+              "caption": "From drafting a post to analysing a campaign, AI can accelerate multiple stages of marketing work."
+            },
+            "assistant": {
+              "alt": "Collaboration between a business owner and an AI digital assistant",
+              "caption": "AI is most useful as an assistant that suggests and processes information while people verify and decide."
+            }
+          }
+        }
   },
 
   "post": {

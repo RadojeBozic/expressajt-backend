@@ -1082,6 +1082,165 @@
             "caption": "Das Profil sorgt für lokale Sichtbarkeit, während die Website Kontrolle, Inhalte, Marke und erweiterte Funktionen bietet."
           }
         }
+      },
+
+      "aiBusiness": {
+        "meta": {
+          "title": "Wie kann KI einem kleinen Unternehmen schon heute helfen?",
+          "excerpt": "Künstliche Intelligenz ist nicht nur großen Unternehmen vorbehalten. Kleine Betriebe können sie bereits heute für Marketing, Verkauf, Verwaltung, Datenanalyse und die tägliche Arbeitsorganisation einsetzen.",
+          "seoTitle": "Wie KI kleinen Unternehmen helfen kann | Express Web",
+          "seoDescription": "Erfahren Sie, wie ein kleines Unternehmen künstliche Intelligenz praktisch für Marketing, Verkauf, Verwaltung, Analysen und Zeitersparnis nutzen kann."
+        },
+
+        "lead": {
+          "first": "Künstliche Intelligenz wird häufig als Technologie dargestellt, die das Geschäft vollständig verändern, Menschen ersetzen oder nahezu jedes Problem lösen wird. Solche Behauptungen erzeugen gleichermaßen Begeisterung und Angst.",
+          "second": "Für ein kleines Unternehmen ist eine einfachere Frage hilfreicher: Welche alltäglichen Aufgaben kann KI bereits heute beschleunigen, vereinfachen oder verbessern?"
+        },
+
+        "definition": {
+          "title": "KI ist ein geschäftlicher Assistent und keine magische Lösung",
+          "first": "Moderne KI-Werkzeuge können Texte analysieren, Inhaltsentwürfe erstellen, Dokumente zusammenfassen, Ideen vorschlagen, bei der Datenverarbeitung helfen und einen Teil wiederkehrender Aufgaben automatisieren.",
+          "second": "Ihr größter Wert besteht nicht darin, ein Unternehmen selbstständig zu führen, sondern Mitarbeitern und Eigentümern zu ermöglichen, bestimmte Aufgaben schneller zu erledigen und mehr Zeit für Entscheidungen zu verwenden, die Erfahrung und Verantwortung erfordern.",
+          "third": "Die Qualität des Ergebnisses hängt von klaren Anweisungen, guten Eingabedaten und der fachlichen Prüfung durch die Person ab, die das Werkzeug verwendet."
+        },
+
+        "warning": {
+          "title": "Das größte Missverständnis über künstliche Intelligenz",
+          "text": "KI wird schlecht organisierte Prozesse nicht automatisch reparieren und keine Geschäftsstrategie ersetzen. Fehlen einem Unternehmen klare Ziele, Verantwortlichkeiten und hochwertige Daten, kann KI falsche oder unbrauchbare Ergebnisse lediglich schneller erzeugen."
+        },
+
+        "uses": {
+          "title": "Fünf Bereiche, in denen KI bereits heute helfen kann",
+          "intro": "Ein kleines Unternehmen muss nicht sofort komplexe Systeme einführen. Der Nutzen kann mit einigen praktischen Aufgaben beginnen, die sich regelmäßig wiederholen.",
+
+          "marketing": {
+            "title": "Marketing und Inhalte",
+            "description": "KI kann bei Entwürfen für Beiträge, Überschriften, Produktbeschreibungen, E-Mails, Blogartikel und Kampagnenideen helfen."
+          },
+          "sales": {
+            "title": "Verkauf und Kundenkommunikation",
+            "description": "Sie kann Antworten auf häufige Fragen, Angebotsentwürfe, Gesprächszusammenfassungen und Vorschläge für die weitere Kommunikation vorbereiten."
+          },
+          "administration": {
+            "title": "Verwaltung",
+            "description": "KI kann lange Dokumente zusammenfassen, Besprechungsprotokolle erstellen, geschäftliche E-Mails entwerfen, Notizen organisieren und bei Übersetzungen helfen."
+          },
+          "analytics": {
+            "title": "Datenanalyse",
+            "description": "Sie kann beim Verständnis von Tabellen, Verkaufsergebnissen, Kosten, Trends und auffälligen Abweichungen unterstützen."
+          },
+          "education": {
+            "title": "Lernen und Recherche",
+            "description": "KI kann Begriffe erklären, Marktforschung unterstützen, Präsentationen vorbereiten und das Einarbeiten in neue Themen beschleunigen."
+          }
+        },
+
+        "dailyWork": {
+          "title": "So sieht die praktische Anwendung in einem kleinen Unternehmen aus",
+          "first": "Ein Ladenbesitzer kann KI für Produktbeschreibungen, Ideen für soziale Netzwerke und Antworten auf häufige Kundenfragen einsetzen.",
+          "second": "Ein Berater kann Besprechungsnotizen zusammenfassen, einen Angebotsentwurf vorbereiten und Themen für einen Fachartikel strukturieren.",
+          "third": "Ein kleiner Hersteller kann Verkaufsdaten analysieren, einen Marketingplan vorbereiten und mehrsprachige Versionen grundlegender Inhalte erstellen, wobei eine fachliche Prüfung erforderlich bleibt."
+        },
+
+        "callout": {
+          "title": "Das beste Ergebnis entsteht durch die Zusammenarbeit von Mensch und KI",
+          "text": "Der Mensch definiert das Ziel, liefert Kontext, prüft Fakten und trifft Entscheidungen. KI beschleunigt die Vorbereitung, schlägt Möglichkeiten vor und hilft bei der Verarbeitung großer Informationsmengen."
+        },
+
+        "limitations": {
+          "title": "Was KI nicht ersetzen kann und sollte",
+          "intro": "Verantwortungsvolle Nutzung beginnt mit dem Verständnis ihrer Grenzen.",
+
+          "context": {
+            "title": "Tiefes Wissen über das konkrete Unternehmen",
+            "description": "KI kennt Ihre Kunden, internen Prozesse, Lieferantenbeziehungen und Marktbesonderheiten nicht automatisch."
+          },
+          "responsibility": {
+            "title": "Geschäftliche und rechtliche Verantwortung",
+            "description": "Entscheidungen, Verträge, Finanzdaten und fachliche Stellungnahmen müssen unter der Kontrolle einer verantwortlichen Person bleiben."
+          },
+          "experience": {
+            "title": "Erfahrung und professionelles Urteilsvermögen",
+            "description": "Ein Werkzeug kann Optionen vorschlagen, verfügt jedoch nicht über echte Erfahrung aus der Arbeit mit Menschen und konkreten Problemen."
+          },
+          "accuracy": {
+            "title": "Prüfung der Richtigkeit",
+            "description": "KI kann Fehler machen, wichtige Details auslassen oder falsche Informationen als zuverlässig darstellen."
+          },
+          "relationships": {
+            "title": "Menschliche Beziehungen und Vertrauen",
+            "description": "Empathie, Verhandlungen, Verantwortung und langfristige Kundenbeziehungen lassen sich nicht auf eine automatische Antwort reduzieren."
+          }
+        },
+
+        "steps": {
+          "title": "So beginnen Sie mit KI-Werkzeugen bei begrenztem Risiko",
+          "intro": "Am besten beginnen Sie mit kleinen Schritten und messen den tatsächlichen Nutzen.",
+
+          "task": {
+            "title": "Wählen Sie eine konkrete Aufgabe",
+            "description": "Beginnen Sie mit einer wiederkehrenden und zeitaufwendigen Aufgabe, etwa dem Entwurf von E-Mails oder der Zusammenfassung von Notizen."
+          },
+          "tool": {
+            "title": "Wählen Sie das passende Werkzeug",
+            "description": "Versuchen Sie nicht, alles mit einer Plattform zu lösen. Wählen Sie nach Aufgabe, Sicherheitsanforderungen und Umgang mit Daten."
+          },
+          "instructions": {
+            "title": "Geben Sie klaren Kontext und Anweisungen",
+            "description": "Erklären Sie Ziel, Zielgruppe, Ton, Einschränkungen und das erwartete Ausgabeformat."
+          },
+          "review": {
+            "title": "Prüfen und verbessern Sie das Ergebnis",
+            "description": "Behandeln Sie die KI-Ausgabe als Entwurf, der vor der Verwendung geprüft, angepasst und freigegeben werden muss."
+          },
+          "measure": {
+            "title": "Messen Sie Zeitersparnis und Qualität",
+            "description": "Bewerten Sie, ob die Aufgabe schneller erledigt wurde und ob das endgültige Ergebnis tatsächlich besser ist."
+          }
+        },
+
+        "security": {
+          "title": "Achten Sie auf Daten und Datenschutz",
+          "first": "Vertrauliche Verträge, Passwörter, Kundendaten, Geschäftsgeheimnisse und andere sensible Informationen sollten nicht in öffentliche KI-Werkzeuge eingegeben werden.",
+          "second": "Vor der Einführung eines Werkzeugs sollten Nutzungsbedingungen, Datenspeicherung, Benutzerrechte und administrative Kontrollen geprüft werden.",
+          "third": "Für ernsthafte Prozesse sind Geschäftskonten, kontrollierte Integrationen und klar definierte interne Regeln häufig die bessere Wahl."
+        },
+
+        "recommendation": {
+          "title": "Empfehlung von Express Web",
+          "text": "Führen Sie KI nicht nur deshalb ein, weil sie derzeit populär ist. Nutzen Sie sie dort, wo ein konkretes Problem, ein messbarer Nutzen und eine verantwortliche Person zur Kontrolle des Ergebnisses vorhanden sind. Beginnen Sie einfach, lernen Sie in der Praxis und automatisieren Sie erst danach komplexere Prozesse."
+        },
+
+        "conclusion": {
+          "title": "KI funktioniert am besten, wenn sie Menschen unterstützt, die ihre Arbeit bereits verstehen",
+          "first": "Künstliche Intelligenz kann einem kleinen Unternehmen helfen, Inhalte schneller vorzubereiten, Informationen besser zu organisieren, die Kommunikation zu verbessern und den Zeitaufwand für Routineaufgaben zu reduzieren.",
+          "second": "Ihr eigentlicher Wert entsteht nicht dadurch, dass Menschen aus dem Prozess entfernt werden, sondern dadurch, dass sie bessere Entscheidungen treffen und mehr Zeit für Kunden, Entwicklung und Geschäftsstrategie haben."
+        },
+
+        "cta": {
+          "title": "Überlegen Sie, wie Sie KI in Ihrem Unternehmen einsetzen können?",
+          "description": "Wir helfen Ihnen, praktische Aufgaben für die Automatisierung zu identifizieren und KI-Werkzeuge mit Website, Verkauf, Support und Geschäftsprozessen zu verbinden.",
+          "primary": "Über die Möglichkeiten sprechen",
+          "secondary": "KI-Automatisierungen ansehen"
+        },
+
+        "images": {
+          "card": {
+            "alt": "Ein Kleinunternehmer nutzt KI-Werkzeuge für Marketing, Kommunikation und Geschäftsorganisation"
+          },
+          "hero": {
+            "alt": "Ein KI-Geschäftsassistent unterstützt ein kleines Unternehmen bei der täglichen Arbeit",
+            "caption": "KI schafft den größten Nutzen, wenn sie konkrete Aufgaben beschleunigt und dem Menschen die Kontrolle über Entscheidungen lässt."
+          },
+          "marketing": {
+            "alt": "Einsatz künstlicher Intelligenz in Marketing, Inhaltserstellung und Kundenkommunikation",
+            "caption": "Vom Entwurf eines Beitrags bis zur Kampagnenanalyse kann KI mehrere Phasen der Marketingarbeit beschleunigen."
+          },
+          "assistant": {
+            "alt": "Zusammenarbeit zwischen einem Unternehmer und einem digitalen KI-Assistenten",
+            "caption": "KI ist als Assistent am nützlichsten, der Informationen vorschlägt und verarbeitet, während der Mensch prüft und entscheidet."
+          }
+        }
       }
   },
 
